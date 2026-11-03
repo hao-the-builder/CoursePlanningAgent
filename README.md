@@ -83,7 +83,7 @@ Raw source files stay unchanged in `raw/`; everything derived goes in `data/`.
 Built in phases, one at a time — see `CLAUDE.md` for the plan and the rules.
 
 - [x] **Phase 0** — project setup
-- [ ] **Phase 1** — collect raw data
+- [x] **Phase 1** — collect raw data
 - [ ] **Phase 2** — build structured data
 - [ ] **Phase 3** — deterministic tools and validation
 - [ ] **Phase 4** — LLM wrapper and agent loop

@@ -30,3 +30,15 @@ Thumbs.db
 desktop.ini
 .idea/
 .vscode/
+
+# --- raw binaries ---------------------------------------------------------
+# The 68 requirement PDFs (~43MB) and the curriculum image are official
+# sources, re-downloadable byte-for-byte with:
+#     python pipeline/fetch_requirements.py
+#     python pipeline/fetch_common_core.py
+# Provenance survives without them: raw/SOURCES.md records the URL, size and
+# SHA-256 of every file, and raw/_manifest.jsonl is committed. Keeping them out
+# of git keeps the clone small for Streamlit Cloud deploys.
+# To archive them instead, delete these two lines and re-add.
+raw/**/*.pdf
+raw/**/*.jpg

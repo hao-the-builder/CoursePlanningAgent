@@ -1,0 +1,2585 @@
+{
+  "cohort": "2026-27",
+  "programs": [
+    {
+      "code": "SREQ-SSCI",
+      "title": "School Requirements: School of Science",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "School of Science",
+      "kind": "school_requirement",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/SREQ-SSCI",
+      "stated_total_credits": 120,
+      "credits_quote": "rements • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+      "pdf_label": "SSCI School Requirements",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+          "label": "SSCI School Requirements"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/SREQ-SSCI.pdf"
+    },
+    {
+      "code": "CHEM",
+      "title": "BSc in Chemistry",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Chemistry",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/CHEM",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "emistry • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27chem.pdf",
+      "pdf_label": "Major Requirements: BSc in Chemistry",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Science",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_chem.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+          "label": "School Requirements: School of Science"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27chem.pdf",
+          "label": "Major Requirements: BSc in Chemistry"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_chem.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/CHEM.pdf"
+    },
+    {
+      "code": "MINOR-CHEM",
+      "title": "Minor Program in Chemistry",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Chemistry",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-CHEM",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-chem.pdf",
+      "pdf_label": "Minor Program in Chemistry",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-chem.pdf",
+          "label": "Minor Program in Chemistry"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-CHEM.pdf"
+    },
+    {
+      "code": "BCB",
+      "title": "BSc in Biochemistry and Cell Biology",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Life Science",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/BCB",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "Biology • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bcb.pdf",
+      "pdf_label": "Major Requirements: BSc in Biochemistry and Cell Biology",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Science",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_bcb.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+          "label": "School Requirements: School of Science"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bcb.pdf",
+          "label": "Major Requirements: BSc in Biochemistry and Cell Biology"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_bcb.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/BCB.pdf"
+    },
+    {
+      "code": "BIOT",
+      "title": "BSc in Biotechnology",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Life Science",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/BIOT",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "hnology • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27biot.pdf",
+      "pdf_label": "Major Requirements: BSc in Biotechnology",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Science",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_biot.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+          "label": "School Requirements: School of Science"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27biot.pdf",
+          "label": "Major Requirements: BSc in Biotechnology"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_biot.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/BIOT.pdf"
+    },
+    {
+      "code": "BIBU",
+      "title": "BSc in Biotechnology and Business",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Life Science",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/BIBU",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "usiness • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bibu.pdf",
+      "pdf_label": "Major Requirements: BSc in Biotechnology and Business",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_bibu.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bibu.pdf",
+          "label": "Major Requirements: BSc in Biotechnology and Business"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_bibu.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses"
+      },
+      "pdf_path": "raw/requirements/BIBU.pdf"
+    },
+    {
+      "code": "BMH",
+      "title": "BSc in Biomedical and Health Sciences",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Life Science",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/BMH",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "ciences • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bmh.pdf",
+      "pdf_label": "Major Requirements: BSc in Biomedical and Health Sciences",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Science",
+      "pathway_pdfs": [
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_bmh.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+          "label": "School Requirements: School of Science"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bmh.pdf",
+          "label": "Major Requirements: BSc in Biomedical and Health Sciences"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_bmh.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/BMH.pdf"
+    },
+    {
+      "code": "DASC",
+      "title": "BSc in Data Analytics and Artificial Intelligence in Science",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Mathematics",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/DASC",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "Science • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27dasc.pdf",
+      "pdf_label": "Major Requirements: BSc in Data Analytics and Artificial Intelligence in Science",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Science",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_dasc.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+          "label": "School Requirements: School of Science"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27dasc.pdf",
+          "label": "Major Requirements: BSc in Data Analytics and Artificial Intelligence in Science"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_dasc.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/DASC.pdf"
+    },
+    {
+      "code": "DSCT",
+      "title": "BSc in Data Science and Technology",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Mathematics",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/DSCT",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "hnology • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27dsct.pdf",
+      "pdf_label": "Major Requirements: BSc in Data Science and Technology",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_dsct.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27dsct.pdf",
+          "label": "Major Requirements: BSc in Data Science and Technology"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_dsct.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/DSCT.pdf"
+    },
+    {
+      "code": "MATH",
+      "title": "BSc in Mathematics",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Mathematics",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MATH",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "ematics • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27math.pdf",
+      "pdf_label": "Major Requirements: BSc in Mathematics",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Science",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_math.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+          "label": "School Requirements: School of Science"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27math.pdf",
+          "label": "Major Requirements: BSc in Mathematics"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_math.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/MATH.pdf"
+    },
+    {
+      "code": "MAEC",
+      "title": "BSc in Mathematics and Economics",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Mathematics",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MAEC",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "onomics • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27maec.pdf",
+      "pdf_label": "Major Requirements: BSc in Mathematics and Economics",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_maec.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27maec.pdf",
+          "label": "Major Requirements: BSc in Mathematics and Economics"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_maec.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/MAEC.pdf"
+    },
+    {
+      "code": "MINOR-ACTM",
+      "title": "Minor Program in Actuarial Mathematics",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Mathematics",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-ACTM",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-actm.pdf",
+      "pdf_label": "Minor Program in Actuarial Mathematics",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-actm.pdf",
+          "label": "Minor Program in Actuarial Mathematics"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-ACTM.pdf"
+    },
+    {
+      "code": "MINOR-MATH",
+      "title": "Minor Program in Mathematics",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Mathematics",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-MATH",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-math.pdf",
+      "pdf_label": "Minor Program in Mathematics",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-math.pdf",
+          "label": "Minor Program in Mathematics"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-MATH.pdf"
+    },
+    {
+      "code": "OST",
+      "title": "BSc in Ocean Science and Technology",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Ocean Science",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/OST",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "hnology • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ost.pdf",
+      "pdf_label": "Major Requirements: BSc in Ocean Science and Technology",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Science",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_ost.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+          "label": "School Requirements: School of Science"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ost.pdf",
+          "label": "Major Requirements: BSc in Ocean Science and Technology"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_ost.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/OST.pdf"
+    },
+    {
+      "code": "MINOR-ENVS",
+      "title": "Minor Program in Environmental Science",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Ocean Science",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-ENVS",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-envs.pdf",
+      "pdf_label": "Minor Program in Environmental Science",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-envs.pdf",
+          "label": "Minor Program in Environmental Science"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-ENVS.pdf"
+    },
+    {
+      "code": "PHYS",
+      "title": "BSc in Physics",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Physics",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/PHYS",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "Physics • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27phys.pdf",
+      "pdf_label": "Major Requirements: BSc in Physics",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Science",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_phys.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+          "label": "School Requirements: School of Science"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27phys.pdf",
+          "label": "Major Requirements: BSc in Physics"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_phys.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/PHYS.pdf"
+    },
+    {
+      "code": "MINOR-ASCO",
+      "title": "Minor Program in Astrophysics and Cosmology",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Physics",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-ASCO",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-asco.pdf",
+      "pdf_label": "Minor Program in Astrophysics and Cosmology",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-asco.pdf",
+          "label": "Minor Program in Astrophysics and Cosmology"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-ASCO.pdf"
+    },
+    {
+      "code": "MINOR-PHYS",
+      "title": "Minor Program in Physics",
+      "school": "SSCI",
+      "school_name": "School of Science",
+      "department": "Physics",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-PHYS",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-phys.pdf",
+      "pdf_label": "Minor Program in Physics",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-phys.pdf",
+          "label": "Minor Program in Physics"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-PHYS.pdf"
+    },
+    {
+      "code": "BIEN",
+      "title": "BEng in Bioengineering",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Chemical and Biological Engineering",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/BIEN",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "neering • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bien.pdf",
+      "pdf_label": "Major Requirements: BEng in Bioengineering",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bien.pdf",
+          "label": "Major Requirements: BEng in Bioengineering"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/BIEN.pdf"
+    },
+    {
+      "code": "CENG",
+      "title": "BEng in Chemical Engineering",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Chemical and Biological Engineering",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/CENG",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "neering • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ceng.pdf",
+      "pdf_label": "Major Requirements: BEng in Chemical Engineering",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ceng.pdf",
+          "label": "Major Requirements: BEng in Chemical Engineering"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/CENG.pdf"
+    },
+    {
+      "code": "EEEN",
+      "title": "BEng in Energy and Environmental Engineering",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Chemical and Biological Engineering",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/EEEN",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "neering • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27eeen.pdf",
+      "pdf_label": "Major Requirements: BEng in Energy and Environmental Engineering",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27eeen.pdf",
+          "label": "Major Requirements: BEng in Energy and Environmental Engineering"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/EEEN.pdf"
+    },
+    {
+      "code": "MINOR-BIEN",
+      "title": "Minor Program in Bioengineering",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Chemical and Biological Engineering",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-BIEN",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-bien.pdf",
+      "pdf_label": "Minor Program in Bioengineering",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-bien.pdf",
+          "label": "Minor Program in Bioengineering"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-BIEN.pdf"
+    },
+    {
+      "code": "CIVL",
+      "title": "BEng in Civil Engineering",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Civil and Environmental Engineering",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/CIVL",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "neering • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27civl.pdf",
+      "pdf_label": "Major Requirements: BEng in Civil Engineering",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27civl.pdf",
+          "label": "Major Requirements: BEng in Civil Engineering"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/CIVL.pdf"
+    },
+    {
+      "code": "CIEV",
+      "title": "BEng in Civil and Environmental Engineering",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Civil and Environmental Engineering",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/CIEV",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "neering • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ciev.pdf",
+      "pdf_label": "Major Requirements: BEng in Civil and Environmental Engineering",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ciev.pdf",
+          "label": "Major Requirements: BEng in Civil and Environmental Engineering"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/CIEV.pdf"
+    },
+    {
+      "code": "MINOR-SC",
+      "title": "Minor Program in Smart City",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Civil and Environmental Engineering",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-SC",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-sc.pdf",
+      "pdf_label": "Minor Program in Smart City",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-sc.pdf",
+          "label": "Minor Program in Smart City"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-SC.pdf"
+    },
+    {
+      "code": "CPEG",
+      "title": "BEng in Computer Engineering",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Computer Engineering Program Office",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/CPEG",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "neering • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27cpeg.pdf",
+      "pdf_label": "Major Requirements: BEng in Computer Engineering",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27cpeg.pdf",
+          "label": "Major Requirements: BEng in Computer Engineering"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/CPEG.pdf"
+    },
+    {
+      "code": "AI",
+      "title": "BEng in Artificial Intelligence",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Computer Science and Engineering",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/AI",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "ligence • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ai.pdf",
+      "pdf_label": "Major Requirements: BEng in Artificial Intelligence",
+      "pathway_pdfs": [
+        {
+          "url": "https://cse.hkust.edu.hk/ug/ai/study_pathways_AI_2025-26_intake.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ai.pdf",
+          "label": "Major Requirements: BEng in Artificial Intelligence"
+        },
+        {
+          "url": "https://cse.hkust.edu.hk/ug/ai/study_pathways_AI_2025-26_intake.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/AI.pdf"
+    },
+    {
+      "code": "COMP",
+      "title": "BEng in Computer Science",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Computer Science and Engineering",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/COMP",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "Science • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27comp.pdf",
+      "pdf_label": "Major Requirements: BEng in Computer Science",
+      "pathway_pdfs": [
+        {
+          "url": "https://cse.hkust.edu.hk/ug/comp/study_pathways_COMP_2025-26_intake.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27comp.pdf",
+          "label": "Major Requirements: BEng in Computer Science"
+        },
+        {
+          "url": "https://cse.hkust.edu.hk/ug/comp/study_pathways_COMP_2025-26_intake.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/COMP.pdf"
+    },
+    {
+      "code": "COSC",
+      "title": "BSc in Computer Science",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Computer Science and Engineering",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/COSC",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "study.) • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27cosc.pdf",
+      "pdf_label": "Major Requirements: BSc in Computer Science",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27cosc.pdf",
+          "label": "Major Requirements: BSc in Computer Science"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/COSC.pdf"
+    },
+    {
+      "code": "MINOR-BDT",
+      "title": "Minor Program in Big Data Technology",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Computer Science and Engineering",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-BDT",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-bdt.pdf",
+      "pdf_label": "Minor Program in Big Data Technology",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-bdt.pdf",
+          "label": "Minor Program in Big Data Technology"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-BDT.pdf"
+    },
+    {
+      "code": "MINOR-IT",
+      "title": "Minor Program in Information Technology",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Computer Science and Engineering",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-IT",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-it.pdf",
+      "pdf_label": "Minor Program in Information Technology",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-it.pdf",
+          "label": "Minor Program in Information Technology"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-IT.pdf"
+    },
+    {
+      "code": "ELEC",
+      "title": "BEng in Electronic Engineering",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Electronic and Computer Engineering",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/ELEC",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "neering • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27elec.pdf",
+      "pdf_label": "Major Requirements: BEng in Electronic Engineering",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27elec.pdf",
+          "label": "Major Requirements: BEng in Electronic Engineering"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/ELEC.pdf"
+    },
+    {
+      "code": "MEIC",
+      "title": "BEng in Microelectronics and Integrated Circuits",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Electronic and Computer Engineering",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MEIC",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "ircuits • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27meic.pdf",
+      "pdf_label": "Major Requirements: BEng in Microelectronics and Integrated Circuits",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27meic.pdf",
+          "label": "Major Requirements: BEng in Microelectronics and Integrated Circuits"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/MEIC.pdf"
+    },
+    {
+      "code": "MINOR-ROBO",
+      "title": "Minor Program in Robotics",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Electronic and Computer Engineering",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-ROBO",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-robo.pdf",
+      "pdf_label": "Minor Program in Robotics",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-robo.pdf",
+          "label": "Minor Program in Robotics"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-ROBO.pdf"
+    },
+    {
+      "code": "DA",
+      "title": "BEng in Decision Analytics",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Industrial Engineering and Decision Analytics",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/DA",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "alytics • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27da.pdf",
+      "pdf_label": "Major Requirements: BEng in Decision Analytics",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27da.pdf",
+          "label": "Major Requirements: BEng in Decision Analytics"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/DA.pdf"
+    },
+    {
+      "code": "IEEM",
+      "title": "BEng in Industrial Engineering and Engineering Management",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Industrial Engineering and Decision Analytics",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/IEEM",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "agement • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ieem.pdf",
+      "pdf_label": "Major Requirements: BEng in Industrial Engineering and Engineering Management",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ieem.pdf",
+          "label": "Major Requirements: BEng in Industrial Engineering and Engineering Management"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/IEEM.pdf"
+    },
+    {
+      "code": "AE",
+      "title": "BEng in Aerospace Engineering",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Mechanical and Aerospace Engineering",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/AE",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "neering • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ae.pdf",
+      "pdf_label": "Major Requirements: BEng in Aerospace Engineering",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ae.pdf",
+          "label": "Major Requirements: BEng in Aerospace Engineering"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/AE.pdf"
+    },
+    {
+      "code": "MECH",
+      "title": "BEng in Mechanical Engineering",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Mechanical and Aerospace Engineering",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MECH",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "neering • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mech.pdf",
+      "pdf_label": "Major Requirements: BEng in Mechanical Engineering",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mech.pdf",
+          "label": "Major Requirements: BEng in Mechanical Engineering"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/MECH.pdf"
+    },
+    {
+      "code": "MINOR-AERO",
+      "title": "Minor Program in Aeronautical Engineering",
+      "school": "SENG",
+      "school_name": "School of Engineering",
+      "department": "Mechanical and Aerospace Engineering",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-AERO",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-aero.pdf",
+      "pdf_label": "Minor Program in Aeronautical Engineering",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-aero.pdf",
+          "label": "Minor Program in Aeronautical Engineering"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-AERO.pdf"
+    },
+    {
+      "code": "SREQ-SBM",
+      "title": "School Requirements: School of Business and Management",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "School of Business and Management",
+      "kind": "school_requirement",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/SREQ-SBM",
+      "stated_total_credits": 120,
+      "credits_quote": "rements • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+      "pdf_label": "SBM School Requirements",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+          "label": "SBM School Requirements"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/SREQ-SBM.pdf"
+    },
+    {
+      "code": "EABU",
+      "title": "BBA in Eurasian Business",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "School of Business and Management",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/EABU",
+      "normative_years": 4,
+      "pathway_pdfs": [],
+      "all_pdfs": [],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "requirements_external_url": "https://eabu.hkust.edu.hk/curriculum-requirements"
+    },
+    {
+      "code": "GBM",
+      "title": "BBA in General Business Management",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "School of Business and Management",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/GBM",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "agement • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gbm.pdf",
+      "pdf_label": "Major Requirements: BBA in General Business Management",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Business and Management",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_gbm.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+          "label": "School Requirements: School of Business and Management"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gbm.pdf",
+          "label": "Major Requirements: BBA in General Business Management"
+        },
+        {
+          "url": "http://ugadmin.ust.hk/prog_crs/ug/202021/pdf/20-21gbm.pdf",
+          "label": ""
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_gbm.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/GBM.pdf"
+    },
+    {
+      "code": "GBUS",
+      "title": "BBA in Global Business",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "School of Business and Management",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/GBUS",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "usiness • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gbus.pdf",
+      "pdf_label": "Major Requirements: BBA in Global Business",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Business and Management",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_gbus.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+          "label": "School Requirements: School of Business and Management"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gbus.pdf",
+          "label": "Major Requirements: BBA in Global Business"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_gbus.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/GBUS.pdf"
+    },
+    {
+      "code": "SGFN",
+      "title": "BSc in Sustainable and Green Finance",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "School of Business and Management",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/SGFN",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "Finance • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sgfn.pdf",
+      "pdf_label": "Major Requirements: BSc in Sustainable and Green Finance",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_sgfn.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sgfn.pdf",
+          "label": "Major Requirements: BSc in Sustainable and Green Finance"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_sgfn.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/SGFN.pdf"
+    },
+    {
+      "code": "MINOR-BUS",
+      "title": "Minor Program in Business",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "School of Business and Management",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-BUS",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-bus.pdf",
+      "pdf_label": "Minor Program in Business",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-bus.pdf",
+          "label": "Minor Program in Business"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-BUS.pdf"
+    },
+    {
+      "code": "ACCT",
+      "title": "BBA in Professional Accounting",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "Accounting",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/ACCT",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "ounting • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27acct.pdf",
+      "pdf_label": "Major Requirements: BBA in Professional Accounting",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Business and Management",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_acct.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+          "label": "School Requirements: School of Business and Management"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27acct.pdf",
+          "label": "Major Requirements: BBA in Professional Accounting"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_acct.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/ACCT.pdf"
+    },
+    {
+      "code": "ECON",
+      "title": "BBA in Economics",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "Economics",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/ECON",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "onomics • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27econ.pdf",
+      "pdf_label": "Major Requirements: BBA in Economics",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Business and Management",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_econ.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+          "label": "School Requirements: School of Business and Management"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27econ.pdf",
+          "label": "Major Requirements: BBA in Economics"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_econ.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses"
+      },
+      "pdf_path": "raw/requirements/ECON.pdf"
+    },
+    {
+      "code": "ECOF",
+      "title": "BSc in Economics and Finance",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "Economics",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/ECOF",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "Finance • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ecof.pdf",
+      "pdf_label": "Major Requirements: BSc in Economics and Finance",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Business and Management",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_ecof.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+          "label": "School Requirements: School of Business and Management"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ecof.pdf",
+          "label": "Major Requirements: BSc in Economics and Finance"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_ecof.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/ECOF.pdf"
+    },
+    {
+      "code": "FINA",
+      "title": "BBA in Finance",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "Finance",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/FINA",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "Finance • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27fina.pdf",
+      "pdf_label": "Major Requirements: BBA in Finance",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Business and Management",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_fina.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+          "label": "School Requirements: School of Business and Management"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27fina.pdf",
+          "label": "Major Requirements: BBA in Finance"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_fina.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/FINA.pdf"
+    },
+    {
+      "code": "QFIN",
+      "title": "BSc in Quantitative Finance",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "Finance",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/QFIN",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "Finance • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27qfin.pdf",
+      "pdf_label": "Major Requirements: BSc in Quantitative Finance",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Business and Management",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_qfin.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+          "label": "School Requirements: School of Business and Management"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27qfin.pdf",
+          "label": "Major Requirements: BSc in Quantitative Finance"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_qfin.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/QFIN.pdf"
+    },
+    {
+      "code": "IS",
+      "title": "BBA in Information Systems",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "Information Systems, Business Statistics and Operations Management",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/IS",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "Systems • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27is.pdf",
+      "pdf_label": "Major Requirements: BBA in Information Systems",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Business and Management",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_is.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+          "label": "School Requirements: School of Business and Management"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27is.pdf",
+          "label": "Major Requirements: BBA in Information Systems"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_is.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/IS.pdf"
+    },
+    {
+      "code": "OM",
+      "title": "BBA in Operations Management",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "Information Systems, Business Statistics and Operations Management",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/OM",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "agement • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27om.pdf",
+      "pdf_label": "Major Requirements: BBA in Operations Management",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Business and Management",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_om.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+          "label": "School Requirements: School of Business and Management"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27om.pdf",
+          "label": "Major Requirements: BBA in Operations Management"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_om.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/OM.pdf"
+    },
+    {
+      "code": "RMBI",
+      "title": "BSc in Risk Management and Business Intelligence",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "Information Systems, Business Statistics and Operations Management",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/RMBI",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "ligence • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27rmbi.pdf",
+      "pdf_label": "Major Requirements: BSc in Risk Management and Business Intelligence",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_rmbi.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27rmbi.pdf",
+          "label": "Major Requirements: BSc in Risk Management and Business Intelligence"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_rmbi.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/RMBI.pdf"
+    },
+    {
+      "code": "MGMT",
+      "title": "BBA in Management",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "Management",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MGMT",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "agement • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mgmt.pdf",
+      "pdf_label": "Major Requirements: BBA in Management",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Business and Management",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_mgmt.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+          "label": "School Requirements: School of Business and Management"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mgmt.pdf",
+          "label": "Major Requirements: BBA in Management"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_mgmt.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/MGMT.pdf"
+    },
+    {
+      "code": "MARK",
+      "title": "BBA in Marketing",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "Marketing",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MARK",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "rketing • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mark.pdf",
+      "pdf_label": "Major Requirements: BBA in Marketing",
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+      "school_pdf_label": "School Requirements: School of Business and Management",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_mark.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+          "label": "School Requirements: School of Business and Management"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mark.pdf",
+          "label": "Major Requirements: BBA in Marketing"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_mark.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/MARK.pdf"
+    },
+    {
+      "code": "WBB",
+      "title": "BBA in World Business",
+      "school": "SBM",
+      "school_name": "School of Business and Management",
+      "department": "World Bachelor in Business Program Office",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/WBB",
+      "normative_years": 4,
+      "pathway_pdfs": [],
+      "all_pdfs": [],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      }
+    },
+    {
+      "code": "GCS",
+      "title": "BSc in Global China Studies",
+      "school": "SHSS",
+      "school_name": "School of Humanities and Social Science",
+      "department": "School of Humanities and Social Science",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/GCS",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "Studies • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
+      "pdf_label": "Major Requirements: BSc in Global China Studies",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_gcs.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
+          "label": "Major Requirements: BSc in Global China Studies"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_gcs.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/GCS.pdf"
+    },
+    {
+      "code": "MINOR-HUMA",
+      "title": "Minor Program in Humanities",
+      "school": "SHSS",
+      "school_name": "School of Humanities and Social Science",
+      "department": "Humanities",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-HUMA",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-huma.pdf",
+      "pdf_label": "Minor Program in Humanities",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-huma.pdf",
+          "label": "Minor Program in Humanities"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-HUMA.pdf"
+    },
+    {
+      "code": "QSA",
+      "title": "BSc in Quantitative Social Analysis",
+      "school": "SHSS",
+      "school_name": "School of Humanities and Social Science",
+      "department": "Social Science",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/QSA",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "nalysis • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27qsa.pdf",
+      "pdf_label": "Major Requirements: BSc in Quantitative Social Analysis",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_qsa.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27qsa.pdf",
+          "label": "Major Requirements: BSc in Quantitative Social Analysis"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_qsa.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/QSA.pdf"
+    },
+    {
+      "code": "MINOR-SOSC",
+      "title": "Minor Program in Social Science",
+      "school": "SHSS",
+      "school_name": "School of Humanities and Social Science",
+      "department": "Social Science",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-SOSC",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-sosc.pdf",
+      "pdf_label": "Minor Program in Social Science",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-sosc.pdf",
+          "label": "Minor Program in Social Science"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-SOSC.pdf"
+    },
+    {
+      "code": "IIM",
+      "title": "BSc in Individualized Interdisciplinary Major",
+      "school": "AIS",
+      "school_name": "Academy of Interdisciplinary Studies",
+      "department": "Emerging Interdisciplinary Areas",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/IIM",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "ersity) • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27iim.pdf",
+      "pdf_label": "Curriculum Framework of BSc Program in Individualized Interdisciplinary Major",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27iim.pdf",
+          "label": "Curriculum Framework of BSc Program in Individualized Interdisciplinary Major"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/IIM.pdf"
+    },
+    {
+      "code": "EXTM-AI",
+      "title": "Extended Major Program in Artificial Intelligence (Major+AI)",
+      "school": "AIS",
+      "school_name": "Academy of Interdisciplinary Studies",
+      "department": "Emerging Interdisciplinary Areas",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/EXTM-AI",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27extm-ai.pdf",
+      "pdf_label": "Extended Major Program in Artificial Intelligence",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27chem.pdf",
+          "label": "BSc in Chemistry 理學士（化學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27math.pdf",
+          "label": "BSc in Mathematics 理學士（數學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ost.pdf",
+          "label": "BSc in Ocean Science and Technology 理學士（海洋科學與技術）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27phys.pdf",
+          "label": "BSc in Physics 理學士（物理）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ae.pdf",
+          "label": "BEng in Aerospace Engineering 工學士（航空航天工程學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bien.pdf",
+          "label": "BEng in Bioengineering 工學士（生物工程學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ceng.pdf",
+          "label": "BEng in Chemical Engineering 工學士（化學工程學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27civl.pdf",
+          "label": "BEng in Civil Engineering 工學士（土木工程學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ciev.pdf",
+          "label": "BEng in Civil and Environmental Engineering 工學士（土木及環境工程學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27da.pdf",
+          "label": "BEng in Decision Analytics 工學士（決策分析學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27elec.pdf",
+          "label": "BEng in Electronic Engineering 工學士（電子工程學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27eeen.pdf",
+          "label": "BEng in Energy and Environmental Engineering 工學士（能源及環境工程）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ieem.pdf",
+          "label": "BEng in Industrial Engineering and Engineering Management 工學士（工業工程及工程管理學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mech.pdf",
+          "label": "BEng in Mechanical Engineering 工學士（機械工程學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27meic.pdf",
+          "label": "BEng in Microelectronics and Integrated Circuits 工學士（微電子與集成電路）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27econ.pdf",
+          "label": "BBA in Economics 工商管理學士（經濟學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27fina.pdf",
+          "label": "BBA in Finance 工商管理學士（金融學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gbus.pdf",
+          "label": "BBA in Global Business 工商管理學士（環球商業管理）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27is.pdf",
+          "label": "BBA in Information Systems 工商管理學士（資訊系統學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mgmt.pdf",
+          "label": "BBA in Management 工商管理學士（管理學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mark.pdf",
+          "label": "BBA in Marketing 工商管理學士（市場學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27om.pdf",
+          "label": "BBA in Operations Management 工商管理學士（營運管理學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27acct.pdf",
+          "label": "BBA in Professional Accounting 工商管理學士（專業會計學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ecof.pdf",
+          "label": "BSc in Economics and Finance 理學士（經濟及金融學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27qfin.pdf",
+          "label": "BSc in Quantitative Finance 理學士（量化金融學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sgfn.pdf",
+          "label": "BSc in Sustainable and Green Finance 理學士（可持續發展及綠色金融）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27idt.pdf",
+          "label": "BSc in Innovation, Design and Technology 理學士（創新設計與科技）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27extm-ai.pdf",
+          "label": "Extended Major Program in Artificial Intelligence"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/EXTM-AI.pdf"
+    },
+    {
+      "code": "EXTM-CADH",
+      "title": "Extended Major Program in Creative Arts and Digital Humanities (Major+CADH)",
+      "school": "AIS",
+      "school_name": "Academy of Interdisciplinary Studies",
+      "department": "Emerging Interdisciplinary Areas",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/EXTM-CADH",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27extm-cadh.pdf",
+      "pdf_label": "Extended Major Program in Creative Arts and Digital Humanities",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27math.pdf",
+          "label": "BSc in Mathematics 理學士（數學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ost.pdf",
+          "label": "BSc in Ocean Science and Technology 理學士（海洋科學與技術）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27econ.pdf",
+          "label": "BBA in Economics 工商管理學士（經濟學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27fina.pdf",
+          "label": "BBA in Finance 工商管理學士（金融學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gbus.pdf",
+          "label": "BBA in Global Business 工商管理學士（環球商業管理）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27is.pdf",
+          "label": "BBA in Information Systems 工商管理學士（資訊系統學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mgmt.pdf",
+          "label": "BBA in Management 工商管理學士（管理學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mark.pdf",
+          "label": "BBA in Marketing 工商管理學士（市場學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27om.pdf",
+          "label": "BBA in Operations Management 工商管理學士（營運管理學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27acct.pdf",
+          "label": "BBA in Professional Accounting 工商管理學士（專業會計學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ecof.pdf",
+          "label": "BSc in Economics and Finance 理學士（經濟及金融學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27qfin.pdf",
+          "label": "BSc in Quantitative Finance 理學士（量化金融學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27rmbi.pdf",
+          "label": "BSc in Risk Management and Business Intelligence 理學士（風險管理及商業智能學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sgfn.pdf",
+          "label": "BSc in Sustainable and Green Finance 理學士（可持續發展及綠色金融）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
+          "label": "BSc in Global China Studies 理學士（環球中國研究）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27qsa.pdf",
+          "label": "BSc in Quantitative Social Analysis 理學士（定量社會數據分析）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27idt.pdf",
+          "label": "BSc in Innovation, Design and Technology 理學士（創新設計與科技）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27extm-cadh.pdf",
+          "label": "Extended Major Program in Creative Arts and Digital Humanities"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/EXTM-CADH.pdf"
+    },
+    {
+      "code": "EXTM-SUST",
+      "title": "Extended Major Program in Sustainability (Major+SUST)",
+      "school": "AIS",
+      "school_name": "Academy of Interdisciplinary Studies",
+      "department": "Emerging Interdisciplinary Areas",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/EXTM-SUST",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27extm-sust.pdf",
+      "pdf_label": "Extended Major Program in Sustainability",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ost.pdf",
+          "label": "BSc in Ocean Science and Technology 理學士（海洋科學與技術）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ae.pdf",
+          "label": "BEng in Aerospace Engineering 工學士（航空航天工程學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ai.pdf",
+          "label": "BEng in Artificial Intelligence 工學士（人工智能）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bien.pdf",
+          "label": "BEng in Bioengineering 工學士（生物工程學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ceng.pdf",
+          "label": "BEng in Chemical Engineering 工學士（化學工程學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27civl.pdf",
+          "label": "BEng in Civil Engineering 工學士（土木工程學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ciev.pdf",
+          "label": "BEng in Civil and Environmental Engineering 工學士（土木及環境工程學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27comp.pdf",
+          "label": "BEng in Computer Science 工學士（計算機科學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27cosc.pdf",
+          "label": "BSc in Computer Science 理學士（計算機科學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27da.pdf",
+          "label": "BEng in Decision Analytics 工學士（決策分析學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27eeen.pdf",
+          "label": "BEng in Energy and Environmental Engineering 工學士（能源及環境工程）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ieem.pdf",
+          "label": "BEng in Industrial Engineering and Engineering Management 工學士（工業工程及工程管理學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mech.pdf",
+          "label": "BEng in Mechanical Engineering 工學士（機械工程學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27econ.pdf",
+          "label": "BBA in Economics 工商管理學士（經濟學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gbus.pdf",
+          "label": "BBA in Global Business 工商管理學士（環球商業管理）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27is.pdf",
+          "label": "BBA in Information Systems 工商管理學士（資訊系統學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mgmt.pdf",
+          "label": "BBA in Management 工商管理學士（管理學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mark.pdf",
+          "label": "BBA in Marketing 工商管理學士（市場學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27om.pdf",
+          "label": "BBA in Operations Management 工商管理學士（營運管理學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27acct.pdf",
+          "label": "BBA in Professional Accounting 工商管理學士（專業會計學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ecof.pdf",
+          "label": "BSc in Economics and Finance 理學士（經濟及金融學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27qfin.pdf",
+          "label": "BSc in Quantitative Finance 理學士（量化金融學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27rmbi.pdf",
+          "label": "BSc in Risk Management and Business Intelligence 理學士（風險管理及商業智能學）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
+          "label": "BSc in Global China Studies 理學士（環球中國研究）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27qsa.pdf",
+          "label": "BSc in Quantitative Social Analysis 理學士（定量社會數據分析）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27evmt.pdf",
+          "label": "BSc in Environmental Management and Technology 理學士（環境管理及科技）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27idt.pdf",
+          "label": "BSc in Innovation, Design and Technology 理學士（創新設計與科技）"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27extm-sust.pdf",
+          "label": "Extended Major Program in Sustainability"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/EXTM-SUST.pdf"
+    },
+    {
+      "code": "EVMT",
+      "title": "BSc in Environmental Management and Technology",
+      "school": "AIS",
+      "school_name": "Academy of Interdisciplinary Studies",
+      "department": "Environment and Sustainability",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/EVMT",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "hnology • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27evmt.pdf",
+      "pdf_label": "Major Requirements: BSc in Environmental Management and Technology",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_evmt.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27evmt.pdf",
+          "label": "Major Requirements: BSc in Environmental Management and Technology"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_evmt.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/EVMT.pdf"
+    },
+    {
+      "code": "MINOR-SUST",
+      "title": "Minor Program in Sustainability",
+      "school": "AIS",
+      "school_name": "Academy of Interdisciplinary Studies",
+      "department": "Environment and Sustainability",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-SUST",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-sust.pdf",
+      "pdf_label": "Minor Program in Sustainability",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-sust.pdf",
+          "label": "Minor Program in Sustainability"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-SUST.pdf"
+    },
+    {
+      "code": "IDT",
+      "title": "BSc in Innovation, Design and Technology",
+      "school": "AIS",
+      "school_name": "Academy of Interdisciplinary Studies",
+      "department": "Integrative Systems and Design",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/IDT",
+      "normative_years": 4,
+      "stated_total_credits": 120,
+      "credits_quote": "hnology • At least 120 credits (where the requirements of a student’s programs of study fall short of 120 credits, additional elective credits must be earned. These elective credits may include those which are",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27idt.pdf",
+      "pdf_label": "Major Requirements: BSc in Innovation, Design and Technology",
+      "pathway_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_idt.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27idt.pdf",
+          "label": "Major Requirements: BSc in Innovation, Design and Technology"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27pw_idt.pdf",
+          "label": "Normative Pathway Example 1"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      },
+      "pdf_path": "raw/requirements/IDT.pdf"
+    },
+    {
+      "code": "MINOR-DESN",
+      "title": "Minor Program in Design",
+      "school": "AIS",
+      "school_name": "Academy of Interdisciplinary Studies",
+      "department": "Integrative Systems and Design",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-DESN",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-desn.pdf",
+      "pdf_label": "Minor Program in Design",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-desn.pdf",
+          "label": "Minor Program in Design"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-DESN.pdf"
+    },
+    {
+      "code": "T&M-DDP",
+      "title": "BEng/BSc & BBA Dual Degree Program in Technology & Management",
+      "school": "AIS",
+      "school_name": "Academy of Interdisciplinary Studies",
+      "department": "Dual Degree Program in Technology and Management",
+      "kind": "major",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/T&M-DDP",
+      "normative_years": 5,
+      "school_pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+      "school_pdf_label": "School Requirements 1: School of Science",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf",
+          "label": "School Requirements 1: School of Science"
+        },
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf",
+          "label": "School Requirements 2: School of Business and Management"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ae.pdf",
+          "label": "BEng in Aerospace Engineering 工學士（航空航天工程學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ai.pdf",
+          "label": "BEng in Artificial Intelligence 工學士（人工智能）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bien.pdf",
+          "label": "BEng in Bioengineering 工學士（生物工程學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ceng.pdf",
+          "label": "BEng in Chemical Engineering 工學士（化學工程學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27civl.pdf",
+          "label": "BEng in Civil Engineering 工學士（土木工程學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ciev.pdf",
+          "label": "BEng in Civil and Environmental Engineering 工學士（土木及環境工程學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27cpeg.pdf",
+          "label": "BEng in Computer Engineering 工學士（計算機工程學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27comp.pdf",
+          "label": "BEng in Computer Science 工學士（計算機科學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27da.pdf",
+          "label": "BEng in Decision Analytics 工學士（決策分析學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27elec.pdf",
+          "label": "BEng in Electronic Engineering 工學士（電子工程學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ieem.pdf",
+          "label": "BEng in Industrial Engineering and Engineering Management 工學士（工業工程及工程管理學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mech.pdf",
+          "label": "BEng in Mechanical Engineering 工學士（機械工程學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27biot.pdf",
+          "label": "BSc in Biotechnology 理學士（生物科技學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27idt.pdf",
+          "label": "BSc in Innovation, Design and Technology 理學士（創新設計與科技）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27econ.pdf",
+          "label": "BBA in Economics 工商管理學士（經濟學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27fina.pdf",
+          "label": "BBA in Finance 工商管理學士（金融學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gbm.pdf",
+          "label": "BBA in General Business Management 工商管理學士（綜合商業管理學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gbus.pdf",
+          "label": "BBA in Global Business 工商管理學士（環球商業管理）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mgmt.pdf",
+          "label": "BBA in Management 工商管理學士（管理學）"
+        },
+        {
+          "url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mark.pdf",
+          "label": "BBA in Marketing 工商管理學士（市場學）"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/",
+        "University Common Core Requirements": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+        "University English Language Requirement": "https://cle.hkust.edu.hk/courses",
+        "University Legal Education Requirement": "https://legal.hkust.edu.hk/legal-education-course"
+      }
+    },
+    {
+      "code": "MINOR-ENTR",
+      "title": "Minor Program in Entrepreneurship",
+      "school": "JOINT",
+      "school_name": "Joint-School Program(s)",
+      "department": "School of ScienceSchool of EngineeringSchool of Business and ManagementAcademy of Interdisciplinary Studies",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-ENTR",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-entr.pdf",
+      "pdf_label": "Minor Program in Entrepreneurship",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-entr.pdf",
+          "label": "Minor Program in Entrepreneurship"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-ENTR.pdf"
+    },
+    {
+      "code": "MINOR-PBS",
+      "title": "Minor Program in Psychological and Behavioral Science",
+      "school": "JOINT",
+      "school_name": "Joint-School Program(s)",
+      "department": "School of Humanities and Social ScienceSchool of Business and Management",
+      "kind": "minor",
+      "page_url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27/MINOR-PBS",
+      "pdf_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-pbs.pdf",
+      "pdf_label": "Minor Program in Psychological and Behavioral Science",
+      "pathway_pdfs": [],
+      "all_pdfs": [
+        {
+          "url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-pbs.pdf",
+          "label": "Minor Program in Psychological and Behavioral Science"
+        }
+      ],
+      "university_links": {
+        "Academic Regulations": "http://acadreg.ust.hk/"
+      },
+      "pdf_path": "raw/requirements/MINOR-PBS.pdf"
+    }
+  ]
+}
