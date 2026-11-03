@@ -1,0 +1,28 @@
+# HKUST Course Planning Agent — pinned to major versions.
+# Python 3.11+ (developed on 3.14).
+
+# --- data contract -------------------------------------------------------
+pydantic>=2,<3
+
+# --- Phase 1-2: fetching and parsing official sources --------------------
+httpx>=0.28,<1
+beautifulsoup4>=4,<5
+lxml>=5,<7
+pdfplumber>=0.11,<1
+
+# --- Phase 5: student-facing output files ---------------------------------
+openpyxl>=3,<4
+python-docx>=1,<2
+
+# --- Phase 4: LLM backends, selected by LLM_BACKEND ----------------------
+# subscription -> Claude Agent SDK (local development, developer's plan)
+# api          -> anthropic SDK (deployed demo, ANTHROPIC_API_KEY)
+anthropic>=0.40,<1
+claude-agent-sdk>=0.1,<1
+python-dotenv>=1,<2
+
+# --- Phase 6: UI ----------------------------------------------------------
+streamlit>=1.40,<2
+
+# --- tests ----------------------------------------------------------------
+pytest>=8,<10

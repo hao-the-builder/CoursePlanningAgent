@@ -1,0 +1,32 @@
+# --- secrets --------------------------------------------------------------
+.env
+.streamlit/secrets.toml
+
+# --- python ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# --- run logs (evidence, regenerated per run) -----------------------------
+logs/*
+!logs/.gitkeep
+
+# --- generated student outputs -------------------------------------------
+# The sample under samples/ is committed on purpose; real generated plans
+# are not.
+outputs/*.xlsx
+outputs/*.docx
+outputs/*.zip
+/*.xlsx
+/*.docx
+!samples/*.xlsx
+
+# --- os / editor ----------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
