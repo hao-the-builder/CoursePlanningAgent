@@ -1,0 +1,16 @@
+# Normalise text to LF in the repo so the same tree behaves the same on
+# Windows (development) and Linux (Streamlit Community Cloud).
+* text=auto eol=lf
+
+# Keep binaries byte-for-byte: the reference spreadsheet and the official
+# source material under raw/ must never be touched by git.
+*.xlsx binary
+*.xlsm binary
+*.docx binary
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+
+# Raw source material is evidence, not code — never normalised, and collapsed
+# in diffs since nothing in raw/ is ever hand-edited.
+raw/** -text -diff
