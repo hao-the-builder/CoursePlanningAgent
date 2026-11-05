@@ -1,0 +1,36 @@
+{
+ "why": "18 credits mapped to named courses behave like any other completed course. The 6 credit-only credits may count toward the 120 and nothing else, which has to be said out loud.",
+ "ok": true,
+ "errors": [],
+ "warning_checks": [
+  "check_prereqs",
+  "check_exclusions",
+  "check_offering",
+  "check_fyp",
+  "check_graduation",
+  "check_transfer"
+ ],
+ "info_checks": [],
+ "must_say": [
+  "credit-only transfer",
+  "only as free electives"
+ ],
+ "credits": {
+  "confirmed": 133.0,
+  "earned": 18.0,
+  "planned": 109.0,
+  "unspecified_transfer": 6.0,
+  "exchange_pending": 0.0
+ },
+ "per_term": {
+  "Transfer": 18,
+  "Y1 Fall": 12,
+  "Y1 Spring": 13,
+  "Y2 Fall": 13,
+  "Y2 Spring": 14,
+  "Y3 Fall": 15,
+  "Y3 Spring": 15,
+  "Y4 Fall": 12,
+  "Y4 Spring": 15
+ }
+}

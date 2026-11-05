@@ -31,8 +31,8 @@
    "source_quote": "SENG | Robotics Electives (Courses from the specified elective list, of which at least 7 credits must be taken from Group A Electives and include at least 1 COMP course; at least 2 courses from Group B; and at least 1 course from Group C.) | 18\n  [Group A - Core Electives]\n  [Group B - Area Electives [Subject to approval of program office, students may request to use a PG course (e.g. ELEC 5660,]\n  [COMP 5421) to substitute the elective course in this group]]\n  [Group C - Robotics Project (ENGG 4950F and ENGG 4950T may not be counted towards this requirement)]\n  [3962]"
   }
  ],
- "stated_total_credits": null,
- "max_double_count_credits": null,
+ "stated_total_credits": 18.0,
+ "max_double_count_credits": 9.0,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-robo.pdf",
  "tier": "auto_extracted",
  "unparsed_lines": [],

@@ -92,8 +92,8 @@
    "source_quote": "ENVS/CHEM/OCES/ENVR | Environmental Science Depth Electives (3 courses from the specified elective list. Students may use either CHEM 2310 or CHEM 2311, but not both, to count towards this elective requirement.) | 9\n\nENVS/CHEM/OCES/ENVR | Environmental Science Depth Electives (3 courses from the specified elective list. Students may use either CHEM 2310 or CHEM 2311, but not both, to count towards this elective requirement.) | 9\n\nLIFS/CHEM/OCES/PHYS/ENVR | Environmental Science Foundation Electives (2 courses from the specified elective list. Students may only use one course out of LIFS 1901, LIFS 1902 and CHEM 1011 to count towards this elective requirement.) | 6\n\nLIFS/CHEM/OCES/PHYS/ENVR | Environmental Science Foundation Electives (2 courses from the specified elective list. Students may only use one course out of LIFS 1901, LIFS 1902 and CHEM 1011 to count towards this elective requirement.) | 6"
   }
  ],
- "stated_total_credits": null,
- "max_double_count_credits": null,
+ "stated_total_credits": 18.0,
+ "max_double_count_credits": 9.0,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-envs.pdf",
  "tier": "auto_extracted",
  "unparsed_lines": [],

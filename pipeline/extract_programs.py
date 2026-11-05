@@ -605,6 +605,29 @@ def suffix(name: str) -> str:
     return "".join(w[0] for w in words).upper()
 
 
+# Two numbers the minor PDFs state only in prose, both of which Phase 3 needs:
+# the credits the minor is worth, and how many of them must be *single*-counted
+# (so the rest may double-count against the major). Part B asks for
+# stated_total_credits and max_double_count_credits "if stated"; this is where
+# they are stated.
+STATED_TOTAL = re.compile(r"minimum total of (\d+) credits", re.I)
+SINGLE_COUNTED = re.compile(r"at least (\d+) credits.{0,140}?single-counted",
+                            re.I | re.S)
+
+
+def stated_numbers(lines: list[str]) -> tuple[float | None, float | None]:
+    """(total credits, credits that may be double-counted), from the prose."""
+    text = " ".join(lines)
+    total = STATED_TOTAL.search(text)
+    single = SINGLE_COUNTED.search(text)
+    if not total:
+        return None, None
+    stated = float(total.group(1))
+    if not single:
+        return stated, None
+    return stated, max(0.0, stated - float(single.group(1)))
+
+
 def read_pdf(path: Path) -> list[str]:
     with pdfplumber.open(path) as pdf:
         return [line for page in pdf.pages for line in render(page, 3.5, 12.0)]
@@ -639,7 +662,14 @@ def build(entry: dict, cache: dict, catalog: set[str]) -> list[Program]:
         return [Program(code=code, title=title, kind=kind, groups=[],
                         tier=Tier.UNSUPPORTED, unparsed_lines=[reason], **common)]
 
-    variants, mandatory, remarks = parse(read_pdf(path))
+    lines = read_pdf(path)
+    variants, mandatory, remarks = parse(lines)
+    if kind == "minor":
+        total, double = stated_numbers(lines)
+        if total is not None:
+            common["stated_total_credits"] = total
+        if double is not None:
+            common["max_double_count_credits"] = double
     base, extras = variants[0], variants[1:]
     shared = school_groups(cache, entry["school"]) if kind == "major" else []
     withdrawn = [r for r in remarks if re.search(r"deleted|subject to approval", r)]

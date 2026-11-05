@@ -70,8 +70,8 @@
    "source_quote": "SOSC/MARK/MGMT | Psychological and Behavioral Science Electives (Courses from the two specified elective lists, of which at least two courses from List A, and at least one from List B, with no more than one 1000-level course in total). Courses taken as Required courses may not be counted toward the elective requirement.) | 12\n  [List A: SOSC courses]\n  [List B: SBM courses]"
   }
  ],
- "stated_total_credits": null,
- "max_double_count_credits": null,
+ "stated_total_credits": 18.0,
+ "max_double_count_credits": 9.0,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-pbs.pdf",
  "tier": "auto_extracted",
  "unparsed_lines": [],

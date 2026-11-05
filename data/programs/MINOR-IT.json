@@ -37,8 +37,8 @@
    "source_quote": "COMP | Information Technology Electives (Courses from the specified elective list, of which at least 6 credits must be at the 3000-level or above. Out of these 6 credits at the 3000-level or above, at least 3 credits must be at the 4000-level or above. Students may request to use up to 6 credits of courses listed under http://www.cse.ust.hk/ug/minor/IT/ to count towards this requirement.) | 10\n  COMP | Any COMP courses at 2000-level or above except COMP 3900, COMP 4900, COMP 4981-4995"
   }
  ],
- "stated_total_credits": null,
- "max_double_count_credits": null,
+ "stated_total_credits": 18.0,
+ "max_double_count_credits": 9.0,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-it.pdf",
  "tier": "auto_extracted",
  "unparsed_lines": [],

@@ -7,7 +7,7 @@ Source: <https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-desn.pdf
 
 ## Worth a look, but not disqualifying
 
-- no stated total to check 12 credits of rules against
+- the rules need 12 credits against the 18 the minor states, within tolerance.
 
 ## Stated conditions this data does not enforce (1)
 

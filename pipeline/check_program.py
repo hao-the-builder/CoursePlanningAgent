@@ -157,7 +157,18 @@ def check(path: Path, catalog: dict[str, Course], slack: float,
 
     floor = credit_floor(program, catalog)
     stated = program.stated_total_credits
-    if stated:
+    if stated and program.kind == "minor":
+        # A minor states what the minor itself is worth, not a degree total,
+        # so the Common Core does not enter and the rules should land on it.
+        if abs(floor - stated) > tolerance:
+            failures.append(
+                f"the rules need {floor:g} credits but the minor states "
+                f"{stated:g}, a gap of {abs(floor - stated):g} beyond the "
+                f"{tolerance:g}-credit tolerance.")
+        elif floor != stated:
+            notes.append(f"the rules need {floor:g} credits against the "
+                         f"{stated:g} the minor states, within tolerance.")
+    elif stated:
         with_core = floor + COMMON_CORE_CREDITS
         if with_core > stated + tolerance:
             failures.append(

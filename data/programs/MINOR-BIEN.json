@@ -105,8 +105,8 @@
    "source_quote": "SENG/LIFS | Bioengineering Electives (3 courses from the specified list, of which at least one course must be at 4000-level) | 9\n\nSENG/LIFS | Bioengineering Electives (3 courses from the specified list, of which at least one course must be at 4000-level) | 9"
   }
  ],
- "stated_total_credits": null,
- "max_double_count_credits": null,
+ "stated_total_credits": 18.0,
+ "max_double_count_credits": 9.0,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-bien.pdf",
  "tier": "auto_extracted",
  "unparsed_lines": [],

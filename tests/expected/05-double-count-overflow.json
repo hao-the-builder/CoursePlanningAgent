@@ -1,0 +1,36 @@
+{
+ "why": "COMP already requires 11 credits of MATH, and the Mathematics minor lets only 9 count toward both. The minor is short as a result, so both facts are reported.",
+ "ok": false,
+ "errors": [
+  {
+   "check": "check_double_count",
+   "contains": "lets at most 9 credits count toward both"
+  },
+  {
+   "check": "check_graduation",
+   "contains": "11/18 credits"
+  }
+ ],
+ "warning_checks": [
+  "check_prereqs",
+  "check_exclusions",
+  "check_offering",
+  "check_fyp",
+  "check_graduation"
+ ],
+ "info_checks": [],
+ "must_say": [],
+ "credits": {
+  "confirmed": 121.0
+ },
+ "per_term": {
+  "Y1 Fall": 16,
+  "Y1 Spring": 16,
+  "Y2 Fall": 18,
+  "Y2 Spring": 14,
+  "Y3 Fall": 15,
+  "Y3 Spring": 15,
+  "Y4 Fall": 12,
+  "Y4 Spring": 15
+ }
+}

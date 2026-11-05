@@ -66,8 +66,8 @@
    "source_quote": "MATH/RMBI | Actuarial/Mathematics Electives (5 courses from the specified elective list, of which 2 courses must be taken from the list of Foundation Electives and 3 courses from the list of Advanced Electives) | 15\n  [List 1 - Foundation Electives (Students may request to replace MATH 2411 by IEDA 2540, ISOM 2500, or LIFS 3150; and]\n  [MATH 2421 by ELEC 2600, IEDA 2520 or ISOM 3540.)]\n  [List 2 - Advanced Electives]\n\nMATH/RMBI | Actuarial/Mathematics Electives (5 courses from the specified elective list, of which 2 courses must be taken from the list of Foundation Electives and 3 courses from the list of Advanced Electives) | 15\n  [List 1 - Foundation Electives (Students may request to replace MATH 2411 by IEDA 2540, ISOM 2500, or LIFS 3150; and]\n  [MATH 2421 by ELEC 2600, IEDA 2520 or ISOM 3540.)]\n  [List 2 - Advanced Electives]"
   }
  ],
- "stated_total_credits": null,
- "max_double_count_credits": null,
+ "stated_total_credits": 18.0,
+ "max_double_count_credits": 9.0,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-actm.pdf",
  "tier": "auto_extracted",
  "unparsed_lines": [],

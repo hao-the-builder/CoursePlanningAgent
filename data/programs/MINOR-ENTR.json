@@ -63,8 +63,8 @@
    "source_quote": "ENTR/SSCI/SENG/SBM/AIS | Entrepreneurship Electives (Courses from the specified elective list, of which at least 6 credits from each area. Students may use at most 6 credits from ENTR 4901-4904 to count towards this elective requirement.) | 15\n  [Area A: Entrepreneurship Electives - Fundamentals]\n\nENTR | 4901-4904 | Student-led Entrepreneurship Acceleration Project | 1-4\n  [Area B: Entrepreneurship Electives - Skillsets]\n  [Schools of Science, Engineering, Business & Management, and Academy of Interdisciplinary Studies - Undergraduate Minor Program in Entrepreneurship]"
   }
  ],
- "stated_total_credits": null,
- "max_double_count_credits": null,
+ "stated_total_credits": 18.0,
+ "max_double_count_credits": 9.0,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-entr.pdf",
  "tier": "auto_extracted",
  "unparsed_lines": [],

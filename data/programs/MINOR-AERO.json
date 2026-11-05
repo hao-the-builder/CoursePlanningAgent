@@ -62,8 +62,8 @@
    "source_quote": "SENG | Technical Electives (Courses from the specified elective list, of which students may only use at most 1 course from Group B to count toward this requirement.) | 9\n  [Group A]\n  [Group B]"
   }
  ],
- "stated_total_credits": null,
- "max_double_count_credits": null,
+ "stated_total_credits": 18.0,
+ "max_double_count_credits": 9.0,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-aero.pdf",
  "tier": "auto_extracted",
  "unparsed_lines": [],

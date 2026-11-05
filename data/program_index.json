@@ -2072,7 +2072,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 2,
@@ -2080,7 +2080,7 @@
    "caveats": 1,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-actm.pdf",
-   "issues_file": "MINOR-ACTM.issues.md"
+   "issues_file": null
   },
   {
    "code": "MINOR-AERO",
@@ -2092,7 +2092,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 2,
@@ -2112,7 +2112,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 21.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 1,
@@ -2120,7 +2120,7 @@
    "caveats": 2,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-asco.pdf",
-   "issues_file": "MINOR-ASCO.issues.md"
+   "issues_file": null
   },
   {
    "code": "MINOR-BDT",
@@ -2152,7 +2152,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 2,
@@ -2160,7 +2160,7 @@
    "caveats": 4,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-bien.pdf",
-   "issues_file": "MINOR-BIEN.issues.md"
+   "issues_file": null
   },
   {
    "code": "MINOR-BUS",
@@ -2172,7 +2172,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 1,
@@ -2180,7 +2180,7 @@
    "caveats": 1,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-bus.pdf",
-   "issues_file": "MINOR-BUS.issues.md"
+   "issues_file": null
   },
   {
    "code": "MINOR-CHEM",
@@ -2192,7 +2192,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 2,
@@ -2212,7 +2212,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 2,
@@ -2232,7 +2232,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 2,
@@ -2252,7 +2252,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 2,
@@ -2260,7 +2260,7 @@
    "caveats": 3,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-envs.pdf",
-   "issues_file": "MINOR-ENVS.issues.md"
+   "issues_file": null
   },
   {
    "code": "MINOR-HUMA",
@@ -2272,7 +2272,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 1,
@@ -2280,7 +2280,7 @@
    "caveats": 6,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-huma.pdf",
-   "issues_file": "MINOR-HUMA.issues.md"
+   "issues_file": null
   },
   {
    "code": "MINOR-IT",
@@ -2292,7 +2292,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 2,
@@ -2312,7 +2312,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 1,
@@ -2320,7 +2320,7 @@
    "caveats": 2,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-math.pdf",
-   "issues_file": "MINOR-MATH.issues.md"
+   "issues_file": null
   },
   {
    "code": "MINOR-PBS",
@@ -2332,7 +2332,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 2,
@@ -2340,7 +2340,7 @@
    "caveats": 4,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-pbs.pdf",
-   "issues_file": "MINOR-PBS.issues.md"
+   "issues_file": null
   },
   {
    "code": "MINOR-PHYS",
@@ -2352,7 +2352,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 2,
@@ -2360,7 +2360,7 @@
    "caveats": 1,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-phys.pdf",
-   "issues_file": "MINOR-PHYS.issues.md"
+   "issues_file": null
   },
   {
    "code": "MINOR-ROBO",
@@ -2372,7 +2372,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 1,
@@ -2380,7 +2380,7 @@
    "caveats": 2,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-robo.pdf",
-   "issues_file": "MINOR-ROBO.issues.md"
+   "issues_file": null
   },
   {
    "code": "MINOR-SC",
@@ -2392,7 +2392,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 2,
@@ -2400,7 +2400,7 @@
    "caveats": 3,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-sc.pdf",
-   "issues_file": "MINOR-SC.issues.md"
+   "issues_file": null
   },
   {
    "code": "MINOR-SOSC",
@@ -2412,7 +2412,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 1,
@@ -2420,7 +2420,7 @@
    "caveats": 5,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-sosc.pdf",
-   "issues_file": "MINOR-SOSC.issues.md"
+   "issues_file": null
   },
   {
    "code": "MINOR-SUST",
@@ -2432,7 +2432,7 @@
    "parent": null,
    "tier": "auto_extracted",
    "default_years": 4,
-   "stated_total_credits": null,
+   "stated_total_credits": 18.0,
    "home_areas": [],
    "home_areas_note": "A minor has no home areas of its own; Broadening is decided by the student's major.",
    "groups": 2,
@@ -2440,7 +2440,7 @@
    "caveats": 4,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-sust.pdf",
-   "issues_file": "MINOR-SUST.issues.md"
+   "issues_file": null
   },
   {
    "code": "OM-BA",

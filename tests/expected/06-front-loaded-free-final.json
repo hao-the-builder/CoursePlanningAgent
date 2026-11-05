@@ -1,0 +1,30 @@
+{
+ "why": "Front-loaded with Y4 Spring free. This must pass: no spread warning, and it should point out that the student finishes a term early.",
+ "ok": true,
+ "errors": [],
+ "warning_checks": [
+  "check_prereqs",
+  "check_exclusions",
+  "check_offering",
+  "check_fyp",
+  "check_graduation"
+ ],
+ "info_checks": [
+  "check_free_terms"
+ ],
+ "must_say": [
+  "graduate early"
+ ],
+ "credits": {
+  "confirmed": 121.0
+ },
+ "per_term": {
+  "Y1 Fall": 16,
+  "Y1 Spring": 16,
+  "Y2 Fall": 18,
+  "Y2 Spring": 17,
+  "Y3 Fall": 18,
+  "Y3 Spring": 18,
+  "Y4 Fall": 18
+ }
+}

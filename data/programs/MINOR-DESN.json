@@ -126,8 +126,8 @@
    "source_quote": "AIS | Design Electives (Courses from the specified list. Students are required to take a minimum total of 6 credits. At least 3 credits must be at 3000-level or above and no more than 3 credits can be taken at 1000-level. Courses taken as Required courses may not be counted toward the elective requirement.) | 6\n  [Courses offered by the Academy of Interdisciplinary Studies]\n  [Courses offered by the School of Science]\n  [Courses offered by the School of Engineering]\n  [Courses offered by the School of Business and Management]\n  [Courses offered by the School of Humanities and Social Science]"
   }
  ],
- "stated_total_credits": null,
- "max_double_count_credits": null,
+ "stated_total_credits": 18.0,
+ "max_double_count_credits": 9.0,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-desn.pdf",
  "tier": "auto_extracted",
  "unparsed_lines": [],

@@ -31,8 +31,8 @@
    "source_quote": "SBM | SB&M Electives (Courses from the specified elective list, of which at least 4 courses must be taken from the list of Business Fundamental Courses. A maximum of 2 Business Advanced Electives can be counted towards the Minor Program requirements.) | 18\n  [List 1 - Business Fundamental Courses (No more than 1 course within the same course groups of]\n  [ACCT 2010/ACCT 2200, ECON 2103/ECON 2113/ECON 2123, FINA 2203/FINA 2303, and MGMT]\n  [1110/MGMT 2110 may be counted towards the elective requirement.)]\n  [List 2 - Business Advanced Courses]\n  SB&M | Any courses offered by the departments under SB&M at 3000-level or above"
   }
  ],
- "stated_total_credits": null,
- "max_double_count_credits": null,
+ "stated_total_credits": 18.0,
+ "max_double_count_credits": 9.0,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-bus.pdf",
  "tier": "auto_extracted",
  "unparsed_lines": [],

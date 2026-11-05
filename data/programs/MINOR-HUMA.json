@@ -145,8 +145,8 @@
    "source_quote": "HUMA | Humanities Elective (Courses from the specified elective list, of which at least 9 credits must be at the 2000-/3000-/4000- level.) | 18\n  [Area 1 - Multidisciplinary]\n  [Area 2 - Linguistics]\n  [Area 3 - Literature, Film and Media Studies]\n  [Area 4 - History and Anthropology]\n  [Area 5 - Philosophy and Religion]\n  [Area 6 - Music and Arts]"
   }
  ],
- "stated_total_credits": null,
- "max_double_count_credits": null,
+ "stated_total_credits": 18.0,
+ "max_double_count_credits": 9.0,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-huma.pdf",
  "tier": "auto_extracted",
  "unparsed_lines": [],

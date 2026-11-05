@@ -91,8 +91,8 @@
    "source_quote": "PHYS | Note: PHYS 1002 OR PHYS 1006 (Subject to approval by program office, students completed both PHYS 4055 and PHYS 4071 may be exempted from this requirement.) | 3\n\nPHYS | Note: PHYS 1111 OR PHYS 1112 OR PHYS 1312 | 3\n\nPHYS | Note: PHYS 1114 OR PHYS 1314 | 3\n\nPHYS | 2022 | Modern Physics | 3\n\nPHYS/MATH | Note: PHYS 2124 OR PHYS 3036 OR PHYS 3037 OR MATH 2351 OR MATH 2352 | 3-4\n\nPHYS | 3071 | Introduction to Stellar Astrophysics | 3\n\nPHYS | Note: PHYS 4055 OR PHYS 4071 | 3"
   }
  ],
- "stated_total_credits": null,
- "max_double_count_credits": null,
+ "stated_total_credits": 21.0,
+ "max_double_count_credits": 12.0,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-asco.pdf",
  "tier": "auto_extracted",
  "unparsed_lines": [],

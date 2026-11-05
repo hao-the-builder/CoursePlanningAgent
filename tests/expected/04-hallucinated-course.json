@@ -1,0 +1,33 @@
+{
+ "why": "Hard rule 1: a course that is not in the catalog cannot be planned, however plausible its code looks.",
+ "ok": false,
+ "errors": [
+  {
+   "check": "unknown_courses",
+   "course": "COMP 9999",
+   "contains": "not in the"
+  }
+ ],
+ "warning_checks": [
+  "check_prereqs",
+  "check_exclusions",
+  "check_offering",
+  "check_fyp",
+  "check_graduation"
+ ],
+ "info_checks": [],
+ "must_say": [],
+ "credits": {
+  "confirmed": 121.0
+ },
+ "per_term": {
+  "Y1 Fall": 16,
+  "Y1 Spring": 16,
+  "Y2 Fall": 18,
+  "Y2 Spring": 14,
+  "Y3 Fall": 15,
+  "Y3 Spring": 15,
+  "Y4 Fall": 12,
+  "Y4 Spring": 15
+ }
+}

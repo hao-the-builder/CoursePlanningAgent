@@ -1,0 +1,34 @@
+{
+ "why": "COMP 2012 sits a year before COMP 2011, which it requires.",
+ "ok": false,
+ "errors": [
+  {
+   "check": "check_prereqs",
+   "course": "COMP 2012",
+   "term": "Y1 Spring",
+   "contains": "COMP 2011"
+  }
+ ],
+ "warning_checks": [
+  "check_prereqs",
+  "check_exclusions",
+  "check_offering",
+  "check_fyp",
+  "check_graduation"
+ ],
+ "info_checks": [],
+ "must_say": [],
+ "credits": {
+  "confirmed": 121.0
+ },
+ "per_term": {
+  "Y1 Fall": 16,
+  "Y1 Spring": 16,
+  "Y2 Fall": 18,
+  "Y2 Spring": 14,
+  "Y3 Fall": 15,
+  "Y3 Spring": 15,
+  "Y4 Fall": 12,
+  "Y4 Spring": 15
+ }
+}

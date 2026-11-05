@@ -1,0 +1,39 @@
+{
+ "why": "Y2 Fall holds 24 credits: over the 18 the Academic Regulations allow, and over the 18 the student asked for. Both are reported, because they are two different limits.",
+ "ok": false,
+ "errors": [
+  {
+   "check": "check_load",
+   "term": "Y2 Fall",
+   "contains": "Academic Regulations cap a Regular Term at 18"
+  },
+  {
+   "check": "check_load",
+   "term": "Y2 Fall",
+   "contains": "above the 18 you asked for"
+  }
+ ],
+ "warning_checks": [
+  "check_prereqs",
+  "check_exclusions",
+  "check_offering",
+  "check_fyp",
+  "check_graduation",
+  "check_spread"
+ ],
+ "info_checks": [],
+ "must_say": [],
+ "credits": {
+  "confirmed": 127.0
+ },
+ "per_term": {
+  "Y1 Fall": 16,
+  "Y1 Spring": 16,
+  "Y2 Fall": 24,
+  "Y2 Spring": 14,
+  "Y3 Fall": 15,
+  "Y3 Spring": 15,
+  "Y4 Fall": 12,
+  "Y4 Spring": 15
+ }
+}
