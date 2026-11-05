@@ -1,0 +1,422 @@
+{
+ "code": "RMBI-FT",
+ "title": "BSc in Risk Management and Business Intelligence - Financial Technology Option",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2010"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2103"
+      ],
+      [
+       "ECON 2113"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2123"
+      ],
+      [
+       "ECON 3123"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 2303"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2020"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2500"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2600"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2130"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1003"
+      ],
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1020"
+      ],
+      [
+       "MATH 1023"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2200",
+      "ISOM 2700",
+      "MARK 2120",
+      "MGMT 2110"
+     ]
+    }
+   ],
+   "source_quote": "ACCT | 2010 | Principles of Accounting I | 3\nECON | Note: ECON 2103 OR ECON 2113 | 3\nECON | Note: ECON 2123 OR ECON 3123 (BSc ECOF students can only use ECON 3123 to fulfill this requirement; while others should take ECON 2123) | 3\nFINA | 2303 | Financial Management | 3\nISOM | 2010 | Introduction to Information Systems | 3\nISOM | 2020 | Coding for Business | 1\nISOM | 2500 | Business Statistics | 3\nISOM | 2600 | Introduction to Business Analytics | 1\nMGMT | 2010 | Business Ethics and the Individual | 2\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\nMATH | Note: MATH 1003 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\nSB&M | Note: Courses for BBA majors: ACCT 2200 AND ISOM 2700 AND MARK 2120 AND MGMT 2110 (Students who enroll in the BSc majors of SBM are not required to take these courses for graduation) | 12"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "RMBI 2001"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "RMBI 3110"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "RMBI 4310"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "RMBI 4980"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "RMBI 4990"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2010"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2103"
+      ],
+      [
+       "ECON 2113"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ECON 2123"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 2303"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2700"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ISOM 3360"
+      ],
+      [
+       "COMP 4331"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ISOM 3370"
+      ],
+      [
+       "COMP 4651"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ISOM 3540"
+      ],
+      [
+       "MATH 2421"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 3710"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 4520"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2130"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "COMP 1023"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1003",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1003",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1013",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1013",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1020"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 2011"
+      ],
+      [
+       "MATH 2023"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 2111"
+      ],
+      [
+       "MATH 2121"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MATH 2411"
+     ]
+    }
+   ],
+   "source_quote": "RMBI | 2001 | Academic and Professional Development in Risk Management and Business Intelligence | 0\nRMBI | 3110 | Introduction to Risk Management and Business Intelligence | 3\nRMBI | 4310 | Advanced Data Mining for Risk Management and Business Intelligence | 3\nRMBI | 4980 | Risk Management and Business Intelligence Capstone Project I | 4\nRMBI | 4990 | Risk Management and Business Intelligence Capstone Project II | 4\nACCT | 2010 | Principles of Accounting I | 3\nECON | Note: ECON 2103 OR ECON 2113 | 3\nECON | 2123 | Macroeconomics | 3\nFINA | 2303 | Financial Management | 3\nISOM | 2010 | Introduction to Information Systems | 3\nISOM | 2700 | Operations Management | 3\nISOM/COMP | Note: ISOM 3360 OR COMP 4331 | 3\nISOM/COMP | Note: ISOM 3370 OR COMP 4651 | 3\nISOM/MATH | Note: ISOM 3540 OR MATH 2421 | 3-4\nISOM | 3710 | Business Modeling and Optimization | 4\nISOM | 4520 | Statistics for Financial Risk Management | 4\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\nCOMP | 1023 | Introduction to Python Programming | 3\nMATH | Note: [(MATH 1003 OR MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\nMATH | Note: MATH 2011 OR MATH 2023 | 3-4\nMATH | Note: MATH 2111 OR MATH 2121 | 3-4\nMATH | 2411 | Applied Statistics | 4"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "RMBI 3000",
+      "RMBI 4220",
+      "FINA 3103",
+      "FINA 3203",
+      "FINA 4103",
+      "FINA 4513",
+      "ISOM 3780",
+      "ISOM 4200",
+      "ISOM 4540",
+      "ISOM 4840",
+      "IEDA 4331",
+      "IEDA 4420",
+      "IEDA 4510",
+      "IEDA 4520",
+      "MATH 4427",
+      "MATH 4511",
+      "MATH 4512",
+      "MATH 4514",
+      "RMBI 3010",
+      "FINA 4713",
+      "ISOM 2600",
+      "ISOM 3260",
+      "ISOM 3270",
+      "ISOM 3310",
+      "ISOM 3330",
+      "ISOM 3900",
+      "ISOM 4010",
+      "ISOM 4030",
+      "ISOM 4040",
+      "ISOM 4530",
+      "ISOM 4720",
+      "ISOM 4830",
+      "ISOM 4860",
+      "COMP 2011",
+      "COMP 2012",
+      "COMP 2711",
+      "COMP 3211",
+      "COMP 3311",
+      "COMP 3631",
+      "COMP 4221",
+      "COMP 4321",
+      "COMP 4462",
+      "COMP 4641",
+      "MATH 4432"
+     ],
+     "min_credits": 9.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "RMBI/FINA/ISOM/COMP/IEDA/MATH | Risk Management and Business Intelligence Electives (Courses from the specified electives list, of which at least 1 course should be taken from each area and at least 6 credits at 3000- level or above) | 9\n  [Area 1: Risk Management]\n  [Area 2: Business Intelligence]\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]"
+  },
+  {
+   "name": "Financial Technology Option - Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ISOM 3350"
+      ],
+      [
+       "IEDA 4500"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "ISOM/IEDA | Note: ISOM 3350 OR IEDA 4500 | 3"
+  },
+  {
+   "name": "Financial Technology Option - Elective Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "RMBI 4220",
+      "FINA 4713",
+      "ISOM 3000B",
+      "ISOM 3270",
+      "ISOM 3350",
+      "ISOM 4020",
+      "ISOM 4200",
+      "ISOM 4530",
+      "ISOM 4860",
+      "COMP 2711",
+      "COMP 3211",
+      "COMP 3631",
+      "COMP 4221",
+      "COMP 4632",
+      "COMP 4634",
+      "COMP 4911",
+      "MATH 4514"
+     ],
+     "min_credits": 6.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "RMBI/FINA/ISOM/COMP/MATH | Financial Technology Electives (Courses from the specified elective list. Courses taken as Major Electives may not be counted toward this requirement) | 6"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27rmbi.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "Risk Management and Business Intelligence Electives (Courses from the specified electives list, of which at least 1 course should be taken from each area and at least 6 credits at 3000- level or above) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor."
+ ],
+ "parent": "RMBI"
+}

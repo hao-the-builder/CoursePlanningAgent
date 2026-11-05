@@ -1,0 +1,159 @@
+{
+ "code": "EXTM-CADH",
+ "title": "Extended Major Program in Creative Arts and Digital Humanities (Major+CADH)",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "AMCC 2010"
+      ],
+      [
+       "AMCC 2020"
+      ],
+      [
+       "HUMA 2107"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "EMIA 2010D"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "EMIA 2020"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "EMIA 4990"
+      ],
+      [
+       "EMIA 4991"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "HUMA 1100"
+      ],
+      [
+       "HUMA 1102"
+      ],
+      [
+       "HUMA 1650"
+      ],
+      [
+       "HUMA 1660"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "HUMA 1673"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "HUMA 1678"
+      ],
+      [
+       "HUMA 2412"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "AMCC/HUMA | Note: AMCC 2010 OR AMCC 2020 OR HUMA 2107 | 3\nEMIA | 2010D | Cross-disciplinary Seminar: Creative Arts and Digital Humanities | 0\nEMIA | 2020 | Cross-disciplinary Design Thinking | 3\nEMIA | Note: EMIA 4990 OR EMIA 4991 | 0-3\nHUMA | Note: HUMA 1100 OR HUMA 1102 OR HUMA 1650 OR HUMA 1660 | 3\nHUMA | 1673 | Art and Digital Culture | 3\nHUMA | Note: HUMA 1678 OR HUMA 2412 | 3"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "EMIA 2220",
+      "ISDN 1004",
+      "ISDN 1007",
+      "ISDN 2000",
+      "ISDN 2210",
+      "HUMA 1107",
+      "HUMA 1210",
+      "HUMA 1221",
+      "HUMA 2101",
+      "HUMA 2103",
+      "HUMA 2104",
+      "HUMA 2105",
+      "HUMA 2109",
+      "HUMA 2240",
+      "HUMA 2250",
+      "HUMA 2260",
+      "HUMA 2300",
+      "HUMA 2310",
+      "HUMA 2320",
+      "HUMA 2660",
+      "HUMA 2661",
+      "HUMA 2670",
+      "HUMA 2680",
+      "HUMA 3104",
+      "HUMA 3107",
+      "HUMA 3201",
+      "HUMA 3210",
+      "HUMA 3220",
+      "HUMA 3250",
+      "HUMA 3660",
+      "HUMA 3680",
+      "HUMA 4220",
+      "HUMA 4250",
+      "EMIA 2210",
+      "EMIA 2500B",
+      "ISDN 2300",
+      "ISDN 3200",
+      "ISDN 3300",
+      "HUMA 1411",
+      "HUMA 1412",
+      "HUMA 2400",
+      "COMP 4421",
+      "COMP 4431",
+      "COMP 4451",
+      "COMP 4461",
+      "COMP 4462",
+      "DASC 3240",
+      "MATH 4336"
+     ],
+     "min_credits": 6.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "CADH | CADH Electives (Courses from the specified elective list. Students opting for EMIA 4990 are required to take a minimum of 9 credits; while those opting for EMIA 4991 a minimum of 6 credits. All electives must be taken from the same group. At least 3-credit of the elective courses traken should be from 3000-level or above.) | 6-9\n  [Group 1: Creative Arts]\n  [Group 2: Digital Humanities]"
+  }
+ ],
+ "stated_total_credits": null,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27extm-cadh.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "HUMA 3105: The course was last offered in 2021-22 and was deleted subsequently.",
+  "ISDN 1100: The course was last offered in 2021-22 and was deleted subsequently.",
+  "Elective(s): HUMA 3105, ISDN 1100 are named in the requirement PDF but not in the 2026-27 course catalog, so they were left out of this check."
+ ],
+ "parent": null
+}

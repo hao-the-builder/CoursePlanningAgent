@@ -1,0 +1,353 @@
+{
+ "code": "PHYS",
+ "title": "BSc in Physics",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 1021"
+      ],
+      [
+       "COMP 1023"
+      ]
+     ]
+    },
+    {
+     "type": "choose_n",
+     "n": 6,
+     "courses": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ],
+     "min_credits": 0.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+  },
+  {
+   "name": "Major Pre-requisite course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1111"
+      ],
+      [
+       "PHYS 1112"
+      ],
+      [
+       "PHYS 1312"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1114"
+      ],
+      [
+       "PHYS 1314"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "PHYS | Note: PHYS 1111 OR PHYS 1112 OR PHYS 1312 (Students taking IRE Track can only use PHYS 1312 to fulfill the requirement.) | 3\nPHYS | Note: PHYS 1114 OR PHYS 1314 (Students taking IRE Track can only use PHYS 1314 to fulfill the requirement.) | 3"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "PHYS 1113"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "PHYS 1115"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "PHYS 2022"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "PHYS 2023"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "PHYS 2080"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 2124"
+      ],
+      [
+       "MATH 2352"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "PHYS 3032"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 3033"
+      ],
+      [
+       "PHYS 3053"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 3036"
+      ],
+      [
+       "PHYS 3037"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 3142"
+      ],
+      [
+       "MATH 3312"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "PHYS 3152"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "PHYS 3153"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "PHYS 4050"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "PHYS 4080"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 4191"
+      ],
+      [
+       "PHYS 4291"
+      ],
+      [
+       "SCIE 3500",
+       "SCIE 4500"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 4811"
+      ],
+      [
+       "PHYS 4812"
+      ],
+      [
+       "PHYS 4814"
+      ],
+      [
+       "PHYS 4815"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1013",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1013",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1020"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 2011"
+      ],
+      [
+       "MATH 2023"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 2111"
+      ],
+      [
+       "MATH 2121"
+      ],
+      [
+       "MATH 2131"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "PHYS | 1113 | Laboratory for General Physics I | 1\nPHYS | 1115 | Laboratory for General Physics II | 1\nPHYS | 2022 | Modern Physics | 3\nPHYS | 2023 | Modern Physics Laboratory | 1\nPHYS | 2080 | Physics Seminar and Tutorial I | 1\nPHYS/MATH | Note: PHYS 2124 OR MATH 2352 (Students taking the Physics and Mathematics Option may take either MATH 2352 or PHYS 2124. Other students can only take PHYS 2124 to fulfill the requirement.) | 3-4\nPHYS | 3032 | Classical Mechanics | 3\nPHYS | Note: PHYS 3033 OR PHYS 3053 (Students taking IRE Track or Honors Physics Option can only use PHYS 3053 fo fulfill the requirement.) | 3-4\nPHYS | Note: PHYS 3036 OR PHYS 3037 (Students taking IRE Track or Honors Physics Option can only use PHYS 3037 to fulfill the requirement.) | 3-4\nPHYS/MATH | Note: PHYS 3142 OR MATH 3312 (Students taking the Physics and Mathematics Option may take either MATH 3312 or PHYS 3142. Other students can only take PHYS 3142 to fulfill the requirement.) | 3\nPHYS | 3152 | Methods of Experimental Physics I | 3\nPHYS | 3153 | Methods of Experimental Physics II | 3\nPHYS | 4050 | Thermodynamics and Statistical Physics | 3\nPHYS | 4080 | Physics Seminar and Tutorial II | 1\nPHYS/SCIE | Note: PHYS 4191 OR PHYS 4291 OR (SCIE 3500 AND SCIE 4500) (Students taking IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement; those taking Honors Physics Option can only use PHYS 4291 to fulfill the requirement.) | 4-6\nPHYS | Note: PHYS 4811 OR PHYS 4812 OR PHYS 4813 OR PHYS 4814 OR PHYS 4815 (2 courses out of 5) | 2\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\nMATH | Note: MATH 2011 OR MATH 2023 (Students in Honors Physics Option, Physics and Mathematics Option and IRE Track can only use MATH 2023 to fulfill the requirement) | 3-4\nMATH | Note: MATH 2111 OR MATH 2121 OR MATH 2131 (Students in Honors Physics Option, Physics and Mathematics Option and IRE Track can only use MATH 2121 OR MATH 2131 to fulfill the requirement) | 3-4"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27phys.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "Students MUST take the following courses prior to enrollment into the major",
+  "PHYS 1111 OR PHYS 1112 OR PHYS 1312 -- (Students taking IRE Track can only use PHYS 1312 to fulfill the requirement.)",
+  "PHYS 1114 OR PHYS 1314 -- (Students taking IRE Track can only use PHYS 1314 to fulfill the requirement.)",
+  "PHYS 2124 OR MATH 2352 -- (Students taking the Physics and Mathematics Option may take either MATH 2352 or PHYS 2124. Other students can only take PHYS 2124 to fulfill the requirement.)",
+  "PHYS 3033 OR PHYS 3053 -- (Students taking IRE Track or Honors Physics Option can only use PHYS 3053 fo fulfill the requirement.)",
+  "PHYS 3036 OR PHYS 3037 -- (Students taking IRE Track or Honors Physics Option can only use PHYS 3037 to fulfill the requirement.)",
+  "PHYS 3142 OR MATH 3312 -- (Students taking the Physics and Mathematics Option may take either MATH 3312 or PHYS 3142. Other students can only take PHYS 3142 to fulfill the requirement.)",
+  "PHYS 4191 OR PHYS 4291 OR (SCIE 3500 AND SCIE 4500) -- (Students taking IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement; those taking Honors Physics Option can only use PHYS 4291 to fulfill the requirement.)",
+  "PHYS 4811 OR PHYS 4812 OR PHYS 4813 OR PHYS 4814 OR PHYS 4815 -- (2 courses out of 5)",
+  "MATH 2011 OR MATH 2023 -- (Students in Honors Physics Option, Physics and Mathematics Option and IRE Track can only use MATH 2023 to fulfill the requirement)",
+  "MATH 2111 OR MATH 2121 OR MATH 2131 -- (Students in Honors Physics Option, Physics and Mathematics Option and IRE Track can only use MATH 2121 OR MATH 2131 to fulfill the requirement)",
+  "PHYS 4813: The course was last offered in 2021-22 and was deleted subsequently.",
+  "Requirements: COMP 1022P is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check.",
+  "Required Course(s): PHYS 4813 is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": null
+}

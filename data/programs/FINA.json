@@ -1,0 +1,199 @@
+{
+ "code": "FINA",
+ "title": "BBA in Finance",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2010"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2103"
+      ],
+      [
+       "ECON 2113"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2123"
+      ],
+      [
+       "ECON 3123"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 2303"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2020"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2500"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2600"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2130"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1003"
+      ],
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1020"
+      ],
+      [
+       "MATH 1023"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2200",
+      "ISOM 2700",
+      "MARK 2120",
+      "MGMT 2110"
+     ]
+    }
+   ],
+   "source_quote": "ACCT | 2010 | Principles of Accounting I | 3\nECON | Note: ECON 2103 OR ECON 2113 | 3\nECON | Note: ECON 2123 OR ECON 3123 (BSc ECOF students can only use ECON 3123 to fulfill this requirement; while others should take ECON 2123) | 3\nFINA | 2303 | Financial Management | 3\nISOM | 2010 | Introduction to Information Systems | 3\nISOM | 2020 | Coding for Business | 1\nISOM | 2500 | Business Statistics | 3\nISOM | 2600 | Introduction to Business Analytics | 1\nMGMT | 2010 | Business Ethics and the Individual | 2\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\nMATH | Note: MATH 1003 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\nSB&M | Note: Courses for BBA majors: ACCT 2200 AND ISOM 2700 AND MARK 2120 AND MGMT 2110 (Students who enroll in the BSc majors of SBM are not required to take these courses for graduation) | 12"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3001"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3103"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3203"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3303"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3810"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ACCT 3010",
+       "ACCT 3020"
+      ],
+      [
+       "ACCT 3030"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ISOM 3230"
+      ],
+      [
+       "ISOM 3320"
+      ],
+      [
+       "ISOM 3400"
+      ],
+      [
+       "COMP 1023"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "FINA | 3001 | Key Skills for Finance Professionals (A) | 1\nFINA | 3103 | Intermediate Investments | 3\nFINA | 3203 | Derivative Securities | 3\nFINA | 3303 | Intermediate Corporate Finance | 3\nFINA | 3810 | Bloomberg Market Concepts Certification | 0\nACCT | Note: (ACCT 3010 AND ACCT 3020) OR ACCT 3030 | 3-6\nISOM/COMP | Note: ISOM 3230 OR ISOM 3320 OR ISOM 3400 OR COMP 1023 | 3"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "FINA 3xxx"
+     ],
+     "min_credits": 9.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "FINA | FINA 3000-level or above Electives (Any 3 courses of the subject and level as specified) | 9"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27fina.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [],
+ "parent": null
+}

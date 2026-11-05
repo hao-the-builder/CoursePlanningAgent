@@ -1,0 +1,287 @@
+{
+ "code": "BIEN",
+ "title": "BEng in Bioengineering",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Engineering Fundamental Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 1023"
+      ],
+      [
+       "COMP 2011"
+      ],
+      [
+       "COMP 2012H"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1012"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1052"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1020"
+      ],
+      [
+       "MATH 1023"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1112"
+      ],
+      [
+       "PHYS 1312"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "COMP | Note: COMP 1022P OR COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\nCHEM | 1052 | Laboratory for General Chemistry B | 1\nMATH | Note: MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "BIEN 1600"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "BIEN 2410"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "BIEN 2610"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "BIEN 3250"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "BIEN 3300"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "BIEN 3310"
+      ],
+      [
+       "BIEN 3320"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "BIEN 3410"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "BIEN 3420"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "BIEN 3910"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "BIEN 4920"
+      ],
+      [
+       "BIEN 4930"
+      ],
+      [
+       "BIEN 4940"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 1000"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 1010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 2210"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 2310"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 2320"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 4020"
+     ]
+    }
+   ],
+   "source_quote": "BIEN | 1600 | Introduction to Bioengineering | 3\nBIEN | 2410 | Cellular and Systems Physiology for Engineers | 3\nBIEN | 2610 | Chemical Biology for Engineers | 3\nBIEN | 3250 | Rate and Transport Processes in Biological Systems | 3\nBIEN | 3300 | Data Science for Molecular Engineering | 3\nBIEN | Note: BIEN 3310 OR BIEN 3320 | 3\nBIEN | 3410 | Bioimaging and Image Analysis | 3\nBIEN | 3420 | Biosensors and Bioinstrumentation for Healthcare | 3\nBIEN | 3910 | Bioengineering Laboratory | 4\nBIEN | Note: BIEN 4920 OR BIEN 4930 OR BIEN 4940 | 6\nCENG | 1000 | Foundations of Chemical and Biological Engineering | 3\nCENG | 1010 | Academic and Professional Development I | 0\nCENG | 2210 | Chemical and Biological Engineering Thermodynamics | 3\nCENG | 2310 | Modeling for Chemical and Biological Engineering I | 3\nCENG | 2320 | Modeling for Chemical and Biological Engineering II | 3\nCENG | 4020 | Academic and Professional Development II | 0"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "choose_n",
+     "n": 5,
+     "courses": [
+      "BIEN 3310",
+      "BIEN 5040",
+      "BIEN 5060",
+      "CENG 5240",
+      "COMP 2012",
+      "COMP 2012H",
+      "COMP 2211",
+      "COMP 4211",
+      "COMP 4331",
+      "COMP 4421",
+      "COMP 5423",
+      "ELEC 2100",
+      "ELEC 2420",
+      "ELEC 4820",
+      "EMIA 4110",
+      "LIFS 3070",
+      "BIEN 4110",
+      "BIEN 5070",
+      "CENG 3150",
+      "CENG 4510",
+      "CENG 4620",
+      "CENG 4630",
+      "CENG 4640",
+      "CENG 4650",
+      "CENG 4670",
+      "CENG 5610",
+      "CHEM 2111",
+      "CHEM 2311",
+      "LIFS 3060",
+      "LIFS 4888",
+      "BIEN 4000",
+      "UCOP 3200",
+      "LIFS 3240",
+      "LIFS 4370",
+      "LIFS 4760"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "BIEN 3310",
+      "BIEN 5040",
+      "BIEN 5060",
+      "CENG 5240",
+      "COMP 2012",
+      "COMP 2012H",
+      "COMP 2211",
+      "COMP 4211",
+      "COMP 4331",
+      "COMP 4421",
+      "COMP 5423",
+      "ELEC 2100",
+      "ELEC 2420",
+      "ELEC 4820",
+      "EMIA 4110",
+      "LIFS 3070",
+      "BIEN 4110",
+      "BIEN 5070",
+      "CENG 3150",
+      "CENG 4510",
+      "CENG 4620",
+      "CENG 4630",
+      "CENG 4640",
+      "CENG 4650",
+      "CENG 4670",
+      "CENG 5610",
+      "CHEM 2111",
+      "CHEM 2311",
+      "LIFS 3060",
+      "LIFS 4888",
+      "BIEN 4000",
+      "UCOP 3200",
+      "LIFS 3240",
+      "LIFS 4370",
+      "LIFS 4760"
+     ],
+     "min_credits": 15.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "SSCI/SENG/AIS | Bioengineering Electives (5 courses from the specified elective list, of which at least 9 credits should be taken from a single specialty area (Area 1 or Area 2). Out of the 15 credits taken, at least 9 credits should be at 4000-level or above. Courses taken as Major Required Courses may not be counted towards this elective requirement.) | 15\n  [Area 1: Biomedical Data Acquisition and Analytics]\n  [Area 2: Bioprocesses, Biomaterials and Bioanalysis]\n  [Other electives]\nSSCI/SENG/AIS | Bioengineering Electives (5 courses from the specified elective list, of which at least 9 credits should be taken from a single specialty area (Area 1 or Area 2). Out of the 15 credits taken, at least 9 credits should be at 4000-level or above. Courses taken as Major Required Courses may not be counted towards this elective requirement.) | 15\n  [Area 1: Biomedical Data Acquisition and Analytics]\n  [Area 2: Bioprocesses, Biomaterials and Bioanalysis]\n  [Other electives]"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bien.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "Students with level 3 or above in HKDSE 1x Biology are exempted from taking LIFS 1901 -- an exemption, not a requirement; it is not applied automatically.",
+  "Bioengineering Electives (5 courses from the specified elective list, of which at least 9 credits should be taken from a single specialty area (Area 1 or Area 2). Out of the 15 credits taken, at least 9 credits should be at 4000-level or above. Courses taken as Major Required Courses may not be counted towards this elective requirement.) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor.",
+  "BIEN 4310: The course was last offered in 2021-22 and was deleted subsequently.",
+  "CENG 4160: The course was last offered in 2022-23 and was deleted subsequently.",
+  "COMP 1022P: The course was last offered in 2024-25 and was deleted subsequently.",
+  "Engineering Fundamental Course(s): COMP 1022P is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check.",
+  "Elective(s): BIEN 4310, CENG 4160 are named in the requirement PDF but not in the 2026-27 course catalog, so they were left out of this check."
+ ],
+ "parent": null
+}

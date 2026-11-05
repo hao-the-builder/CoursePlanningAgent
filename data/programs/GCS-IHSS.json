@@ -1,0 +1,126 @@
+{
+ "code": "GCS-IHSS",
+ "title": "BSc in Global China Studies - Integrated Humanities and Social Science Track",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "HUMA 1440"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "HUMA 2590"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 1350"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 2290"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "SHSS 4991"
+      ],
+      [
+       "SHSS 4992"
+      ],
+      [
+       "SHSS 4991",
+       "SHSS 4993"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LANG 2170"
+     ]
+    }
+   ],
+   "source_quote": "HUMA | 1440 | Modern China | 3\nHUMA | 2590 | The Making of the Modern World: Renaissance to the Present | 3\nSOSC | 1350 | Contemporary China: Continuity and Change | 3\nSOSC | 2290 | Understanding Globalization | 3\nSHSS | Note: SHSS 4991 OR SHSS 4992 OR (SHSS 4991 AND SHSS 4993) [For students taking one of the Research Options, they should take SHSS 4992 OR (SHSS 4991 AND SHSS 4993)] | 3-6\nLANG | 2170 | Chinese Communication Skills for Humanities & Social Science Studies | 3"
+  },
+  {
+   "name": "Integrated Humanities and Social Science Track - Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "HUMA 2400"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 2140"
+     ]
+    }
+   ],
+   "source_quote": "HUMA | 2400 | Approaches to Humanities in China Studies | 3\nSOSC | 2140 | Research Methods in the Social Sciences | 3"
+  },
+  {
+   "name": "Integrated Humanities and Social Science Track - Elective Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "SOSC 3120",
+      "SOSC 3540",
+      "SOSC 4260",
+      "SOSC 4280",
+      "HUMA 3630",
+      "HUMA 3900",
+      "HUMA 4610",
+      "HUMA 4700",
+      "HUMA 4801",
+      "SOSC 3520",
+      "SOSC 3630",
+      "SOSC 3880",
+      "SOSC 4310",
+      "SOSC 4600",
+      "HUMA 3030",
+      "HUMA 3201",
+      "HUMA 4020",
+      "HUMA 4220",
+      "HUMA 4221"
+     ],
+     "min_credits": 18.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "HUMA/SOSC | HUMA/SOSC Restricted Electives (6 courses, which should include three 3000-level courses & three 4000-level courses taken from at least 3 different areas, from the specified elective list.) | 18\n  [Area: Environment, Economy & Globalization]\n  [Area: Heritage, Community & Identity]\n  [Area: Political & Social Change]\n  [Area: Literature, Communication & Media]"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [
+  "HUMA/SOSC/SHSS | HUMA/SOSC/SHSS Electives [Students opting for SHSS 4992 OR (SHSS 4991 AND SHSS 4993) are required to take a minimum total of 8 courses (24 credits), out of which 2 must be at 3000-/4000-level; students opting for SHSS 4991 are required to take a minimum total of 9 courses (27 credits), out of which 3 must be at 3000-/4000-level.] | 24-27\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]"
+ ],
+ "caveats": [
+  "SHSS 4991 OR SHSS 4992 OR (SHSS 4991 AND SHSS 4993) -- [For students taking one of the Research Options, they should take SHSS 4992 OR (SHSS 4991 AND SHSS 4993)]",
+  "HUMA/SOSC Restricted Electives (6 courses, which should include three 3000-level courses & three 4000-level courses taken from at least 3 different areas, from the specified elective list.) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor.",
+  "SOSC 4290: The course was last offered in 2023-24 and was deleted subsequently.",
+  "Integrated Humanities and Social Science Track - Elective Course(s): SOSC 4290 is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": "GCS"
+}

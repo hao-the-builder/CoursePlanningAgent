@@ -130,8 +130,40 @@ def _program_files() -> list[Path]:
 def test_every_program_json_loads_and_cites_its_source(path, catalog):
     from schema import Program
 
+    from schema import Tier
+
     program = Program.model_validate_json(path.read_text(encoding="utf-8"))
     assert program.code == path.stem
     assert program.cohort == "2026-27"
-    assert program.source_url.startswith("https://")
-    assert program.groups, "a program with no requirement groups says nothing"
+    # a few official PDF links are published over plain http
+    assert program.source_url.startswith(("https://", "http://"))
+    if program.tier is Tier.UNSUPPORTED:
+        assert program.unparsed_lines, "an unsupported program must say why"
+    else:
+        assert program.groups, "a program with no requirement groups says nothing"
+    if program.parent:
+        assert (PROGRAMS / f"{program.parent}.json").exists()
+
+
+@pytest.mark.skipif(not _program_files(), reason="Phase 2 Part B not run yet")
+@pytest.mark.parametrize("path", _program_files(), ids=lambda p: p.stem)
+def test_every_course_a_rule_names_is_in_the_catalog(path, catalog):
+    """Hard rule 1, at the data layer: a rule may not cite a course that
+    does not exist, because the planner would then put it in a plan."""
+    from schema import ChooseN, CreditsFrom, EveryTerm, OneOf, Program, Required
+
+    program = Program.model_validate_json(path.read_text(encoding="utf-8"))
+    cited: set[str] = set()
+    for group in program.groups:
+        for rule in group.rules:
+            if isinstance(rule, Required):
+                cited |= set(rule.courses)
+            elif isinstance(rule, OneOf):
+                cited |= {c for option in rule.options for c in option}
+            elif isinstance(rule, ChooseN):
+                cited |= set(rule.courses)
+            elif isinstance(rule, CreditsFrom):
+                cited |= {p for p in rule.patterns if "x" not in p and p != "*"}
+            elif isinstance(rule, EveryTerm):
+                cited.add(rule.course)
+    assert sorted(cited - set(catalog)) == []

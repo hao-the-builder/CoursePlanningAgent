@@ -1,0 +1,273 @@
+{
+ "code": "AE",
+ "title": "BEng in Aerospace Engineering",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Engineering Fundamental Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 1023"
+      ],
+      [
+       "COMP 2011"
+      ],
+      [
+       "COMP 2012H"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1013",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1013",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1020"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MATH 2011"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MATH 2351"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1112"
+      ],
+      [
+       "PHYS 1312"
+      ]
+     ]
+    },
+    {
+     "type": "choose_n",
+     "n": 1,
+     "courses": [
+      "CHEM 1008",
+      "CHEM 1012",
+      "LIFS 1901",
+      "PHYS 1101"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "CHEM 1008",
+      "CHEM 1012",
+      "LIFS 1901",
+      "PHYS 1101"
+     ],
+     "min_credits": 3.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "COMP | Note: COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\nMATH | 2011 | Introduction to Multivariable Calculus | 3\nMATH | 2351 | Introduction to Differential Equations | 3\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3\nCHEM/LIFS/PHYS | Science 1000-level course (1 course from the specified course list) | 3-4\nCHEM/LIFS/PHYS | Science 1000-level course (1 course from the specified course list) | 3-4"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "MECH 1001"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 1910"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 1990"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 2002"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 2007"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 2020"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 2040"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 2210"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 2300"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 2310"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 3400"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 3610"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 3620"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 3640"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 3650"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 3660"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 3670"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 3680"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 3690"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MECH 4980"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 2420"
+     ]
+    }
+   ],
+   "source_quote": "MECH | 1001 | Academic and Professional Development I | 0\nMECH | 1910 | Foundations of Mechanical and Aerospace Engineering | 3\nMECH | 1990 | Industrial Training | 0\nMECH | 2002 | Academic and Professional Development II | 0\nMECH | 2007 | Aerospace Engineering: Principles and Systems | 3\nMECH | 2020 | Statics and Dynamics | 3\nMECH | 2040 | Solid Mechanics I | 3\nMECH | 2210 | Fluid Mechanics | 3\nMECH | 2300 | Engineering Computation with Matrices and AI | 3\nMECH | 2310 | Thermodynamics | 3\nMECH | 3400 | Introduction to Engineering Composite Materials | 3\nMECH | 3610 | Control Principles | 3\nMECH | 3620 | Aircraft Design | 3\nMECH | 3640 | Aerodynamics | 3\nMECH | 3650 | Aircraft Structural Analysis | 3\nMECH | 3660 | Aircraft Propulsion | 3\nMECH | 3670 | Aircraft Performance and Stability | 3\nMECH | 3680 | Avionics Systems | 3\nMECH | 3690 | Aerospace Engineering Laboratory | 3\nMECH | 4980 | Final Year Aerospace Design Project | 6\nELEC | 2420 | Basic Electronics | 3"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "choose_n",
+     "n": 2,
+     "courses": [
+      "MECH 2520",
+      "MECH 3310",
+      "MECH 3740",
+      "MECH 4100",
+      "MECH 4740",
+      "MECH 4810",
+      "MECH 4890",
+      "MECH 5961"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "MECH 2520",
+      "MECH 3310",
+      "MECH 3740",
+      "MECH 4100",
+      "MECH 4740",
+      "MECH 4810",
+      "MECH 4890",
+      "MECH 5961"
+     ],
+     "min_credits": 6.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "MECH | MECH Electives in Aerospace (2 courses from the specified elective list) | 6\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]\nMECH | MECH Electives in Aerospace (2 courses from the specified elective list) | 6\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ae.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [],
+ "parent": null
+}

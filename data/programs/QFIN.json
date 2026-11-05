@@ -1,0 +1,240 @@
+{
+ "code": "QFIN",
+ "title": "BSc in Quantitative Finance",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2010"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2103"
+      ],
+      [
+       "ECON 2113"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2123"
+      ],
+      [
+       "ECON 3123"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 2303"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2020"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2500"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2600"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2130"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1003"
+      ],
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1020"
+      ],
+      [
+       "MATH 1023"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2200",
+      "ISOM 2700",
+      "MARK 2120",
+      "MGMT 2110"
+     ]
+    }
+   ],
+   "source_quote": "ACCT | 2010 | Principles of Accounting I | 3\nECON | Note: ECON 2103 OR ECON 2113 | 3\nECON | Note: ECON 2123 OR ECON 3123 (BSc ECOF students can only use ECON 3123 to fulfill this requirement; while others should take ECON 2123) | 3\nFINA | 2303 | Financial Management | 3\nISOM | 2010 | Introduction to Information Systems | 3\nISOM | 2020 | Coding for Business | 1\nISOM | 2500 | Business Statistics | 3\nISOM | 2600 | Introduction to Business Analytics | 1\nMGMT | 2010 | Business Ethics and the Individual | 2\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\nMATH | Note: MATH 1003 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\nSB&M | Note: Courses for BBA majors: ACCT 2200 AND ISOM 2700 AND MARK 2120 AND MGMT 2110 (Students who enroll in the BSc majors of SBM are not required to take these courses for graduation) | 12"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3103"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3111"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3203"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3303"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3810"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 4803"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ECON 3334"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 3230"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1014"
+      ],
+      [
+       "MATH 1024"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 2011"
+      ],
+      [
+       "MATH 2023"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "FINA | 3103 | Intermediate Investments | 3\nFINA | 3111 | Finance Professional Development | 1\nFINA | 3203 | Derivative Securities | 3\nFINA | 3303 | Intermediate Corporate Finance | 3\nFINA | 3810 | Bloomberg Market Concepts Certification | 0\nFINA | 4803 | Quantitative Trading | 3\nECON | 3334 | Introduction to Econometrics | 4\nISOM | 3230 | Business Programming in VBA | 3\nMATH | Note: MATH 1014 OR MATH 1024 (Students taken MATH 1020 to fulfill the School Requirements may be exempted from this requirement) | 0-3\nMATH | Note: MATH 2011 OR MATH 2023 | 3-4"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "ISOM 3360",
+      "ISOM 3370",
+      "COMP 2011",
+      "COMP 2012",
+      "COMP 2012H",
+      "COMP 3211",
+      "COMP 4211",
+      "COMP 4221",
+      "COMP 4331",
+      "COMP 4332",
+      "COMP 4471",
+      "RMBI 4310",
+      "ECON 4304",
+      "ISOM 3540",
+      "ISOM 4520",
+      "ISOM 4530",
+      "ISOM 4540",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "MATH 2350",
+      "MATH 2351",
+      "MATH 2352",
+      "MATH 2421",
+      "MATH 2431",
+      "MATH 3423",
+      "MATH 4511",
+      "MATH 4512"
+     ],
+     "min_credits": 18.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "QFIN | Restricted Electives (Courses from the specified elective list, of which at least 3 credits from Area A, at least 6 credits from Area B, and at least 9 credits from Area C) | 18\n  [Area A: Finance]\n  FINA | Any FINA courses at 3000-or 4000-level\n  [Area B: Programming and Data Analysis]\n  [Area C: Quantitative Skills]"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27qfin.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "MATH 1014 OR MATH 1024 -- (Students taken MATH 1020 to fulfill the School Requirements may be exempted from this requirement)",
+  "Restricted Electives (Courses from the specified elective list, of which at least 3 credits from Area A, at least 6 credits from Area B, and at least 9 credits from Area C) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor."
+ ],
+ "parent": null
+}

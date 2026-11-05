@@ -1,0 +1,44 @@
+{
+ "code": "MINOR-ROBO",
+ "title": "Minor Program in Robotics",
+ "kind": "minor",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Elective(s)",
+   "category": "Minor",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "ELEC 3300",
+      "COMP 1029C",
+      "COMP 2011",
+      "MECH 2520",
+      "ELEC 3200",
+      "ELEC 4220",
+      "COMP 4211",
+      "COMP 4421",
+      "MECH 3610",
+      "MECH 4710",
+      "ENGG 3960",
+      "ENGG 4950"
+     ],
+     "min_credits": 18.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "SENG | Robotics Electives (Courses from the specified elective list, of which at least 7 credits must be taken from Group A Electives and include at least 1 COMP course; at least 2 courses from Group B; and at least 1 course from Group C.) | 18\n  [Group A - Core Electives]\n  [Group B - Area Electives [Subject to approval of program office, students may request to use a PG course (e.g. ELEC 5660,]\n  [COMP 5421) to substitute the elective course in this group]]\n  [Group C - Robotics Project (ENGG 4950F and ENGG 4950T may not be counted towards this requirement)]\n  [3962]"
+  }
+ ],
+ "stated_total_credits": null,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-robo.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "To graduate with a minor in Robotics, students must have enrolled in the Minor Program, complete a minimum total of 18 credits and all of the minor requirements, as well as the requirements of the major program of study. For credit transfer, students can transfer a maximum total of 6 credits to the Minor Program. Out of the total credits required by the minor program, at least 9 credits should be single-counted within the minor and are not used to fulfill any other requirements for graduation except the 120-credit degree requirement. Students may use no more than 9 credits earned from courses delivered in online mode, including HKUST self-paced online [SPO] courses and other online credits approved through the University’s credit transfer procedures, to satisfy the graduation requirements of a degree program.",
+  "Elective(s): IEDA 2100E, MECH 4000D are named in the requirement PDF but not in the 2026-27 course catalog, so they were left out of this check."
+ ],
+ "parent": null
+}

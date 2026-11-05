@@ -1,0 +1,323 @@
+{
+ "code": "SGFN",
+ "title": "BSc in Sustainable and Green Finance",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2010"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2103"
+      ],
+      [
+       "ECON 2113"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2123"
+      ],
+      [
+       "ECON 3123"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 2303"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2020"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2500"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2600"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2130"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1003"
+      ],
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1020"
+      ],
+      [
+       "MATH 1023"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2200",
+      "ISOM 2700",
+      "MARK 2120",
+      "MGMT 2110"
+     ]
+    }
+   ],
+   "source_quote": "ACCT | 2010 | Principles of Accounting I | 3\nECON | Note: ECON 2103 OR ECON 2113 | 3\nECON | Note: ECON 2123 OR ECON 3123 (BSc ECOF students can only use ECON 3123 to fulfill this requirement; while others should take ECON 2123) | 3\nFINA | 2303 | Financial Management | 3\nISOM | 2010 | Introduction to Information Systems | 3\nISOM | 2020 | Coding for Business | 1\nISOM | 2500 | Business Statistics | 3\nISOM | 2600 | Introduction to Business Analytics | 1\nMGMT | 2010 | Business Ethics and the Individual | 2\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\nMATH | Note: MATH 1003 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\nSB&M | Note: Courses for BBA majors: ACCT 2200 AND ISOM 2700 AND MARK 2120 AND MGMT 2110 (Students who enroll in the BSc majors of SBM are not required to take these courses for graduation) | 12"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "SGFN 4733"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SUST 1000"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 2303"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3103"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3203"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3810"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 4303"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 4513"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 4703"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2020"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2500"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2600"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2700"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 3780"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2130"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ENVR 1170"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ENVR 2080"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ENVR 3005"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ENVR 3110"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ENVR 3310"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ENVR 4320"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ENVR 4340"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ENVR 4350"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1003"
+      ],
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1020"
+      ],
+      [
+       "MATH 1023"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "SGFN | 4733 | Green Finance Case Analyses | 3\nSUST | 1000 | Sustainability Fundamentals | 3\nACCT | 2010 | Principles of Accounting I | 3\nFINA | 2303 | Financial Management | 3\nFINA | 3103 | Intermediate Investments | 3\nFINA | 3203 | Derivative Securities | 3\nFINA | 3810 | Bloomberg Market Concepts Certification | 0\nFINA | 4303 | Fixed Income Securities | 3\nFINA | 4513 | Risk Management | 3\nFINA | 4703 | ESG Investing | 3\nISOM | 2020 | Coding for Business | 1\nISOM | 2500 | Business Statistics | 3\nISOM | 2600 | Introduction to Business Analytics | 1\nISOM | 2700 | Operations Management | 3\nISOM | 3780 | Sustainable Supply Chain Management | 3\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\nENVR | 1170 | Science, Environment and Society -From Big Bang to Big Data | 3\nENVR | 2080 | Circular Economy and Life Cycle Assessment | 3\nENVR | 3005 | Environmental Risks: Principles and Practices | 3\nENVR | 3110 | Life Cycle Assessment for Sustainable Development | 3\nENVR | 3310 | Green Business Strategy | 3\nENVR | 4320 | ESG Management and Reporting | 3\nENVR | 4340 | Social Sustainability: Risks and Challenges | 3\nENVR | 4350 | Governing Green Finance: National and International Perspectives and Approaches | 3\nMATH | Note: MATH 1003 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "FINA 3xxx",
+      "FINA 4xxx"
+     ],
+     "min_credits": 3.0,
+     "exclude": []
+    },
+    {
+     "type": "choose_n",
+     "n": 1,
+     "courses": [
+      "ENVR 3220",
+      "ENVR 3410",
+      "ENVR 3420",
+      "ENVR 4480"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "ENVR 3220",
+      "ENVR 3410",
+      "ENVR 3420",
+      "ENVR 4480"
+     ],
+     "min_credits": 3.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "FINA | FINA 3000-/4000-level Electives (Any course(s) of the subject and level as specified) | 3\nENVR | Sustainability Electives (1 course from the specified elective list) | 3\nENVR | Sustainability Electives (1 course from the specified elective list) | 3"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sgfn.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [],
+ "parent": null
+}

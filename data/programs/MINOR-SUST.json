@@ -1,0 +1,105 @@
+{
+ "code": "MINOR-SUST",
+ "title": "Minor Program in Sustainability",
+ "kind": "minor",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Required Course(s)",
+   "category": "Minor",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "SUST 1000"
+     ]
+    }
+   ],
+   "source_quote": "SUST | 1000 | Sustainability Fundamentals | 3"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Minor",
+   "rules": [
+    {
+     "type": "choose_n",
+     "n": 5,
+     "courses": [
+      "ENVR 2050",
+      "ENVR 3004",
+      "ENVR 3310",
+      "ENGG 1110",
+      "ENTR 3030",
+      "MGMT 3160",
+      "ENVR 1080",
+      "ENVR 1150",
+      "ENVR 3110",
+      "HUMA 2623",
+      "ISOM 1700",
+      "MARK 1220",
+      "SOSC 3540",
+      "ENVR 1030",
+      "ENVR 2010",
+      "ENVR 2020",
+      "ENVR 2070",
+      "ENVR 3410",
+      "ENVR 3420",
+      "ENVR 4320",
+      "CHEM 1004",
+      "CHEM 1008",
+      "MGMT 3170",
+      "OCES 2004",
+      "SOSC 1860",
+      "SOSC 2310"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "ENVR 2050",
+      "ENVR 3004",
+      "ENVR 3310",
+      "ENGG 1110",
+      "ENTR 3030",
+      "MGMT 3160",
+      "ENVR 1080",
+      "ENVR 1150",
+      "ENVR 3110",
+      "HUMA 2623",
+      "ISOM 1700",
+      "MARK 1220",
+      "SOSC 3540",
+      "ENVR 1030",
+      "ENVR 2010",
+      "ENVR 2020",
+      "ENVR 2070",
+      "ENVR 3410",
+      "ENVR 3420",
+      "ENVR 4320",
+      "CHEM 1004",
+      "CHEM 1008",
+      "MGMT 3170",
+      "OCES 2004",
+      "SOSC 1860",
+      "SOSC 2310"
+     ],
+     "min_credits": 15.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "SBM/SENG/SHSS/SSCI/AIS | Sustainability Electives [(5 courses from the specified elective list, out of which at least 1 course taken from each of the areas and at least 2 courses at 3000-level or above) Students of the 2022-23 intake and onwards may not use CIVL 1150 to count towards Area 2 of this elective requirement.] | 15\n  [Area 1: Skills and Competencies]\n  [Area 2: Values and Perspectives]\n  [Area 3: Knowledge]\nSBM/SENG/SHSS/SSCI/AIS | Sustainability Electives [(5 courses from the specified elective list, out of which at least 1 course taken from each of the areas and at least 2 courses at 3000-level or above) Students of the 2022-23 intake and onwards may not use CIVL 1150 to count towards Area 2 of this elective requirement.] | 15\n  [Area 1: Skills and Competencies]\n  [Area 2: Values and Perspectives]\n  [Area 3: Knowledge]"
+  }
+ ],
+ "stated_total_credits": null,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-sust.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "To graduate with a minor in Sustainability, students must have enrolled in the Minor Program and complete a minimum total of 18 credits and all of its requirements, as well as the requirements of the major program of For credit transfer, students can transfer a maximum total of 6 credits to the Minor Program. Out of the total credits required by the minor program, at least 9 credits should be single-counted within the minor and are not used to fulfill any other requirements for graduation except the 120-credit degree Students may use no more than 9 credits earned from courses delivered in online mode, including HKUST self-paced online [SPO] courses and other online credits approved through the University’s credit transfer procedures, to satisfy the graduation requirements of a degree program.",
+  "Sustainability Electives [(5 courses from the specified elective list, out of which at least 1 course taken from each of the areas and at least 2 courses at 3000-level or above) Students of the 2022-23 intake and onwards may not use CIVL 1150 to count towards Area 2 of this elective requirement.] -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor.",
+  "OCES 2001: The course was last offered in 2024-25 and was deleted subsequently.",
+  "Elective(s): OCES 2001 is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": null
+}

@@ -1,0 +1,340 @@
+{
+ "code": "BIBU",
+ "title": "BSc in Biotechnology and Business",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 1021"
+      ],
+      [
+       "COMP 1023"
+      ]
+     ]
+    },
+    {
+     "type": "choose_n",
+     "n": 6,
+     "courses": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ],
+     "min_credits": 0.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "BIBU 1010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "BIBU 4820"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "BIBU 4830"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "BIBU 4840"
+      ],
+      [
+       "BIBU 4850"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 1902"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 1904"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2040"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2070"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2210"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 3110"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 4200"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 4630"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1011"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1012"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1003"
+      ],
+      [
+       "MATH 1005"
+      ],
+      [
+       "MATH 1006"
+      ],
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1020"
+      ],
+      [
+       "MATH 1023"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1101"
+      ],
+      [
+       "PHYS 1111"
+      ],
+      [
+       "PHYS 1112"
+      ],
+      [
+       "PHYS 1312"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2200"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2103"
+      ],
+      [
+       "ECON 2113"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ECON 2123"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 2203"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2500"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2700"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MARK 2120"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2110"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2130"
+     ]
+    }
+   ],
+   "source_quote": "BIBU | 1010 | Biotechnology and Business Seminar | 1\nBIBU | 4820 | Biotechnology Entrepreneurship and Business Operations | 3\nBIBU | 4830 | Biotechnology Management | 3\nBIBU | Note: BIBU 4840 OR BIBU 4850 | 3-6\nLIFS | 1902 | General Biology II | 3\nLIFS | 1904 | Laboratory for General Biology II | 1\nLIFS | 2040 | Cell Biology | 3\nLIFS | 2070 | Introduction to Biotechnology | 3\nLIFS | 2210 | Biochemistry I | 3\nLIFS | 3110 | Biotechnological Application of Recombinant DNA Techniques | 3\nLIFS | 4200 | Concepts and Issues in Contemporary Biotechnology | 3\nLIFS | 4630 | Advanced Topics in Biotechnology | 3\nCHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\nMATH | Note: MATH 1003 OR MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\nPHYS | Note: PHYS 1101 OR PHYS 1111 OR PHYS 1112 OR PHYS 1312 | 3-4\nACCT | 2200 | Principles of Accounting II | 3\nECON | Note: ECON 2103 OR ECON 2113 | 3\nECON | 2123 | Macroeconomics | 3\nFINA | 2203 | Fundamentals of Business Finance | 3\nISOM | 2010 | Introduction to Information Systems | 3\nISOM | 2500 | Business Statistics | 3\nISOM | 2700 | Operations Management | 3\nMARK | 2120 | Marketing Management | 3\nMGMT | 2110 | Organizational Behavior | 3\nMGMT | 2130 | Business Ethics and Social Responsibility | 2"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "BTEC 5340",
+      "BTEC 5380",
+      "CHEM 2111",
+      "CHEM 2155",
+      "CHEM 2311",
+      "CHEM 2355"
+     ],
+     "min_credits": 9.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "SSCI/SBM | Biotechnology and Business Electives (Courses from the specified elective list, of which at least 3 credits from each area in Biotechnology / Business. Courses taken as Major Required Courses may not be counted towards this elective requirement.) | 9\n  [Biotechnology]\n  LIFS | Any LIFS courses at 3000/4000-level\n  [Business]\n  SB&M | Any ECON/FINA/ISOM/MARK/MGMT courses at 3000/4000-level"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bibu.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "Students with level 3 or above in HKDSE 1x Biology are exempted from taking LIFS 1901 -- an exemption, not a requirement; it is not applied automatically.",
+  "Students with level 3 or above in HKDSE 1/2x or 1x Chemistry are exempted from taking CHEM 1008 -- an exemption, not a requirement; it is not applied automatically.",
+  "Biotechnology and Business Electives (Courses from the specified elective list, of which at least 3 credits from each area in Biotechnology / Business. Courses taken as Major Required Courses may not be counted towards this elective requirement.) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor.",
+  "Requirements: COMP 1022P is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": null
+}

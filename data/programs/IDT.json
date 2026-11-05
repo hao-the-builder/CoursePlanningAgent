@@ -1,0 +1,310 @@
+{
+ "code": "IDT",
+ "title": "BSc in Innovation, Design and Technology",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 1001"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 1004"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 1007"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 1010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 1011"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 2001"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 2002"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 2200"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 2300"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 2400"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 2601"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 2602"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 2603"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 3001"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 3002"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 3010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 3200"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 4001"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 4002"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISDN 4010"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 1023"
+      ],
+      [
+       "COMP 2011"
+      ],
+      [
+       "COMP 2012H"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LANG 4036"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1006"
+      ],
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1020"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1101"
+      ],
+      [
+       "PHYS 1111"
+      ],
+      [
+       "PHYS 1112"
+      ],
+      [
+       "PHYS 1312"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "ISDN | 1001 | Introduction to Integrative Systems and Design | 3\nISDN | 1004 | Sketching | 1\nISDN | 1007 | From Design Thinking to Design Action: Defining Problems for Better Solutions | 3\nISDN | 1010 | Academic and Professional Development I | 0\nISDN | 1011 | Industrial Training | 0\nISDN | 2001 | Second Year Design Project I | 1\nISDN | 2002 | Second Year Design Project II | 3\nISDN | 2010 | Academic and Professional Development II | 0\nISDN | 2200 | Systems Thinking and Design | 3\nISDN | 2300 | Introduction to 3D Design | 3\nISDN | 2400 | Physical Prototyping | 3\nISDN | 2601 | Exploring the World through Smart Mechatronics | 3\nISDN | 2602 | Internet of Things: Integrative System Design | 3\nISDN | 2603 | Materials, Shape and Design | 3\nISDN | 3001 | Third Year Design Project I | 3\nISDN | 3002 | Third Year Design Project II | 3\nISDN | 3010 | Academic and Professional Development III | 0\nISDN | 3200 | Graphic Communication | 2\nISDN | 4001 | Final Year Design Project I | 4\nISDN | 4002 | Final Year Design Project II | 4\nISDN | 4010 | Academic and Professional Development IV | 0\nCOMP | Note: COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\nLANG | 4036 | Technical Communication for Technology Projects | 3\nMATH | Note: [MATH 1006 OR MATH 1013 OR MATH 1023 AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] (Subject to approval of the program office, MATH 1014/1024 may be replaced by a COMP course) | 4-7\nPHYS | Note: PHYS 1101 OR PHYS 1111 OR PHYS 1112 OR PHYS 1312 | 3-4"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "ISDN 3350",
+      "ISDN 3360",
+      "ISDN 4200",
+      "ENTR 3100",
+      "FINA 2203",
+      "ISOM 2030",
+      "ISOM 2700",
+      "ISOM 4020",
+      "MARK 2120",
+      "TEMG 3950",
+      "TEMG 4940",
+      "TEMG 4950",
+      "TEMG 4970"
+     ],
+     "min_credits": 6.0,
+     "exclude": []
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "ISDN 2210",
+      "ISDN 3004",
+      "ISDN 3150",
+      "ISDN 3300",
+      "BIEN 3320",
+      "COMP 2011",
+      "COMP 2012",
+      "COMP 2211",
+      "COMP 2611",
+      "COMP 3111",
+      "COMP 3211",
+      "COMP 3311",
+      "COMP 3711",
+      "COMP 4021",
+      "COMP 4221",
+      "COMP 4331",
+      "COMP 4411",
+      "COMP 4421",
+      "COMP 4461",
+      "COMP 4462",
+      "COMP 4521",
+      "COMP 4632",
+      "COMP 4641",
+      "COMP 4651",
+      "COMP 4901"
+     ],
+     "min_credits": 21.0,
+     "exclude": []
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "ELEC 3xxx"
+     ],
+     "min_credits": 0.0,
+     "exclude": []
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "ELEC 2100",
+      "ELEC 2350",
+      "ELEC 2400",
+      "ELEC 2600",
+      "IEDA 2520",
+      "MATH 2011",
+      "MATH 2111",
+      "MATH 2343",
+      "MATH 2350",
+      "MATH 2411",
+      "MECH 2020",
+      "MECH 2040",
+      "MECH 2210",
+      "MECH 2310",
+      "MECH 2410",
+      "MECH 2520",
+      "MECH 3030",
+      "MECH 3300",
+      "MECH 3310",
+      "MECH 3420",
+      "MECH 3510",
+      "MECH 3610",
+      "MECH 3907",
+      "MECH 4450",
+      "MECH 4710",
+      "MECH 4740"
+     ],
+     "min_credits": 0.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "ISDN/ENTR/SBM/TEMG | Product Management and Entrepreneurship Electives (Courses from the specified elective list, of which at least 1 course must be at 3000-level or above.) | 6\nISDN/SENG/MATH | Project-related Electives (Courses from the specified elective list, of which at least 12 credits should be at 3000-level or above and no more than 3 credits at 1000-level. Students should seek approval of their advisor for the choices of courses.) | 21\nELEC | Any ELEC courses at 3000-level | 0-4\nELEC | Any ELEC courses at 4000-level | 0-4"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27idt.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "[MATH 1006 OR MATH 1013 OR MATH 1023 AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] -- (Subject to approval of the program office, MATH 1014/1024 may be replaced by a COMP course)",
+  "Any ELEC courses at 3000-level -- the requirement PDF states no credit minimum here, so nothing is enforced; the courses that count are recorded."
+ ],
+ "parent": null
+}

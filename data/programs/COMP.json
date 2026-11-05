@@ -1,0 +1,325 @@
+{
+ "code": "COMP",
+ "title": "BEng in Computer Science",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Engineering Fundamental Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "COMP 1023"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1013",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1013",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1020"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 2111"
+      ],
+      [
+       "MATH 2121"
+      ],
+      [
+       "MATH 2131"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "COMP | 1023 | Introduction to Python Programming | 3\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\nMATH | Note: MATH 2111 OR MATH 2121 OR MATH 2131 | 3-4"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 1991",
+       "COMP 4981"
+      ],
+      [
+       "COMP 1991",
+       "COMP 4981H"
+      ],
+      [
+       "COMP 4910"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 2011",
+       "COMP 2012"
+      ],
+      [
+       "COMP 2012H"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "COMP 2611"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 2711"
+      ],
+      [
+       "COMP 2711H"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 3111"
+      ],
+      [
+       "COMP 3111H"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "COMP 3511"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 3711"
+      ],
+      [
+       "COMP 3711H"
+      ]
+     ]
+    },
+    {
+     "type": "every_term",
+     "course": "COMP 4900"
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ELEC 2600"
+      ],
+      [
+       "IEDA 2520"
+      ],
+      [
+       "IEDA 2540"
+      ],
+      [
+       "MATH 2411"
+      ],
+      [
+       "MATH 2421"
+      ],
+      [
+       "MATH 2431"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "COMP | Note: [COMP 1991 AND (COMP 4981 OR COMP 4981H)] OR [COMP 4910] | 6\nCOMP | Note: (COMP 2011 AND COMP 2012) OR COMP 2012H | 5-8\nCOMP | 2611 | Computer Organization | 4\nCOMP | Note: COMP 2711 OR COMP 2711H | 4\nCOMP | Note: COMP 3111 OR COMP 3111H | 4\nCOMP | 3511 | Operating Systems | 3\nCOMP | Note: COMP 3711 OR COMP 3711H | 3-4\nCOMP | Note: Students are required to take COMP 4900 for every regular term in which they are in residency at HKUST with major in COMP | 0\nELEC/IEDA/MATH | Note: ELEC 2600 OR ELEC 2600H OR IEDA 2520 OR IEDA 2540 OR MATH 2411 OR MATH 2421 OR MATH 2431 | 3-4"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "COMP 2xxx"
+     ],
+     "min_credits": 3.0,
+     "exclude": []
+    },
+    {
+     "type": "choose_n",
+     "n": 5,
+     "courses": [
+      "COMP 3211",
+      "COMP 3721",
+      "COMP 4211",
+      "COMP 4212",
+      "COMP 4221",
+      "COMP 4222",
+      "COMP 4331",
+      "COMP 4332",
+      "COMP 4421",
+      "COMP 4471",
+      "COMP 4541",
+      "COMP 4551",
+      "COMP 4901B",
+      "COMP 4901D",
+      "COMP 4901L",
+      "COMP 4901R",
+      "COMP 4901T",
+      "COMP 4901V",
+      "COMP 4901X",
+      "COMP 5211",
+      "COMP 5212",
+      "COMP 5214",
+      "COMP 5215",
+      "COMP 5221",
+      "COMP 5331",
+      "COMP 5421",
+      "COMP 5711",
+      "COMP 5712",
+      "COMP 5713",
+      "COMP 4411",
+      "COMP 4431",
+      "COMP 4441",
+      "COMP 4451",
+      "COMP 4461",
+      "COMP 4462",
+      "COMP 5411",
+      "COMP 3021",
+      "COMP 3031",
+      "COMP 3311",
+      "COMP 4021",
+      "COMP 4121",
+      "COMP 4321",
+      "COMP 4521",
+      "COMP 4651",
+      "COMP 4901A",
+      "COMP 5111",
+      "COMP 5112",
+      "COMP 5311",
+      "COMP 3631",
+      "COMP 4531",
+      "COMP 4611",
+      "COMP 4621",
+      "COMP 4632",
+      "COMP 4634",
+      "COMP 4635",
+      "COMP 4641",
+      "COMP 4901Q",
+      "COMP 5621",
+      "COMP 5631",
+      "COMP 4911"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "COMP 3211",
+      "COMP 3721",
+      "COMP 4211",
+      "COMP 4212",
+      "COMP 4221",
+      "COMP 4222",
+      "COMP 4331",
+      "COMP 4332",
+      "COMP 4421",
+      "COMP 4471",
+      "COMP 4541",
+      "COMP 4551",
+      "COMP 4901B",
+      "COMP 4901D",
+      "COMP 4901L",
+      "COMP 4901R",
+      "COMP 4901T",
+      "COMP 4901V",
+      "COMP 4901X",
+      "COMP 5211",
+      "COMP 5212",
+      "COMP 5214",
+      "COMP 5215",
+      "COMP 5221",
+      "COMP 5331",
+      "COMP 5421",
+      "COMP 5711",
+      "COMP 5712",
+      "COMP 5713",
+      "COMP 4411",
+      "COMP 4431",
+      "COMP 4441",
+      "COMP 4451",
+      "COMP 4461",
+      "COMP 4462",
+      "COMP 5411",
+      "COMP 3021",
+      "COMP 3031",
+      "COMP 3311",
+      "COMP 4021",
+      "COMP 4121",
+      "COMP 4321",
+      "COMP 4521",
+      "COMP 4651",
+      "COMP 4901A",
+      "COMP 5111",
+      "COMP 5112",
+      "COMP 5311",
+      "COMP 3631",
+      "COMP 4531",
+      "COMP 4611",
+      "COMP 4621",
+      "COMP 4632",
+      "COMP 4634",
+      "COMP 4635",
+      "COMP 4641",
+      "COMP 4901Q",
+      "COMP 5621",
+      "COMP 5631",
+      "COMP 4911"
+     ],
+     "min_credits": 15.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "COMP | COMP 2000-level or above Elective (Any course(s) of the subject and level as specified) | 3\nCOMP | COMP Electives (5 courses from the specified elective list, of which at least 3 courses should be taken from 1 area and at least 2 courses outside that area (including course(s) in the Courses Without Associated Area). Students may use at most one course under Deep Learning Applications (COMP 4471 and COMP 5215) to count towards this elective requirement.) | 15\n  [Artificial Intelligence / Theory Area]\n  [Vision & Graphics / Multimedia Area]\n  [Software / Database Area]\n  [Computer Systems / Networking Area]\n  [Courses Without Associated Area]\nCOMP | COMP Electives (5 courses from the specified elective list, of which at least 3 courses should be taken from 1 area and at least 2 courses outside that area (including course(s) in the Courses Without Associated Area). Students may use at most one course under Deep Learning Applications (COMP 4471 and COMP 5215) to count towards this elective requirement.) | 15\n  [Artificial Intelligence / Theory Area]\n  [Vision & Graphics / Multimedia Area]\n  [Software / Database Area]\n  [Computer Systems / Networking Area]\n  [Courses Without Associated Area]"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27comp.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "COMP Electives (5 courses from the specified elective list, of which at least 3 courses should be taken from 1 area and at least 2 courses outside that area (including course(s) in the Courses Without Associated Area). Students may use at most one course under Deep Learning Applications (COMP 4471 and COMP 5215) to count towards this elective requirement.) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor.",
+  "ELEC 2600H: The course was last offered in 2021-22 and was deleted subsequently.",
+  "Required Course(s): ELEC 2600H is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": null
+}

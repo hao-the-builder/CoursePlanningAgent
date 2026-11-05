@@ -1,0 +1,129 @@
+{
+ "code": "MINOR-CHEM",
+ "title": "Minor Program in Chemistry",
+ "kind": "minor",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Required Course(s)",
+   "category": "Minor",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1011"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "CHEM 2110"
+      ],
+      [
+       "CHEM 2111"
+      ],
+      [
+       "CHEM 2210"
+      ],
+      [
+       "CHEM 2310"
+      ],
+      [
+       "CHEM 2311"
+      ],
+      [
+       "CHEM 2401"
+      ],
+      [
+       "CHEM 2410"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "CHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\nCHEM | Note: (CHEM 2110 OR CHEM 2111) OR CHEM 2210 OR (CHEM 2310 OR CHEM 2311) OR (CHEM 2401 OR CHEM 2410) (3 courses out of 4 course groups) | 9-10"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Minor",
+   "rules": [
+    {
+     "type": "choose_n",
+     "n": 2,
+     "courses": [
+      "CHEM 2155",
+      "CHEM 2355",
+      "CHEM 3030",
+      "CHEM 3120",
+      "CHEM 3220",
+      "CHEM 3320",
+      "CHEM 3420",
+      "CHEM 4110",
+      "CHEM 4120",
+      "CHEM 4130",
+      "CHEM 4140",
+      "CHEM 4160",
+      "CHEM 4210",
+      "CHEM 4220",
+      "CHEM 4230",
+      "CHEM 4240",
+      "CHEM 4310",
+      "CHEM 4320",
+      "CHEM 4330",
+      "CHEM 4340",
+      "CHEM 4410",
+      "CHEM 4420",
+      "CHEM 4430",
+      "CHEM 4620",
+      "CHEM 4640",
+      "CHEM 4680"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "CHEM 2155",
+      "CHEM 2355",
+      "CHEM 3030",
+      "CHEM 3120",
+      "CHEM 3220",
+      "CHEM 3320",
+      "CHEM 3420",
+      "CHEM 4110",
+      "CHEM 4120",
+      "CHEM 4130",
+      "CHEM 4140",
+      "CHEM 4160",
+      "CHEM 4210",
+      "CHEM 4220",
+      "CHEM 4230",
+      "CHEM 4240",
+      "CHEM 4310",
+      "CHEM 4320",
+      "CHEM 4330",
+      "CHEM 4340",
+      "CHEM 4410",
+      "CHEM 4420",
+      "CHEM 4430",
+      "CHEM 4620",
+      "CHEM 4640",
+      "CHEM 4680"
+     ],
+     "min_credits": 6.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "CHEM | Chemistry Elective (2 courses from the specified elective list, out of which at least 3 credits must be at 4000-level.) | 6\nCHEM | Chemistry Elective (2 courses from the specified elective list, out of which at least 3 credits must be at 4000-level.) | 6"
+  }
+ ],
+ "stated_total_credits": null,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-chem.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "To graduate with a minor in Chemistry, the students must be enrolled in the minor program, complete a minimum total of 18 credits and all of its requirements, as well as all the requirements of their major program of study; and have attained an average grade point of at least 1.5 in courses taken within the minor program. For credit transfer, students can transfer a maximum total of 6 credits to the Minor Program. Out of the total credits required by the minor program, at least 9 credits should be single-counted within the minor and are not used to fulfill any other requirements for graduation except the 120-credit degree requirement. Students may use no more than 9 credits earned from courses delivered in online mode, including HKUST self-paced online [SPO] courses and other online credits approved through the University’s credit transfer procedures, to satisfy the graduation requirements of a degree program.",
+  "(CHEM 2110 OR CHEM 2111) OR CHEM 2210 OR (CHEM 2310 OR CHEM 2311) OR (CHEM 2401 OR CHEM 2410) -- (3 courses out of 4 course groups)"
+ ],
+ "parent": null
+}

@@ -1,0 +1,326 @@
+{
+ "code": "BMH",
+ "title": "BSc in Biomedical and Health Sciences",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 1021"
+      ],
+      [
+       "COMP 1023"
+      ]
+     ]
+    },
+    {
+     "type": "choose_n",
+     "n": 6,
+     "courses": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ],
+     "min_credits": 0.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+  },
+  {
+   "name": "Major Pre-requisite course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 1902"
+     ]
+    }
+   ],
+   "source_quote": "LIFS | 1902 | General Biology II | 3"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 1904"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 1980"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2040"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2210"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2220"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2901"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 3040"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "LIFS 3901"
+      ],
+      [
+       "LIFS 3902"
+      ],
+      [
+       "LIFS 3903"
+      ],
+      [
+       "LIFS 3904"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 4370"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 4380"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "LIFS 4966"
+      ],
+      [
+       "LIFS 4976",
+       "LIFS 4986"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1011"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1012"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1051"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1052"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1005"
+      ],
+      [
+       "MATH 1006"
+      ],
+      [
+       "MATH 1013"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "COMP 1021"
+     ]
+    }
+   ],
+   "source_quote": "LIFS | 1904 | Laboratory for General Biology II | 1\nLIFS | 1980 | Guided Study on Biomedical and Health Sciences | 1\nLIFS | 2010 | Modern Approaches to Biochemical and Cell Biological Research | 3\nLIFS | 2040 | Cell Biology | 3\nLIFS | 2210 | Biochemistry I | 3\nLIFS | 2220 | Biochemistry II | 3\nLIFS | 2901 | Case Study on Biomedical and Health Sciences I: From Proposal to Practice | 3\nLIFS | 3040 | Animal Physiology | 3\nLIFS | Note: LIFS 3901 OR LIFS 3902 OR LIFS 3903 OR LIFS 3904 (2 courses out of 4) | 8\nLIFS | 4370 | Human Genetics and Personalized Medicine | 3\nLIFS | 4380 | Pharmacology and Toxicology | 3\nLIFS | Note: LIFS 4966 OR (LIFS 4976 AND LIFS 4986) | 3-7\nCHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\nCHEM | 1051 | Laboratory for General Chemistry A | 1\nCHEM | 1052 | Laboratory for General Chemistry B | 1\nMATH | Note: MATH 1005 OR MATH 1006 OR MATH 1013 | 3-4\nCOMP | 1021 | Introduction to Computer Science | 3"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "LIFS 1982",
+      "LIFS 2070",
+      "LIFS 3002",
+      "LIFS 3060",
+      "LIFS 3070",
+      "LIFS 3140",
+      "LIFS 3150",
+      "LIFS 3240",
+      "LIFS 3370",
+      "LIFS 4000",
+      "LIFS 4060",
+      "LIFS 4090",
+      "LIFS 4140",
+      "LIFS 4320",
+      "LIFS 4540",
+      "LIFS 4550",
+      "LIFS 4760",
+      "LIFS 4950",
+      "CHEM 2111",
+      "CHEM 2155",
+      "CHEM 2311",
+      "CHEM 2355",
+      "BIEN 4110",
+      "CENG 4650",
+      "COMP 2011",
+      "MGMT 1120",
+      "MGMT 1130",
+      "MGMT 2110",
+      "SOSC 1960",
+      "SOSC 1969",
+      "SOSC 1980",
+      "SOSC 1990",
+      "SOSC 2240",
+      "SOSC 3900"
+     ],
+     "min_credits": 17.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "LIFS/CHEM/SENG/SBM/SHSS | Biomedical and Health Sciences Electives [Courses from the specified elective list. Students should take a minimum of 17 credits (for those opting for LIFS 4976 and LIFS 4986) or 21 credits (for those opting for LIFS 4966), of which at least 12 credits must be offered by LIFS.] | 17-21"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bmh.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "Students MUST take the following courses prior to enrollment into the major",
+  "Students with level 3 or above in HKDSE 1x Biology are exempted from taking LIFS 1901 -- an exemption, not a requirement; it is not applied automatically.",
+  "Students with level 3 or above in HKDSE 1x Biology are exempted from taking LIFS 1903 -- an exemption, not a requirement; it is not applied automatically.",
+  "LIFS 3901 OR LIFS 3902 OR LIFS 3903 OR LIFS 3904 -- (2 courses out of 4)",
+  "LIFS 3180: This is a new course subject to approval.",
+  "LIFS 3190: This is a new course subject to approval.",
+  "LIFS 4170: This is a new course subject to approval.",
+  "LIFS 4881: This is a new course subject to approval.",
+  "Requirements: COMP 1022P is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check.",
+  "Elective(s): LIFS 3180, LIFS 3190, LIFS 4170, LIFS 4881 are named in the requirement PDF but not in the 2026-27 course catalog, so they were left out of this check."
+ ],
+ "parent": null
+}

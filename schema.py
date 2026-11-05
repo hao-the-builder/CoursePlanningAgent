@@ -126,6 +126,8 @@ class Program(BaseModel):
     source_url: str
     tier: Tier = Tier.AUTO
     unparsed_lines: list[str] = []   # anything the extractor couldn't map → forces review
+    caveats: list[str] = []          # mapped, but a stated refinement is not enforced
+    parent: str | None = None        # base program, when this is a track/option variant
 
 
 # ---------------------------------------------------------------- student --

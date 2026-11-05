@@ -1,0 +1,187 @@
+{
+ "code": "GCS-SS",
+ "title": "BSc in Global China Studies - Social Science Track",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "HUMA 1440"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "HUMA 2590"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 1350"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 2290"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "SHSS 4991"
+      ],
+      [
+       "SHSS 4992"
+      ],
+      [
+       "SHSS 4991",
+       "SHSS 4993"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LANG 2170"
+     ]
+    }
+   ],
+   "source_quote": "HUMA | 1440 | Modern China | 3\nHUMA | 2590 | The Making of the Modern World: Renaissance to the Present | 3\nSOSC | 1350 | Contemporary China: Continuity and Change | 3\nSOSC | 2290 | Understanding Globalization | 3\nSHSS | Note: SHSS 4991 OR SHSS 4992 OR (SHSS 4991 AND SHSS 4993) [For students taking one of the Research Options, they should take SHSS 4992 OR (SHSS 4991 AND SHSS 4993)] | 3-6\nLANG | 2170 | Chinese Communication Skills for Humanities & Social Science Studies | 3"
+  },
+  {
+   "name": "Social Science Track - Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 1100"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 1300"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 1440"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 1850"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 2140"
+     ]
+    }
+   ],
+   "source_quote": "SOSC | 1100 | Quantitative Data Analysis for Social Research I | 3\nSOSC | 1300 | The World of Politics | 3\nSOSC | 1440 | Introduction to Economics | 3\nSOSC | 1850 | Understanding Society | 3\nSOSC | 2140 | Research Methods in the Social Sciences | 3"
+  },
+  {
+   "name": "Social Science Track - Elective Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "choose_n",
+     "n": 2,
+     "courses": [
+      "SOSC 1780",
+      "SOSC 1860",
+      "SOSC 1960",
+      "SOSC 1980"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "SOSC 1780",
+      "SOSC 1860",
+      "SOSC 1960",
+      "SOSC 1980"
+     ],
+     "min_credits": 6.0,
+     "exclude": []
+    },
+    {
+     "type": "choose_n",
+     "n": 9,
+     "courses": [
+      "SOSC 3120",
+      "SOSC 3520",
+      "SOSC 3540",
+      "SOSC 3630",
+      "SOSC 3880",
+      "SOSC 4260",
+      "SOSC 4280",
+      "SOSC 4310",
+      "SOSC 4600"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "SOSC 3120",
+      "SOSC 3520",
+      "SOSC 3540",
+      "SOSC 3630",
+      "SOSC 3880",
+      "SOSC 4260",
+      "SOSC 4280",
+      "SOSC 4310",
+      "SOSC 4600"
+     ],
+     "min_credits": 27.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "SOSC | Disciplinary Foundation Electives (2 courses from the specified elective list, of which the courses should be taken from different areas.) | 6\n  [Introductory Demography]\n  [Introductory Psychology]\nSOSC | Disciplinary Foundation Electives (2 courses from the specified elective list, of which the courses should be taken from different areas.) | 6\n  [Introductory Demography]\n  [Introductory Psychology]\nSOSC | SOSC Electives (9 courses from the specified elective list, of which at least 4 courses must come from the list under \"Restricted Electives\".) | 27\n  [Restricted Electives]\nSOSC | SOSC Electives (9 courses from the specified elective list, of which at least 4 courses must come from the list under \"Restricted Electives\".) | 27\n  [Restricted Electives]"
+  },
+  {
+   "name": "Social Science Track - Others",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "SOSC 1xxx",
+      "SOSC 2xxx",
+      "SOSC 3xxx",
+      "SOSC 4xxx",
+      "SOSC 5xxx"
+     ],
+     "min_credits": 0.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "SOSC | Any SOSC courses"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "SHSS 4991 OR SHSS 4992 OR (SHSS 4991 AND SHSS 4993) -- [For students taking one of the Research Options, they should take SHSS 4992 OR (SHSS 4991 AND SHSS 4993)]",
+  "Any SOSC courses -- the requirement PDF states no credit minimum here, so nothing is enforced; the courses that count are recorded.",
+  "SOSC 4290: The course was last offered in 2023-24 and was deleted subsequently.",
+  "Social Science Track - Elective Course(s): SOSC 4290 is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": "GCS"
+}

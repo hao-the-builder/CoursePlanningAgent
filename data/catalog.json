@@ -631,6 +631,76 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "BIEN 5040": {
+  "code": "BIEN 5040",
+  "title": "Introduction to Neural Engineering",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "BIEN 5050": {
+  "code": "BIEN 5050",
+  "title": "Global Health Ethics",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "BIEN 5060": {
+  "code": "BIEN 5060",
+  "title": "Fundamentals and Applications of Sensing Technologies in Healthcare",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "BIEN 5070": {
+  "code": "BIEN 5070",
+  "title": "Synthetic Biology",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "BTEC 5210": {
+  "code": "BTEC 5210",
+  "title": "Principles and Application in Biotechnology",
+  "credits": 4.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "BTEC 5340": {
+  "code": "BTEC 5340",
+  "title": "Biomarkers and Medical Devices",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "BTEC 5380": {
+  "code": "BTEC 5380",
+  "title": "Drug Discovery and Development",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "CENG 1000": {
   "code": "CENG 1000",
   "title": "Foundations of Chemical and Biological Engineering",
@@ -1025,6 +1095,76 @@
  "CENG 4980": {
   "code": "CENG 4980",
   "title": "Investigation Project",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "CENG 5210": {
+  "code": "CENG 5210",
+  "title": "Advanced Separation Processes",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "CENG 5230": {
+  "code": "CENG 5230",
+  "title": "Advanced Control and Data Science",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "CENG 5240": {
+  "code": "CENG 5240",
+  "title": "Deep Learning for Chemical and Biological Engineering",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "CENG 5550": {
+  "code": "CENG 5550",
+  "title": "Polymer Physics and Advanced Applications",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "CENG 5610": {
+  "code": "CENG 5610",
+  "title": "Protein Engineering",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "CENG 5840": {
+  "code": "CENG 5840",
+  "title": "Nanomaterials for Chemical Engineering Applications",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "CENG 5930": {
+  "code": "CENG 5930",
+  "title": "Electrochemical Energy Technologies",
   "credits": 3.0,
   "credits_max": null,
   "prereq_expr": null,
@@ -2096,6 +2236,16 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "CIVL 4100T": {
+  "code": "CIVL 4100T",
+  "title": "Applications of Artificial Intelligence in Remote Sensing",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "CIVL 4210": {
   "code": "CIVL 4210",
   "title": "Advanced Construction with AI and Robotics",
@@ -2417,6 +2567,46 @@
  "CIVL 4950": {
   "code": "CIVL 4950",
   "title": "Civil Engineering Capstone Design Project",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "CIVL 5410": {
+  "code": "CIVL 5410",
+  "title": "Physical-Chemical Water/Wastewater Treatment",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "CIVL 5430": {
+  "code": "CIVL 5430",
+  "title": "Aquatic Chemistry",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "CIVL 5450": {
+  "code": "CIVL 5450",
+  "title": "Hazardous Waste Treatment and Site Remediation",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "CIVL 5460": {
+  "code": "CIVL 5460",
+  "title": "Landfill Engineering and Design",
   "credits": 3.0,
   "credits_max": null,
   "prereq_expr": null,
@@ -3192,6 +3382,96 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "COMP 4901A": {
+  "code": "COMP 4901A",
+  "title": "Distributed Systems",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 4901B": {
+  "code": "COMP 4901B",
+  "title": "Large Language Models",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 4901D": {
+  "code": "COMP 4901D",
+  "title": "Embedded AI Systems",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 4901L": {
+  "code": "COMP 4901L",
+  "title": "Foundations of Computer Vision",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 4901Q": {
+  "code": "COMP 4901Q",
+  "title": "High Performance Computing",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 4901R": {
+  "code": "COMP 4901R",
+  "title": "Algorithmic Game Theory",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 4901T": {
+  "code": "COMP 4901T",
+  "title": "Introduction to Computer Vision",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 4901V": {
+  "code": "COMP 4901V",
+  "title": "Large-Scale Deep Perception, Localization, and Planning for Autonomous Vehicles",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 4901X": {
+  "code": "COMP 4901X",
+  "title": "Formal Reasoning about Programs",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "COMP 4910": {
   "code": "COMP 4910",
   "title": "Co-op Program",
@@ -3246,6 +3526,176 @@
   "exclusions": [
    "COMP 4981"
   ],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5111": {
+  "code": "COMP 5111",
+  "title": "Fundamentals of Software Analysis",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5112": {
+  "code": "COMP 5112",
+  "title": "Parallel Programming",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5211": {
+  "code": "COMP 5211",
+  "title": "Advanced Artificial Intelligence",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5212": {
+  "code": "COMP 5212",
+  "title": "Machine Learning",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5214": {
+  "code": "COMP 5214",
+  "title": "Advanced Deep Learning Architectures",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5215": {
+  "code": "COMP 5215",
+  "title": "Perception and Information Processing for Robotics",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5221": {
+  "code": "COMP 5221",
+  "title": "Natural Language Processing",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5311": {
+  "code": "COMP 5311",
+  "title": "Database Architecture and Implementation",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5331": {
+  "code": "COMP 5331",
+  "title": "Knowledge Discovery in Databases",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5411": {
+  "code": "COMP 5411",
+  "title": "Advanced Computer Graphics",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5421": {
+  "code": "COMP 5421",
+  "title": "Computer Vision",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5423": {
+  "code": "COMP 5423",
+  "title": "Deep Learning in Medical Image Analysis",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5621": {
+  "code": "COMP 5621",
+  "title": "Computer Networks",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5631": {
+  "code": "COMP 5631",
+  "title": "Cryptography and Security",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5711": {
+  "code": "COMP 5711",
+  "title": "Introduction to Advanced Algorithmic Techniques",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5712": {
+  "code": "COMP 5712",
+  "title": "Introduction to Combinatorial Optimization",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "COMP 5713": {
+  "code": "COMP 5713",
+  "title": "Computational Geometry",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
   "terms_offered": [],
   "common_core_areas": []
  },
@@ -4385,6 +4835,26 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "ELEC 4010R": {
+  "code": "ELEC 4010R",
+  "title": "Compound Semiconductor Device Physics and Technologies",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "ELEC 4010S": {
+  "code": "ELEC 4010S",
+  "title": "Microwave Theory and Applications",
+  "credits": 4.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "ELEC 4110": {
   "code": "ELEC 4110",
   "title": "Digital Communications and Wireless Systems",
@@ -4656,6 +5126,16 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "ELEC 5900": {
+  "code": "ELEC 5900",
+  "title": "Modern Engineering Research Methodologies",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "EMIA 1901": {
   "code": "EMIA 1901",
   "title": "Introduction to Smart City Development",
@@ -4683,6 +5163,36 @@
  "EMIA 2010": {
   "code": "EMIA 2010",
   "title": "Cross-disciplinary Seminar",
+  "credits": 0.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "EMIA 2010A": {
+  "code": "EMIA 2010A",
+  "title": "Cross-disciplinary Seminar: Artificial Intelligence",
+  "credits": 0.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "EMIA 2010C": {
+  "code": "EMIA 2010C",
+  "title": "Cross-disciplinary Seminar: Sustainability",
+  "credits": 0.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "EMIA 2010D": {
+  "code": "EMIA 2010D",
+  "title": "Cross-disciplinary Seminar: Creative Arts and Digital Humanities",
   "credits": 0.0,
   "credits_max": null,
   "prereq_expr": null,
@@ -4740,11 +5250,31 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "EMIA 2500B": {
+  "code": "EMIA 2500B",
+  "title": "Film Script Analysis and Scriptwriting",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "EMIA 3500": {
   "code": "EMIA 3500",
   "title": "Special Topics (II)",
   "credits": 1.0,
   "credits_max": 4.0,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "EMIA 3500A": {
+  "code": "EMIA 3500A",
+  "title": "AI and Design in Sci-Fi",
+  "credits": 2.0,
+  "credits_max": null,
   "prereq_expr": null,
   "exclusions": [],
   "terms_offered": [],
@@ -8006,6 +8536,46 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "HUMA 4000F": {
+  "code": "HUMA 4000F",
+  "title": "The Nexus of Power: Warfare, Trade and the State in Chinese History",
+  "credits": 4.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "HUMA 4000I": {
+  "code": "HUMA 4000I",
+  "title": "Ecology and Society",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "HUMA 4000J": {
+  "code": "HUMA 4000J",
+  "title": "The Search for Identity: On Self and Community",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "HUMA 4000L": {
+  "code": "HUMA 4000L",
+  "title": "Philosophy of History and Society",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "HUMA 4020": {
   "code": "HUMA 4020",
   "title": "Language and Literature in Modern China",
@@ -8593,6 +9163,26 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "IEDA 5170": {
+  "code": "IEDA 5170",
+  "title": "Advanced Production Planning and Control",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "IEDA 5230": {
+  "code": "IEDA 5230",
+  "title": "Deterministic Models in Operations Research",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "IIMP 2000": {
   "code": "IIMP 2000",
   "title": "Academic and Professional Development",
@@ -8923,6 +9513,16 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "ISDN 3000D": {
+  "code": "ISDN 3000D",
+  "title": "Maker",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "ISDN 3001": {
   "code": "ISDN 3001",
   "title": "Third Year Design Project I",
@@ -9018,6 +9618,16 @@
   "title": "Special Topics",
   "credits": 1.0,
   "credits_max": 4.0,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "ISDN 4000S": {
+  "code": "ISDN 4000S",
+  "title": "Applied Generative AI for Interdisciplinary Projects",
+  "credits": 3.0,
+  "credits_max": null,
   "prereq_expr": null,
   "exclusions": [],
   "terms_offered": [],
@@ -9260,6 +9870,16 @@
   "title": "Special Topics in Information Systems",
   "credits": 0.0,
   "credits_max": 4.0,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "ISOM 3000B": {
+  "code": "ISOM 3000B",
+  "title": "Blockchain Entrepreneurship for Social Impact",
+  "credits": 3.0,
+  "credits_max": null,
   "prereq_expr": null,
   "exclusions": [],
   "terms_offered": [],
@@ -13672,6 +14292,26 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "MECH 4000P": {
+  "code": "MECH 4000P",
+  "title": "AI in Mechanical Engineering",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "MECH 4000S": {
+  "code": "MECH 4000S",
+  "title": "Intelligent Control and Data-Driven Modeling of Dynamic Systems",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "MECH 4010": {
   "code": "MECH 4010",
   "title": "Materials Failure in Mechanical Applications",
@@ -13855,6 +14495,16 @@
   "code": "MECH 4995",
   "title": "Research Project",
   "credits": 6.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "MECH 5961": {
+  "code": "MECH 5961",
+  "title": "Acoustics and Aeroacoustics",
+  "credits": 3.0,
   "credits_max": null,
   "prereq_expr": null,
   "exclusions": [],
@@ -14638,6 +15288,16 @@
   "credits": 3.0,
   "credits_max": null,
   "prereq_expr": "(LIFS 1901 OR level 3 or above in HKDSE 1xBiology) AND (PHYS 1111 OR PHYS 1112 OR PHYS 1312)",
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "PHYS 2021": {
+  "code": "PHYS 2021",
+  "title": "Black Holes and the Early Universe",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
   "exclusions": [],
   "terms_offered": [],
   "common_core_areas": []
@@ -16522,6 +17182,16 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "SOSC 1000F": {
+  "code": "SOSC 1000F",
+  "title": "Globalization in Everyday Life",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "SOSC 1001": {
   "code": "SOSC 1001",
   "title": "Special Topics",
@@ -16971,6 +17641,16 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "SOSC 2000F": {
+  "code": "SOSC 2000F",
+  "title": "Political Sociology: Concepts, Theories and Applications",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "SOSC 2130": {
   "code": "SOSC 2130",
   "title": "Education and Society",
@@ -17159,6 +17839,16 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "SOSC 3000J": {
+  "code": "SOSC 3000J",
+  "title": "AI Governance and Regulation",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "SOSC 3001": {
   "code": "SOSC 3001",
   "title": "Understanding China, 1700-2000: A Data Analytic Approach",
@@ -17340,6 +18030,16 @@
   "terms_offered": [],
   "common_core_areas": []
  },
+ "SOSC 3800": {
+  "code": "SOSC 3800",
+  "title": "Ethics, Emerging Technologies and Public Policy",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
  "SOSC 3850": {
   "code": "SOSC 3850",
   "title": "Ethics and Public Affairs",
@@ -17399,6 +18099,36 @@
   "title": "Special Topics",
   "credits": 1.0,
   "credits_max": 4.0,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "SOSC 4000F": {
+  "code": "SOSC 4000F",
+  "title": "Jerusalem through the Ages: Historical Geography of the Holy City",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "SOSC 4000I": {
+  "code": "SOSC 4000I",
+  "title": "China's Belt and Road Initiative",
+  "credits": 3.0,
+  "credits_max": null,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "SOSC 4000J": {
+  "code": "SOSC 4000J",
+  "title": "The New Silk Route: Social Science Perspectives",
+  "credits": 3.0,
+  "credits_max": null,
   "prereq_expr": null,
   "exclusions": [],
   "terms_offered": [],
@@ -17701,6 +18431,16 @@
   "title": "T&M Corporate Consulting Project",
   "credits": 3.0,
   "credits_max": 5.0,
+  "prereq_expr": null,
+  "exclusions": [],
+  "terms_offered": [],
+  "common_core_areas": []
+ },
+ "TEMG 4950N": {
+  "code": "TEMG 4950N",
+  "title": "T&M Corporate Consulting Project: Meta LLM for Digital Transformation of Viu International",
+  "credits": 4.0,
+  "credits_max": null,
   "prereq_expr": null,
   "exclusions": [],
   "terms_offered": [],

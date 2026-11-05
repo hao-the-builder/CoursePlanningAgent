@@ -1,0 +1,77 @@
+{
+ "code": "MINOR-AERO",
+ "title": "Minor Program in Aeronautical Engineering",
+ "kind": "minor",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Required Course(s)",
+   "category": "Minor",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MECH 3640"
+      ],
+      [
+       "MECH 3650"
+      ],
+      [
+       "MECH 3660"
+      ],
+      [
+       "MECH 3670"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "MECH | Note: MECH 3640 OR MECH 3650 OR MECH 3660 OR MECH 3670 (3 courses out of 4) | 9"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Minor",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "MECH 2007",
+      "MECH 3740",
+      "MECH 3750",
+      "MECH 4100",
+      "MECH 4350",
+      "MECH 4430",
+      "MECH 4710",
+      "MECH 4720",
+      "MECH 4740",
+      "CIVL 4370",
+      "COMP 3111",
+      "COMP 3511",
+      "ELEC 3200",
+      "IEDA 2410",
+      "MECH 1910",
+      "CENG 2210",
+      "CENG 2220",
+      "CIVL 2120",
+      "CIVL 2510"
+     ],
+     "min_credits": 9.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "SENG | Technical Electives (Courses from the specified elective list, of which students may only use at most 1 course from Group B to count toward this requirement.) | 9\n  [Group A]\n  [Group B]"
+  }
+ ],
+ "stated_total_credits": null,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-aero.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "To graduate with a minor in Aeronautical Engineering, students must have enrolled in the Minor Program and complete a minimum total of 18 credits and all of its requirements, as well as the requirements of the major program of study; and have attained an average grade point of at least 2.15 in courses taken within the minor program. For credit transfer, students can transfer a maximum total of 6 credits to the Minor Program. Courses accepted for transfer credits must normally be at a level equivalent to HKUST courses of 1000-level or above. Out of the total credits required by the minor program, at least 9 credits should be single-counted within the minor and are not used to fulfill any other requirements for graduation except the 120-credit degree requirement. Students may use no more than 9 credits earned from courses delivered in online mode, including HKUST self-paced online [SPO] courses and other online credits approved through the University’s credit transfer procedures, to satisfy the graduation requirements of a degree program.",
+  "MECH 3640 OR MECH 3650 OR MECH 3660 OR MECH 3670 -- (3 courses out of 4)",
+  "IEDA 2200: The course was last offered in 2021-22 and was deleted subsequently.",
+  "Elective(s): IEDA 2200 is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": null
+}

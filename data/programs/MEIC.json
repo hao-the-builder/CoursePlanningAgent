@@ -1,0 +1,239 @@
+{
+ "code": "MEIC",
+ "title": "BEng in Microelectronics and Integrated Circuits",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Engineering Fundamental Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ELEC 2600"
+      ],
+      [
+       "MATH 2011"
+      ],
+      [
+       "MATH 2350"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "COMP 1023"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 2011"
+      ],
+      [
+       "COMP 2012H"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1013",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1013",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1020"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1112"
+      ],
+      [
+       "PHYS 1312"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1114"
+      ],
+      [
+       "PHYS 1314"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "ELEC/MATH | Note: ELEC 2600 OR MATH 2011 OR MATH 2350 (2 courses out of 3) | 6-7\nCOMP | 1023 | Introduction to Python Programming | 3\nCOMP | Note: COMP 2011 OR COMP 2012H | 4-5\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3\nPHYS | Note: PHYS 1114 OR PHYS 1314 | 3"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 1100"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 1300"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 1910"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 2100"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 2350"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 2400"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 2910"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 2992"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 3400"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 3500"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 3910"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ELEC 4920",
+       "ELEC 4900"
+      ],
+      [
+       "ELEC 4920",
+       "ELEC 4901"
+      ],
+      [
+       "ELEC 4920",
+       "ELEC 4910"
+      ],
+      [
+       "ELEC 4930",
+       "ELEC 4900"
+      ],
+      [
+       "ELEC 4930",
+       "ELEC 4901"
+      ],
+      [
+       "ELEC 4930",
+       "ELEC 4910"
+      ],
+      [
+       "ELEC 4930",
+       "ELEC 4931",
+       "ELEC 4932"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "ELEC | 1100 | Introduction to Electro-Robot Design | 4\nELEC | 1300 | Introduction to Microelectronics and Integrated Circuits | 4\nELEC | 1910 | Academic and Professional Development I | 0\nELEC | 2100 | Signals and Systems | 4\nELEC | 2350 | Introduction to Computer Organization and Design | 4\nELEC | 2400 | Electronic Circuits | 4\nELEC | 2910 | Academic and Professional Development II | 0\nELEC | 2992 | Industrial Experience (Microelectronics and Integrated Circuits) | 0\nELEC | 3400 | Introduction to Integrated Circuits and Systems | 4\nELEC | 3500 | Integrated Circuit Devices | 4\nELEC | 3910 | Academic and Professional Development III | 0\nELEC | Note: [(ELEC 4920 OR ELEC 4930) AND (ELEC 4900 OR ELEC 4901 OR ELEC 4910)] OR [(ELEC 4930 AND ELEC 4931 AND ELEC 4932)] (Students taking the Research Option must take ELEC 4901) | 9"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "ELEC 3300",
+      "ELEC 3310",
+      "ELEC 3410",
+      "ELEC 3600",
+      "ELEC 3610",
+      "ELEC 4010R",
+      "ELEC 4010S",
+      "ELEC 4320",
+      "ELEC 4420",
+      "ELEC 4430",
+      "ELEC 4510",
+      "ELEC 4520",
+      "ELEC 4530",
+      "ELEC 4610",
+      "ELEC 4620",
+      "ELEC 4810"
+     ],
+     "min_credits": 13.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "ELEC | ELEC Electives (Courses from the specified elective list, of which at least 2 courses must be at 4000-level.) | 13\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "http://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27meic.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "ELEC 2600 OR MATH 2011 OR MATH 2350 -- (2 courses out of 3)",
+  "[(ELEC 4920 OR ELEC 4930) AND (ELEC 4900 OR ELEC 4901 OR ELEC 4910)] OR [(ELEC 4930 AND ELEC 4931 AND ELEC 4932)] -- (Students taking the Research Option must take ELEC 4901)"
+ ],
+ "parent": null
+}

@@ -1,0 +1,207 @@
+{
+ "code": "GBUS",
+ "title": "BBA in Global Business",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2010"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2103"
+      ],
+      [
+       "ECON 2113"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2123"
+      ],
+      [
+       "ECON 3123"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 2303"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2020"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2500"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2600"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2130"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1003"
+      ],
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1020"
+      ],
+      [
+       "MATH 1023"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2200",
+      "ISOM 2700",
+      "MARK 2120",
+      "MGMT 2110"
+     ]
+    }
+   ],
+   "source_quote": "ACCT | 2010 | Principles of Accounting I | 3\nECON | Note: ECON 2103 OR ECON 2113 | 3\nECON | Note: ECON 2123 OR ECON 3123 (BSc ECOF students can only use ECON 3123 to fulfill this requirement; while others should take ECON 2123) | 3\nFINA | 2303 | Financial Management | 3\nISOM | 2010 | Introduction to Information Systems | 3\nISOM | 2020 | Coding for Business | 1\nISOM | 2500 | Business Statistics | 3\nISOM | 2600 | Introduction to Business Analytics | 1\nMGMT | 2010 | Business Ethics and the Individual | 2\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\nMATH | Note: MATH 1003 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\nSB&M | Note: Courses for BBA majors: ACCT 2200 AND ISOM 2700 AND MARK 2120 AND MGMT 2110 (Students who enroll in the BSc majors of SBM are not required to take these courses for graduation) | 12"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "GBUS 1000"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "GBUS 2010"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "GBUS 3030"
+      ],
+      [
+       "ISOM 4780"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "GBUS 4910"
+     ]
+    }
+   ],
+   "source_quote": "GBUS | 1000 | Global Leadership Development | 0\nGBUS | 2010 | Global Business Analysis | 3\nGBUS/ISOM | Note: GBUS 3030 OR ISOM 4780 | 3-4\nGBUS | 4910 | Capstone Project | 4"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "GBUS 2030",
+      "GBUS 2050",
+      "GBUS 3010",
+      "GBUS 3040",
+      "GBUS 3050",
+      "GBUS 3060",
+      "ACCT 3610",
+      "ECON 4364",
+      "ECON 4474",
+      "MARK 3430",
+      "MGMT 3120",
+      "MGMT 3170",
+      "MGMT 4230",
+      "MGMT 4240",
+      "MGMT 4250",
+      "SOSC 4260",
+      "ECON 4264",
+      "ISOM 3900",
+      "ISOM 4020",
+      "ISOM 4040",
+      "ISOM 4750",
+      "ISOM 4780",
+      "MARK 3220",
+      "MARK 3480",
+      "MARK 3610",
+      "MARK 4450",
+      "MGMT 3140",
+      "MGMT 3160",
+      "MGMT 4210",
+      "MGMT 4220",
+      "ENTR 3030",
+      "ENTR 3360",
+      "ENVR 3310",
+      "ISDN 4200"
+     ],
+     "min_credits": 15.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "GBUS | Global Business Electives (Courses from the specified elective list, of which at least 6 credits from Area A, and at least 1 course from Area B and Area C, respectively. With approval of the program office, students may replace the requirement of completing one Additional Major/ Extended Major/ Minor (see “Others” below) by taking additional 9 credits at 3000-level or above from this elective list, with at least 1 course from Area A out of the additional 9 credits.) | 15-24\n  [Area A: Global Business]\n  [Area B: Global and Societal Perspective]\n  [Area C: Business Strategy and Innovation]\n  [Other(s) Complete one Additional Major, Minor or Extended Major Program (Students pursuing Dual Degree Program in Technology and Management are exempted from this requirement) One regular term of study abroad]"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gbus.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [
+  "GBUS/SBMT | Note: GBUS 2040 OR SMBT 2100-2110 | 1-4",
+  "SBMT | 2100-2110 | Community Services Project | 1-4"
+ ],
+ "caveats": [
+  "Global Business Electives (Courses from the specified elective list, of which at least 6 credits from Area A, and at least 1 course from Area B and Area C, respectively. With approval of the program office, students may replace the requirement of completing one Additional Major/ Extended Major/ Minor (see “Others” below) by taking additional 9 credits at 3000-level or above from this elective list, with at least 1 course from Area A out of the additional 9 credits.) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor."
+ ],
+ "parent": null
+}

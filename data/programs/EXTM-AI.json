@@ -1,0 +1,152 @@
+{
+ "code": "EXTM-AI",
+ "title": "Extended Major Program in Artificial Intelligence (Major+AI)",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "EMIA 2010A"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "EMIA 2020"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "EMIA 4110"
+      ],
+      [
+       "COMP 4211"
+      ],
+      [
+       "MATH 4432"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "EMIA 4990"
+      ],
+      [
+       "EMIA 4991"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "COMP 1023"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "COMP 2211"
+     ]
+    }
+   ],
+   "source_quote": "EMIA | 2010A | Cross-disciplinary Seminar: Artificial Intelligence | 0\nEMIA | 2020 | Cross-disciplinary Design Thinking | 3\nEMIA/COMP/ | Note: EMIA 4110 OR COMP 4211 OR MATH 4432 | 3\nEMIA | Note: EMIA 4990 OR EMIA 4991 | 0-3\nCOMP | 1023 | Introduction to Python Programming | 3\nCOMP | 2211 | Introduction to Artificial Intelligence | 3"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "CTDL 1902",
+      "EMIA 1901",
+      "EMIA 3500A",
+      "ISDN 3150",
+      "ISDN 4000S",
+      "ACCT 4720",
+      "BIEN 3300",
+      "BIEN 3310",
+      "BIEN 3320",
+      "CENG 3300",
+      "CHEM 3030",
+      "CIVL 4100T",
+      "CIVL 4210",
+      "CIVL 4220",
+      "CIVL 4360",
+      "COMP 1944",
+      "COMP 3211",
+      "COMP 4212",
+      "COMP 4221",
+      "COMP 4222",
+      "COMP 4321",
+      "COMP 4331",
+      "COMP 4332",
+      "COMP 4421",
+      "COMP 4441",
+      "COMP 4451",
+      "COMP 4461",
+      "COMP 4462",
+      "COMP 4471",
+      "COMP 4531",
+      "COMP 4551",
+      "COMP 4641",
+      "COMP 4651",
+      "COMP 4901B",
+      "COMP 4901L",
+      "COMP 5211",
+      "COMP 5214",
+      "DASC 3240",
+      "DASC 3250",
+      "DASC 4010",
+      "DASC 4400",
+      "ECON 4305",
+      "ELEC 3130",
+      "ELEC 3350",
+      "ELEC 3810",
+      "ELEC 4240",
+      "ELEC 4350",
+      "FINA 4713",
+      "HUMA 1930",
+      "IEDA 3010",
+      "IEDA 3250",
+      "IEDA 3560",
+      "ISOM 3340",
+      "ISOM 3360",
+      "ISOM 3390",
+      "LIFS 4320",
+      "MATH 3425",
+      "MATH 4335",
+      "MATH 4336",
+      "MECH 3510",
+      "MECH 4000P",
+      "MECH 4000S",
+      "PHYS 4058",
+      "PHYS 4811",
+      "TEMG 4950N"
+     ],
+     "min_credits": 6.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "AIS/SSCI/SENG/SBM/SHSS | Artificial Intelligence Electives (Courses from the specified elective list. Students may use at most one course from the same course groups of COMP 1944/CTDL 1902/HUMA 1930, COMP 4462/DASC 3240 and IEDA 3250/MATH 3425 to count towards this elective requirement.) (Students taking EMIA 4990 should take a minimum of 9 credits. Students taking EMIA 4991 should take a minimum of 6 credits.) | 6-9"
+  }
+ ],
+ "stated_total_credits": null,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27extm-ai.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "Artificial Intelligence Electives (Courses from the specified elective list. Students may use at most one course from the same course groups of COMP 1944/CTDL 1902/HUMA 1930, COMP 4462/DASC 3240 and IEDA 3250/MATH 3425 to count towards this elective requirement.) (Students taking EMIA 4990 should take a minimum of 9 credits. Students taking EMIA 4991 should take a minimum of 6 credits.) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor."
+ ],
+ "parent": null
+}

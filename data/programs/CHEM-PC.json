@@ -1,0 +1,416 @@
+{
+ "code": "CHEM-PC",
+ "title": "BSc in Chemistry - Pure Chemistry Option",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 1021"
+      ],
+      [
+       "COMP 1023"
+      ]
+     ]
+    },
+    {
+     "type": "choose_n",
+     "n": 6,
+     "courses": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ],
+     "min_credits": 0.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+  },
+  {
+   "name": "Major Pre-requisite course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1011"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1012"
+     ]
+    }
+   ],
+   "source_quote": "CHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1051"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1052"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 2110"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 2210"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 2310"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 2550"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 2555"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3120"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3220"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3320"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3550"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "CHEM 4689"
+      ],
+      [
+       "CHEM 4691"
+      ],
+      [
+       "SCIE 3500",
+       "SCIE 4500"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1005"
+      ],
+      [
+       "MATH 1006"
+      ],
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1020"
+      ],
+      [
+       "MATH 1023"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "CHEM | 1051 | Laboratory for General Chemistry A | 1\nCHEM | 1052 | Laboratory for General Chemistry B | 1\nCHEM | 2110 | Organic Chemistry I | 3\nCHEM | 2210 | Inorganic Chemistry I | 3\nCHEM | 2310 | Fundamentals of Analytical Chemistry | 3\nCHEM | 2550 | Synthetic Chemistry Laboratory I | 2\nCHEM | 2555 | Molecular Characterization Chemistry Laboratory l | 2\nCHEM | 3120 | Organic Chemistry II | 3\nCHEM | 3220 | Inorganic Chemistry II | 3\nCHEM | 3320 | Instrumental Analysis | 3\nCHEM | 3550 | Synthetic Chemistry Laboratory II | 2\nCHEM/SCIE | Note: CHEM 4689 OR CHEM 4691 OR (SCIE 3500 AND SCIE 4500) (Students following IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement) | 3-6\nMATH | Note: MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4"
+  },
+  {
+   "name": "Pure Chemistry Option - Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4550"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4555"
+     ]
+    }
+   ],
+   "source_quote": "CHEM | 4550 | Advanced Synthetic Laboratory | 1\nCHEM | 4555 | Advanced Molecular Characterization Laboratory | 1"
+  },
+  {
+   "name": "Pure Chemistry Option - Elective Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "CHEM 4140",
+      "CHEM 4240",
+      "CHEM 4430"
+     ],
+     "min_credits": 12.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "CHEM | Chemistry Electives [Course(s) from the specified elective list, of which at least 1 course must be taken from the Core Area. Courses taken as Required/Elective Courses of another Chemistry Option may not be counted towards this elective requirement.] | 12\n  [Core Area]"
+  },
+  {
+   "name": "Pure Chemistry Option - Others",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3020"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3030"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3610"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4110"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4120"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4130"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4160"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4210"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4220"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4230"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4310"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4320"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4330"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4340"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4410"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4420"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4620"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4640"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4680"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 4692"
+     ]
+    }
+   ],
+   "source_quote": "CHEM3010 | Great Ideas in Chemistry | 3\nCHEM3020 | Chemistry in the Mass Media | 3\nCHEM3030 | Introduction to AI for Chemistry | 4\nCHEM3610 | Chemistry Internship | 2-3\nCHEM4110 | Structural Elucidation in Organic Chemistry | 3\nCHEM4120 | Biomolecular Chemistry | 3\nCHEM4130 | Medicinal Chemistry | 3\nCHEM4160 | Cheminformatics | 3\nCHEM4210 | Solid State Chemistry | 3\nCHEM4220 | Materials Chemistry | 3\nCHEM4230 | Materials Characterization Method | 3\nCHEM4310 | Environmental Chemistry | 3\nCHEM4320 | Environmental Analytical Chemistry | 3\nCHEM4330 | Separation Science | 3\nCHEM4340 | Bioanalytical Techniques | 3\nCHEM4410 | Physical Chemistry in Biological Applications | 3\nCHEM4420 | Statistical Machine Learning Methods for Chemical Data Analysis | 3\nCHEM4620 | Organometallic Chemistry | 3\nCHEM4640 | Chemistry for Advanced Solar Cell Technologies | 3\nCHEM4680 | Undergraduate Research | 3\nCHEM4692 | Capstone Research II | 3"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27chem.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "Students MUST take the following courses prior to enrollment into the major",
+  "CHEM 4689 OR CHEM 4691 OR (SCIE 3500 AND SCIE 4500) -- (Students following IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement)",
+  "Students in the Core Chemistry Track, and those in the International Research Enrichment Track with consent of the program office, may enroll in the Pure Chemistry Option.",
+  "Chemistry Electives [Course(s) from the specified elective list, of which at least 1 course must be taken from the Core Area. Courses taken as Required/Elective Courses of another Chemistry Option may not be counted towards this elective requirement.] -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor.",
+  "Requirements: COMP 1022P is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": "CHEM"
+}

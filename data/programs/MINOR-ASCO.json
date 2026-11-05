@@ -1,0 +1,104 @@
+{
+ "code": "MINOR-ASCO",
+ "title": "Minor Program in Astrophysics and Cosmology",
+ "kind": "minor",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Required Course(s)",
+   "category": "Minor",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1002"
+      ],
+      [
+       "PHYS 1006"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1111"
+      ],
+      [
+       "PHYS 1112"
+      ],
+      [
+       "PHYS 1312"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1114"
+      ],
+      [
+       "PHYS 1314"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "PHYS 2022"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 2124"
+      ],
+      [
+       "PHYS 3036"
+      ],
+      [
+       "PHYS 3037"
+      ],
+      [
+       "MATH 2351"
+      ],
+      [
+       "MATH 2352"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "PHYS 3071"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 4055"
+      ],
+      [
+       "PHYS 4071"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "PHYS | Note: PHYS 1002 OR PHYS 1006 (Subject to approval by program office, students completed both PHYS 4055 and PHYS 4071 may be exempted from this requirement.) | 3\nPHYS | Note: PHYS 1111 OR PHYS 1112 OR PHYS 1312 | 3\nPHYS | Note: PHYS 1114 OR PHYS 1314 | 3\nPHYS | 2022 | Modern Physics | 3\nPHYS/MATH | Note: PHYS 2124 OR PHYS 3036 OR PHYS 3037 OR MATH 2351 OR MATH 2352 | 3-4\nPHYS | 3071 | Introduction to Stellar Astrophysics | 3\nPHYS | Note: PHYS 4055 OR PHYS 4071 | 3"
+  }
+ ],
+ "stated_total_credits": null,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-asco.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "To graduate with a minor in Astrophysics and Cosmology, students must have enrolled in the Minor Program and complete a minimum total of 21 credits and all of its requirements, as well as the requirements of the major program of study; and have attained an average grade point of at least 1.85 in courses taken within the minor program. For credit transfer, students can transfer a maximum total of 6 credits to the Minor Program. Out of the total credits required by the minor program, at least 9 credits should be single-counted within the minor and are not used to fulfill any other requirements for graduation except the 120-credit degree requirement. Students may use no more than 9 credits earned from courses delivered in online mode, including HKUST self-paced online [SPO] courses and other online credits approved through the University’s credit transfer procedures, to satisfy the graduation requirements of a degree program.",
+  "PHYS 1002 OR PHYS 1006 -- (Subject to approval by program office, students completed both PHYS 4055 and PHYS 4071 may be exempted from this requirement.)"
+ ],
+ "parent": null
+}

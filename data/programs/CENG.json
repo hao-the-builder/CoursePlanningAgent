@@ -1,0 +1,258 @@
+{
+ "code": "CENG",
+ "title": "BEng in Chemical Engineering",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Engineering Fundamental Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 1023"
+      ],
+      [
+       "COMP 2011"
+      ],
+      [
+       "COMP 2012H"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1012"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1020"
+      ],
+      [
+       "MATH 1023"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1112"
+      ],
+      [
+       "PHYS 1312"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "COMP | Note: COMP 1022P OR COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\nMATH | Note: MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "CENG 1000"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 1010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 1110"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 1500"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 2210"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 2220"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 2310"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 2320"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 3110"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 3150"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 3210"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 3220"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 3230"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 3300"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 3950"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CENG 4020"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "CENG 4920"
+      ],
+      [
+       "CENG 4930"
+      ],
+      [
+       "CENG 4940"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "BIEN 2410"
+      ],
+      [
+       "BIEN 2610"
+      ],
+      [
+       "LIFS 1901"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1052"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 2111"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 2155"
+     ]
+    }
+   ],
+   "source_quote": "CENG | 1000 | Foundations of Chemical and Biological Engineering | 3\nCENG | 1010 | Academic and Professional Development I | 0\nCENG | 1110 | Introduction to Chemical Engineering | 3\nCENG | 1500 | A First Course on Materials Science and Applications | 3\nCENG | 2210 | Chemical and Biological Engineering Thermodynamics | 3\nCENG | 2220 | Transport Phenomena I | 3\nCENG | 2310 | Modeling for Chemical and Biological Engineering I | 3\nCENG | 2320 | Modeling for Chemical and Biological Engineering II | 3\nCENG | 3110 | Process Dynamics and Control | 3\nCENG | 3150 | Integrated Chemical Process and Product Design | 5\nCENG | 3210 | Separation Processes | 3\nCENG | 3220 | Transport Phenomena II | 3\nCENG | 3230 | Chemical and Biological Reaction Engineering | 3\nCENG | 3300 | Data Science for Molecular Engineering | 3\nCENG | 3950 | Chemical and Environmental Engineering Laboratory** | 4\nCENG | 4020 | Academic and Professional Development II | 0\nCENG | Note: CENG 4920 OR CENG 4930 OR CENG 4940 | 6\nBIEN/LIFS | Note: BIEN 2410 OR BIEN 2610 OR LIFS 1901 | 3\nCHEM | 1052 | Laboratory for General Chemistry B | 1\nCHEM | 2111 | Fundamentals of Organic Chemistry | 3\nCHEM | 2155 | Fundamental Organic Chemistry Laboratory | 1"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "CENG 4000",
+      "CENG 4130",
+      "CENG 4140",
+      "CENG 4510",
+      "CENG 4540",
+      "CENG 4620",
+      "CENG 4630",
+      "CENG 4640",
+      "CENG 4650",
+      "CENG 4670",
+      "CENG 4710",
+      "CENG 4950",
+      "CENG 4980",
+      "CENG 5210",
+      "CENG 5230",
+      "CENG 5240",
+      "CENG 5550",
+      "CENG 5840",
+      "CENG 5930",
+      "BIEN 5070",
+      "COMP 2211",
+      "ENEG 4130",
+      "CHEM 2311"
+     ],
+     "min_credits": 12.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "CENG/BIEN/COMP/ENEG/CHEM | CENG Electives (Courses from the specified list; students taking the Environment Option must take CENG 4140 and CENG 4710.) | 12\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ceng.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "CENG 4160: The course was last offered in 2022-23 and was deleted subsequently.",
+  "COMP 1022P: The course was last offered in 2024-25 and was deleted subsequently.",
+  "Engineering Fundamental Course(s): COMP 1022P is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check.",
+  "Elective(s): CENG 4160 is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": null
+}

@@ -1,0 +1,369 @@
+{
+ "code": "CPEG-RES",
+ "title": "BEng in Computer Engineering - Research Option",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Engineering Fundamental Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "COMP 1023"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1013",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1013",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1020"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MATH 2011"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MATH 2111"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1112"
+      ],
+      [
+       "PHYS 1312"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "PHYS 1114"
+      ],
+      [
+       "PHYS 1314"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "COMP | 1023 | Introduction to Python Programming | 3\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\nMATH | 2011 | Introduction to Multivariable Calculus | 3\nMATH | 2111 | Matrix Algebra and Applications | 3\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3\nPHYS | Note: PHYS 1114 OR PHYS 1314 | 3"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "CPEG 1930"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "CPEG 1971",
+       "CPEG 4901"
+      ],
+      [
+       "CPEG 1971",
+       "CPEG 4902"
+      ],
+      [
+       "CPEG 1971",
+       "CPEG 4911"
+      ],
+      [
+       "CPEG 1971",
+       "CPEG 4912"
+      ],
+      [
+       "CPEG 4910"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CPEG 2930"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CPEG 3930"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 2011",
+       "COMP 2012"
+      ],
+      [
+       "COMP 2012H"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 2611"
+      ],
+      [
+       "ELEC 2350"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 2711"
+      ],
+      [
+       "COMP 2711H"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "COMP 3511"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 1100"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 2100"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 2400"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 2600"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ELEC 3300"
+     ]
+    }
+   ],
+   "source_quote": "CPEG | 1930 | Academic and Professional Development I | 0\nCPEG | Note: [CPEG 1971 AND (CPEG 4901 OR CPEG 4902 OR CPEG 4911 OR CPEG 4912)] OR [CPEG 4910] (Students taking the Research Option must take either CPEG 4902 or CPEG 4912) | 6\nCPEG | 2930 | Academic and Professional Development II | 0\nCPEG | 3930 | Academic and Professional Development III | 0\nCOMP | Note: (COMP 2011 AND COMP 2012) OR COMP 2012H | 5-8\nCOMP/ELEC | Note: COMP 2611 OR ELEC 2350 | 4\nCOMP | Note: COMP 2711 OR COMP 2711H | 4\nCOMP | 3511 | Operating Systems | 3\nELEC | 1100 | Introduction to Electro-Robot Design | 4\nELEC | 2100 | Signals and Systems | 4\nELEC | 2400 | Electronic Circuits | 4\nELEC | 2600 | Probability and Random Processes in Engineering | 4\nELEC | 3300 | Introduction to Embedded Systems | 4"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "ELEC 2xxx"
+     ],
+     "min_credits": 3.0,
+     "exclude": []
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "COMP 3211",
+      "COMP 3711",
+      "COMP 3711H",
+      "COMP 3721",
+      "COMP 4211",
+      "COMP 4221",
+      "COMP 4222",
+      "COMP 4331",
+      "COMP 4332",
+      "COMP 4421",
+      "COMP 4471",
+      "COMP 4541",
+      "COMP 4551",
+      "COMP 5211",
+      "COMP 5212",
+      "COMP 5214",
+      "COMP 5215",
+      "COMP 5221",
+      "COMP 5331",
+      "COMP 5421",
+      "COMP 5711",
+      "COMP 5712",
+      "COMP 5713",
+      "ELEC 3180",
+      "ELEC 3350",
+      "ELEC 4240",
+      "ELEC 4840",
+      "ELEC 3100",
+      "ELEC 3600",
+      "ELEC 4110",
+      "ELEC 4610",
+      "ELEC 4620",
+      "COMP 4521",
+      "COMP 4531",
+      "COMP 4611",
+      "ELEC 3200",
+      "ELEC 3310",
+      "ELEC 4220",
+      "ELEC 4260",
+      "ELEC 4320"
+     ],
+     "min_credits": 12.0,
+     "exclude": []
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "ENGG 4950",
+      "COMP 4411",
+      "COMP 4421",
+      "COMP 4431",
+      "COMP 4441",
+      "COMP 4451",
+      "COMP 4461",
+      "COMP 4462",
+      "COMP 4471",
+      "COMP 5411",
+      "COMP 5421",
+      "ELEC 3400",
+      "ELEC 3410",
+      "ELEC 3500",
+      "ELEC 3610",
+      "ELEC 4420",
+      "ELEC 4430",
+      "ELEC 4450",
+      "ELEC 4510",
+      "ELEC 4520",
+      "ELEC 4530",
+      "ELEC 3100",
+      "ELEC 3130",
+      "ELEC 4810",
+      "ELEC 4820",
+      "COMP 3021",
+      "COMP 3031",
+      "COMP 3111",
+      "COMP 3111H",
+      "COMP 3311",
+      "COMP 4021",
+      "COMP 4121",
+      "COMP 4321",
+      "COMP 4331",
+      "COMP 4332",
+      "COMP 4521",
+      "COMP 4651",
+      "COMP 5111",
+      "COMP 5112",
+      "COMP 5311",
+      "COMP 5331",
+      "ELEC 3810",
+      "COMP 3631",
+      "COMP 4531",
+      "COMP 4541",
+      "COMP 4611",
+      "COMP 4621",
+      "COMP 4632",
+      "COMP 4634",
+      "COMP 4635",
+      "COMP 4641",
+      "COMP 5621",
+      "COMP 5631",
+      "ELEC 3120",
+      "ELEC 4350",
+      "COMP 4911"
+     ],
+     "min_credits": 1.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "COMP/ELEC | COMP/ELEC 2000-level or above Elective (Any course(s) of the subject and level as specified) | 3\nCOMP/ELEC/ENGG | Area Courses [At least 2 courses should be taken from one area and at least 1 course outside that area (including course(s) in the Courses without Associated Area).] | 12\n  [Artificial Intelligence / Theory Area]\n  [Communications Area]\n  [Embedded System / Robotics Area]\nENGG | 3960-3962 | Robotics Special Project | 1-4\n  [Graphic / Multimedia Area]\n  [Semiconductor / VLSI Area]\n  [Signal Processing Area]\n  [Software / Database Area]\n  [Systems / Networking Area]\n  [Courses Without Associated Area]\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]"
+  },
+  {
+   "name": "Requirements",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "CPEG 4902",
+      "CPEG 4912"
+     ]
+    }
+   ],
+   "source_quote": "Students in the Research Option should also take either CPEG 4902 or CPEG 4912 as specified in the"
+  },
+  {
+   "name": "Research Option - Elective Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "ELEC 5900",
+      "UROP 1100"
+     ],
+     "min_credits": 3.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "COMP/ELEC/UROP | Research Electives [Students should take either (ELEC 5900 AND UROP 1100) or a 3-credit COMP 5000-level course to fulfill this requirement.] | 3-4\n  COMP | Any COMP course at 5000-level"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27cpeg.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [
+  "COMP/ELEC | CPEG Electives (1 PG-level course as approved by advisor) | 3"
+ ],
+ "caveats": [
+  "[CPEG 1971 AND (CPEG 4901 OR CPEG 4902 OR CPEG 4911 OR CPEG 4912)] OR [CPEG 4910] -- (Students taking the Research Option must take either CPEG 4902 or CPEG 4912)",
+  "Area Courses [At least 2 courses should be taken from one area and at least 1 course outside that area (including course(s) in the Courses without Associated Area).] -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor.",
+  "ELEC 3210: The course was last offered in 2024-25 and was deleted subsequently.",
+  "ELEC 4210: The course was last offered in 2021-22 and was deleted subsequently.",
+  "ELEC 4830: The course was last offered in 2021-22 and was deleted subsequently.",
+  "Elective(s): ELEC 3210, ELEC 4210, ELEC 4830 are named in the requirement PDF but not in the 2026-27 course catalog, so they were left out of this check."
+ ],
+ "parent": "CPEG"
+}

@@ -1,0 +1,285 @@
+{
+ "code": "CHEM-CC",
+ "title": "BSc in Chemistry - Core Chemistry Track",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 1021"
+      ],
+      [
+       "COMP 1023"
+      ]
+     ]
+    },
+    {
+     "type": "choose_n",
+     "n": 6,
+     "courses": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ],
+     "min_credits": 0.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+  },
+  {
+   "name": "Major Pre-requisite course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1011"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1012"
+     ]
+    }
+   ],
+   "source_quote": "CHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1051"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1052"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 2110"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 2210"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 2310"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 2550"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 2555"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3120"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3220"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3320"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3550"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "CHEM 4689"
+      ],
+      [
+       "CHEM 4691"
+      ],
+      [
+       "SCIE 3500",
+       "SCIE 4500"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1005"
+      ],
+      [
+       "MATH 1006"
+      ],
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1020"
+      ],
+      [
+       "MATH 1023"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "CHEM | 1051 | Laboratory for General Chemistry A | 1\nCHEM | 1052 | Laboratory for General Chemistry B | 1\nCHEM | 2110 | Organic Chemistry I | 3\nCHEM | 2210 | Inorganic Chemistry I | 3\nCHEM | 2310 | Fundamentals of Analytical Chemistry | 3\nCHEM | 2550 | Synthetic Chemistry Laboratory I | 2\nCHEM | 2555 | Molecular Characterization Chemistry Laboratory l | 2\nCHEM | 3120 | Organic Chemistry II | 3\nCHEM | 3220 | Inorganic Chemistry II | 3\nCHEM | 3320 | Instrumental Analysis | 3\nCHEM | 3550 | Synthetic Chemistry Laboratory II | 2\nCHEM/SCIE | Note: CHEM 4689 OR CHEM 4691 OR (SCIE 3500 AND SCIE 4500) (Students following IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement) | 3-6\nMATH | Note: MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4"
+  },
+  {
+   "name": "Core Chemistry Track - Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 2410"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3420"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 3555"
+     ]
+    }
+   ],
+   "source_quote": "CHEM | 2410 | Physical Chemistry I: Equilibrium Thermodynamics and Statistical Mechanics | 3**\nCHEM | 3420 | Physical Chemistry II | 3**\nCHEM | 3555 | Molecular Characterization Chemistry Laboratory II | 2"
+  },
+  {
+   "name": "Core Chemistry Track - Elective Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "CHEM 3xxx"
+     ],
+     "min_credits": 4.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "CHEM | CHEM 3000-level or above Elective (Any course(s) of the subject and level as specified. Students following Core Chemistry Track without any Chemistry Option are required to complete a minimum of 7 credits, while students following IRE Track and those to graduate with a Chemistry Option a minimum of 4 credits.) | 4-7\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements specified in]\n  [addition to the major requirements.]"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27chem.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "Students MUST take the following courses prior to enrollment into the major",
+  "CHEM 4689 OR CHEM 4691 OR (SCIE 3500 AND SCIE 4500) -- (Students following IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement)",
+  "Requirements: COMP 1022P is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": "CHEM"
+}

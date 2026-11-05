@@ -1,0 +1,203 @@
+{
+ "code": "QSA",
+ "title": "BSc in Quantitative Social Analysis",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 1050"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 1110"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 2400"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 3200"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 4110"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 4330"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1005",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1005",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1006",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1006",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1013",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1013",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1020"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MATH 2411"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 1021"
+      ],
+      [
+       "COMP 1023"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "SOSC | 1050 | Introduction to Social Science Research | 3\nSOSC | 1110 | Data Analysis for Quantitative Social Research | 3\nSOSC | 2400 | Quantitative Data Analysis for Social Research II | 3\nSOSC | 3200 | Quantitative Social Analysis Colloquium | 1\nSOSC | 4110 | Capstone Project | 3\nSOSC | 4330 | Quantitative Data Analysis for Social Research III | 3\nMATH | Note: [(MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-7\nMATH | 2411 | Applied Statistics | 4\nCOMP | Note: COMP 1021 OR COMP 1023 | 3"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "SOSC 1780",
+      "SOSC 1860",
+      "SOSC 1440",
+      "SOSC 1300",
+      "SOSC 1960",
+      "SOSC 1980",
+      "SOSC 1850"
+     ],
+     "min_credits": 24.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "SOSC | Social Science Electives (8 courses from the specified elective list. Students should take at least 2 Foundation courses, EACH of which should be from a different discipline [Foundation 1 to Foundation 5], and out of the 24 credits, at least 6 credits must be at 3000-/4000-level. Courses on the list of QSA Methodological Electives may not be counted towards this elective requirement) | 24\n  [Foundation 1: Geography/Demography]\n  [Foundation 2: Economics]\n  [Foundation 3: Political Science]\n  [Foundation 4: Psychology]\n  [Foundation 5: Sociology]\nSOSC | Social Science Electives (8 courses from the specified elective list. Students should take at least 2 Foundation courses, EACH of which should be from a different discipline [Foundation 1 to Foundation 5], and out of the 24 credits, at least 6 credits must be at 3000-/4000-level. Courses on the list of QSA Methodological Electives may not be counted towards this elective requirement) | 24\n  [Foundation 1: Geography/Demography]\n  [Foundation 2: Economics]\n  [Foundation 3: Political Science]\n  [Foundation 4: Psychology]\n  [Foundation 5: Sociology]"
+  },
+  {
+   "name": "Others",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "SOSC 1xxx",
+      "SOSC 2xxx",
+      "SOSC 3xxx",
+      "SOSC 4xxx",
+      "SOSC 5xxx"
+     ],
+     "min_credits": 0.0,
+     "exclude": []
+    },
+    {
+     "type": "choose_n",
+     "n": 4,
+     "courses": [
+      "SOSC 3240",
+      "SOSC 3720",
+      "SOSC 3730",
+      "SOSC 4250",
+      "SOSC 4300",
+      "MATH 2421",
+      "MATH 2431",
+      "MATH 3423",
+      "MATH 3424",
+      "MATH 3426",
+      "MATH 4423",
+      "MATH 4424",
+      "MATH 4425",
+      "COMP 2011",
+      "ISOM 3360",
+      "MARK 3220"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "SOSC 3240",
+      "SOSC 3720",
+      "SOSC 3730",
+      "SOSC 4250",
+      "SOSC 4300",
+      "MATH 2421",
+      "MATH 2431",
+      "MATH 3423",
+      "MATH 3424",
+      "MATH 3426",
+      "MATH 4423",
+      "MATH 4424",
+      "MATH 4425",
+      "COMP 2011",
+      "ISOM 3360",
+      "MARK 3220"
+     ],
+     "min_credits": 12.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "SOSC | Any SOSC courses except those listed as Foundation course in this requirement and those listed under QSA Methodological Electives.\nSOSC/MATH/COMP/ISOM/ | QSA Methodological Electives (4 courses from the specified elective list, of which 6 credits must be taken in SOSC) | 12\n  [MARK]\nSOSC/MATH/COMP/ISOM/ | QSA Methodological Electives (4 courses from the specified elective list, of which 6 credits must be taken in SOSC) | 12\n  [MARK]"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27qsa.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "Social Science Electives (8 courses from the specified elective list. Students should take at least 2 Foundation courses, EACH of which should be from a different discipline [Foundation 1 to Foundation 5], and out of the 24 credits, at least 6 credits must be at 3000-/4000-level. Courses on the list of QSA Methodological Electives may not be counted towards this elective requirement) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor.",
+  "Any SOSC courses except those listed as Foundation course in this requirement and those listed under QSA Methodological Electives. -- the requirement PDF states no credit minimum here, so nothing is enforced; the courses that count are recorded."
+ ],
+ "parent": null
+}

@@ -1,0 +1,375 @@
+{
+ "code": "MATH-CS",
+ "title": "BSc in Mathematics - Computer Science Track",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 1021"
+      ],
+      [
+       "COMP 1023"
+      ]
+     ]
+    },
+    {
+     "type": "choose_n",
+     "n": 6,
+     "courses": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ],
+     "min_credits": 0.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+  },
+  {
+   "name": "Major Pre-requisite course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1013",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1013",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1014"
+      ],
+      [
+       "MATH 1023",
+       "MATH 1024"
+      ],
+      [
+       "MATH 1020"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "MATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] (Students following IRE track can only use MATH 1023 and MATH 1024 to fulfill the requirement) | 4-6"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 2023"
+      ],
+      [
+       "MATH 2024"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 2033"
+      ],
+      [
+       "MATH 2043"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 2121"
+      ],
+      [
+       "MATH 2131"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 3033"
+      ],
+      [
+       "MATH 3043"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "MATH | Note: MATH 2023 OR MATH 2024 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.] | 4\nMATH | Note: MATH 2033 OR MATH 2043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.] | 4\nMATH | Note: MATH 2121 OR MATH 2131 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.] | 4\nMATH | Note: MATH 3033 OR MATH 3043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.] | 4"
+  },
+  {
+   "name": "Computer Science Track - Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 2343"
+      ],
+      [
+       "COMP 2711"
+      ],
+      [
+       "COMP 2711H"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MATH 3121"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 4991"
+      ],
+      [
+       "MATH 4992"
+      ],
+      [
+       "MATH 4999"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "COMP 1023"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 2011",
+       "COMP 2012"
+      ],
+      [
+       "COMP 2012H"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "COMP 2611"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 3711"
+      ],
+      [
+       "COMP 3711H"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "MATH/COMP | Note: MATH 2343 OR COMP 2711 OR COMP 2711H | 4\nMATH | 3121 | Abstract Algebra | 3\nMATH | Note: MATH 4991 OR MATH 4992 OR MATH 4999 | 3\nCOMP | 1023 | Introduction to Python Programming | 3\nCOMP | Note: (COMP 2011 AND COMP 2012) OR COMP 2012H | 5-8\nCOMP | 2611 | Computer Organization | 4\nCOMP | Note: COMP 3711 OR COMP 3711H | 3-4"
+  },
+  {
+   "name": "Computer Science Track - Elective Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "MATH 3xxx"
+     ],
+     "min_credits": 3.0,
+     "exclude": []
+    },
+    {
+     "type": "choose_n",
+     "n": 2,
+     "courses": [
+      "MATH 2001",
+      "MATH 2411",
+      "MATH 2421",
+      "MATH 2431",
+      "MATH 3312",
+      "MATH 3322",
+      "MATH 3332",
+      "MATH 3343",
+      "MATH 4023",
+      "MATH 4141",
+      "MATH 4223",
+      "MATH 4321",
+      "MATH 4343"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "MATH 2001",
+      "MATH 2411",
+      "MATH 2421",
+      "MATH 2431",
+      "MATH 3312",
+      "MATH 3322",
+      "MATH 3332",
+      "MATH 3343",
+      "MATH 4023",
+      "MATH 4141",
+      "MATH 4223",
+      "MATH 4321",
+      "MATH 4343"
+     ],
+     "min_credits": 6.0,
+     "exclude": []
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "COMP 4xxx"
+     ],
+     "min_credits": 3.0,
+     "exclude": []
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "COMP 2xxx"
+     ],
+     "min_credits": 0.0,
+     "exclude": []
+    },
+    {
+     "type": "choose_n",
+     "n": 1,
+     "courses": [
+      "COMP 3031",
+      "COMP 3111",
+      "COMP 3111H",
+      "COMP 3211",
+      "COMP 3311",
+      "COMP 3511"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "COMP 3031",
+      "COMP 3111",
+      "COMP 3111H",
+      "COMP 3211",
+      "COMP 3311",
+      "COMP 3511"
+     ],
+     "min_credits": 3.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "MATH | MATH 3000-level or above Elective (Any 1 course of the subject and level as specified) | 3\nMATH | MATH Electives (2 courses from the specified elective list) | 6\nMATH | MATH Electives (2 courses from the specified elective list) | 6\nCOMP | COMP 4000-level or above Elective (Any 1 course of the subject and level as specified) | 3\nCOMP | (For students opting COMP 2012H only) COMP 2000-level or above Elective (Any 1 course of the subject and level as specified. Students opting COMP 2011 AND COMP 2012 do not need to fulfill this requirement.) | 0-3\nCOMP | COMP Elective (1 course from the specified elective list) | 3\nCOMP | COMP Elective (1 course from the specified elective list) | 3"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27math.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "Students MUST take the following courses prior to enrollment into the major",
+  "[(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] -- (Students following IRE track can only use MATH 1023 and MATH 1024 to fulfill the requirement)",
+  "MATH 2023 OR MATH 2024 -- [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.]",
+  "MATH 2033 OR MATH 2043 -- [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.]",
+  "MATH 2121 OR MATH 2131 -- [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.]",
+  "MATH 3033 OR MATH 3043 -- [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.]",
+  "Requirements: COMP 1022P is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": "MATH"
+}

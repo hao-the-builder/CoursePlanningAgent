@@ -1,0 +1,127 @@
+{
+ "code": "EXTM-SUST",
+ "title": "Extended Major Program in Sustainability (Major+SUST)",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "SUST 1000"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "EMIA 2010C"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "EMIA 2020"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "EMIA 4990"
+      ],
+      [
+       "EMIA 4991"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ENVR 3005"
+      ],
+      [
+       "ENVR 4340"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "SUST | 1000 | Sustainability Fundamentals | 3\nEMIA | 2010C | Cross-disciplinary Seminar: Sustainability | 0\nEMIA | 2020 | Cross-disciplinary Design Thinking | 3\nEMIA | Note: EMIA 4990 OR EMIA 4991 | 0-3\nENVR | Note: ENVR 3005 OR ENVR 4340 | 3"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "SUST 1001",
+      "SUST 2001",
+      "SUST 3001",
+      "SUST 4001",
+      "ENVR 1170",
+      "ENVR 2080",
+      "ENVR 3210",
+      "CENG 1700",
+      "CENG 4140",
+      "CENG 4510",
+      "CENG 4710",
+      "CENG 4720",
+      "CHEM 4640",
+      "CIVL 1140",
+      "CIVL 1180",
+      "CIVL 1190",
+      "CIVL 1210",
+      "CIVL 1220",
+      "CIVL 2410",
+      "CIVL 4430",
+      "COMP 1021",
+      "COMP 1023",
+      "ECON 4454",
+      "ECON 4464",
+      "ENEG 1700",
+      "ENEG 3110",
+      "ENEG 4320",
+      "FINA 4703",
+      "HUMA 1622",
+      "HUMA 2621",
+      "HUMA 2921",
+      "LIFS 2011",
+      "LIFS 2060",
+      "MARK 1220",
+      "MECH 1905",
+      "MGMT 3160",
+      "MGMT 3170",
+      "OCES 1010",
+      "OCES 2004",
+      "OCES 2005",
+      "OCES 4203",
+      "OCES 4301",
+      "PHYS 1003",
+      "PPOL 3210",
+      "SOSC 1860",
+      "SOSC 2330",
+      "SOSC 3540"
+     ],
+     "min_credits": 12.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "SUST | SUST Electives [Courses from the specified elective list. Students may use at most one course from the same course groups of CENG 4720 / CIVL 4430 / ENVR 3210 / OCES 4203; CIVL 1190 / ENVR 1170 and COMP 1021 / COMP 1023 to count towards this elective requirement. (Students opting for EMIA 4990 are required to take a minimum of 15 credits; while those opting for EMIA 4991 a minimum of 12 credits.) Out of the electives taken, at least 6 credits should be at 3000-level or above.] | 12-15"
+  }
+ ],
+ "stated_total_credits": null,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27extm-sust.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "SUST Electives [Courses from the specified elective list. Students may use at most one course from the same course groups of CENG 4720 / CIVL 4430 / ENVR 3210 / OCES 4203; CIVL 1190 / ENVR 1170 and COMP 1021 / COMP 1023 to count towards this elective requirement. (Students opting for EMIA 4990 are required to take a minimum of 15 credits; while those opting for EMIA 4991 a minimum of 12 credits.) Out of the electives taken, at least 6 credits should be at 3000-level or above.] -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor.",
+  "CIVL 4560: The course was last offered in 2021-22 and was deleted subsequently.",
+  "Elective(s): CIVL 4560 is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": null
+}

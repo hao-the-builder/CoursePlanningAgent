@@ -1,0 +1,215 @@
+{
+ "code": "MGMT-HR",
+ "title": "BBA in Management - Human Resources Option",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2010"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2103"
+      ],
+      [
+       "ECON 2113"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2123"
+      ],
+      [
+       "ECON 3123"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 2303"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2020"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2500"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2600"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2130"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1003"
+      ],
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1020"
+      ],
+      [
+       "MATH 1023"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2200",
+      "ISOM 2700",
+      "MARK 2120",
+      "MGMT 2110"
+     ]
+    }
+   ],
+   "source_quote": "ACCT | 2010 | Principles of Accounting I | 3\nECON | Note: ECON 2103 OR ECON 2113 | 3\nECON | Note: ECON 2123 OR ECON 3123 (BSc ECOF students can only use ECON 3123 to fulfill this requirement; while others should take ECON 2123) | 3\nFINA | 2303 | Financial Management | 3\nISOM | 2010 | Introduction to Information Systems | 3\nISOM | 2020 | Coding for Business | 1\nISOM | 2500 | Business Statistics | 3\nISOM | 2600 | Introduction to Business Analytics | 1\nMGMT | 2010 | Business Ethics and the Individual | 2\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\nMATH | Note: MATH 1003 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\nSB&M | Note: Courses for BBA majors: ACCT 2200 AND ISOM 2700 AND MARK 2120 AND MGMT 2110 (Students who enroll in the BSc majors of SBM are not required to take these courses for graduation) | 12"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MGMT 3110"
+      ],
+      [
+       "MGMT 3120"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MGMT 3130"
+      ],
+      [
+       "MGMT 3140"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MGMT 4210"
+      ],
+      [
+       "MGMT 4220"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "MGMT | Note: MGMT 3110 OR MGMT 3120 (Students in the Human Resources Option must take MGMT 3110 to fulfill this requirement. Students in the Consulting Option must take MGMT 3120 to fulfill this requirement.) | 4\nMGMT | Note: MGMT 3130 OR MGMT 3140 (Students in the Consulting Option must take MGMT 3140 to fulfill this requirement.) | 4\nMGMT | Note: MGMT 4210 OR MGMT 4220 (Students in the Consulting Option or in the Corporate Social Responsibility and Sustainability Option must take MGMT 4210 to fulfill this requirement.) | 3-4"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "MGMT 3xxx"
+     ],
+     "min_credits": 9.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "MGMT | MGMT 3000-level or above Electives (Any 3 courses of the subject and level as specified. Courses taken as Option Required Courses may not be counted towards the elective requirement.) | 9\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]"
+  },
+  {
+   "name": "Requirements",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 3110"
+     ]
+    }
+   ],
+   "source_quote": "Students in the Human Resources Option should also take MGMT 3110 as specified in the major"
+  },
+  {
+   "name": "Human Resources Option - Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MGMT 4270"
+      ],
+      [
+       "MGMT 4280"
+      ],
+      [
+       "MGMT 4290"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "MGMT | Note: MGMT 4270 OR MGMT 4280 OR MGMT 4290 OR MGMT 4300 (2 courses out of 4) | 6"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27mgmt.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "MGMT 3110 OR MGMT 3120 -- (Students in the Human Resources Option must take MGMT 3110 to fulfill this requirement. Students in the Consulting Option must take MGMT 3120 to fulfill this requirement.)",
+  "MGMT 3130 OR MGMT 3140 -- (Students in the Consulting Option must take MGMT 3140 to fulfill this requirement.)",
+  "MGMT 4210 OR MGMT 4220 -- (Students in the Consulting Option or in the Corporate Social Responsibility and Sustainability Option must take MGMT 4210 to fulfill this requirement.)",
+  "requirements. Courses used to fulfill the requirements of another option under MGMT cannot be reused to",
+  "MGMT 4270 OR MGMT 4280 OR MGMT 4290 OR MGMT 4300 -- (2 courses out of 4)",
+  "MGMT 4300: The course was last offered in 2022-23 and was deleted subsequently.",
+  "Human Resources Option - Required Course(s): MGMT 4300 is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": "MGMT"
+}

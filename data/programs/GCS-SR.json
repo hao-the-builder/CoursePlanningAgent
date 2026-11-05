@@ -1,0 +1,91 @@
+{
+ "code": "GCS-SR",
+ "title": "BSc in Global China Studies - Sociology Research Option",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "HUMA 1440"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "HUMA 2590"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 1350"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "SOSC 2290"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "SHSS 4991"
+      ],
+      [
+       "SHSS 4992"
+      ],
+      [
+       "SHSS 4991",
+       "SHSS 4993"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LANG 2170"
+     ]
+    }
+   ],
+   "source_quote": "HUMA | 1440 | Modern China | 3\nHUMA | 2590 | The Making of the Modern World: Renaissance to the Present | 3\nSOSC | 1350 | Contemporary China: Continuity and Change | 3\nSOSC | 2290 | Understanding Globalization | 3\nSHSS | Note: SHSS 4991 OR SHSS 4992 OR (SHSS 4991 AND SHSS 4993) [For students taking one of the Research Options, they should take SHSS 4992 OR (SHSS 4991 AND SHSS 4993)] | 3-6\nLANG | 2170 | Chinese Communication Skills for Humanities & Social Science Studies | 3"
+  },
+  {
+   "name": "Sociology Research Option - Elective Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "SOSC 1662",
+      "SOSC 1780",
+      "SOSC 1850",
+      "SOSC 2740",
+      "SOSC 3130",
+      "SOSC 3880"
+     ],
+     "min_credits": 9.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "SOSC | Sociology Electives (3 courses, which should include two courses at 3000-level or above, from the specified elective list. Courses taken as Major Elective Courses may not be counted towards this elective requirement.) | 9"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "SHSS 4991 OR SHSS 4992 OR (SHSS 4991 AND SHSS 4993) -- [For students taking one of the Research Options, they should take SHSS 4992 OR (SHSS 4991 AND SHSS 4993)]",
+  "Students in the Integrated Humanities and Social Science Track with CGA of 3.3 or above may apply for enrollment in the Sociology Research Option. In addition, they should take Honors Thesis or Honors Research with a primary focus in sociology to complete the requirement of SHSS 4992 OR (SHSS 4991 AND SHSS 4993) as specified in the major requirements.",
+  "SOSC 4290: The course was last offered in 2023-24 and was deleted subsequently."
+ ],
+ "parent": "GCS"
+}

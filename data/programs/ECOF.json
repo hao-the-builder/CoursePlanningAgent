@@ -1,0 +1,189 @@
+{
+ "code": "ECOF",
+ "title": "BSc in Economics and Finance",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2010"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2103"
+      ],
+      [
+       "ECON 2113"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2123"
+      ],
+      [
+       "ECON 3123"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 2303"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2020"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2500"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ISOM 2600"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "MGMT 2130"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "MATH 1003"
+      ],
+      [
+       "MATH 1013"
+      ],
+      [
+       "MATH 1020"
+      ],
+      [
+       "MATH 1023"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ACCT 2200",
+      "ISOM 2700",
+      "MARK 2120",
+      "MGMT 2110"
+     ]
+    }
+   ],
+   "source_quote": "ACCT | 2010 | Principles of Accounting I | 3\nECON | Note: ECON 2103 OR ECON 2113 | 3\nECON | Note: ECON 2123 OR ECON 3123 (BSc ECOF students can only use ECON 3123 to fulfill this requirement; while others should take ECON 2123) | 3\nFINA | 2303 | Financial Management | 3\nISOM | 2010 | Introduction to Information Systems | 3\nISOM | 2020 | Coding for Business | 1\nISOM | 2500 | Business Statistics | 3\nISOM | 2600 | Introduction to Business Analytics | 1\nMGMT | 2010 | Business Ethics and the Individual | 2\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\nMATH | Note: MATH 1003 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\nSB&M | Note: Courses for BBA majors: ACCT 2200 AND ISOM 2700 AND MARK 2120 AND MGMT 2110 (Students who enroll in the BSc majors of SBM are not required to take these courses for graduation) | 12"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "ECON 2174"
+      ],
+      [
+       "MATH 2023"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ECON 3113"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ECON 3133"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ECON 3143"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "ECON 3334"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "FINA 3103"
+     ]
+    }
+   ],
+   "source_quote": "ECON/MATH | Note: ECON 2174 OR MATH 2023 | 4\nECON | 3113 | Microeconomic Theory I | 4\nECON | 3133 | Microeconomic Theory II | 4\nECON | 3143 | Macroeconomic Theory II | 4\nECON | 3334 | Introduction to Econometrics | 4\nFINA | 3103 | Intermediate Investments | 3"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "ECON 4xxx"
+     ],
+     "min_credits": 11.0,
+     "exclude": []
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "FINA 3xxx"
+     ],
+     "min_credits": 6.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "ECON | ECON 4000-level Electives (Any 3 courses of the subject and level as specified) | 11\nFINA | FINA 3000-level or above Electives (Any 2 courses of the subject and level as specified) | 6"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ecof.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [],
+ "parent": null
+}

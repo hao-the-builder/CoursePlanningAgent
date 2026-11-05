@@ -1,0 +1,290 @@
+{
+ "code": "BCB",
+ "title": "BSc in Biochemistry and Cell Biology",
+ "kind": "major",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Requirements",
+   "category": "School",
+   "rules": [
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "COMP 1021"
+      ],
+      [
+       "COMP 1023"
+      ]
+     ]
+    },
+    {
+     "type": "choose_n",
+     "n": 6,
+     "courses": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ]
+    },
+    {
+     "type": "credits_from",
+     "patterns": [
+      "CHEM 1008",
+      "CHEM 1011",
+      "CHEM 1012",
+      "CHEM 1051",
+      "CHEM 1052",
+      "DASC 2010",
+      "LIFS 1901",
+      "LIFS 1902",
+      "LIFS 1903",
+      "LIFS 1904",
+      "LIFS 1930",
+      "LIFS 2210",
+      "MATH 1005",
+      "MATH 1006",
+      "MATH 1013",
+      "MATH 1014",
+      "MATH 1020",
+      "MATH 1023",
+      "MATH 1024",
+      "MATH 2011",
+      "MATH 2023",
+      "MATH 2111",
+      "MATH 2121",
+      "MATH 2131",
+      "OCES 1001",
+      "OCES 1010",
+      "PHYS 1101",
+      "PHYS 1111",
+      "PHYS 1112",
+      "PHYS 1113",
+      "PHYS 1114",
+      "PHYS 1115",
+      "PHYS 1312",
+      "PHYS 1314"
+     ],
+     "min_credits": 0.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+  },
+  {
+   "name": "Major Pre-requisite course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 1902"
+     ]
+    }
+   ],
+   "source_quote": "LIFS | 1902 | General Biology II | 3"
+  },
+  {
+   "name": "Required Course(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 1904"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2040"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2210"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2220"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2240"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2720"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 2820"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 3010"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 3020"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "LIFS 3140"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "LIFS 4961"
+      ],
+      [
+       "LIFS 4971",
+       "LIFS 4981"
+      ],
+      [
+       "SCIE 4500",
+       "LIFS 4981"
+      ]
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1011"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1012"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1051"
+     ]
+    },
+    {
+     "type": "required",
+     "courses": [
+      "CHEM 1052"
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "CHEM 2111"
+      ],
+      [
+       "CHEM 2311"
+      ]
+     ]
+    },
+    {
+     "type": "one_of",
+     "options": [
+      [
+       "CHEM 2155"
+      ],
+      [
+       "CHEM 2355"
+      ]
+     ]
+    }
+   ],
+   "source_quote": "LIFS | 1904 | Laboratory for General Biology II | 1\nLIFS | 2010 | Modern Approaches to Biochemical and Cell Biological Research | 3\nLIFS | 2040 | Cell Biology | 3\nLIFS | 2210 | Biochemistry I | 3\nLIFS | 2220 | Biochemistry II | 3\nLIFS | 2240 | Cell Biology Laboratory | 3\nLIFS | 2720 | Biochemistry Laboratory | 2\nLIFS | 2820 | Biochemical Laboratory Techniques | 1\nLIFS | 3010 | Molecular and Cellular Biology I | 3\nLIFS | 3020 | Molecular and Cellular Biology II | 3\nLIFS | 3140 | General Genetics | 4\nLIFS/SCIE | Note: LIFS 4961 OR (LIFS 4971 AND LIFS 4981) OR (SCIE 4500 AND LIFS 4981) (Students following IRE Track can only use (SCIE 4500 AND LIFS 4981) to fulfill the requirement.) | 3-7\nCHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\nCHEM | 1051 | Laboratory for General Chemistry A | 1\nCHEM | 1052 | Laboratory for General Chemistry B | 1\nCHEM | Note: CHEM 2111 OR CHEM 2311 | 3\nCHEM | Note: CHEM 2155 OR CHEM 2355 | 1"
+  },
+  {
+   "name": "Elective(s)",
+   "category": "Major",
+   "rules": [
+    {
+     "type": "credits_from",
+     "patterns": [
+      "LIFS 2060",
+      "LIFS 2070",
+      "LIFS 2080",
+      "CHEM 3120",
+      "CHEM 3320",
+      "CHEM 4140",
+      "OCES 1010",
+      "PHYS 2010"
+     ],
+     "min_credits": 12.0,
+     "exclude": []
+    }
+   ],
+   "source_quote": "LIFS/BIPH/CHEM/OCES/PHYS | Biochemistry and Cell Biology Electives (Courses from the specified elective list. Students following IRE Track are required to take a minimum of 12 credits; while others should either take a minimum of 20 credits (for those opting for LIFS 4971 & LIFS 4981), or 24 credits (for those opting for LIFS 4961). Courses taken as Major/Track Required Courses may not be counted towards the elective requirement.) | 12-24\n  LIFS | Any LIFS courses at 3000/4000-level"
+  }
+ ],
+ "stated_total_credits": 120.0,
+ "max_double_count_credits": null,
+ "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27bcb.pdf",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "Students MUST take the following courses prior to enrollment into the major",
+  "Students with level 3 or above in HKDSE 1x Biology are exempted from taking LIFS 1901 -- an exemption, not a requirement; it is not applied automatically.",
+  "Students with level 3 or above in HKDSE 1x Biology are exempted from taking LIFS 1903 -- an exemption, not a requirement; it is not applied automatically.",
+  "LIFS 4961 OR (LIFS 4971 AND LIFS 4981) OR (SCIE 4500 AND LIFS 4981) -- (Students following IRE Track can only use (SCIE 4500 AND LIFS 4981) to fulfill the requirement.)",
+  "Requirements: COMP 1022P is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
+ ],
+ "parent": null
+}
