@@ -19,7 +19,8 @@ from pydantic import BaseModel, Field
 class Course(BaseModel):
     code: str                      # "COMP 2011"
     title: str
-    credits: float
+    credits: float                 # the minimum, when the catalog gives a range
+    credits_max: float | None = None  # top of the range; None when fixed
     prereq_expr: str | None = None   # raw text from catalog, e.g. "COMP 1021 OR COMP 1022P"
     exclusions: list[str] = []
     terms_offered: list[Literal["Fall", "Winter", "Spring", "Summer"]] = []
@@ -71,8 +72,22 @@ class EveryTerm(BaseModel):
     course: str
 
 
+class NAreas(BaseModel):
+    """min_credits spread over at least n_areas different Common Core areas.
+
+    The Common Core Broadening requirement: "12 credits from 4 different
+    non-home common core areas", where more areas are eligible than must be
+    used (an SSCI student picks 4 of A/H/T/SA/SUS). cc_area pins one area, so
+    it cannot express the choice.
+    """
+    type: Literal["n_areas"] = "n_areas"
+    areas: list[str]           # eligible areas, e.g. ["A", "H", "T", "SA", "SUS"]
+    n_areas: int               # how many of them must be used
+    min_credits: float
+
+
 Rule = Annotated[
-    Union[Required, OneOf, ChooseN, CreditsFrom, CommonCoreArea, EveryTerm],
+    Union[Required, OneOf, ChooseN, CreditsFrom, CommonCoreArea, EveryTerm, NAreas],
     Field(discriminator="type"),
 ]
 
@@ -134,6 +149,25 @@ def _matches(code: str, pattern: str) -> bool:
     return re.match(regex, code) is not None
 
 
+def _spread(courses: list[str], areas: list[str], catalog: dict[str, Course]) -> int:
+    """How many of `areas` these courses can cover, one course to one area.
+
+    Greedy: a course tagged "S, T" can serve S or T but not both, so courses
+    with the fewest eligible areas are placed first. Good enough for a
+    pass/fail check; planner/allocate.py does the authoritative assignment.
+    """
+    pool = sorted(
+        ([a for a in areas if a in catalog[c].common_core_areas] for c in courses
+         if c in catalog and any(a in areas for a in catalog[c].common_core_areas)),
+        key=len)
+    used: set[str] = set()
+    for options in pool:
+        free = [a for a in options if a not in used]
+        if free:
+            used.add(free[0])
+    return len(used)
+
+
 class RuleResult(BaseModel):
     group: str
     category: Category
@@ -171,6 +205,12 @@ def evaluate(program: Program, plan: list[PlannedCourse],
             elif isinstance(r, EveryTerm):
                 n = codes.count(r.course)
                 ok, d = n >= terms_in_residence, f"{n}/{terms_in_residence} terms"
+            elif isinstance(r, NAreas):
+                eligible = [c for c in have if c in catalog
+                            and any(a in r.areas for a in catalog[c].common_core_areas)]
+                got, n = sum(cred(c) for c in eligible), _spread(eligible, r.areas, catalog)
+                ok = got >= r.min_credits and n >= r.n_areas
+                d = f"{got:g}/{r.min_credits:g} credits over {n}/{r.n_areas} areas"
             out.append(RuleResult(group=g.name, category=g.category,
                                   rule_type=r.type, satisfied=ok, detail=d))
     return out

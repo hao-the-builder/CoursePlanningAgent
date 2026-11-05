@@ -19,14 +19,19 @@ SCHEMA = REPO / "schema.py"
 sys.path.insert(0, str(REPO))
 
 from schema import (  # noqa: E402
+    Category,
     ChooseN,
     CommonCoreArea,
+    Course,
     CreditsFrom,
     EveryTerm,
+    NAreas,
     OneOf,
     PlannedCourse,
+    Program,
     Required,
     RequirementGroup,
+    evaluate,
 )
 
 
@@ -120,7 +125,8 @@ def test_the_six_rule_types_are_intact():
     """Hard rule 9: rule-type semantics do not change without a decision.
 
     Adding a rule type is allowed, so this asserts the six are present rather
-    than that there are exactly six.
+    than that there are exactly six. n_areas was added in Phase 2 with the
+    developer's agreement (see DECISIONS.md) and is checked alongside them.
     """
     expected = {
         Required: "required",
@@ -129,6 +135,7 @@ def test_the_six_rule_types_are_intact():
         CreditsFrom: "credits_from",
         CommonCoreArea: "cc_area",
         EveryTerm: "every_term",
+        NAreas: "n_areas",
     }
     for model, tag in expected.items():
         assert model.model_fields["type"].default == tag, model.__name__
@@ -145,6 +152,8 @@ def test_the_six_rule_types_are_intact():
                 {"type": "credits_from", "patterns": ["COMP 4xxx"], "min_credits": 6},
                 {"type": "cc_area", "area": "HAIC", "min_credits": 3},
                 {"type": "every_term", "course": "COMP 4900"},
+                {"type": "n_areas", "areas": ["A", "H"], "n_areas": 2,
+                 "min_credits": 6},
             ],
         }
     )
@@ -157,3 +166,67 @@ def test_total_credits_counts_each_course_once(example):
     assert sum(1 for p in plan if p.code == "COMP 4900") == 8
     expected = sum(catalog[c].credits for c in {p.code for p in plan} if c in catalog)
     assert example["total_credits"](plan, catalog) == expected
+
+
+# ------------------------------------------- Phase 2: the n_areas rule type --
+
+def _broadening(areas: list[str], n: int = 4, credits: float = 12) -> Program:
+    """A stand-in Common Core program with one Broadening rule."""
+    return Program(
+        code="CC", title="Common Core", kind="common_core", cohort="2026-27",
+        source_url="https://uce.ust.hk/web/courses_2026/curriculum.html",
+        groups=[RequirementGroup(name="Broadening", category=Category.COMMON_CORE,
+                                 rules=[NAreas(areas=areas, n_areas=n,
+                                               min_credits=credits)])])
+
+
+def _cc_catalog(tagged: dict[str, list[str]]) -> dict[str, Course]:
+    return {code: Course(code=code, title=code, credits=3, common_core_areas=a)
+            for code, a in tagged.items()}
+
+
+def _plan(codes: list[str]) -> list[PlannedCourse]:
+    return [PlannedCourse(code=c, term="Y2 Fall", status="planned") for c in codes]
+
+
+def test_n_areas_needs_both_the_credits_and_the_spread():
+    """12 credits over four areas: three areas' worth of credits is not enough."""
+    catalog = _cc_catalog({"X 1": ["A"], "X 2": ["A"], "X 3": ["H"], "X 4": ["T"]})
+    program = _broadening(["A", "H", "T", "SA", "SUS"])
+
+    result = evaluate(program, _plan(list(catalog)), catalog)[0]
+    assert not result.satisfied
+    assert result.detail == "12/12 credits over 3/4 areas"
+
+    catalog["X 5"] = Course(code="X 5", title="X 5", credits=3,
+                            common_core_areas=["SUS"])
+    spread = evaluate(program, _plan(list(catalog)), catalog)[0]
+    assert spread.satisfied, spread.detail
+
+
+def test_n_areas_counts_a_two_area_course_once():
+    """A course tagged "S, T" can fill S or T, not both."""
+    catalog = _cc_catalog({"X 1": ["A", "H"], "X 2": ["A", "H"]})
+    result = evaluate(_broadening(["A", "H"], n=2, credits=6),
+                      _plan(list(catalog)), catalog)[0]
+    assert result.satisfied and result.detail == "6/6 credits over 2/2 areas"
+
+    one = _cc_catalog({"X 1": ["A", "H"]})
+    assert evaluate(_broadening(["A", "H"], n=2, credits=3),
+                    _plan(list(one)), one)[0].detail == "3/3 credits over 1/2 areas"
+
+
+def test_n_areas_ignores_home_areas():
+    """Courses in an area the rule does not list contribute nothing."""
+    catalog = _cc_catalog({"X 1": ["S"], "X 2": ["A"]})
+    result = evaluate(_broadening(["A", "H", "T", "SA", "SUS"]),
+                      _plan(list(catalog)), catalog)[0]
+    assert result.detail == "3/12 credits over 1/4 areas"
+
+
+def test_variable_credit_courses_keep_their_range():
+    """Phase 2 decision: credits is the minimum, credits_max the top."""
+    fixed = Course(code="COMP 3711", title="Algorithms", credits=3)
+    variable = Course(code="UROP 2100", title="UROP", credits=1, credits_max=4)
+    assert fixed.credits_max is None
+    assert (variable.credits, variable.credits_max) == (1, 4)
