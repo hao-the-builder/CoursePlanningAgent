@@ -43,7 +43,11 @@ cp .env.example .env          # then edit .env
 ```bash
 pytest                                        # tests
 python schema.py                              # the data-contract example
-python pipeline/check_program.py --all        # re-check every program JSON
+python pipeline/parse_catalog.py              # raw/catalog  -> data/catalog.json
+python pipeline/extract_programs.py           # raw/requirements -> data/programs
+python pipeline/check_program.py --all --write   # re-check and re-tier
+python pipeline/build_index.py                # -> data/program_index.json
+python pipeline/pdf_to_text.py raw/requirements/COMP.pdf  # read one PDF
 python -m planner.agent tests/profiles/X.json # one plan from one profile
 streamlit run app.py                          # the UI
 python scripts/run_eval.py                    # all profiles -> logs/eval_report.md
@@ -69,7 +73,9 @@ secrets, never in the repo.
 schema.py          rule schema + evaluator + PlannedCourse — the data contract
 samples/           the target spreadsheet layout, and the script that built it
 raw/               official PDFs and HTML, untouched, with SOURCES.md provenance
-data/              derived JSON: catalog, programs, Common Core, regulations
+data/              derived JSON: catalog.json (1,649 courses),
+                   programs/{CODE}.json (129, incl. track/option variants),
+                   program_index.json, common_core.json, regulations.json
 pipeline/          fetch and parse raw sources into data/
 planner/           terms, tools, validation, allocation, intake, agent loop
 outputs/           the .xlsx and .docx builders
@@ -84,7 +90,7 @@ Built in phases, one at a time — see `CLAUDE.md` for the plan and the rules.
 
 - [x] **Phase 0** — project setup
 - [x] **Phase 1** — collect raw data
-- [ ] **Phase 2** — build structured data
+- [x] **Phase 2** — build structured data
 - [ ] **Phase 3** — deterministic tools and validation
 - [ ] **Phase 4** — LLM wrapper and agent loop
 - [ ] **Phase 5** — output files
