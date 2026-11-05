@@ -92,7 +92,7 @@ Built in phases, one at a time — see `CLAUDE.md` for the plan and the rules.
 - [x] **Phase 1** — collect raw data
 - [x] **Phase 2** — build structured data
 - [x] **Phase 3** — deterministic tools and validation
-- [ ] **Phase 4** — LLM wrapper and agent loop
+- [x] **Phase 4** — LLM wrapper and agent loop
 - [ ] **Phase 5** — output files
 - [ ] **Phase 6** — Streamlit UI
 - [ ] **Phase 7** — testing, test log, deploy

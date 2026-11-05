@@ -131,6 +131,32 @@ def describe_program(program: Program, catalog) -> str:
     return "\n".join(lines)
 
 
+def _group_credits(group, catalog) -> float:
+    """Roughly what one group is worth, for the prompt's credit budget."""
+    from planner.allocate import group_demand
+
+    return group_demand(group, catalog)
+
+
+def _all_requirements(major: Program, minor: Program | None,
+                      common_core: Program | None, catalog) -> str:
+    """Every requirement the student must meet, not just the major's.
+
+    Leaving the Common Core out of the prompt was why early runs came back
+    with the Broadening requirement unmet: the model had never been told what
+    it was.
+    """
+    parts = [f"## Major — {major.title} ({major.code})",
+             describe_program(major, catalog)]
+    if minor is not None:
+        parts += [f"\n## Minor — {minor.title} ({minor.code})",
+                  describe_program(minor, catalog)]
+    if common_core is not None:
+        parts += ["\n## University Common Core (every student)",
+                  describe_program(common_core, catalog)]
+    return "\n".join(parts)
+
+
 def describe_report(report: ValidationReport) -> str:
     lines = []
     for issue in report.errors:
@@ -302,8 +328,13 @@ def plan_for(profile: StudentProfile, *, paths: int = DEFAULT_PATHS,
                                log_path=log.path)
 
     catalog = T.catalog()
+    common_core = T.common_core_for(profile.major)
     spec = build_tools(profile, major, minor)
     system = prompt_text("system")
+    degree = T.regulation("graduation_total_credits") or 120.0
+    floor = sum(_group_credits(g, catalog)
+                for program in (major, minor, common_core) if program
+                for g in program.groups)
     prompt = prompt_text(
         "planning",
         paths=str(paths), program=major.code, program_title=major.title,
@@ -317,18 +348,28 @@ def plan_for(profile: StudentProfile, *, paths: int = DEFAULT_PATHS,
         workload_min=f"{profile.workload_min:g}",
         workload_max=f"{profile.workload_max:g}",
         spread=profile.spread,
-        requirements=describe_program(major, catalog),
+        requirements=_all_requirements(major, minor, common_core, catalog),
+        degree_credits=f"{degree:g}",
+        required_credits=f"{floor:g}",
+        free_credits=f"{max(0.0, degree - floor):g}",
+        expected_rows=str(round(degree / 3)),
         already_done=_already_done(profile),
         tool_summary="\n".join(f"- `{t.name}` — {t.description}" for t in spec),
     )
-    log.event("prompt_built", chars=len(prompt), tools=[t.name for t in spec])
+    log.event("prompt_built", chars=len(prompt), tools=[t.name for t in spec],
+              degree_credits=degree, required_credits=floor)
 
     message = prompt
     drafted: list[Path] = []
     iterations = 0
+    unreadable = False
 
     for iterations in range(1, max_iterations + 1):
-        task = "plan" if iterations == 1 else "retry"
+        # CLAUDE.md puts retries on MODEL_FAST, which is right for a
+        # reply that was merely unreadable. Re-planning around a
+        # validation error is the same work as planning, so it stays on
+        # MODEL_STRONG.
+        task = "retry" if unreadable else "plan"
         log.event("llm_request", iteration=iterations, task=task,
                   chars=len(message))
         try:
@@ -346,13 +387,16 @@ def plan_for(profile: StudentProfile, *, paths: int = DEFAULT_PATHS,
         try:
             drafted = _parse_paths(reply)
         except (ValueError, json.JSONDecodeError) as exc:
-            log.event("unreadable_reply", iteration=iterations, error=str(exc))
+            unreadable = True
+            log.event("unreadable_reply", iteration=iterations,
+                      error=str(exc))
             message = (f"That reply could not be read: {exc}\n\nSend the same "
                        f"answer again as one JSON object in the shape the "
                        f"instructions described, with nothing before or after "
                        f"it.")
             continue
 
+        unreadable = False
         for path in drafted:
             path.report = validate_plan(path.plan, profile, major=major,
                                         minor=minor, catalog=catalog)
@@ -370,7 +414,7 @@ def plan_for(profile: StudentProfile, *, paths: int = DEFAULT_PATHS,
 
         if iterations == max_iterations:
             break
-        message = _fix_request(broken)
+        message = _fix_request(drafted)
 
     log.event("gave_up", iterations=iterations,
               unresolved=sum(len(p.report.errors) for p in drafted
@@ -383,17 +427,42 @@ def plan_for(profile: StudentProfile, *, paths: int = DEFAULT_PATHS,
         paths=drafted, iterations=iterations, log_path=log.path)
 
 
-def _fix_request(broken: list[Path]) -> str:
-    parts = ["Some of those paths do not validate. Fix them and send the "
-             "whole JSON object again, with every path, corrected.", ""]
-    for path in broken:
-        parts.append(f"## {path.name}")
-        parts += [f"- {i.message}" for i in (path.report.errors if path.report
-                                             else [])]
-        parts.append("")
-    parts.append("Change as little as possible. If a requirement cannot be "
-                 "met at all, leave it and say so in `trade_offs` rather than "
-                 "inventing a course to cover it.")
+def _as_payload(paths: list[Path]) -> dict:
+    return {"paths": [{"name": p.name, "summary": p.summary,
+                       "why_it_fits": p.why_it_fits,
+                       "trade_offs": p.trade_offs,
+                       "plan": [r.model_dump(exclude_defaults=True)
+                                for r in p.plan],
+                       "slot_suggestions": p.slot_suggestions}
+                      for p in paths]}
+
+
+def _fix_request(drafted: list[Path]) -> str:
+    """The retry message, carrying the whole previous answer back.
+
+    Each call to a backend is a fresh conversation — the Agent SDK starts a
+    new session per query, and the API wrapper sends no history — so a retry
+    that listed only the errors was asking the model to fix a plan it could
+    no longer see. That is what made the first real runs spend four
+    iterations achieving nothing.
+    """
+    parts = ["Here is the answer you sent. Some of it does not validate.", "",
+             "```json", json.dumps(_as_payload(drafted), indent=1), "```", "",
+             "## What is wrong", ""]
+    for path in drafted:
+        errors = path.report.errors if path.report else []
+        if not errors:
+            parts.append(f"- **{path.name}**: valid. Keep it exactly as it is.")
+            continue
+        parts.append(f"- **{path.name}**:")
+        parts += [f"  - {issue.message}" for issue in errors]
+    parts += [
+        "",
+        "Send the whole JSON object again with every path — the valid ones "
+        "unchanged, the rest corrected. Change as little as possible. If a "
+        "requirement genuinely cannot be met, leave it unmet and say so in "
+        "`trade_offs`; never invent a course to cover it.",
+    ]
     return "\n".join(parts)
 
 

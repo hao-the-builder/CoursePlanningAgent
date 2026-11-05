@@ -17,6 +17,16 @@ $term_table
 - Credits per term: between $workload_min and $workload_max
 - Workload shape asked for: **$spread**
 
+## The credit budget
+
+The degree needs **$degree_credits credits**. The requirements below come to
+about **$required_credits**, which leaves roughly **$free_credits credits of
+free electives** that you still have to choose and place. A plan that only
+covers the named requirements is 30-odd credits short and will fail.
+
+Every path lists **every course in every term** — around $expected_rows rows.
+Do not abbreviate, do not write "and so on", do not leave a term out.
+
 ## What the program requires
 
 $requirements

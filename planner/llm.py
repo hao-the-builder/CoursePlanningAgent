@@ -253,7 +253,8 @@ def _chat_subscription(prompt: str, *, task: str, system: str, model: str,
     def wrap(spec: ToolSpec):
         @sdk_tool(spec.name, spec.description, spec.schema)
         async def handler(arguments: dict) -> dict:
-            calls.append((spec.name, dict(arguments)))
+            # The call is recorded from the ToolUseBlock below, not here, or
+            # every call would be counted twice.
             return {"content": [{"type": "text",
                                  "text": _run_tool(tools, spec.name, arguments)}]}
         return handler
