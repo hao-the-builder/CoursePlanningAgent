@@ -29,7 +29,11 @@ from schema import PlannedCourse  # noqa: E402
 PROFILES = REPO / "tests" / "profiles"
 EXPECTED = REPO / "tests" / "expected"
 
-CASES = sorted(p.stem for p in PROFILES.glob("*.json")) if PROFILES.exists() else []
+# Only the cases that have a hand-written expectation beside them. A profile
+# with no expected file is a fixture for a later phase (the agent writes its
+# plan), not a validation case.
+CASES = sorted(p.stem for p in PROFILES.glob("*.json")
+               if (EXPECTED / p.name).exists()) if PROFILES.exists() else []
 
 
 def load(name: str) -> tuple[list[PlannedCourse], StudentProfile, dict]:

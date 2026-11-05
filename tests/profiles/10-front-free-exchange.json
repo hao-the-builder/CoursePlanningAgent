@@ -1,0 +1,25 @@
+{
+ "name": "10-front-free-exchange",
+ "description": "The Phase 4 case: front-loaded, Y4 Spring kept free, and a term on exchange. A plan has to respect all three at once. Profile only - the agent writes the plan.",
+ "profile": {
+  "cohort": "2026-27",
+  "school": "SENG",
+  "department": "Computer Science and Engineering",
+  "major": "COMP",
+  "programme_years": 4,
+  "workload_min": 12,
+  "workload_max": 18,
+  "spread": "front",
+  "free_terms": ["Y4 Spring"],
+  "exchange": {
+   "terms": ["Y3 Spring"],
+   "host_university": "National University of Singapore",
+   "purposes": ["major"]
+  },
+  "direction": "AI",
+  "career_interests": "industry, machine learning engineering",
+  "background": "HKDSE, strong maths, some Python",
+  "gpa_target": 3.3
+ },
+ "plan": []
+}

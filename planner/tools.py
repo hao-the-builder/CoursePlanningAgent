@@ -31,13 +31,33 @@ from pathlib import Path
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from schema import Course, Program  # noqa: E402
+from planner.terms import is_regular, sort_key  # noqa: E402
+from schema import (  # noqa: E402
+    ChooseN,
+    CommonCoreArea,
+    Course,
+    CreditsFrom,
+    EveryTerm,
+    NAreas,
+    OneOf,
+    PlannedCourse,
+    Program,
+    Required,
+    _matches,
+)
 
 REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
 PROGRAMS = DATA / "programs"
 
 CODE = re.compile(r"\b[A-Z]{2,6} ?\d{4}[A-Z]?\b")
+
+# Courses that belong at the home university, whatever the exchange is meant
+# to cover. A final year project done at a host university is not the same
+# qualification, and an industrial placement is arranged by HKUST.
+STAY_HOME = re.compile(
+    r"final year (project|thesis)|capstone|industrial experience|co-op"
+    r"|undergraduate research|independent (study|work)", re.I)
 
 
 # ------------------------------------------------------------ data access --
@@ -330,3 +350,375 @@ def common_core_for(program_code: str) -> Program:
                                        rules=rules,
                                        source_quote=group.source_quote))
     return base.model_copy(update={"groups": groups})
+
+
+# ------------------------------------------------------------ draft plans --
+# A feasible plan, built from the rules by plain code.
+#
+# Section 2 of CLAUDE.md puts "course codes, credits, prerequisites,
+# exclusions, requirement rules" on the data side of the line and "choosing
+# paths, writing explanations" on the LLM's. Picking a set of courses that
+# satisfies a rule is the first kind of job, so it is done here: the agent
+# hands the LLM a feasible skeleton and asks it to vary and explain it, rather
+# than asking it to assemble 40 course codes from memory. A plan this builds
+# is a starting point, never the answer - validate.py still has the last word.
+
+
+def _cheapest(option: list[str], chosen: set[str],
+              catalog: dict[str, Course]) -> float:
+    """What this option adds, counting a course already chosen as free."""
+    return sum(0.0 if c in chosen else catalog[c].credits
+               for c in option if c in catalog)
+
+
+def _clashes(code: str, chosen: set[str], catalog: dict[str, Course]) -> bool:
+    """Would adding this course break an exclusion with one already chosen?
+
+    Self-contradicting exclusions - where one course is the other's
+    prerequisite - are ignored, the same way validate.py reports rather than
+    enforces them.
+    """
+    course = catalog.get(code)
+    if not course:
+        return True
+    for other in chosen:
+        pair = (course.exclusions, catalog[other].exclusions if other in catalog else [])
+        named = any(e.startswith(other) for e in pair[0]) or \
+            any(e.startswith(code) for e in pair[1])
+        if not named:
+            continue
+        if _is_prereq(code, other, catalog) or _is_prereq(other, code, catalog):
+            continue
+        return True
+    return False
+
+
+def _is_prereq(a: str, b: str, catalog: dict[str, Course]) -> bool:
+    course = catalog.get(a)
+    return bool(course and course.prereq_expr
+                and b in courses_in(parse_prereq(course.prereq_expr)))
+
+
+def _pick(candidates: list[str], want: float, chosen: set[str],
+          catalog: dict[str, Course]) -> list[str]:
+    """Take courses until `want` credits are covered, cheapest choice first.
+
+    Courses with no prerequisite come first, because a draft that needs a
+    chain of three prerequisites to reach one elective is harder to schedule
+    and no better.
+    """
+    taken: list[str] = []
+    have = 0.0
+    ordered = sorted(
+        (c for c in candidates if c in catalog and c not in chosen),
+        key=lambda c: (bool(catalog[c].prereq_expr), -catalog[c].credits, c))
+    for code in ordered:
+        if have >= want:
+            break
+        if _clashes(code, chosen, catalog):
+            continue
+        taken.append(code)
+        chosen.add(code)
+        have += catalog[code].credits
+    return taken
+
+
+def _area_courses(area: str, catalog: dict[str, Course]) -> list[str]:
+    return [code for code, c in catalog.items() if area in c.common_core_areas]
+
+
+def required_set(program: Program, catalog: dict[str, Course],
+                 chosen: set[str] | None = None) -> tuple[set[str], list[str]]:
+    """Courses one program's rules call for, and its every-term courses."""
+    chosen = set() if chosen is None else chosen
+    every_term: list[str] = []
+    deferred: list = []
+
+    for group in program.groups:
+        for rule in group.rules:
+            if isinstance(rule, Required):
+                chosen |= {c for c in rule.courses if c in catalog}
+            elif isinstance(rule, EveryTerm):
+                if rule.course in catalog:
+                    every_term.append(rule.course)
+            else:
+                deferred.append(rule)
+
+    for rule in deferred:
+        if isinstance(rule, OneOf):
+            best = min(rule.options,
+                       key=lambda o: (_cheapest(o, chosen, catalog), o))
+            chosen |= {c for c in best if c in catalog}
+        elif isinstance(rule, ChooseN):
+            have = [c for c in rule.courses if c in chosen]
+            _pick([c for c in rule.courses if c not in chosen],
+                  sum(catalog[c].credits for c in
+                      sorted(rule.courses, key=lambda c: catalog[c].credits
+                             if c in catalog else 0)[:max(0, rule.n - len(have))]),
+                  chosen, catalog)
+        elif isinstance(rule, CreditsFrom):
+            matching = [c for c in catalog
+                        if c not in rule.exclude
+                        and any(_matches(c, p) for p in rule.patterns)]
+            covered = sum(catalog[c].credits for c in chosen if c in matching)
+            _pick(matching, rule.min_credits - covered, chosen, catalog)
+        elif isinstance(rule, CommonCoreArea):
+            pool = _area_courses(rule.area, catalog)
+            covered = sum(catalog[c].credits for c in chosen if c in pool)
+            _pick(pool, rule.min_credits - covered, chosen, catalog)
+        elif isinstance(rule, NAreas):
+            per = rule.min_credits / rule.n_areas
+            for area in rule.areas[:rule.n_areas]:
+                pool = _area_courses(area, catalog)
+                covered = sum(catalog[c].credits for c in chosen if c in pool)
+                _pick(pool, per - covered, chosen, catalog)
+    return chosen, every_term
+
+
+def _depth(code: str, chosen: set[str], catalog: dict[str, Course],
+           seen: frozenset[str] = frozenset()) -> int:
+    """How many terms of prerequisites sit under this course, within the plan."""
+    course = catalog.get(code)
+    if not course or not course.prereq_expr or code in seen:
+        return 0
+    needed = courses_in(parse_prereq(course.prereq_expr)) & chosen
+    if not needed:
+        return 0
+    return 1 + max(_depth(c, chosen, catalog, seen | {code}) for c in needed)
+
+
+def _height(code: str, chosen: set[str], catalog: dict[str, Course],
+            cache: dict[str, int]) -> int:
+    """How long a chain of courses waits on this one, inside the plan.
+
+    Scheduling the deepest chains first is what stops a four-link chain such
+    as COMP 1023 -> 2011 -> 2611 -> 3511 from being crowded out by free
+    electives that could have gone in any term.
+    """
+    if code in cache:
+        return cache[code]
+    cache[code] = 0
+    best = 0
+    for other in chosen:
+        course = catalog.get(other)
+        if not course or not course.prereq_expr:
+            continue
+        if code in courses_in(parse_prereq(course.prereq_expr)):
+            best = max(best, 1 + _height(other, chosen, catalog, cache))
+    cache[code] = best
+    return best
+
+
+def _target(remaining_credits: float, remaining_terms: int, low: float,
+            high: float, spread: str) -> float:
+    """How many credits to aim for in the next term.
+
+    Recomputed each term from what is left, so a term is never left under the
+    minimum load and the last one is never asked to absorb the remainder.
+    """
+    if remaining_terms <= 0:
+        return high
+    base = remaining_credits / remaining_terms
+    if spread == "front":
+        base *= 1.2
+    elif spread == "back":
+        base *= 0.8
+    return min(high, max(low, base))
+
+
+def draft_plan(profile, major: Program, minor: Program | None = None,
+               common_core: Program | None = None,
+               catalog: dict[str, Course] | None = None,
+               spread: str | None = None) -> list[PlannedCourse]:
+    """One feasible plan for this student, or as close as the data allows."""
+    from planner.terms import term_sequence
+    from schema import PlannedCourse
+
+    if catalog is None:
+        catalog = globals()["catalog"]()
+    if common_core is None and profile.major:
+        common_core = common_core_for(profile.major)
+
+    done = {p.code for p in profile.already_taken()}
+    chosen: set[str] = set(done)
+    every_term: list[str] = []
+    for program in (major, minor, common_core):
+        if program is not None:
+            chosen, extra = required_set(program, catalog, chosen)
+            every_term += extra
+
+    # Free electives up to the degree total.
+    needed = regulation("graduation_total_credits") or 120.0
+    have = sum(catalog[c].credits for c in chosen if c in catalog)
+    have += profile.unspecified_transfer_credits
+    if have < needed:
+        fillers = [c for c, course in catalog.items()
+                   if not course.prereq_expr and course.credits == 3
+                   and not course.common_core_areas]
+        _pick(sorted(fillers), needed - have, chosen, catalog)
+
+    # Schedule what is left, prerequisites first.
+    to_place = sorted(chosen - done - set(every_term),
+                      key=lambda c: (_depth(c, chosen, catalog), c))
+    terms = [t.label for t in term_sequence(
+        profile.cohort or "2026-27", profile.programme_years,
+        use_summer=profile.use_summer, use_winter=profile.use_winter)]
+    free = set(profile.free_terms)
+    away = set(profile.exchange_terms)
+    usable = [t for t in terms if t not in free]
+
+    low = regulation("min_credits_regular_term") or 12.0
+    high = regulation("max_credits_regular_term") or 18.0
+    low, high = max(low, profile.workload_min), min(high, profile.workload_max)
+
+    plan: list[PlannedCourse] = []
+    for entry in profile.already_taken():
+        plan.append(entry)
+    for term in usable:
+        for code in every_term:
+            if term not in away and is_regular(term):
+                plan.append(PlannedCourse(code=code, term=term, status="planned"))
+
+    loaded = {t: 0.0 for t in usable}
+    heights: dict[str, int] = {}
+    remaining = sorted(
+        to_place,
+        key=lambda c: (-_height(c, chosen, catalog, heights),
+                       _depth(c, chosen, catalog), c))
+
+    def ready(code: str, before: set[str]) -> bool:
+        course = catalog.get(code)
+        if not course or not course.prereq_expr:
+            return True
+        met, _ = satisfied_by(parse_prereq(course.prereq_expr), before)
+        return met
+
+    def credits_of(code: str) -> float:
+        return catalog[code].credits if code in catalog else 0.0
+
+    low_ = low
+
+    # A term on exchange is not an empty term: the student takes courses at
+    # the host university and maps them back. Fill it with the requirements
+    # the exchange is meant to cover, as rows that are explicitly pending
+    # (hard rule 6), choosing courses nothing else depends on so no
+    # prerequisite chain is broken by being away.
+    for term in sorted(away, key=sort_key):
+        if term not in usable:
+            continue
+        # A term abroad is a full term, not a light one: under-filling it
+        # pushes credits back onto the HKUST terms, which is what makes an
+        # exchange plus a free final term look impossible when it is not.
+        budget = high
+        for code in sorted(remaining,
+                           key=lambda c: (heights.get(c, 0), -credits_of(c), c)):
+            if heights.get(code, 0) or credits_of(code) > budget:
+                continue
+            if STAY_HOME.search(catalog[code].title if code in catalog else ""):
+                continue        # a final year project is not done abroad
+            plan.append(PlannedCourse(
+                code=code, term=term, status="exchange",
+                host_course="(host course to be confirmed)",
+                host_university=(profile.exchange.host_university
+                                 if profile.exchange else None),
+                mapping_approved=False,
+                note="Pick a host course that maps to this requirement and "
+                     "get the mapping approved before you go."))
+            budget -= credits_of(code)
+            remaining.remove(code)
+
+    open_terms = [t for t in usable if t not in away]
+    for index, term in enumerate(open_terms):
+        # A course becomes available when its prerequisite is met by the
+        # courses in *earlier* terms, so the set is frozen before filling.
+        before = {p.code for p in plan
+                  if sort_key(p.term) < sort_key(term)} | done
+        left = sum(credits_of(c) for c in remaining)
+        target = _target(left, len(open_terms) - index, low, high,
+                         spread or profile.spread)
+        moved = True
+        while moved and remaining:
+            moved = False
+            for code in list(remaining):
+                credits = credits_of(code)
+                ceiling = target if loaded[term] >= low else high
+                if loaded[term] + credits > min(ceiling, high):
+                    continue
+                if not ready(code, before):
+                    continue
+                plan.append(PlannedCourse(code=code, term=term, status="planned"))
+                loaded[term] += credits
+                remaining.remove(code)
+                moved = True
+
+    # A relaxation pass: anything the shaped targets could not take is
+    # offered to the emptiest term that is ready for it, up to the
+    # regulation ceiling. Going by load rather than by date is what keeps a
+    # tight plan - an exchange term plus a free term leaves six terms for a
+    # 120-credit degree - from piling the remainder onto the last one.
+    for _ in range(len(open_terms) + 1):
+        if not remaining:
+            break
+        moved = False
+        for term in sorted(open_terms, key=lambda t: (loaded[t], sort_key(t))):
+            before = {p.code for p in plan
+                      if sort_key(p.term) < sort_key(term)} | done
+            for code in list(remaining):
+                credits = credits_of(code)
+                if loaded[term] + credits > high or not ready(code, before):
+                    continue
+                plan.append(PlannedCourse(code=code, term=term,
+                                          status="planned"))
+                loaded[term] += credits
+                remaining.remove(code)
+                moved = True
+        if not moved:
+            break
+
+    # Make room. A term left at 17 of an 18-credit ceiling wastes a credit,
+    # and six such terms can leave a whole course unplaceable. For each
+    # course still waiting, try moving one already-placed course that nothing
+    # depends on into another term, to open a gap big enough.
+    def earlier(term: str) -> set[str]:
+        return {p.code for p in plan if sort_key(p.term) < sort_key(term)} | done
+
+    for code in list(remaining):
+        need = credits_of(code)
+        for term in sorted(open_terms, key=lambda t: -loaded[t]):
+            if not ready(code, earlier(term)):
+                continue
+            movable = [p for p in plan if p.term == term
+                       and p.status == "planned"
+                       and not heights.get(p.code, 0)]
+            for row in sorted(movable, key=lambda r: -credits_of(r.code)):
+                freed = credits_of(row.code)
+                if loaded[term] - freed + need > high:
+                    continue
+                for other in sorted(open_terms, key=lambda t: loaded[t]):
+                    if other == term or loaded[other] + freed > high:
+                        continue
+                    if not ready(row.code, earlier(other)):
+                        continue
+                    plan.remove(row)
+                    plan.append(PlannedCourse(code=row.code, term=other,
+                                              status="planned"))
+                    loaded[term] -= freed
+                    loaded[other] += freed
+                    plan.append(PlannedCourse(code=code, term=term,
+                                              status="planned"))
+                    loaded[term] += need
+                    remaining.remove(code)
+                    break
+                if code not in remaining:
+                    break
+            if code not in remaining:
+                break
+
+    # Anything still unplaced goes in the emptiest term, where validate.py
+    # will object: a draft that will not schedule is a fact about the
+    # requirements, not something to bury.
+    for code in list(remaining):
+        term = min(open_terms, key=lambda t: loaded[t]) if open_terms             else "Y4 Spring"
+        plan.append(PlannedCourse(code=code, term=term, status="planned"))
+        loaded[term] = loaded.get(term, 0.0) + credits_of(code)
+    return plan

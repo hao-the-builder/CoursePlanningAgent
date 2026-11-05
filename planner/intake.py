@@ -39,8 +39,9 @@ Spread = Literal["even", "front", "back"]
 ExchangePurpose = Literal["major", "common_core", "minor", "free"]
 
 REQUIRED_FIELDS = {
-    "cohort": "which intake year you started in — requirements differ by cohort",
-    "major": "your major, so the right requirements can be loaded",
+    "cohort": "Which intake year did you start in? Requirements differ by "
+              "cohort, so I cannot use the wrong year's.",
+    "major": "Which major are you in? That decides which requirements apply.",
 }
 
 
@@ -124,5 +125,4 @@ def missing_required(profile: StudentProfile) -> list[str]:
 
 def follow_up_questions(profile: StudentProfile) -> list[str]:
     """A plain question for each missing required field."""
-    return [f"What is {REQUIRED_FIELDS[name]}?" for name in
-            missing_required(profile)]
+    return [REQUIRED_FIELDS[name] for name in missing_required(profile)]
