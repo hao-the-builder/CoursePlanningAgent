@@ -693,6 +693,15 @@ def check_double_count(allocation: Allocation,
             f"your major and {minor.code}, but that minor does not publish how "
             f"many may be shared, so the limit was not checked — verify it "
             f"with the minor programme coordinator.")]
+    shared = allocation.double_counted_credits
+    if not allocation.over_cap:
+        # Within the cap, but the student should still know how much of the
+        # minor their major is already paying for.
+        return [Issue(
+            "info", "check_double_count",
+            f"{shared:g} of {minor.code}'s credits also count toward your "
+            f"major, out of the {allocation.double_count_cap:g} that may be "
+            f"shared.")] if shared else []
     if allocation.over_cap:
         return [Issue(
             "error", "check_double_count",

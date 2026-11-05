@@ -10,16 +10,30 @@
   "workload_min": 12,
   "workload_max": 18,
   "spread": "front",
-  "free_terms": ["Y4 Spring"],
+  "free_terms": [
+   "Y4 Spring"
+  ],
   "exchange": {
-   "terms": ["Y3 Spring"],
+   "terms": [
+    "Y3 Spring"
+   ],
    "host_university": "National University of Singapore",
-   "purposes": ["major"]
+   "purposes": [
+    "major"
+   ]
   },
   "direction": "AI",
   "career_interests": "industry, machine learning engineering",
   "background": "HKDSE, strong maths, some Python",
   "gpa_target": 3.3
  },
- "plan": []
+ "plan": [],
+ "expect": {
+  "status": "ok",
+  "max_errors": 0,
+  "require_any": [
+   "check_exchange",
+   "check_free_terms"
+  ]
+ }
 }

@@ -245,5 +245,13 @@
    "term": "Y4 Spring",
    "status": "planned"
   }
- ]
+ ],
+ "expect": {
+  "status": "ok",
+  "require_clean_paths": 1,
+  "require_any": [
+   "check_free_terms"
+  ],
+  "note": "On the stub backend the front-loaded variant lands 3 credits over the cap in one term: the greedy draft fills early terms with free electives and starves a late prerequisite chain of room. A model fixes this in the retry loop; the stub cannot, so one clean path is the bar here."
+ }
 }

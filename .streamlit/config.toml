@@ -1,0 +1,13 @@
+# Streamlit configuration, committed so a deploy and a local run look alike.
+
+[server]
+# The app holds nothing a visitor should be able to upload into.
+maxUploadSize = 1
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#1F3864"

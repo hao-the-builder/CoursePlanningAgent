@@ -255,5 +255,12 @@
    "host_university": "National University of Singapore",
    "mapping_approved": false
   }
- ]
+ ],
+ "expect": {
+  "status": "ok",
+  "max_errors": 0,
+  "require_any": [
+   "check_exchange"
+  ]
+ }
 }

@@ -37,6 +37,18 @@ from schema import PlannedCourse, Tier  # noqa: E402
 
 load_dotenv()
 
+# Streamlit Community Cloud supplies configuration through `st.secrets`, not
+# through the environment, so planner/llm.py would never see the key. Copy it
+# across once, without overwriting anything already set locally. The key is
+# only ever read from here — it is never written to a file, a log or an
+# output (hard rule 8).
+for _name in ("LLM_BACKEND", "ANTHROPIC_API_KEY", "MODEL_FAST", "MODEL_STRONG"):
+    try:
+        if _name in st.secrets and not os.environ.get(_name):
+            os.environ[_name] = str(st.secrets[_name])
+    except Exception:          # no secrets.toml at all, which is normal
+        break
+
 MAX_GENERATIONS = 3
 MAX_CHAT_TURNS = 12
 COHORT = "2026-27"

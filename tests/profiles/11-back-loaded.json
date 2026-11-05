@@ -1,0 +1,24 @@
+{
+ "name": "11-back-loaded",
+ "description": "A gentle first year, heavier later. Must pass, and must not warn about the spread.",
+ "profile": {
+  "cohort": "2026-27",
+  "school": "SENG",
+  "department": "Computer Science and Engineering",
+  "major": "COMP",
+  "programme_years": 4,
+  "workload_min": 12,
+  "workload_max": 18,
+  "spread": "back",
+  "direction": "systems",
+  "career_interests": "industry, backend engineering"
+ },
+ "expect": {
+  "status": "ok",
+  "max_errors": 0,
+  "forbid_checks": [
+   "check_spread"
+  ]
+ },
+ "plan": []
+}

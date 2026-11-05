@@ -258,5 +258,13 @@
    "status": "transfer",
    "mapping_approved": true
   }
- ]
+ ],
+ "expect": {
+  "status": "ok",
+  "max_errors": 0,
+  "require_any": [
+   "check_transfer"
+  ],
+  "note": "The last term cannot reach the 12-credit minimum, so the draft empties it and the student finishes a term early."
+ }
 }

@@ -243,5 +243,12 @@
    "term": "Y4 Spring",
    "status": "planned"
   }
- ]
+ ],
+ "expect": {
+  "status": "ok",
+  "require_clean_paths": 1,
+  "require_any": [
+   "check_double_count"
+  ]
+ }
 }

@@ -242,5 +242,10 @@
    "term": "Y4 Spring",
    "status": "planned"
   }
- ]
+ ],
+ "expect": {
+  "status": "ok",
+  "max_errors": 0,
+  "note": "the agent replans from scratch, so the broken order in the fixture is not carried over"
+ }
 }

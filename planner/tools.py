@@ -689,6 +689,7 @@ def draft_plan(profile, major: Program, minor: Program | None = None,
                 continue
             movable = [p for p in plan if p.term == term
                        and p.status == "planned"
+                       and p.code not in every_term
                        and not heights.get(p.code, 0)]
             for row in sorted(movable, key=lambda r: -credits_of(r.code)):
                 freed = credits_of(row.code)
@@ -714,11 +715,92 @@ def draft_plan(profile, major: Program, minor: Program | None = None,
             if code not in remaining:
                 break
 
+    # Level up. A term under the minimum load is an error even when the
+    # plan as a whole fits, so a term below it borrows a course nothing
+    # depends on from the fullest term that can spare one.
+    for _ in range(len(open_terms) * 2 if not remaining else 0):
+        # Only once everything is placed. While courses are still waiting the
+        # problem is capacity, not balance, and shuffling makes it worse.
+        short = [t for t in open_terms if 0 < loaded[t] < low]
+        if not short:
+            break
+        shifted = False
+        for term in short:
+            donors = sorted((t for t in open_terms if t != term),
+                            key=lambda t: -loaded[t])
+            for donor in donors:
+                movable = [p for p in plan if p.term == donor
+                           and p.status == "planned"
+                           and p.code not in every_term
+                           and not heights.get(p.code, 0)]
+                for row in sorted(movable, key=lambda r: credits_of(r.code)):
+                    size = credits_of(row.code)
+                    if loaded[donor] - size < low or loaded[term] + size > high:
+                        continue
+                    others = {p.code for p in plan if p is not row
+                              and sort_key(p.term) < sort_key(term)} | done
+                    if not ready(row.code, others):
+                        continue
+                    plan.remove(row)
+                    plan.append(PlannedCourse(code=row.code, term=term,
+                                              status="planned"))
+                    loaded[donor] -= size
+                    loaded[term] += size
+                    shifted = True
+                    break
+                if shifted:
+                    break
+            if shifted:
+                break
+        if not shifted:
+            break
+
+    # A last term that cannot reach the minimum load is worse than no last
+    # term at all: under-loading is a breach, finishing early is not. If its
+    # courses fit in the terms before it, move them and leave it empty.
+    if not remaining and open_terms:
+        tail = open_terms[-1]
+        if 0 < loaded[tail] < low:
+            movers = [p for p in plan if p.term == tail
+                      and p.status == "planned" and p.code not in every_term]
+            placed = []
+            for row in movers:
+                size = credits_of(row.code)
+                for earlier_term in open_terms[:-1]:
+                    if loaded[earlier_term] + size > high:
+                        continue
+                    others = {p.code for p in plan if p is not row
+                              and sort_key(p.term) < sort_key(earlier_term)}
+                    if not ready(row.code, others | done):
+                        continue
+                    placed.append((row, earlier_term, size))
+                    loaded[earlier_term] += size
+                    break
+            if len(placed) == len(movers):
+                for row, earlier_term, size in placed:
+                    plan.remove(row)
+                    plan.append(PlannedCourse(code=row.code,
+                                              term=earlier_term,
+                                              status="planned"))
+                loaded[tail] = 0.0
+                for row in [p for p in plan if p.term == tail]:
+                    plan.remove(row)       # the every-term rows go too
+            else:
+                for _, earlier_term, size in placed:
+                    loaded[earlier_term] -= size
+
     # Anything still unplaced goes in the emptiest term, where validate.py
     # will object: a draft that will not schedule is a fact about the
     # requirements, not something to bury.
     for code in list(remaining):
-        term = min(open_terms, key=lambda t: loaded[t]) if open_terms             else "Y4 Spring"
+        if open_terms:
+            ok_terms = [t for t in open_terms
+                        if ready(code, {p.code for p in plan
+                                        if sort_key(p.term) < sort_key(t)}
+                                 | done)]
+            term = min(ok_terms or open_terms, key=lambda t: loaded[t])
+        else:
+            term = "Y4 Spring"
         plan.append(PlannedCourse(code=code, term=term, status="planned"))
         loaded[term] = loaded.get(term, 0.0) + credits_of(code)
     return plan

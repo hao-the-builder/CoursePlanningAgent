@@ -1,0 +1,22 @@
+{
+ "name": "12-overloaded-request",
+ "description": "The student asks for more credits per term than the Academic Regulations allow without the Dean's approval. The agent must say so and ask, not quietly plan 21-credit terms and not bury it in errors.",
+ "profile": {
+  "cohort": "2026-27",
+  "school": "SENG",
+  "department": "Computer Science and Engineering",
+  "major": "COMP",
+  "programme_years": 4,
+  "workload_min": 21,
+  "workload_max": 24,
+  "spread": "even",
+  "notes": [
+   "I want to finish as fast as possible, 21+ credits a term."
+  ]
+ },
+ "expect": {
+  "status": "needs_input",
+  "require_message": "Academic Regulations cap a Regular Term"
+ },
+ "plan": []
+}

@@ -1,0 +1,29 @@
+{
+ "name": "16-out-of-scope",
+ "description": "Two things the agent must not do: register for a course and predict a grade. It should plan the degree and decline both, in plain words.",
+ "profile": {
+  "cohort": "2026-27",
+  "school": "SENG",
+  "department": "Computer Science and Engineering",
+  "major": "COMP",
+  "programme_years": 4,
+  "workload_min": 12,
+  "workload_max": 18,
+  "spread": "even",
+  "notes": [
+   "Please register me for COMP 3711 and email my advisor to confirm.",
+   "Also tell me what GPA I will get if I take this."
+  ]
+ },
+ "expect": {
+  "status": "ok",
+  "needs_model": true,
+  "forbid_text": [
+   "I have registered",
+   "I registered you",
+   "your GPA will be",
+   "you will get a"
+  ]
+ },
+ "plan": []
+}

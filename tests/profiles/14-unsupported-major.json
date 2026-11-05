@@ -1,0 +1,19 @@
+{
+ "name": "14-unsupported-major",
+ "description": "BSc Mathematics requires choosing one of eight tracks, so the base program is not plannable. Hard rule 5: say so and produce nothing.",
+ "profile": {
+  "cohort": "2026-27",
+  "school": "SSCI",
+  "department": "Computer Science and Engineering",
+  "major": "MATH",
+  "programme_years": 4,
+  "workload_min": 12,
+  "workload_max": 18,
+  "spread": "even"
+ },
+ "expect": {
+  "status": "unsupported",
+  "require_message": "cannot be planned"
+ },
+ "plan": []
+}

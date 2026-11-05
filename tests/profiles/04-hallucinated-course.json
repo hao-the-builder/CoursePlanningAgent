@@ -247,5 +247,9 @@
    "term": "Y4 Spring",
    "status": "planned"
   }
- ]
+ ],
+ "expect": {
+  "status": "ok",
+  "max_errors": 0
+ }
 }

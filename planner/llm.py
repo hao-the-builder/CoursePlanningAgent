@@ -142,9 +142,15 @@ def _chat_stub(prompt: str, *, task: str, system: str,
         for marker in ("# Plan 1 paths", "# Plan 2 paths"):
             if marker in prompt:
                 wanted = int(marker.split()[2])
-        shapes = [("even", "Even load throughout"),
-                  ("front", "Front-loaded, lighter final year"),
-                  ("back", "Back-loaded, gentle start")][:wanted]
+        names = {"even": "Even load throughout",
+                 "front": "Front-loaded, lighter final year",
+                 "back": "Back-loaded, gentle start"}
+        # Lead with the shape the prompt asks for; a model would.
+        asked = next((k for k in names
+                      if f"Workload shape asked for: **{k}**" in prompt),
+                     "even")
+        order = [asked] + [k for k in names if k != asked]
+        shapes = [(k, names[k]) for k in order][:wanted]
         calls, paths = [], []
         for spread, name in shapes:
             calls.append(("draft_plan", {"spread": spread}))

@@ -1,0 +1,18 @@
+{
+ "name": "13-missing-cohort",
+ "description": "No intake cohort. Requirements differ by year, so hard rule 4 says ask.",
+ "profile": {
+  "school": "SENG",
+  "department": "Computer Science and Engineering",
+  "major": "COMP",
+  "programme_years": 4,
+  "workload_min": 12,
+  "workload_max": 18,
+  "spread": "even"
+ },
+ "expect": {
+  "status": "needs_input",
+  "require_question": "intake year"
+ },
+ "plan": []
+}

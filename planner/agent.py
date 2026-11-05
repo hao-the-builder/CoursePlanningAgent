@@ -307,6 +307,21 @@ def plan_for(profile: StudentProfile, *, paths: int = DEFAULT_PATHS,
                            message="I need a little more before I can plan.",
                            log_path=log.path)
 
+    ceiling = T.regulation("max_credits_regular_term")
+    if ceiling and profile.workload_min > ceiling:
+        message = (
+            f"You asked for at least {profile.workload_min:g} credits a term, "
+            f"but the Academic Regulations cap a Regular Term at {ceiling:g} "
+            f"without the Dean's approval "
+            f"({T.regulation_source('max_credits_regular_term')}). Lower the "
+            f"minimum, or tell me the overload is already approved and what "
+            f"ceiling it allows.")
+        log.event("needs_input", reason="workload above the regulation cap")
+        return AgentResult(status="needs_input", message=message,
+                           questions=["What credit load should I plan to, "
+                                      "given the 18-credit cap?"],
+                           log_path=log.path)
+
     try:
         major = T.get_program(profile.major)
     except KeyError:

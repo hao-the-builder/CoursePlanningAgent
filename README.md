@@ -53,6 +53,24 @@ streamlit run app.py                          # the UI
 python scripts/run_eval.py                    # all profiles -> logs/eval_report.md
 ```
 
+## Deploying
+
+Streamlit Community Cloud, pointed at this repository with `app.py` as the
+entry point. Three things to set up, in this order:
+
+1. **Set a spend limit in the Claude Console** before anything else. The two
+   model runs recorded in `TEST_LOG.md` cost about $1.25 each.
+2. Paste `.streamlit/secrets.toml.example` into the app's **Secrets** box and
+   fill in the key. `app.py` copies those into the environment on startup,
+   because Streamlit Cloud supplies them through `st.secrets` rather than the
+   environment, and `planner/llm.py` reads the environment. The real
+   `.streamlit/secrets.toml` is gitignored and must never be committed.
+3. `LLM_BACKEND=api` there; `subscription` only works where the `claude` CLI
+   is installed and signed in, which it is not on Cloud.
+
+The clone stays small — raw PDFs are not committed (see `DECISIONS.md`), so
+a deploy pulls about 3 MB.
+
 ## Switching LLM backends
 
 One wrapper, `planner/llm.py`, two interchangeable backends chosen by the
@@ -95,7 +113,7 @@ Built in phases, one at a time — see `CLAUDE.md` for the plan and the rules.
 - [x] **Phase 4** — LLM wrapper and agent loop
 - [x] **Phase 5** — output files
 - [x] **Phase 6** — Streamlit UI
-- [ ] **Phase 7** — testing, test log, deploy
+- [x] **Phase 7** — testing, test log, deploy *(all but the deploy itself)*
 
 ### Checked by eye, not by test
 

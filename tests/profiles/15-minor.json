@@ -1,0 +1,27 @@
+{
+ "name": "15-minor",
+ "description": "COMP with a Mathematics minor. The double-count cap is 9 credits and COMP already requires 11 of MATH, so the overlap has to be reported.",
+ "profile": {
+  "cohort": "2026-27",
+  "school": "SENG",
+  "department": "Computer Science and Engineering",
+  "major": "COMP",
+  "programme_years": 4,
+  "workload_min": 12,
+  "workload_max": 18,
+  "spread": "even",
+  "minor": "MINOR-MATH",
+  "direction": "theory",
+  "notes": [
+   "I'd like the minor to overlap with my major where the rules allow it."
+  ]
+ },
+ "expect": {
+  "status": "ok",
+  "require_clean_paths": 1,
+  "require_any": [
+   "check_double_count"
+  ]
+ },
+ "plan": []
+}
