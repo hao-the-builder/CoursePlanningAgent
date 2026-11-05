@@ -54,7 +54,7 @@
      ]
     }
    ],
-   "source_quote": "HUMA | 1440 | Modern China | 3\nHUMA | 2590 | The Making of the Modern World: Renaissance to the Present | 3\nSOSC | 1350 | Contemporary China: Continuity and Change | 3\nSOSC | 2290 | Understanding Globalization | 3\nSHSS | Note: SHSS 4991 OR SHSS 4992 OR (SHSS 4991 AND SHSS 4993) [For students taking one of the Research Options, they should take SHSS 4992 OR (SHSS 4991 AND SHSS 4993)] | 3-6\nLANG | 2170 | Chinese Communication Skills for Humanities & Social Science Studies | 3"
+   "source_quote": "HUMA | 1440 | Modern China | 3\n\nHUMA | 2590 | The Making of the Modern World: Renaissance to the Present | 3\n\nSOSC | 1350 | Contemporary China: Continuity and Change | 3\n\nSOSC | 2290 | Understanding Globalization | 3\n\nSHSS | Note: SHSS 4991 OR SHSS 4992 OR (SHSS 4991 AND SHSS 4993) [For students taking one of the Research Options, they should take SHSS 4992 OR (SHSS 4991 AND SHSS 4993)] | 3-6\n\nLANG | 2170 | Chinese Communication Skills for Humanities & Social Science Studies | 3"
   },
   {
    "name": "Social Science Track - Required Course(s)",
@@ -91,7 +91,7 @@
      ]
     }
    ],
-   "source_quote": "SOSC | 1100 | Quantitative Data Analysis for Social Research I | 3\nSOSC | 1300 | The World of Politics | 3\nSOSC | 1440 | Introduction to Economics | 3\nSOSC | 1850 | Understanding Society | 3\nSOSC | 2140 | Research Methods in the Social Sciences | 3"
+   "source_quote": "SOSC | 1100 | Quantitative Data Analysis for Social Research I | 3\n\nSOSC | 1300 | The World of Politics | 3\n\nSOSC | 1440 | Introduction to Economics | 3\n\nSOSC | 1850 | Understanding Society | 3\n\nSOSC | 2140 | Research Methods in the Social Sciences | 3"
   },
   {
    "name": "Social Science Track - Elective Course(s)",
@@ -150,26 +150,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "SOSC | Disciplinary Foundation Electives (2 courses from the specified elective list, of which the courses should be taken from different areas.) | 6\n  [Introductory Demography]\n  [Introductory Psychology]\nSOSC | Disciplinary Foundation Electives (2 courses from the specified elective list, of which the courses should be taken from different areas.) | 6\n  [Introductory Demography]\n  [Introductory Psychology]\nSOSC | SOSC Electives (9 courses from the specified elective list, of which at least 4 courses must come from the list under \"Restricted Electives\".) | 27\n  [Restricted Electives]\nSOSC | SOSC Electives (9 courses from the specified elective list, of which at least 4 courses must come from the list under \"Restricted Electives\".) | 27\n  [Restricted Electives]"
-  },
-  {
-   "name": "Social Science Track - Others",
-   "category": "Major",
-   "rules": [
-    {
-     "type": "credits_from",
-     "patterns": [
-      "SOSC 1xxx",
-      "SOSC 2xxx",
-      "SOSC 3xxx",
-      "SOSC 4xxx",
-      "SOSC 5xxx"
-     ],
-     "min_credits": 0.0,
-     "exclude": []
-    }
-   ],
-   "source_quote": "SOSC | Any SOSC courses"
+   "source_quote": "SOSC | Disciplinary Foundation Electives (2 courses from the specified elective list, of which the courses should be taken from different areas.) | 6\n  [Introductory Demography]\n  [Introductory Psychology]\n\nSOSC | Disciplinary Foundation Electives (2 courses from the specified elective list, of which the courses should be taken from different areas.) | 6\n  [Introductory Demography]\n  [Introductory Psychology]\n\nSOSC | SOSC Electives (9 courses from the specified elective list, of which at least 4 courses must come from the list under \"Restricted Electives\".) | 27\n  [Restricted Electives]\n  [Others]\n  SOSC | Any SOSC courses\n\nSOSC | SOSC Electives (9 courses from the specified elective list, of which at least 4 courses must come from the list under \"Restricted Electives\".) | 27\n  [Restricted Electives]\n  [Others]\n  SOSC | Any SOSC courses"
   }
  ],
  "stated_total_credits": 120.0,
@@ -179,7 +160,6 @@
  "unparsed_lines": [],
  "caveats": [
   "SHSS 4991 OR SHSS 4992 OR (SHSS 4991 AND SHSS 4993) -- [For students taking one of the Research Options, they should take SHSS 4992 OR (SHSS 4991 AND SHSS 4993)]",
-  "Any SOSC courses -- the requirement PDF states no credit minimum here, so nothing is enforced; the courses that count are recorded.",
   "SOSC 4290: The course was last offered in 2023-24 and was deleted subsequently.",
   "Social Science Track - Elective Course(s): SOSC 4290 is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
  ],

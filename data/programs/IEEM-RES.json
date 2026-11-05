@@ -52,7 +52,7 @@
      ]
     }
    ],
-   "source_quote": "IEDA/COMP | Note: IEDA 1180 OR COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\nCHEM/PHYS | Note: CHEM 1012 OR PHYS 1112 OR PHYS 1312 | 3\nMATH | 2011 | Introduction to Multivariable Calculus | 3\nMATH | 2111 | Matrix Algebra and Applications | 3"
+   "source_quote": "IEDA/COMP | Note: IEDA 1180 OR COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\n\nCHEM/PHYS | Note: CHEM 1012 OR PHYS 1112 OR PHYS 1312 | 3\n\nMATH | 2011 | Introduction to Multivariable Calculus | 3\n\nMATH | 2111 | Matrix Algebra and Applications | 3"
   },
   {
    "name": "Required Course(s)",
@@ -153,7 +153,7 @@
      ]
     }
    ],
-   "source_quote": "IEDA | 1010 | Academic and Professional Development I | 0\nIEDA | 1020 | Academic and Professional Development II | 0\nIEDA | 1901 | Industrial Training and Experience | 0\nIEDA | 2010 | Introduction of Industrial Engineering and Decision Analytics | 3\nIEDA | 2520 | Probability for Engineers | 3\nIEDA | 2540 | Statistics for Engineers | 3\nIEDA | 3010 | Prescriptive Analytics | 3\nIEDA | 3230 | Engineering Economics and Accounting | 3\nIEDA | 3250 | Stochastic Models | 3\nIEDA | 3300 | Industrial Data Systems | 3\nIEDA | 4100 | Integrated Production Systems | 3\nIEDA | 4130 | System Simulation | 3\nIEDA | Note: IEDA 4901 OR IEDA 4960 (Students taking the Research Option must take IEDA 4901) | 6\nECON | Note: ECON 2103 OR ECON 2113 | 3"
+   "source_quote": "IEDA | 1010 | Academic and Professional Development I | 0\n\nIEDA | 1020 | Academic and Professional Development II | 0\n\nIEDA | 1901 | Industrial Training and Experience | 0\n\nIEDA | 2010 | Introduction of Industrial Engineering and Decision Analytics | 3\n\nIEDA | 2520 | Probability for Engineers | 3\n\nIEDA | 2540 | Statistics for Engineers | 3\n\nIEDA | 3010 | Prescriptive Analytics | 3\n\nIEDA | 3230 | Engineering Economics and Accounting | 3\n\nIEDA | 3250 | Stochastic Models | 3\n\nIEDA | 3300 | Industrial Data Systems | 3\n\nIEDA | 4100 | Integrated Production Systems | 3\n\nIEDA | 4130 | System Simulation | 3\n\nIEDA | Note: IEDA 4901 OR IEDA 4960 (Students taking the Research Option must take IEDA 4901) | 6\n\nECON | Note: ECON 2103 OR ECON 2113 | 3"
   },
   {
    "name": "Elective(s)",
@@ -217,13 +217,13 @@
      "exclude": []
     }
    ],
-   "source_quote": "IEDA | IEEM Advanced Electives (2 courses from the specified elective list. Students should seek approval of their advisor for the choices of courses.) | 6\nIEDA | IEEM Advanced Electives (2 courses from the specified elective list. Students should seek approval of their advisor for the choices of courses.) | 6"
+   "source_quote": "IEDA | IEEM Advanced Electives (2 courses from the specified elective list. Students should seek approval of their advisor for the choices of courses.) | 6\n\nIEDA | IEEM Advanced Electives (2 courses from the specified elective list. Students should seek approval of their advisor for the choices of courses.) | 6"
   }
  ],
  "stated_total_credits": 120.0,
  "max_double_count_credits": null,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ieem.pdf",
- "tier": "auto_extracted",
+ "tier": "unsupported",
  "unparsed_lines": [
   "MATH | Note: [MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6"
  ],

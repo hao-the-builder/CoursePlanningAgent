@@ -101,7 +101,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -138,7 +138,7 @@
      ]
     }
    ],
-   "source_quote": "MATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\nCOMP | 1023 | Introduction to Python Programming | 3"
+   "source_quote": "MATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\n\nCOMP | 1023 | Introduction to Python Programming | 3"
   },
   {
    "name": "Required Course(s)",
@@ -271,7 +271,7 @@
      ]
     }
    ],
-   "source_quote": "DSCT | 4900 | Academic and Professional Development | 0\nMATH | 2023 | Multivariable Calculus | 4\nMATH | Note: MATH 2121 OR MATH 2131 | 4\nMATH | 2411 | Applied Statistics | 4\nMATH | Note: MATH 2421 OR MATH 2431 | 4\nMATH | 3322 | Matrix Computation | 3\nMATH | 3332 | Data Analytic Tools | 3\nMATH | 3424 | Regression Analysis | 3\nMATH | 3428 | Statistical Computing | 3\nMATH/COMP | Note: MATH 4432 OR COMP 4211 | 3\nMATH/COMP | Note: MATH 4995 OR COMP 4910 OR COMP 4981 OR COMP 4981H | 3-6\nCOMP | Note: (COMP 2011 AND COMP 2012) OR COMP 2012H | 5-8\nCOMP | Note: COMP 2711 OR COMP 2711H | 4\nCOMP | Note: COMP 3711 OR COMP 3711H | 3-4"
+   "source_quote": "DSCT | 4900 | Academic and Professional Development | 0\n\nMATH | 2023 | Multivariable Calculus | 4\n\nMATH | Note: MATH 2121 OR MATH 2131 | 4\n\nMATH | 2411 | Applied Statistics | 4\n\nMATH | Note: MATH 2421 OR MATH 2431 | 4\n\nMATH | 3322 | Matrix Computation | 3\n\nMATH | 3332 | Data Analytic Tools | 3\n\nMATH | 3424 | Regression Analysis | 3\n\nMATH | 3428 | Statistical Computing | 3\n\nMATH/COMP | Note: MATH 4432 OR COMP 4211 | 3\n\nMATH/COMP | Note: MATH 4995 OR COMP 4910 OR COMP 4981 OR COMP 4981H | 3-6\n\nCOMP | Note: (COMP 2011 AND COMP 2012) OR COMP 2012H | 5-8\n\nCOMP | Note: COMP 2711 OR COMP 2711H | 4\n\nCOMP | Note: COMP 3711 OR COMP 3711H | 3-4"
   },
   {
    "name": "Elective(s)",

@@ -101,7 +101,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -183,7 +183,7 @@
      ]
     }
    ],
-   "source_quote": "MATH | Note: MATH 2023 OR MATH 2024 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.] | 4\nMATH | Note: MATH 2033 OR MATH 2043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.] | 4\nMATH | Note: MATH 2121 OR MATH 2131 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.] | 4\nMATH | Note: MATH 3033 OR MATH 3043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.] | 4"
+   "source_quote": "MATH | Note: MATH 2023 OR MATH 2024 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2033 OR MATH 2043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2121 OR MATH 2131 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 3033 OR MATH 3043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.] | 4"
   },
   {
    "name": "Pure Mathematics Track - Required Course(s)",
@@ -219,7 +219,7 @@
      ]
     }
    ],
-   "source_quote": "MATH | 2001 | Foundation of Mathematics | 2\nMATH | 3121 | Abstract Algebra | 3\nMATH | 4225 | Topology | 3\nMATH | Note: MATH 4991 OR MATH 4999 | 3"
+   "source_quote": "MATH | 2001 | Foundation of Mathematics | 2\n\nMATH | 3121 | Abstract Algebra | 3\n\nMATH | 4225 | Topology | 3\n\nMATH | Note: MATH 4991 OR MATH 4999 | 3"
   },
   {
    "name": "Pure Mathematics Track - Elective Course(s)",
@@ -228,7 +228,10 @@
     {
      "type": "credits_from",
      "patterns": [
-      "MATH 2xxx"
+      "MATH 2xxx",
+      "MATH 3xxx",
+      "MATH 4xxx",
+      "MATH 5xxx"
      ],
      "min_credits": 6.0,
      "exclude": []
@@ -320,7 +323,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "MATH | MATH 2000-level or above Electives (Any 2 courses of the subject and level as specified) | 6\nMATH | Applied Mathematics or Statistics Elective (1 course from the specified elective list) | 3\nMATH | Applied Mathematics or Statistics Elective (1 course from the specified elective list) | 3\nMATH | Analysis Depth Elective (1 course from the specified elective list) | 3\nMATH | Analysis Depth Elective (1 course from the specified elective list) | 3\nMATH | Geometry Depth Elective (1 course from the specified elective list) | 3\nMATH | Geometry Depth Elective (1 course from the specified elective list) | 3\nMATH | Algebra Depth Elective (1 course from the specified elective list) | 3\nMATH | Algebra Depth Elective (1 course from the specified elective list) | 3"
+   "source_quote": "MATH | MATH 2000-level or above Electives (Any 2 courses of the subject and level as specified) | 6\n\nMATH | Applied Mathematics or Statistics Elective (1 course from the specified elective list) | 3\n\nMATH | Applied Mathematics or Statistics Elective (1 course from the specified elective list) | 3\n\nMATH | Analysis Depth Elective (1 course from the specified elective list) | 3\n\nMATH | Analysis Depth Elective (1 course from the specified elective list) | 3\n\nMATH | Geometry Depth Elective (1 course from the specified elective list) | 3\n\nMATH | Geometry Depth Elective (1 course from the specified elective list) | 3\n\nMATH | Algebra Depth Elective (1 course from the specified elective list) | 3\n\nMATH | Algebra Depth Elective (1 course from the specified elective list) | 3"
   }
  ],
  "stated_total_credits": 120.0,

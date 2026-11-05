@@ -167,3 +167,156 @@ def test_every_course_a_rule_names_is_in_the_catalog(path, catalog):
             elif isinstance(rule, EveryTerm):
                 cited.add(rule.course)
     assert sorted(cited - set(catalog)) == []
+
+
+# ------------------------------------------------------- common_core.json --
+
+@pytest.fixture(scope="module")
+def common_core():
+    from schema import Program
+
+    path = REPO / "data" / "common_core.json"
+    if not path.exists():
+        pytest.skip("data/common_core.json not written yet")
+    return Program.model_validate_json(path.read_text(encoding="utf-8"))
+
+
+def test_common_core_adds_up_to_the_published_thirty_credits(common_core):
+    """Foundations 18 + Broadening 12 + Experiencing 0, per the published table."""
+    assert common_core.kind == "common_core"
+    assert common_core.stated_total_credits == 30
+    per_area = {g.name: sum(r.min_credits for r in g.rules)
+                for g in common_core.groups}
+    assert per_area["Foundations - Human-AI Co-Creation and Data Literacy (HAIC)"] == 6
+    assert per_area["Foundations - Habits, Mindsets, and Wellness (HMW)"] == 3
+    assert per_area["Foundations - English Communication (E-Comm)"] == 6
+    assert per_area["Foundations - Chinese Communication (C-Comm)"] == 3
+    assert per_area["Broadening"] == 12
+    assert per_area["Experiencing (UxOP)"] == 0
+    assert sum(per_area.values()) == common_core.stated_total_credits
+
+
+def test_broadening_asks_for_four_areas_out_of_six(common_core):
+    from schema import NAreas
+
+    rule = next(r for g in common_core.groups for r in g.rules
+                if isinstance(r, NAreas))
+    assert rule.n_areas == 4
+    assert rule.min_credits == 12
+    assert sorted(rule.areas) == ["A", "H", "S", "SA", "SUS", "T"]
+    assert any("home area" in c for c in common_core.caveats), (
+        "the rule lists every area, so something must say to remove the "
+        "student's home areas first")
+
+
+def test_the_haic_shortfall_is_recorded_not_papered_over(common_core, catalog):
+    """6 credits are required but only one HAIC course is published."""
+    haic = [c for c in catalog.values() if "HAIC" in c.common_core_areas]
+    assert sum(c.credits for c in haic) < 6
+    assert any("HAIC" in c and "verify" in c.lower() for c in common_core.caveats)
+
+
+# ------------------------------------------------------- regulations.json --
+
+@pytest.fixture(scope="module")
+def regulations() -> dict:
+    path = REPO / "data" / "regulations.json"
+    if not path.exists():
+        pytest.skip("data/regulations.json not written yet")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def test_every_regulation_with_a_value_cites_a_source(regulations):
+    """Hard rule 11: a threshold a validator uses must come from an official
+    source recorded with its URL, or be null."""
+    for name, rule in regulations["rules"].items():
+        if rule["value"] is None:
+            assert rule["source"] is None, name
+            assert rule["note"], f"{name} is null and must say why"
+        else:
+            assert rule["source"] in regulations["sources"], name
+            assert rule["source_quote"].strip(), name
+            assert regulations["sources"][rule["source"]]["url"].startswith("http")
+
+
+def test_the_load_limits_are_the_ones_the_regulations_state(regulations):
+    rules = regulations["rules"]
+    assert rules["min_credits_regular_term"]["value"] == 12
+    assert rules["max_credits_regular_term"]["value"] == 18
+    assert rules["graduation_total_credits"]["value"] == 120
+    assert rules["min_hkust_credits"]["value"] == 60
+    assert rules["regular_terms"]["value"] == ["Fall", "Spring"]
+
+
+def test_the_unknown_regulations_stay_null(regulations):
+    """Summer/winter limits, the overload ceiling, the double-count cap, the
+    exchange rules and FYP duration were not found in Phase 1; a validator
+    must warn "verify" rather than invent a threshold."""
+    for name in ("max_credits_summer_term", "max_credits_winter_term",
+                 "major_minor_double_count_cap", "exchange_credit_rules",
+                 "fyp_duration_terms"):
+        assert regulations["rules"][name]["value"] is None, name
+    assert regulations["rules"]["overload_approval"][
+        "max_credits_with_approval"] is None
+    assert len(regulations["gaps"]) == 5
+
+
+# ----------------------------------------------------- program_index.json --
+
+@pytest.fixture(scope="module")
+def index() -> dict:
+    path = REPO / "data" / "program_index.json"
+    if not path.exists():
+        pytest.skip("data/program_index.json not built yet")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def test_the_index_covers_every_program_file(index):
+    listed = {row["code"] for row in index["programs"]}
+    assert listed == {p.stem for p in _program_files()}
+    assert index["cohort"] == "2026-27"
+    assert index["default_years"] == 4
+
+
+def test_every_variant_points_at_a_base_that_is_listed(index):
+    listed = {row["code"] for row in index["programs"]}
+    for row in index["programs"]:
+        if row["parent"]:
+            assert row["parent"] in listed, row["code"]
+            assert row["parent"] != row["code"]
+
+
+def test_every_major_has_home_areas_or_says_why_not(index):
+    """Broadening cannot be checked without them, so a blank needs a reason."""
+    allowed = {"A", "H", "S", "T", "SA", "SUS"}
+    for row in index["programs"]:
+        if row["kind"] != "major":
+            continue
+        assert set(row["home_areas"]) <= allowed, row["code"]
+        assert row["home_areas"] or row["home_areas_note"], row["code"]
+
+
+def test_home_areas_match_the_published_table(index):
+    """Spot checks against the curriculum page and the program-specific PDF."""
+    by_code = {row["code"]: row for row in index["programs"]}
+    assert by_code["COMP"]["home_areas"] == ["T"]
+    assert by_code["MATH-AM"]["home_areas"] == ["S"]       # inherits from MATH
+    assert by_code["FINA"]["home_areas"] == ["SA"]
+    assert by_code["GCS-SS"]["home_areas"] == ["H", "SA"]
+    assert by_code["IDT"]["home_areas"] == ["T"]
+    assert by_code["BIEN"]["home_areas"] == ["S", "T"]
+    assert by_code["EVMT"]["home_areas"] == ["SA", "SUS"]
+    assert by_code["MINOR-MATH"]["home_areas"] == []
+
+
+def test_an_unsupported_program_always_explains_itself(index):
+    from schema import Program
+
+    for row in index["programs"]:
+        if row["tier"] != "unsupported":
+            continue
+        program = Program.model_validate_json(
+            (PROGRAMS / f"{row['code']}.json").read_text(encoding="utf-8"))
+        assert program.unparsed_lines, row["code"]
+        assert row["issues_file"], row["code"]
+        assert (PROGRAMS / row["issues_file"]).exists()

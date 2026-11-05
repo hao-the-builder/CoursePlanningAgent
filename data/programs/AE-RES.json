@@ -91,7 +91,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\nMATH | 2011 | Introduction to Multivariable Calculus | 3\nMATH | 2351 | Introduction to Differential Equations | 3\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3\nCHEM/LIFS/PHYS | Science 1000-level course (1 course from the specified course list) | 3-4\nCHEM/LIFS/PHYS | Science 1000-level course (1 course from the specified course list) | 3-4"
+   "source_quote": "COMP | Note: COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\n\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\n\nMATH | 2011 | Introduction to Multivariable Calculus | 3\n\nMATH | 2351 | Introduction to Differential Equations | 3\n\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3\n\nCHEM/LIFS/PHYS | Science 1000-level course (1 course from the specified course list) | 3-4\n\nCHEM/LIFS/PHYS | Science 1000-level course (1 course from the specified course list) | 3-4"
   },
   {
    "name": "Required Course(s)",
@@ -224,7 +224,7 @@
      ]
     }
    ],
-   "source_quote": "MECH | 1001 | Academic and Professional Development I | 0\nMECH | 1910 | Foundations of Mechanical and Aerospace Engineering | 3\nMECH | 1990 | Industrial Training | 0\nMECH | 2002 | Academic and Professional Development II | 0\nMECH | 2007 | Aerospace Engineering: Principles and Systems | 3\nMECH | 2020 | Statics and Dynamics | 3\nMECH | 2040 | Solid Mechanics I | 3\nMECH | 2210 | Fluid Mechanics | 3\nMECH | 2300 | Engineering Computation with Matrices and AI | 3\nMECH | 2310 | Thermodynamics | 3\nMECH | 3400 | Introduction to Engineering Composite Materials | 3\nMECH | 3610 | Control Principles | 3\nMECH | 3620 | Aircraft Design | 3\nMECH | 3640 | Aerodynamics | 3\nMECH | 3650 | Aircraft Structural Analysis | 3\nMECH | 3660 | Aircraft Propulsion | 3\nMECH | 3670 | Aircraft Performance and Stability | 3\nMECH | 3680 | Avionics Systems | 3\nMECH | 3690 | Aerospace Engineering Laboratory | 3\nMECH | 4980 | Final Year Aerospace Design Project | 6\nELEC | 2420 | Basic Electronics | 3"
+   "source_quote": "MECH | 1001 | Academic and Professional Development I | 0\n\nMECH | 1910 | Foundations of Mechanical and Aerospace Engineering | 3\n\nMECH | 1990 | Industrial Training | 0\n\nMECH | 2002 | Academic and Professional Development II | 0\n\nMECH | 2007 | Aerospace Engineering: Principles and Systems | 3\n\nMECH | 2020 | Statics and Dynamics | 3\n\nMECH | 2040 | Solid Mechanics I | 3\n\nMECH | 2210 | Fluid Mechanics | 3\n\nMECH | 2300 | Engineering Computation with Matrices and AI | 3\n\nMECH | 2310 | Thermodynamics | 3\n\nMECH | 3400 | Introduction to Engineering Composite Materials | 3\n\nMECH | 3610 | Control Principles | 3\n\nMECH | 3620 | Aircraft Design | 3\n\nMECH | 3640 | Aerodynamics | 3\n\nMECH | 3650 | Aircraft Structural Analysis | 3\n\nMECH | 3660 | Aircraft Propulsion | 3\n\nMECH | 3670 | Aircraft Performance and Stability | 3\n\nMECH | 3680 | Avionics Systems | 3\n\nMECH | 3690 | Aerospace Engineering Laboratory | 3\n\nMECH | 4980 | Final Year Aerospace Design Project | 6\n\nELEC | 2420 | Basic Electronics | 3"
   },
   {
    "name": "Elective(s)",
@@ -260,7 +260,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "MECH | MECH Electives in Aerospace (2 courses from the specified elective list) | 6\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]\nMECH | MECH Electives in Aerospace (2 courses from the specified elective list) | 6\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]"
+   "source_quote": "MECH | MECH Electives in Aerospace (2 courses from the specified elective list) | 6\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]\n\nMECH | MECH Electives in Aerospace (2 courses from the specified elective list) | 6\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]"
   },
   {
    "name": "Research Option - Required Course(s)",

@@ -101,7 +101,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -216,7 +216,7 @@
      ]
     }
    ],
-   "source_quote": "DASC | 2010 | Calculus for Data Analytics in Science | 3\nDASC | 2020 | Applied Linear Algebra for Least Squares Optimization and Machine Learning | 3\nDASC | 2110 | Object-oriented Programming for Data Analytics in Science | 3\nDASC | 2210 | A Survey on Big Data in Science and Society | 1\nDASC | 2220 | Statistics and Probability for Data Analytics in Science | 3\nDASC | 3120 | Data Structures for Data Analytics in Science | 3\nDASC | 3230 | Statistical Modeling and Machine Learning | 3\nDASC | 3240 | Data Visualization in Science | 3\nDASC | 3250 | Numerical Methods for Data Analytics in Science | 3\nDASC | 4010 | Practical Artificial Intelligence in Science | 3\nDASC | 4300 | Capstone Project for Data Analytics in Science | 3\nCOMP | Note: COMP 1021 OR COMP 1023 | 3"
+   "source_quote": "DASC | 2010 | Calculus for Data Analytics in Science | 3\n\nDASC | 2020 | Applied Linear Algebra for Least Squares Optimization and Machine Learning | 3\n\nDASC | 2110 | Object-oriented Programming for Data Analytics in Science | 3\n\nDASC | 2210 | A Survey on Big Data in Science and Society | 1\n\nDASC | 2220 | Statistics and Probability for Data Analytics in Science | 3\n\nDASC | 3120 | Data Structures for Data Analytics in Science | 3\n\nDASC | 3230 | Statistical Modeling and Machine Learning | 3\n\nDASC | 3240 | Data Visualization in Science | 3\n\nDASC | 3250 | Numerical Methods for Data Analytics in Science | 3\n\nDASC | 4010 | Practical Artificial Intelligence in Science | 3\n\nDASC | 4300 | Capstone Project for Data Analytics in Science | 3\n\nCOMP | Note: COMP 1021 OR COMP 1023 | 3"
   },
   {
    "name": "Applied Biosciences Track - Required Course(s)",
@@ -253,7 +253,7 @@
      ]
     }
    ],
-   "source_quote": "LIFS | 1902 | General Biology II | 3\nLIFS | 2040 | Cell Biology | 3\nLIFS | 3140 | General Genetics | 4\nLIFS | 3580 | Bioinformatics | 3\nLIFS | 4320 | Data Science for Biology and Medicine | 3"
+   "source_quote": "LIFS | 1902 | General Biology II | 3\n\nLIFS | 2040 | Cell Biology | 3\n\nLIFS | 3140 | General Genetics | 4\n\nLIFS | 3580 | Bioinformatics | 3\n\nLIFS | 4320 | Data Science for Biology and Medicine | 3"
   }
  ],
  "stated_total_credits": 120.0,

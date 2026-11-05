@@ -53,7 +53,7 @@
      ]
     }
    ],
-   "source_quote": "COMP | 1023 | Introduction to Python Programming | 3\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\nMATH | Note: MATH 2111 OR MATH 2121 OR MATH 2131 | 3-4"
+   "source_quote": "COMP | 1023 | Introduction to Python Programming | 3\n\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\n\nMATH | Note: MATH 2111 OR MATH 2121 OR MATH 2131 | 3-4"
   },
   {
    "name": "Required Course(s)",
@@ -160,7 +160,7 @@
      ]
     }
    ],
-   "source_quote": "COMP | Note: [COMP 1991 AND (COMP 4981 OR COMP 4981H)] OR [COMP 4910] | 6\nCOMP | Note: (COMP 2011 AND COMP 2012) OR COMP 2012H | 5-8\nCOMP | 2611 | Computer Organization | 4\nCOMP | Note: COMP 2711 OR COMP 2711H | 4\nCOMP | Note: COMP 3111 OR COMP 3111H | 4\nCOMP | 3511 | Operating Systems | 3\nCOMP | Note: COMP 3711 OR COMP 3711H | 3-4\nCOMP | Note: Students are required to take COMP 4900 for every regular term in which they are in residency at HKUST with major in COMP | 0\nELEC/IEDA/MATH | Note: ELEC 2600 OR ELEC 2600H OR IEDA 2520 OR IEDA 2540 OR MATH 2411 OR MATH 2421 OR MATH 2431 | 3-4"
+   "source_quote": "COMP | Note: [COMP 1991 AND (COMP 4981 OR COMP 4981H)] OR [COMP 4910] | 6\n\nCOMP | Note: (COMP 2011 AND COMP 2012) OR COMP 2012H | 5-8\n\nCOMP | 2611 | Computer Organization | 4\n\nCOMP | Note: COMP 2711 OR COMP 2711H | 4\n\nCOMP | Note: COMP 3111 OR COMP 3111H | 4\n\nCOMP | 3511 | Operating Systems | 3\n\nCOMP | Note: COMP 3711 OR COMP 3711H | 3-4\n\nCOMP | Note: Students are required to take COMP 4900 for every regular term in which they are in residency at HKUST with major in COMP | 0\n\nELEC/IEDA/MATH | Note: ELEC 2600 OR ELEC 2600H OR IEDA 2520 OR IEDA 2540 OR MATH 2411 OR MATH 2421 OR MATH 2431 | 3-4"
   },
   {
    "name": "Elective(s)",
@@ -169,7 +169,10 @@
     {
      "type": "credits_from",
      "patterns": [
-      "COMP 2xxx"
+      "COMP 2xxx",
+      "COMP 3xxx",
+      "COMP 4xxx",
+      "COMP 5xxx"
      ],
      "min_credits": 3.0,
      "exclude": []
@@ -308,7 +311,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | COMP 2000-level or above Elective (Any course(s) of the subject and level as specified) | 3\nCOMP | COMP Electives (5 courses from the specified elective list, of which at least 3 courses should be taken from 1 area and at least 2 courses outside that area (including course(s) in the Courses Without Associated Area). Students may use at most one course under Deep Learning Applications (COMP 4471 and COMP 5215) to count towards this elective requirement.) | 15\n  [Artificial Intelligence / Theory Area]\n  [Vision & Graphics / Multimedia Area]\n  [Software / Database Area]\n  [Computer Systems / Networking Area]\n  [Courses Without Associated Area]\nCOMP | COMP Electives (5 courses from the specified elective list, of which at least 3 courses should be taken from 1 area and at least 2 courses outside that area (including course(s) in the Courses Without Associated Area). Students may use at most one course under Deep Learning Applications (COMP 4471 and COMP 5215) to count towards this elective requirement.) | 15\n  [Artificial Intelligence / Theory Area]\n  [Vision & Graphics / Multimedia Area]\n  [Software / Database Area]\n  [Computer Systems / Networking Area]\n  [Courses Without Associated Area]"
+   "source_quote": "COMP | COMP 2000-level or above Elective (Any course(s) of the subject and level as specified) | 3\n\nCOMP | COMP Electives (5 courses from the specified elective list, of which at least 3 courses should be taken from 1 area and at least 2 courses outside that area (including course(s) in the Courses Without Associated Area). Students may use at most one course under Deep Learning Applications (COMP 4471 and COMP 5215) to count towards this elective requirement.) | 15\n  [Artificial Intelligence / Theory Area]\n  [Vision & Graphics / Multimedia Area]\n  [Software / Database Area]\n  [Computer Systems / Networking Area]\n  [Courses Without Associated Area]\n\nCOMP | COMP Electives (5 courses from the specified elective list, of which at least 3 courses should be taken from 1 area and at least 2 courses outside that area (including course(s) in the Courses Without Associated Area). Students may use at most one course under Deep Learning Applications (COMP 4471 and COMP 5215) to count towards this elective requirement.) | 15\n  [Artificial Intelligence / Theory Area]\n  [Vision & Graphics / Multimedia Area]\n  [Software / Database Area]\n  [Computer Systems / Networking Area]\n  [Courses Without Associated Area]"
   }
  ],
  "stated_total_credits": 120.0,

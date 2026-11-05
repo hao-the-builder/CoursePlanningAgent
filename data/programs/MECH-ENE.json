@@ -91,7 +91,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\nMATH | 2011 | Introduction to Multivariable Calculus | 3\nMATH | 2351 | Introduction to Differential Equations | 3\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3\nCHEM/LIFS/PHYS | Science 1000-level course (1 course from the specified course list) | 3-4\nCHEM/LIFS/PHYS | Science 1000-level course (1 course from the specified course list) | 3-4"
+   "source_quote": "COMP | Note: COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\n\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\n\nMATH | 2011 | Introduction to Multivariable Calculus | 3\n\nMATH | 2351 | Introduction to Differential Equations | 3\n\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3\n\nCHEM/LIFS/PHYS | Science 1000-level course (1 course from the specified course list) | 3-4\n\nCHEM/LIFS/PHYS | Science 1000-level course (1 course from the specified course list) | 3-4"
   },
   {
    "name": "Required Course(s)",
@@ -226,7 +226,7 @@
      ]
     }
    ],
-   "source_quote": "MECH | 1001 | Academic and Professional Development I | 0\nMECH | 1910 | Foundations of Mechanical and Aerospace Engineering | 3\nMECH | 1990 | Industrial Training | 0\nMECH | 2002 | Academic and Professional Development II | 0\nMECH | 2020 | Statics and Dynamics | 3\nMECH | 2040 | Solid Mechanics I | 3\nMECH | 2210 | Fluid Mechanics | 3\nMECH | 2300 | Engineering Computation with Matrices and AI | 3\nMECH | 2310 | Thermodynamics | 3\nMECH | 2410 | Engineering Materials I | 3\nMECH | 2520 | Design and Manufacturing I | 3\nMECH | 3030 | Mechanisms of Machinery | 3\nMECH | Note: MECH 3300 OR MECH 3420 OR MECH 3710 | 3\nMECH | 3310 | Heat Transfer | 3\nMECH | 3610 | Control Principles | 3\nMECH | 3630 | Electrical Technology | 3\nMECH | 3830 | Laboratory | 3\nMECH | 3907 | Mechatronic Design and Prototyping | 3\nMECH | 4900 | Final Year Design Project | 6\nELEC | 2420 | Basic Electronics | 3"
+   "source_quote": "MECH | 1001 | Academic and Professional Development I | 0\n\nMECH | 1910 | Foundations of Mechanical and Aerospace Engineering | 3\n\nMECH | 1990 | Industrial Training | 0\n\nMECH | 2002 | Academic and Professional Development II | 0\n\nMECH | 2020 | Statics and Dynamics | 3\n\nMECH | 2040 | Solid Mechanics I | 3\n\nMECH | 2210 | Fluid Mechanics | 3\n\nMECH | 2300 | Engineering Computation with Matrices and AI | 3\n\nMECH | 2310 | Thermodynamics | 3\n\nMECH | 2410 | Engineering Materials I | 3\n\nMECH | 2520 | Design and Manufacturing I | 3\n\nMECH | 3030 | Mechanisms of Machinery | 3\n\nMECH | Note: MECH 3300 OR MECH 3420 OR MECH 3710 | 3\n\nMECH | 3310 | Heat Transfer | 3\n\nMECH | 3610 | Control Principles | 3\n\nMECH | 3630 | Electrical Technology | 3\n\nMECH | 3830 | Laboratory | 3\n\nMECH | 3907 | Mechatronic Design and Prototyping | 3\n\nMECH | 4900 | Final Year Design Project | 6\n\nELEC | 2420 | Basic Electronics | 3"
   },
   {
    "name": "Energy Option - Elective Course(s)",
@@ -266,7 +266,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "MECH | MECH Electives in Energy (3 courses from the specified elective list. Courses taken as Major Required Courses or Elective Courses of other MECH Options may not be counted towards this elective requirement.) | 9\nMECH | MECH Electives in Energy (3 courses from the specified elective list. Courses taken as Major Required Courses or Elective Courses of other MECH Options may not be counted towards this elective requirement.) | 9"
+   "source_quote": "MECH | MECH Electives in Energy (3 courses from the specified elective list. Courses taken as Major Required Courses or Elective Courses of other MECH Options may not be counted towards this elective requirement.) | 9\n\nMECH | MECH Electives in Energy (3 courses from the specified elective list. Courses taken as Major Required Courses or Elective Courses of other MECH Options may not be counted towards this elective requirement.) | 9"
   }
  ],
  "stated_total_credits": 120.0,

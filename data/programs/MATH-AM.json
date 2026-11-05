@@ -101,7 +101,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -183,7 +183,7 @@
      ]
     }
    ],
-   "source_quote": "MATH | Note: MATH 2023 OR MATH 2024 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.] | 4\nMATH | Note: MATH 2033 OR MATH 2043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.] | 4\nMATH | Note: MATH 2121 OR MATH 2131 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.] | 4\nMATH | Note: MATH 3033 OR MATH 3043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.] | 4"
+   "source_quote": "MATH | Note: MATH 2023 OR MATH 2024 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2033 OR MATH 2043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2121 OR MATH 2131 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 3033 OR MATH 3043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.] | 4"
   },
   {
    "name": "Applied Mathematics Track - Required Course(s)",
@@ -231,7 +231,7 @@
      ]
     }
    ],
-   "source_quote": "MATH | 2352 | Differential Equations | 4\nMATH | 2411 | Applied Statistics | 4\nMATH | 3312 | Numerical Analysis | 3\nMATH | 4052 | Partial Differential Equations | 3\nMATH | 4360 | Mathematical Modeling | 3\nMATH | Note: MATH 4992 OR MATH 4999 | 3"
+   "source_quote": "MATH | 2352 | Differential Equations | 4\n\nMATH | 2411 | Applied Statistics | 4\n\nMATH | 3312 | Numerical Analysis | 3\n\nMATH | 4052 | Partial Differential Equations | 3\n\nMATH | 4360 | Mathematical Modeling | 3\n\nMATH | Note: MATH 4992 OR MATH 4999 | 3"
   },
   {
    "name": "Applied Mathematics Track - Elective Course(s)",
@@ -285,7 +285,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "MATH | MATH Depth Electives (4 courses from the specified elective list) | 12\nMATH | MATH Depth Electives (4 courses from the specified elective list) | 12"
+   "source_quote": "MATH | MATH Depth Electives (4 courses from the specified elective list) | 12\n\nMATH | MATH Depth Electives (4 courses from the specified elective list) | 12"
   }
  ],
  "stated_total_credits": 120.0,

@@ -1,0 +1,174 @@
+{
+ "cohort": "2026-27",
+ "sources": {
+  "AR": {
+   "title": "Academic Regulations Governing Undergraduate Studies, 2026-27",
+   "url": "https://registry.hkust.edu.hk/resource-library/academic-regulations-governing-ug-studies-2026-27",
+   "local": "raw/regulations/academic_regulations_ug_2026-27.html"
+  },
+  "CC": {
+   "title": "Common Core Curriculum, 2026-27 intake",
+   "url": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+   "local": "raw/common_core/curriculum.html"
+  },
+  "PROG": {
+   "title": "Program requirement PDFs, 2026-27 intake",
+   "url": "https://prog-crs.hkust.edu.hk/ugprog/2026-27",
+   "local": "raw/requirements/*.pdf"
+  }
+ },
+ "rules": {
+  "regular_terms": {
+   "value": ["Fall", "Spring"],
+   "source": "AR",
+   "source_quote": "9.1 Regular Terms. Decisions on students' academic standing and progress are made only at the end of the Fall and the Spring Terms, which are referred to as Regular Terms.",
+   "note": "Winter and Summer are academic terms but not Regular Terms, so the AR 5.4 load limits do not apply to them."
+  },
+  "academic_terms": {
+   "value": ["Fall", "Winter", "Spring", "Summer"],
+   "source": "AR",
+   "source_quote": "There are four academic terms in each academic year: Fall (normally early September to late December); Winter; Spring (normally early February to late May); and Summer (normally late June to mid-August).",
+   "note": ""
+  },
+  "min_credits_regular_term": {
+   "value": 12,
+   "source": "AR",
+   "source_quote": "5.4 Maximum and Minimum Study Load. In each Regular Term, students within their normative duration of study and in good academic standing must register for courses totalling a mimimum of 12 credits and a maximum of 18 credits.",
+   "note": "The spelling \"mimimum\" is the official page's. Applies to students within their normative duration and in good academic standing."
+  },
+  "max_credits_regular_term": {
+   "value": 18,
+   "source": "AR",
+   "source_quote": "5.4 Maximum and Minimum Study Load. In each Regular Term, students within their normative duration of study and in good academic standing must register for courses totalling a mimimum of 12 credits and a maximum of 18 credits.",
+   "note": ""
+  },
+  "overload_approval": {
+   "value": "Dean or the Dean's designee",
+   "max_credits_with_approval": null,
+   "source": "AR",
+   "source_quote": "Students seeking an exemption from AR 5.4 require the approval of the relevant Dean or the Dean's designee.",
+   "note": "An exemption is possible but no ceiling is published, so no higher limit may be assumed. A plan above 18 credits is an error unless the student says the exemption is already approved."
+  },
+  "min_credits_summer_term": {
+   "value": null,
+   "source": null,
+   "source_quote": "",
+   "note": "Not found. AR 5.4 is written for Regular Terms, and Summer is not one. Validators must warn \"verify\" rather than apply 12-18."
+  },
+  "max_credits_summer_term": {
+   "value": null,
+   "source": null,
+   "source_quote": "",
+   "note": "Not found; see min_credits_summer_term."
+  },
+  "min_credits_winter_term": {
+   "value": null,
+   "source": null,
+   "source_quote": "",
+   "note": "Not found; Winter is not a Regular Term."
+  },
+  "max_credits_winter_term": {
+   "value": null,
+   "source": null,
+   "source_quote": "",
+   "note": "Not found; Winter is not a Regular Term."
+  },
+  "graduation_total_credits": {
+   "value": 120,
+   "source": "AR",
+   "source_quote": "4.1 Requirements for Bachelor's Degrees. To gain an award of a bachelor's degree, students are required to: i. Earn at least 120 credits in approved courses or through credit transfer subject to AR 6.3.",
+   "note": ""
+  },
+  "graduation_other_requirements": {
+   "value": [
+    "Fulfill the requirements of the University Common Core Program",
+    "Fulfill the University English Language Requirement",
+    "Fulfill the University Legal Education Requirement",
+    "Fulfill School/AIS requirements, if any",
+    "Fulfill requirements for at least one Major, or School requirements for a general degree"
+   ],
+   "source": "AR",
+   "source_quote": "4.1 ... ii. Fulfill the requirements of the University Common Core Program iii. Fulfill the University English Language Requirement iv. Fulfill the University Legal Education Requirement [For students admitted in 2022-23 intake or after only] v. Fulfill School/ AIS requirements, if any, for programs under the School/ AIS vi. Fulfill requirements for at least one Major, or School requirements for a general degree under the School",
+   "note": "The English and Legal Education requirements are not modelled as rules; no course list for them was collected in Phase 1."
+  },
+  "min_hkust_credits": {
+   "value": 60,
+   "source": "AR",
+   "source_quote": "6.3 Minimum HKUST Credits. To graduate with bachelor degree(s) from the University, students must complete a minimum of two years of full-time study at HKUST and obtain a minimum of 60 HKUST course credits.",
+   "note": "This caps transferred credits at 60 for a 120-credit degree. The AR adds that a Major, Minor or the Common Core Program may specify its own minimum."
+  },
+  "min_years_at_hkust": {
+   "value": 2,
+   "source": "AR",
+   "source_quote": "... students must complete a minimum of two years of full-time study at HKUST and obtain a minimum of 60 HKUST course credits.",
+   "note": ""
+  },
+  "transfer_credit_types": {
+   "value": ["course-credit transfer", "credit-only transfer", "cross-campus transfer"],
+   "source": "AR",
+   "source_quote": "Transfer of credit can be of three types: (i) course-credit transfer, where a transferred course is equivalent to a specific course in the HKUST course catalog; (ii) credit-only transfer, where only credits are transferred; (iii) cross-campus transfer, where both credits and grades attained by students in courses offered by HKUST(GZ) via \"cross-campus study\" are automatically transferred.",
+   "note": "\"credit-only transfer\" is the official name for the intake form's \"unspecified credits\" rows. Only course-credit transfer maps to a named HKUST course."
+  },
+  "transfer_credits_count_toward_gpa": {
+   "value": false,
+   "source": "AR",
+   "source_quote": "Transfer credits granted for (i) and (ii) will not be included in the calculation of grade averages, unless prior arrangements have been made.",
+   "note": ""
+  },
+  "additional_major_single_counted_credits": {
+   "value": 20,
+   "source": "AR",
+   "source_quote": "To graduate with an Additional Major, students must fulfill the requirements specified for that Major, within which they must complete at least 20 single-counted credits. These 20 credits cannot be used to fulfill any other requirements for graduation except for the 120-credit degree requirement.",
+   "note": "Applies to an additional major, not to a minor."
+  },
+  "common_core_reuse_allowed": {
+   "value": false,
+   "source": "PROG",
+   "source_quote": "Under the new 30-credit Common Core Program which is applicable to students admitted to the University in 2022-23 and thereafter, courses that have been counted towards School and/or Major Requirements are not allowed to be reused for fulfilment of the University Common Core Requirements.",
+   "note": "Printed in the preamble of every program requirement PDF. This is the one double-counting rule with a clear source: Major/School credits may never also be Common Core credits."
+  },
+  "major_minor_double_count_cap": {
+   "value": null,
+   "source": null,
+   "source_quote": "",
+   "note": "No University-wide cap was found. Each minor states its own floor instead: the minor PDFs collected say \"at least 9 credits ... should be single-counted within the minor and are not used to fulfill any other requirements for graduation except the 120-credit degree requirement\". planner/allocate.py must read that per program from Program.max_double_count_credits and warn \"verify\" where it is null."
+  },
+  "minor_total_credits": {
+   "value": null,
+   "source": null,
+   "source_quote": "",
+   "note": "Not set by the AR. Every minor PDF collected states its own minimum, 18 credits in each case; that figure is in each data/programs/MINOR-*.json rather than here."
+  },
+  "exchange_credit_rules": {
+   "value": null,
+   "source": null,
+   "source_quote": "",
+   "note": "Not found. AR 6 covers credit transfer in general and makes no statement specific to outgoing exchange. planner/validate.py must therefore treat every exchange mapping as pending approval and warn \"verify\", never as satisfied (hard rule 6)."
+  },
+  "fyp_duration_terms": {
+   "value": null,
+   "source": null,
+   "source_quote": "",
+   "note": "Not found. The AR says nothing about Final Year Project duration, and no program PDF collected states that an FYP must span two terms. check_fyp must warn \"verify\" rather than assume."
+  },
+  "max_online_credits": {
+   "value": 9,
+   "source": "PROG",
+   "source_quote": "Students may use no more than 9 credits earned from courses delivered in online mode, including HKUST self-paced online [SPO] courses and other online credits approved through the University's credit transfer procedures, to satisfy the graduation requirements of a degree program.",
+   "note": "Printed in the preamble of every program requirement PDF. Not checked by any validator: data/catalog.json records no delivery mode, because the course pages state it only for some courses."
+  },
+  "common_core_total_credits": {
+   "value": 30,
+   "source": "CC",
+   "source_quote": "Foundations Requirement (18 credits) ... Broadening Requirement (12 credits) ... Experiencing Requirement (0 credit). Total Credits Required: 30.",
+   "note": "Breakdown is in data/common_core.json."
+  }
+ },
+ "gaps": [
+  "min/max credits in Summer and Winter terms",
+  "the credit ceiling for an approved overload",
+  "a University-wide Major/Minor double-count cap",
+  "rules specific to outgoing exchange credit transfer",
+  "Final Year Project duration"
+ ]
+}

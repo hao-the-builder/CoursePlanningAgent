@@ -101,7 +101,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -133,7 +133,7 @@
      ]
     }
    ],
-   "source_quote": "PHYS | Note: PHYS 1111 OR PHYS 1112 OR PHYS 1312 (Students taking IRE Track can only use PHYS 1312 to fulfill the requirement.) | 3\nPHYS | Note: PHYS 1114 OR PHYS 1314 (Students taking IRE Track can only use PHYS 1314 to fulfill the requirement.) | 3"
+   "source_quote": "PHYS | Note: PHYS 1111 OR PHYS 1112 OR PHYS 1312 (Students taking IRE Track can only use PHYS 1312 to fulfill the requirement.) | 3\n\nPHYS | Note: PHYS 1114 OR PHYS 1314 (Students taking IRE Track can only use PHYS 1314 to fulfill the requirement.) | 3"
   },
   {
    "name": "Required Course(s)",
@@ -325,7 +325,7 @@
      ]
     }
    ],
-   "source_quote": "PHYS | 1113 | Laboratory for General Physics I | 1\nPHYS | 1115 | Laboratory for General Physics II | 1\nPHYS | 2022 | Modern Physics | 3\nPHYS | 2023 | Modern Physics Laboratory | 1\nPHYS | 2080 | Physics Seminar and Tutorial I | 1\nPHYS/MATH | Note: PHYS 2124 OR MATH 2352 (Students taking the Physics and Mathematics Option may take either MATH 2352 or PHYS 2124. Other students can only take PHYS 2124 to fulfill the requirement.) | 3-4\nPHYS | 3032 | Classical Mechanics | 3\nPHYS | Note: PHYS 3033 OR PHYS 3053 (Students taking IRE Track or Honors Physics Option can only use PHYS 3053 fo fulfill the requirement.) | 3-4\nPHYS | Note: PHYS 3036 OR PHYS 3037 (Students taking IRE Track or Honors Physics Option can only use PHYS 3037 to fulfill the requirement.) | 3-4\nPHYS/MATH | Note: PHYS 3142 OR MATH 3312 (Students taking the Physics and Mathematics Option may take either MATH 3312 or PHYS 3142. Other students can only take PHYS 3142 to fulfill the requirement.) | 3\nPHYS | 3152 | Methods of Experimental Physics I | 3\nPHYS | 3153 | Methods of Experimental Physics II | 3\nPHYS | 4050 | Thermodynamics and Statistical Physics | 3\nPHYS | 4080 | Physics Seminar and Tutorial II | 1\nPHYS/SCIE | Note: PHYS 4191 OR PHYS 4291 OR (SCIE 3500 AND SCIE 4500) (Students taking IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement; those taking Honors Physics Option can only use PHYS 4291 to fulfill the requirement.) | 4-6\nPHYS | Note: PHYS 4811 OR PHYS 4812 OR PHYS 4813 OR PHYS 4814 OR PHYS 4815 (2 courses out of 5) | 2\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\nMATH | Note: MATH 2011 OR MATH 2023 (Students in Honors Physics Option, Physics and Mathematics Option and IRE Track can only use MATH 2023 to fulfill the requirement) | 3-4\nMATH | Note: MATH 2111 OR MATH 2121 OR MATH 2131 (Students in Honors Physics Option, Physics and Mathematics Option and IRE Track can only use MATH 2121 OR MATH 2131 to fulfill the requirement) | 3-4"
+   "source_quote": "PHYS | 1113 | Laboratory for General Physics I | 1\n\nPHYS | 1115 | Laboratory for General Physics II | 1\n\nPHYS | 2022 | Modern Physics | 3\n\nPHYS | 2023 | Modern Physics Laboratory | 1\n\nPHYS | 2080 | Physics Seminar and Tutorial I | 1\n\nPHYS/MATH | Note: PHYS 2124 OR MATH 2352 (Students taking the Physics and Mathematics Option may take either MATH 2352 or PHYS 2124. Other students can only take PHYS 2124 to fulfill the requirement.) | 3-4\n\nPHYS | 3032 | Classical Mechanics | 3\n\nPHYS | Note: PHYS 3033 OR PHYS 3053 (Students taking IRE Track or Honors Physics Option can only use PHYS 3053 fo fulfill the requirement.) | 3-4\n\nPHYS | Note: PHYS 3036 OR PHYS 3037 (Students taking IRE Track or Honors Physics Option can only use PHYS 3037 to fulfill the requirement.) | 3-4\n\nPHYS/MATH | Note: PHYS 3142 OR MATH 3312 (Students taking the Physics and Mathematics Option may take either MATH 3312 or PHYS 3142. Other students can only take PHYS 3142 to fulfill the requirement.) | 3\n\nPHYS | 3152 | Methods of Experimental Physics I | 3\n\nPHYS | 3153 | Methods of Experimental Physics II | 3\n\nPHYS | 4050 | Thermodynamics and Statistical Physics | 3\n\nPHYS | 4080 | Physics Seminar and Tutorial II | 1\n\nPHYS/SCIE | Note: PHYS 4191 OR PHYS 4291 OR (SCIE 3500 AND SCIE 4500) (Students taking IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement; those taking Honors Physics Option can only use PHYS 4291 to fulfill the requirement.) | 4-6\n\nPHYS | Note: PHYS 4811 OR PHYS 4812 OR PHYS 4813 OR PHYS 4814 OR PHYS 4815 (2 courses out of 5) | 2\n\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\n\nMATH | Note: MATH 2011 OR MATH 2023 (Students in Honors Physics Option, Physics and Mathematics Option and IRE Track can only use MATH 2023 to fulfill the requirement) | 3-4\n\nMATH | Note: MATH 2111 OR MATH 2121 OR MATH 2131 (Students in Honors Physics Option, Physics and Mathematics Option and IRE Track can only use MATH 2121 OR MATH 2131 to fulfill the requirement) | 3-4"
   },
   {
    "name": "Requirements",
@@ -371,7 +371,7 @@
      ]
     }
    ],
-   "source_quote": "PHYS/MATH | Note: PHYS 3031 OR (MATH 4023 AND MATH 4052) | 3-6\nPHYS | 3034 | Electricity and Magnetism II | 3\nPHYS | 4051 | Quantum Mechanics II | 3"
+   "source_quote": "PHYS/MATH | Note: PHYS 3031 OR (MATH 4023 AND MATH 4052) | 3-6\n\nPHYS | 3034 | Electricity and Magnetism II | 3\n\nPHYS | 4051 | Quantum Mechanics II | 3"
   },
   {
    "name": "Honors Physics Option - Elective Course(s)",

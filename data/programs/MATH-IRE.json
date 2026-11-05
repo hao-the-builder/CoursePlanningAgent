@@ -101,7 +101,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -183,7 +183,7 @@
      ]
     }
    ],
-   "source_quote": "MATH | Note: MATH 2023 OR MATH 2024 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.] | 4\nMATH | Note: MATH 2033 OR MATH 2043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.] | 4\nMATH | Note: MATH 2121 OR MATH 2131 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.] | 4\nMATH | Note: MATH 3033 OR MATH 3043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.] | 4"
+   "source_quote": "MATH | Note: MATH 2023 OR MATH 2024 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2033 OR MATH 2043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2121 OR MATH 2131 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 3033 OR MATH 3043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.] | 4"
   },
   {
    "name": "Requirements",
@@ -218,13 +218,13 @@
      ]
     }
    ],
-   "source_quote": "SCIE | 3500 | IRE Research Project I | 3\nSCIE | 4500 | IRE Research Project II | 3"
+   "source_quote": "SCIE | 3500 | IRE Research Project I | 3\n\nSCIE | 4500 | IRE Research Project II | 3"
   }
  ],
  "stated_total_credits": 120.0,
  "max_double_count_credits": null,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27math.pdf",
- "tier": "auto_extracted",
+ "tier": "unsupported",
  "unparsed_lines": [
   "  With approval by the program office, students should follow the curriculum of one of the following Mathematics Tracks: Pure Mathematics (Advanced) Track, Applied Mathematics Track, Statistics Track and complete all of its requirements excluding the capstone project requirement, which should be fulfilled by both SCIE 3500 and SCIE 4500 only. For students approved to follow the Applied Mathematics Track and Statistics Track, they must choose MATH 2431 which is listed in the Track Requirements; while for those who follow the Pure Mathematics (Advanced) Track, they should take MATH 2431 as an additional required course. | 27-34"
  ],

@@ -101,7 +101,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -120,7 +120,7 @@
      ]
     }
    ],
-   "source_quote": "OCES | 1001 | The Earth as a Blue Planet | 3\nOCES | 1010 | Principles and Applications of Environmental Science | 3"
+   "source_quote": "OCES | 1001 | The Earth as a Blue Planet | 3\n\nOCES | 1010 | Principles and Applications of Environmental Science | 3"
   },
   {
    "name": "Required Course(s)",
@@ -275,7 +275,7 @@
      ]
     }
    ],
-   "source_quote": "OCES | 2002 | Marine Chemistry | 3\nOCES | 2003 | Descriptive Physical Oceanography | 3\nOCES | 2004 | Sustainable Ocean | 3\nOCES | 2005 | Coastal Marine Habitats | 3\nOCES | 2130 | Marine Biology | 3\nOCES | 3001 | Coastal Environmental Monitoring | 3\nOCES | 3003 | Field Methods in Marine Studies | 4\nOCES | 3160 | Ecology | 3\nOCES | 3301 | Data Analysis in Ocean Science | 3\nOCES | 4001 | Ocean and Climate Change | 3\nOCES | 4203 | Environmental Impact and Risk Assessment | 3\nOCES/SCIE | Note: OCES 4964 OR (OCES 4974 AND OCES 4984) OR (SCIE 3500 AND SCIE 4500) (Students following IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement.) | 3-6\nCHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\nLIFS | 1902 | General Biology II | 3\nMATH | Note: MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\nPHYS | Note: PHYS 1101 OR PHYS 1111 OR PHYS 1112 OR PHYS 1312 | 3-4\nCOMP | Note: COMP 1021 OR COMP 1023 | 3\nLANG | Note: LANG 4010 (Students following IRE Track are exempted from this course and should take LANG 3027 to fulfill the IRE requirement.) | 0-3"
+   "source_quote": "OCES | 2002 | Marine Chemistry | 3\n\nOCES | 2003 | Descriptive Physical Oceanography | 3\n\nOCES | 2004 | Sustainable Ocean | 3\n\nOCES | 2005 | Coastal Marine Habitats | 3\n\nOCES | 2130 | Marine Biology | 3\n\nOCES | 3001 | Coastal Environmental Monitoring | 3\n\nOCES | 3003 | Field Methods in Marine Studies | 4\n\nOCES | 3160 | Ecology | 3\n\nOCES | 3301 | Data Analysis in Ocean Science | 3\n\nOCES | 4001 | Ocean and Climate Change | 3\n\nOCES | 4203 | Environmental Impact and Risk Assessment | 3\n\nOCES/SCIE | Note: OCES 4964 OR (OCES 4974 AND OCES 4984) OR (SCIE 3500 AND SCIE 4500) (Students following IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement.) | 3-6\n\nCHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\n\nLIFS | 1902 | General Biology II | 3\n\nMATH | Note: MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\n\nPHYS | Note: PHYS 1101 OR PHYS 1111 OR PHYS 1112 OR PHYS 1312 | 3-4\n\nCOMP | Note: COMP 1021 OR COMP 1023 | 3\n\nLANG | Note: LANG 4010 (Students following IRE Track are exempted from this course and should take LANG 3027 to fulfill the IRE requirement.) | 0-3"
   },
   {
    "name": "Elective(s)",

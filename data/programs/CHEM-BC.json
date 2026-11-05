@@ -101,7 +101,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -120,7 +120,7 @@
      ]
     }
    ],
-   "source_quote": "CHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3"
+   "source_quote": "CHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\n\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3"
   },
   {
    "name": "Required Course(s)",
@@ -228,7 +228,7 @@
      ]
     }
    ],
-   "source_quote": "CHEM | 1051 | Laboratory for General Chemistry A | 1\nCHEM | 1052 | Laboratory for General Chemistry B | 1\nCHEM | 2110 | Organic Chemistry I | 3\nCHEM | 2210 | Inorganic Chemistry I | 3\nCHEM | 2310 | Fundamentals of Analytical Chemistry | 3\nCHEM | 2550 | Synthetic Chemistry Laboratory I | 2\nCHEM | 2555 | Molecular Characterization Chemistry Laboratory l | 2\nCHEM | 3120 | Organic Chemistry II | 3\nCHEM | 3220 | Inorganic Chemistry II | 3\nCHEM | 3320 | Instrumental Analysis | 3\nCHEM | 3550 | Synthetic Chemistry Laboratory II | 2\nCHEM/SCIE | Note: CHEM 4689 OR CHEM 4691 OR (SCIE 3500 AND SCIE 4500) (Students following IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement) | 3-6\nMATH | Note: MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4"
+   "source_quote": "CHEM | 1051 | Laboratory for General Chemistry A | 1\n\nCHEM | 1052 | Laboratory for General Chemistry B | 1\n\nCHEM | 2110 | Organic Chemistry I | 3\n\nCHEM | 2210 | Inorganic Chemistry I | 3\n\nCHEM | 2310 | Fundamentals of Analytical Chemistry | 3\n\nCHEM | 2550 | Synthetic Chemistry Laboratory I | 2\n\nCHEM | 2555 | Molecular Characterization Chemistry Laboratory l | 2\n\nCHEM | 3120 | Organic Chemistry II | 3\n\nCHEM | 3220 | Inorganic Chemistry II | 3\n\nCHEM | 3320 | Instrumental Analysis | 3\n\nCHEM | 3550 | Synthetic Chemistry Laboratory II | 2\n\nCHEM/SCIE | Note: CHEM 4689 OR CHEM 4691 OR (SCIE 3500 AND SCIE 4500) (Students following IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement) | 3-6\n\nMATH | Note: MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4"
   },
   {
    "name": "Biomolecular Chemistry Track - Required Course(s)",
@@ -277,7 +277,7 @@
      ]
     }
    ],
-   "source_quote": "CHEM | 2401 | Physical Principles for Biomolecular Science | 4\nCHEM | 4110 | Structural Elucidation in Organic Chemistry | 3\nCHEM | 4120 | Biomolecular Chemistry | 3\nCHEM | 4130 | Medicinal Chemistry | 3\nCHEM | 4150 | Biomolecular Synthesis Laboratory | 1\nCHEM | 4155 | Biomolecular Characterization Laboratory | 1\nCHEM | 4340 | Bioanalytical Techniques | 3"
+   "source_quote": "CHEM | 2401 | Physical Principles for Biomolecular Science | 4\n\nCHEM | 4110 | Structural Elucidation in Organic Chemistry | 3\n\nCHEM | 4120 | Biomolecular Chemistry | 3\n\nCHEM | 4130 | Medicinal Chemistry | 3\n\nCHEM | 4150 | Biomolecular Synthesis Laboratory | 1\n\nCHEM | 4155 | Biomolecular Characterization Laboratory | 1\n\nCHEM | 4340 | Bioanalytical Techniques | 3"
   }
  ],
  "stated_total_credits": 120.0,

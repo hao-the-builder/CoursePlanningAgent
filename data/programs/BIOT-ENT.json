@@ -101,7 +101,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -225,7 +225,7 @@
      ]
     }
    ],
-   "source_quote": "LIFS | 1904 | Laboratory for General Biology II | 1\nLIFS | 2040 | Cell Biology | 3\nLIFS | 2070 | Introduction to Biotechnology | 3\nLIFS | 2080 | Plant Biology | 3\nLIFS | 2210 | Biochemistry I | 3\nLIFS | 2220 | Biochemistry II | 3\nLIFS | 3150 | Biostatistics | 3\nLIFS/SCIE | Note: LIFS 4963 OR (LIFS 4973 AND LIFS 4983) OR (SCIE 4500 AND LIFS 4983) (Students following IRE Track can only use (SCIE 4500 AND LIFS 4983) to fulfill the requirement.) | 3-7\nCHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\nCHEM | 1051 | Laboratory for General Chemistry A | 1\nCHEM | 1052 | Laboratory for General Chemistry B | 1\nCHEM | Note: CHEM 2111 OR CHEM 2311 | 3\nCHEM | Note: CHEM 2155 OR CHEM 2355 | 1"
+   "source_quote": "LIFS | 1904 | Laboratory for General Biology II | 1\n\nLIFS | 2040 | Cell Biology | 3\n\nLIFS | 2070 | Introduction to Biotechnology | 3\n\nLIFS | 2080 | Plant Biology | 3\n\nLIFS | 2210 | Biochemistry I | 3\n\nLIFS | 2220 | Biochemistry II | 3\n\nLIFS | 3150 | Biostatistics | 3\n\nLIFS/SCIE | Note: LIFS 4963 OR (LIFS 4973 AND LIFS 4983) OR (SCIE 4500 AND LIFS 4983) (Students following IRE Track can only use (SCIE 4500 AND LIFS 4983) to fulfill the requirement.) | 3-7\n\nCHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\n\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\n\nCHEM | 1051 | Laboratory for General Chemistry A | 1\n\nCHEM | 1052 | Laboratory for General Chemistry B | 1\n\nCHEM | Note: CHEM 2111 OR CHEM 2311 | 3\n\nCHEM | Note: CHEM 2155 OR CHEM 2355 | 1"
   },
   {
    "name": "Elective(s)",
@@ -296,7 +296,7 @@
      ]
     }
    ],
-   "source_quote": "LIFS | 2888 | Introduction to Bioindustries | 3\nLIFS | 3110 | Biotechnological Application of Recombinant DNA Techniques | 3\nLIFS | 3140 | General Genetics | 4\nLIFS | 4200 | Concepts and Issues in Contemporary Biotechnology | 3\nLIFS | 4630 | Advanced Topics in Biotechnology | 3\nBIBU | 4820 | Biotechnology Entrepreneurship and Business Operations | 3"
+   "source_quote": "LIFS | 2888 | Introduction to Bioindustries | 3\n\nLIFS | 3110 | Biotechnological Application of Recombinant DNA Techniques | 3\n\nLIFS | 3140 | General Genetics | 4\n\nLIFS | 4200 | Concepts and Issues in Contemporary Biotechnology | 3\n\nLIFS | 4630 | Advanced Topics in Biotechnology | 3\n\nBIBU | 4820 | Biotechnology Entrepreneurship and Business Operations | 3"
   }
  ],
  "stated_total_credits": 120.0,

@@ -54,7 +54,7 @@
      ]
     }
    ],
-   "source_quote": "HUMA | 1440 | Modern China | 3\nHUMA | 2590 | The Making of the Modern World: Renaissance to the Present | 3\nSOSC | 1350 | Contemporary China: Continuity and Change | 3\nSOSC | 2290 | Understanding Globalization | 3\nSHSS | Note: SHSS 4991 OR SHSS 4992 OR (SHSS 4991 AND SHSS 4993) [For students taking one of the Research Options, they should take SHSS 4992 OR (SHSS 4991 AND SHSS 4993)] | 3-6\nLANG | 2170 | Chinese Communication Skills for Humanities & Social Science Studies | 3"
+   "source_quote": "HUMA | 1440 | Modern China | 3\n\nHUMA | 2590 | The Making of the Modern World: Renaissance to the Present | 3\n\nSOSC | 1350 | Contemporary China: Continuity and Change | 3\n\nSOSC | 2290 | Understanding Globalization | 3\n\nSHSS | Note: SHSS 4991 OR SHSS 4992 OR (SHSS 4991 AND SHSS 4993) [For students taking one of the Research Options, they should take SHSS 4992 OR (SHSS 4991 AND SHSS 4993)] | 3-6\n\nLANG | 2170 | Chinese Communication Skills for Humanities & Social Science Studies | 3"
   },
   {
    "name": "Integrated Humanities and Social Science Track - Required Course(s)",
@@ -73,7 +73,7 @@
      ]
     }
    ],
-   "source_quote": "HUMA | 2400 | Approaches to Humanities in China Studies | 3\nSOSC | 2140 | Research Methods in the Social Sciences | 3"
+   "source_quote": "HUMA | 2400 | Approaches to Humanities in China Studies | 3\n\nSOSC | 2140 | Research Methods in the Social Sciences | 3"
   },
   {
    "name": "Integrated Humanities and Social Science Track - Elective Course(s)",
@@ -112,7 +112,7 @@
  "stated_total_credits": 120.0,
  "max_double_count_credits": null,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
- "tier": "auto_extracted",
+ "tier": "unsupported",
  "unparsed_lines": [
   "HUMA/SOSC/SHSS | HUMA/SOSC/SHSS Electives [Students opting for SHSS 4992 OR (SHSS 4991 AND SHSS 4993) are required to take a minimum total of 8 courses (24 credits), out of which 2 must be at 3000-/4000-level; students opting for SHSS 4991 are required to take a minimum total of 9 courses (27 credits), out of which 3 must be at 3000-/4000-level.] | 24-27\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]"
  ],

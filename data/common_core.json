@@ -1,0 +1,103 @@
+{
+ "code": "COMMON-CORE",
+ "title": "University Common Core Program, 30 credits",
+ "kind": "common_core",
+ "cohort": "2026-27",
+ "groups": [
+  {
+   "name": "Foundations - Human-AI Co-Creation and Data Literacy (HAIC)",
+   "category": "Common Core",
+   "rules": [
+    {
+     "type": "cc_area",
+     "area": "HAIC",
+     "min_credits": 6
+    }
+   ],
+   "source_quote": "Human-AI Co-Creation and Data Literacy (HAIC) (at least 3 credits in Year 1) -- 6 credits. [30-credit Common Core Curriculum with SUS area, published table]"
+  },
+  {
+   "name": "Foundations - Habits, Mindsets, and Wellness (HMW)",
+   "category": "Common Core",
+   "rules": [
+    {
+     "type": "cc_area",
+     "area": "HMW",
+     "min_credits": 3
+    }
+   ],
+   "source_quote": "Behavioral Foundations of University Education: Habits, Mindsets, and Wellness (HMW) (year-long in Year 1) -- 3 credits."
+  },
+  {
+   "name": "Foundations - English Communication (E-Comm)",
+   "category": "Common Core",
+   "rules": [
+    {
+     "type": "cc_area",
+     "area": "E-Comm",
+     "min_credits": 6
+    }
+   ],
+   "source_quote": "English Communication (E-Comm) (at least 3 credits in Year 1) -- 6 credits."
+  },
+  {
+   "name": "Foundations - Chinese Communication (C-Comm)",
+   "category": "Common Core",
+   "rules": [
+    {
+     "type": "cc_area",
+     "area": "C-Comm",
+     "min_credits": 3
+    }
+   ],
+   "source_quote": "Chinese Communication (C-Comm) (in any year) -- 3 credits."
+  },
+  {
+   "name": "Broadening",
+   "category": "Common Core",
+   "rules": [
+    {
+     "type": "n_areas",
+     "areas": [
+      "A",
+      "H",
+      "S",
+      "T",
+      "SA",
+      "SUS"
+     ],
+     "n_areas": 4,
+     "min_credits": 12
+    }
+   ],
+   "source_quote": "To provide students with a well-rounded education, HKUST requires each student to complete 12 credits of common core courses outside their home area(s) in the Broadening group. Students should take 12 credits from four different non-home common core areas under the Broadening group. If they fall short of the 12-credit requirement, they may take Broadening courses of any common core area, including their home common core area(s), to fulfill the requirement."
+  },
+  {
+   "name": "Experiencing (UxOP)",
+   "category": "Common Core",
+   "rules": [
+    {
+     "type": "cc_area",
+     "area": "UxOP",
+     "min_credits": 0
+    }
+   ],
+   "source_quote": "The Experiencing group allows students to choose any one of the four structured programs offered as the Undergraduate experiential Opportunities Programs (UxOP) ... Required credits: 0. Although the UxOP area is an elective, students are encouraged to consider taking a course in UxOP area."
+  }
+ ],
+ "stated_total_credits": 30,
+ "max_double_count_credits": null,
+ "source_url": "https://uce.ust.hk/web/courses_2026/curriculum.html",
+ "tier": "auto_extracted",
+ "unparsed_lines": [],
+ "caveats": [
+  "Broadening: the areas listed here are all six Broadening areas. A student's own home area(s) must be removed before this rule is applied -- an SSCI student picks 4 of A/H/T/SA/SUS, a GCS student (home H and SA) must take 3 credits in each of A, S, T and SUS. Each program's home areas are in data/program_index.json, read from the curriculum page and Program-specific Credit Requirements2026.pdf.",
+  "Broadening: the official text adds that a student who falls short of 12 credits may make them up from any area, including a home area. That fallback is not expressed in the rule, which requires four different non-home areas. Confirm with your advisor before relying on it.",
+  "Broadening: UxOP credits may be used to substitute for credits in any Broadening area. The substitution is not applied automatically.",
+  "HAIC asks for 6 credits, but only one HAIC course is on the active Common Core list for this cohort -- AISC 1000, Foundations of AI Literacy, 3 credits, effective 2026-27 Fall. Where the other 3 credits come from is not stated in any source collected in raw/; verify with the Common Core Office. The three CTDL-area courses (CTDL 1901, 1902, 1950) are the nearest candidates but no source says they count toward HAIC for the 2026-27 intake.",
+  "Courses counted towards School and/or Major Requirements may not be reused to fulfil the University Common Core Requirements. This is enforced by planner/allocate.py, not by these rules.",
+  "To fulfil 3 common core UROP credits a student must also complete two non-common-core UROP preparatory courses (two UROP 1100, or UROP 1100 and UROP 2100) alongside UROP 3200; UPOP needs one credit of pre-internship training alongside the 2-credit UPOP course. Those preparatory courses are not Common Core courses and are not counted here.",
+  "Individualized Interdisciplinary Major (IIM), dual degree and Joint-School students have home areas that differ per student; the Common Core Office states these must be confirmed with the Academy directly."
+ ],
+ "parent": null
+}

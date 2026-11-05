@@ -73,7 +73,7 @@
      ]
     }
    ],
-   "source_quote": "CIVL/COMP | Note: CIVL 1121 OR COMP 1022P OR COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\nCIVL | 2035 | Mathematical Methods for Civil Engineers | 3\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3"
+   "source_quote": "CIVL/COMP | Note: CIVL 1121 OR COMP 1022P OR COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\n\nCIVL | 2035 | Mathematical Methods for Civil Engineers | 3\n\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\n\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\n\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3"
   },
   {
    "name": "Required Course(s)",
@@ -217,7 +217,7 @@
      ]
     }
    ],
-   "source_quote": "CIVL | 1100 | Discovering Civil and Environmental Engineering | 3\nCIVL | 2000 | Academic and Professional Development for Civil and Environmental Engineering II | 0\nCIVL | 2021 | Industrial Training: BIM, Drawing, Surveying, and Sustainability | 3\nCIVL | 2110 | Statics | 3\nCIVL | 2120 | Mechanics of Materials | 3\nCIVL | 2160 | Modeling Systems with Uncertainties | 3\nCIVL | 2170 | Infrastructure Systems Engineering and Management | 3\nCIVL | 2410 | Environmental Assessment and Management | 3\nCIVL | 2510 | Fluid Mechanics | 3\nCIVL | 2810 | Construction Materials | 3\nCIVL | 3000 | Academic and Professional Development for Civil and Environmental Engineering III | 0\nCIVL | 3020 | Internship Training | 0\nCIVL | 3210 | Introduction to Construction Management | 3\nCIVL | 3310 | Structural Analysis | 3\nCIVL | 3320 | Reinforced Concrete Design | 3\nCIVL | 3510 | Hydrosystems Engineering | 3\nCIVL | 3610 | Traffic and Transportation Engineering | 3\nCIVL | 3730 | Fundamentals of Geotechnics | 3\nCIVL | 3740 | Geotechnical Analysis and Design | 3\nCIVL | 4000 | Academic and Professional Development for Civil and Environmental Engineering IV | 0\nCIVL | Note: CIVL 4910 OR CIVL 4920 (Students taking the Research Option must take CIVL 4920) | 6\nCIVL | 4950 | Civil Engineering Capstone Design Project | 3"
+   "source_quote": "CIVL | 1100 | Discovering Civil and Environmental Engineering | 3\n\nCIVL | 2000 | Academic and Professional Development for Civil and Environmental Engineering II | 0\n\nCIVL | 2021 | Industrial Training: BIM, Drawing, Surveying, and Sustainability | 3\n\nCIVL | 2110 | Statics | 3\n\nCIVL | 2120 | Mechanics of Materials | 3\n\nCIVL | 2160 | Modeling Systems with Uncertainties | 3\n\nCIVL | 2170 | Infrastructure Systems Engineering and Management | 3\n\nCIVL | 2410 | Environmental Assessment and Management | 3\n\nCIVL | 2510 | Fluid Mechanics | 3\n\nCIVL | 2810 | Construction Materials | 3\n\nCIVL | 3000 | Academic and Professional Development for Civil and Environmental Engineering III | 0\n\nCIVL | 3020 | Internship Training | 0\n\nCIVL | 3210 | Introduction to Construction Management | 3\n\nCIVL | 3310 | Structural Analysis | 3\n\nCIVL | 3320 | Reinforced Concrete Design | 3\n\nCIVL | 3510 | Hydrosystems Engineering | 3\n\nCIVL | 3610 | Traffic and Transportation Engineering | 3\n\nCIVL | 3730 | Fundamentals of Geotechnics | 3\n\nCIVL | 3740 | Geotechnical Analysis and Design | 3\n\nCIVL | 4000 | Academic and Professional Development for Civil and Environmental Engineering IV | 0\n\nCIVL | Note: CIVL 4910 OR CIVL 4920 (Students taking the Research Option must take CIVL 4920) | 6\n\nCIVL | 4950 | Civil Engineering Capstone Design Project | 3"
   },
   {
    "name": "Elective(s)",
@@ -260,7 +260,7 @@
  "stated_total_credits": 120.0,
  "max_double_count_credits": null,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27civl.pdf",
- "tier": "auto_extracted",
+ "tier": "unsupported",
  "unparsed_lines": [
   "  Advanced Electives (Courses at 4000-or PG level. Students should seek approval of their advisor for the choices of courses.) | 3"
  ],

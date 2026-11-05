@@ -46,7 +46,7 @@
      ]
     }
    ],
-   "source_quote": "COMP/ISOM | Note: COMP 1021 OR COMP 1022P OR COMP 1023 OR ISOM 2010 | 3\nMATH | Note: MATH 1003 OR MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4"
+   "source_quote": "COMP/ISOM | Note: COMP 1021 OR COMP 1022P OR COMP 1023 OR ISOM 2010 | 3\n\nMATH | Note: MATH 1003 OR MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4"
   },
   {
    "name": "Required Course(s)",
@@ -70,13 +70,13 @@
      ]
     }
    ],
-   "source_quote": "IIMP | 2000 | Academic and Professional Development | 0\nIIMP | Note: IIMP 4970 OR IIMP 4991 | 6"
+   "source_quote": "IIMP | 2000 | Academic and Professional Development | 0\n\nIIMP | Note: IIMP 4970 OR IIMP 4991 | 6"
   }
  ],
  "stated_total_credits": 120.0,
  "max_double_count_credits": null,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27iim.pdf",
- "tier": "auto_extracted",
+ "tier": "unsupported",
  "unparsed_lines": [
   "IIM | Note: Courses planned by the students (with endorsement by the Individualized Major Advisory Committee and approved by the University, of which at least 12 credits must be at 3000-level or above.) | At least 48",
   "IIM | Courses planned by the students (with endorsement by the Individualized Major Advisory Committee and approved by the University, of which at least 9 credits must be at 3000-level or above.) | 18"

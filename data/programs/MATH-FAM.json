@@ -101,7 +101,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -183,7 +183,7 @@
      ]
     }
    ],
-   "source_quote": "MATH | Note: MATH 2023 OR MATH 2024 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.] | 4\nMATH | Note: MATH 2033 OR MATH 2043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.] | 4\nMATH | Note: MATH 2121 OR MATH 2131 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.] | 4\nMATH | Note: MATH 3033 OR MATH 3043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.] | 4"
+   "source_quote": "MATH | Note: MATH 2023 OR MATH 2024 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2033 OR MATH 2043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2121 OR MATH 2131 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 3033 OR MATH 3043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.] | 4"
   },
   {
    "name": "Financial and Actuarial Mathematics Track - Required Course(s)",
@@ -266,7 +266,7 @@
      ]
     }
    ],
-   "source_quote": "MATH | 2411 | Applied Statistics | 4\nMATH | Note: MATH 2421 OR MATH 2431 | 4\nMATH | 2511 | Fundamentals of Actuarial Mathematics | 3\nMATH | 3423 | Statistical Inference | 3\nMATH | 4427 | Loss Models and their Applications | 3\nMATH | 4511 | Quantitative Methods for Fixed Income Derivatives | 3\nMATH | 4512 | Fundamentals of Mathematical Finance | 3\nMATH | 4513 | Life Contingencies Models and Insurance Risk | 3\nMATH | 4514 | Financial Economics in Actuarial Science | 3\nMATH | 4515 | Statistical and Computational Methods in Financial Mathematics | 3\nMATH | Note: MATH 4996 OR MATH 4999 | 3"
+   "source_quote": "MATH | 2411 | Applied Statistics | 4\n\nMATH | Note: MATH 2421 OR MATH 2431 | 4\n\nMATH | 2511 | Fundamentals of Actuarial Mathematics | 3\n\nMATH | 3423 | Statistical Inference | 3\n\nMATH | 4427 | Loss Models and their Applications | 3\n\nMATH | 4511 | Quantitative Methods for Fixed Income Derivatives | 3\n\nMATH | 4512 | Fundamentals of Mathematical Finance | 3\n\nMATH | 4513 | Life Contingencies Models and Insurance Risk | 3\n\nMATH | 4514 | Financial Economics in Actuarial Science | 3\n\nMATH | 4515 | Statistical and Computational Methods in Financial Mathematics | 3\n\nMATH | Note: MATH 4996 OR MATH 4999 | 3"
   },
   {
    "name": "Financial and Actuarial Mathematics Track - Elective Course(s)",
@@ -335,7 +335,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "MATH | Pure or Applied Mathematics Elective (1 course from the specified elective list) | 2\nMATH | Pure or Applied Mathematics Elective (1 course from the specified elective list) | 2\nMATH | MATH Depth Electives (2 courses from the specified elective list. Courses taken as Required Courses may not be reused to count towards this elective requirement.) | 6\nMATH | MATH Depth Electives (2 courses from the specified elective list. Courses taken as Required Courses may not be reused to count towards this elective requirement.) | 6"
+   "source_quote": "MATH | Pure or Applied Mathematics Elective (1 course from the specified elective list) | 2\n\nMATH | Pure or Applied Mathematics Elective (1 course from the specified elective list) | 2\n\nMATH | MATH Depth Electives (2 courses from the specified elective list. Courses taken as Required Courses may not be reused to count towards this elective requirement.) | 6\n\nMATH | MATH Depth Electives (2 courses from the specified elective list. Courses taken as Required Courses may not be reused to count towards this elective requirement.) | 6"
   }
  ],
  "stated_total_credits": 120.0,

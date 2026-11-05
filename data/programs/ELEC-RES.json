@@ -92,7 +92,7 @@
      ]
     }
    ],
-   "source_quote": "ELEC/MATH | Note: ELEC 2600 OR MATH 2011 OR MATH 2111 OR MATH 2350 OR MATH 2351 (3 courses out of 5) | 9-10\nCOMP | 1023 | Introduction to Python Programming | 3\nCOMP | Note: COMP 2011 OR COMP 2012H | 4-5\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3\nPHYS | Note: PHYS 1114 OR PHYS 1314 | 3"
+   "source_quote": "ELEC/MATH | Note: ELEC 2600 OR MATH 2011 OR MATH 2111 OR MATH 2350 OR MATH 2351 (3 courses out of 5) | 9-10\n\nCOMP | 1023 | Introduction to Python Programming | 3\n\nCOMP | Note: COMP 2011 OR COMP 2012H | 4-5\n\nMATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\n\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3\n\nPHYS | Note: PHYS 1114 OR PHYS 1314 | 3"
   },
   {
    "name": "Required Course(s)",
@@ -167,7 +167,7 @@
      ]
     }
    ],
-   "source_quote": "ELEC | 1100 | Introduction to Electro-Robot Design | 4\nELEC | 1200 | A System View of Communications: from Signals to Packets | 4\nELEC | 1910 | Academic and Professional Development I | 0\nELEC | 2100 | Signals and Systems | 4\nELEC | 2350 | Introduction to Computer Organization and Design | 4\nELEC | 2400 | Electronic Circuits | 4\nELEC | 2910 | Academic and Professional Development II | 0\nELEC | 2991 | Industrial Experience (Electronic Engineering) | 0\nELEC | 3910 | Academic and Professional Development III | 0\nELEC | Note: ELEC 4900 OR ELEC 4901 OR ELEC 4910 (Students taking the Research Option must take ELEC 4901) | 6"
+   "source_quote": "ELEC | 1100 | Introduction to Electro-Robot Design | 4\n\nELEC | 1200 | A System View of Communications: from Signals to Packets | 4\n\nELEC | 1910 | Academic and Professional Development I | 0\n\nELEC | 2100 | Signals and Systems | 4\n\nELEC | 2350 | Introduction to Computer Organization and Design | 4\n\nELEC | 2400 | Electronic Circuits | 4\n\nELEC | 2910 | Academic and Professional Development II | 0\n\nELEC | 2991 | Industrial Experience (Electronic Engineering) | 0\n\nELEC | 3910 | Academic and Professional Development III | 0\n\nELEC | Note: ELEC 4900 OR ELEC 4901 OR ELEC 4910 (Students taking the Research Option must take ELEC 4901) | 6"
   },
   {
    "name": "Elective(s)",
@@ -176,7 +176,9 @@
     {
      "type": "credits_from",
      "patterns": [
-      "ELEC 3xxx"
+      "ELEC 3xxx",
+      "ELEC 4xxx",
+      "ELEC 5xxx"
      ],
      "min_credits": 21.0,
      "exclude": []

@@ -6,6 +6,96 @@ phase does not silently contradict a decision taken earlier.
 
 ---
 
+## 2026-11-05 - Four additions to `schema.py`, agreed one at a time
+
+Hard rule 9 forbids changing the six rule types' semantics and allows adding
+fields. Everything below is additive; the six rule types are untouched and
+`python schema.py` still prints exactly what it printed in Phase 0.
+
+| Added | Why |
+|---|---|
+| `Course.credits_max` | 150 catalog courses have a credit *range* ("1-4 Credit(s)"): UROP, independent study, special topics. `credits` holds the minimum, `credits_max` the top, `None` when fixed. Collapsing to the minimum would understate term load and the 120-credit total. |
+| the `n_areas` rule type | The Common Core Broadening requirement is "12 credits from 4 different non-home areas" where 5 areas are usually eligible. `cc_area` pins one area and a `RequirementGroup` requires *all* its rules, so the choice could not be expressed. `evaluate()` gained one branch and a `_spread` helper; no existing branch changed. |
+| `Program.caveats` | A line that yields a rule but states a refinement no rule type can carry - COMP's "at least 3 courses from 1 area and at least 2 outside" - would otherwise land in `unparsed_lines` and, under Part D, make COMP and most large majors `unsupported` over refinements that were read correctly. `unparsed_lines` keeps its strict meaning; a caveat means "checked, but not this part of it" and travels to the `.docx` and the Progress sheet's "Things to check". 463 of them. |
+| `Program.parent` | Names the base program when a file is a track or option variant (see the next decision). |
+
+---
+
+## 2026-11-05 - Tracks and options become one program file each
+
+**Decision.** 22 of the 68 requirement PDFs define tracks ("students should
+follow one of the tracks and complete all requirements") or options (optional
+add-ons, often behind a CGA bar). A `Program` holds one flat list of groups
+that must all be met, so each selectable variant is written as its own file:
+the shared requirements plus that variant's groups, with `parent` naming the
+base. 68 programs become **129 files**, 60 of them variants.
+
+**Consequences.**
+
+- The intake dropdown in Phase 6 lists variants, which is the choice a student
+  actually faces: "BSc in Mathematics - Statistics Track", not "BSc in
+  Mathematics".
+- Where the track choice is mandatory (`BIOT`, `CHEM`, `DASC`, `GCS`, `MATH`)
+  the **base** program is not a complete curriculum, so it is marked
+  `unsupported` and the agent asks for a track before planning (hard rule 5).
+- `program_index.json` gained `parent`, and each variant inherits the base
+  program's Common Core home areas.
+
+---
+
+## 2026-11-05 - 74 courses are read from the requirement PDFs, not the catalog
+
+**Decision.** `data/catalog.json` holds 1,649 courses: 1,575 from the course
+pages, plus 74 the requirement PDFs offer as electives but the 2026-27 course
+pages do not list - 5000-level postgraduate courses, and lettered sections of
+a parent course (`COMP 4901B Large Language Models`, where the catalog has
+only `COMP 4901 Special Topics, 0-4 credits`). Each is printed in the PDF with
+its own title and credit value.
+
+**Why.** Hard rule 1 requires every course in an output to exist in
+`catalog.json`. Leaving these out would drop 27 of COMP's elective options and
+22 of CPEG's without making anything safer, and nothing is invented: the
+requirement PDFs are an official source already recorded in `raw/SOURCES.md`.
+`data/CATALOG_SOURCES.md` lists which course came from which PDF.
+
+**The other direction.** 34 courses that a PDF's own remarks call deleted, last
+offered in an earlier year, or "subject to approval" are **not** added. Every
+rule that named one has it removed and says so in a caveat.
+
+---
+
+## 2026-11-05 - Part D's credit tolerance is 12 credits
+
+**Decision.** Part D asks for "a documented tolerance for choose-type rules".
+`pipeline/check_program.py` computes a *floor* - the fewest credits that can
+satisfy every rule, each course counted once - and fails a program when
+`floor + 30` (the Common Core) exceeds the stated degree total by more than
+**12 credits**. Between 0 and 12 over is a note, not a failure.
+
+**Why 12.** The floor is approximate in three directions, all of them
+understating or overstating by about a course at a time: a variable-credit
+course is costed at its minimum, a `one_of` at its cheapest option, and an
+Option variant is extra study layered on an already complete degree (`RMBI-FT`
+sits 10 credits over, legitimately). Twelve credits is four courses' worth of
+that slop. A real double-count is far larger: before the floor counted each
+course once, `CHEM-PC` came out 32 credits over.
+
+---
+
+## 2026-11-05 - Two of the five verification programs are track variants
+
+**Decision.** The Phase 2 Part F list is **COMP, MATH-AM, FINA, GCS-SS, IDT**,
+not `MATH` and `GCS` as recorded on 2026-11-03.
+
+**Why.** Both `MATH` and `GCS` require the student to choose a track, so the
+base program is `unsupported` and there is nothing to verify. `MATH-AM`
+(Applied Mathematics) and `GCS-SS` (Social Science) are the stand-ins;
+`GCS-IHSS` was not chosen because it still has an unparsed line. The other
+three are unchanged. `data/VERIFY.md` lays each rule beside its `source_quote`
+for these five.
+
+---
+
 ## 2026-11-03 — Programme length: 4 years only
 
 **Decision.** Drop 5-year programme support for now. Build and validate 4-year

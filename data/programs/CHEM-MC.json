@@ -101,7 +101,7 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -120,7 +120,7 @@
      ]
     }
    ],
-   "source_quote": "CHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3"
+   "source_quote": "CHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\n\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3"
   },
   {
    "name": "Required Course(s)",
@@ -228,7 +228,7 @@
      ]
     }
    ],
-   "source_quote": "CHEM | 1051 | Laboratory for General Chemistry A | 1\nCHEM | 1052 | Laboratory for General Chemistry B | 1\nCHEM | 2110 | Organic Chemistry I | 3\nCHEM | 2210 | Inorganic Chemistry I | 3\nCHEM | 2310 | Fundamentals of Analytical Chemistry | 3\nCHEM | 2550 | Synthetic Chemistry Laboratory I | 2\nCHEM | 2555 | Molecular Characterization Chemistry Laboratory l | 2\nCHEM | 3120 | Organic Chemistry II | 3\nCHEM | 3220 | Inorganic Chemistry II | 3\nCHEM | 3320 | Instrumental Analysis | 3\nCHEM | 3550 | Synthetic Chemistry Laboratory II | 2\nCHEM/SCIE | Note: CHEM 4689 OR CHEM 4691 OR (SCIE 3500 AND SCIE 4500) (Students following IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement) | 3-6\nMATH | Note: MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4"
+   "source_quote": "CHEM | 1051 | Laboratory for General Chemistry A | 1\n\nCHEM | 1052 | Laboratory for General Chemistry B | 1\n\nCHEM | 2110 | Organic Chemistry I | 3\n\nCHEM | 2210 | Inorganic Chemistry I | 3\n\nCHEM | 2310 | Fundamentals of Analytical Chemistry | 3\n\nCHEM | 2550 | Synthetic Chemistry Laboratory I | 2\n\nCHEM | 2555 | Molecular Characterization Chemistry Laboratory l | 2\n\nCHEM | 3120 | Organic Chemistry II | 3\n\nCHEM | 3220 | Inorganic Chemistry II | 3\n\nCHEM | 3320 | Instrumental Analysis | 3\n\nCHEM | 3550 | Synthetic Chemistry Laboratory II | 2\n\nCHEM/SCIE | Note: CHEM 4689 OR CHEM 4691 OR (SCIE 3500 AND SCIE 4500) (Students following IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement) | 3-6\n\nMATH | Note: MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4"
   },
   {
    "name": "Materials Chemistry Option - Required Course(s)",
@@ -247,7 +247,7 @@
      ]
     }
    ],
-   "source_quote": "CHEM | 4250 | Materials Preparation Laboratory | 1\nCHEM | 4255 | Materials Characterization Laboratory | 1"
+   "source_quote": "CHEM | 4250 | Materials Preparation Laboratory | 1\n\nCHEM | 4255 | Materials Characterization Laboratory | 1"
   },
   {
    "name": "Materials Chemistry Option - Elective Course(s)",
@@ -261,128 +261,31 @@
       "CHEM 4220",
       "CHEM 4230",
       "CHEM 4240",
-      "CHEM 4640"
+      "CHEM 4640",
+      "CHEM 3010",
+      "CHEM 3020",
+      "CHEM 3030",
+      "CHEM 3610",
+      "CHEM 4120",
+      "CHEM 4130",
+      "CHEM 4140",
+      "CHEM 4160",
+      "CHEM 4310",
+      "CHEM 4320",
+      "CHEM 4330",
+      "CHEM 4340",
+      "CHEM 4410",
+      "CHEM 4420",
+      "CHEM 4430",
+      "CHEM 4620",
+      "CHEM 4680",
+      "CHEM 4692"
      ],
      "min_credits": 12.0,
      "exclude": []
     }
    ],
-   "source_quote": "CHEM | Chemistry Electives [Course(s) from the specified elective list, of which at least 2 courses must be taken from the Core Area. Courses taken as Required/Elective Courses of another Chemistry Option may not be counted towards this elective requirement.] | 12\n  [Core Area]"
-  },
-  {
-   "name": "Materials Chemistry Option - Others",
-   "category": "Major",
-   "rules": [
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 3010"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 3020"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 3030"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 3610"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4120"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4130"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4140"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4160"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4310"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4320"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4330"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4340"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4410"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4420"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4430"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4620"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4680"
-     ]
-    },
-    {
-     "type": "required",
-     "courses": [
-      "CHEM 4692"
-     ]
-    }
-   ],
-   "source_quote": "CHEM3010 | Great Ideas in Chemistry | 3\nCHEM3020 | Chemistry in the Mass Media | 3\nCHEM3030 | Introduction to AI for Chemistry | 4\nCHEM3610 | Chemistry Internship | 2-3\nCHEM4120 | Biomolecular Chemistry | 3\nCHEM4130 | Medicinal Chemistry | 3\nCHEM4140 | Intermediate Organic Chemistry | 3\nCHEM4160 | Cheminformatics | 3\nCHEM4310 | Environmental Chemistry | 3\nCHEM4320 | Environmental Analytical Chemistry | 3\nCHEM4330 | Separation Science | 3\nCHEM4340 | Bioanalytical Techniques | 3\nCHEM4410 | Physical Chemistry in Biological Applications | 3\nCHEM4420 | Statistical Machine Learning Methods for Chemical Data Analysis | 3\nCHEM4430 | Symmetry in Chemistry and Spectroscopy | 3\nCHEM4620 | Organometallic Chemistry | 3\nCHEM4680 | Undergraduate Research | 3\nCHEM4692 | Capstone Research II | 3"
+   "source_quote": "CHEM | Chemistry Electives [Course(s) from the specified elective list, of which at least 2 courses must be taken from the Core Area. Courses taken as Required/Elective Courses of another Chemistry Option may not be counted towards this elective requirement.] | 12\n  [Core Area]\n  [Others]"
   }
  ],
  "stated_total_credits": 120.0,

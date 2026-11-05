@@ -83,8 +83,10 @@ SECTIONS = {
 GROUP_HEADINGS = {
     "Major Pre-requisite course(s)", "Engineering Fundamental Course(s)",
     "Required Course(s)", "Required Courses", "Elective(s)", "Elective Course(s)",
-    "Others", "Other(s)",
 }
+# "Others" heads a group of its own in MATH, but in CHEM it heads the tail of an
+# elective list, so it only starts a group when no elective list is open.
+SOFT_HEADINGS = {"Others", "Other(s)"}
 # "Core Area", "Restricted Electives" and the like name a sub-list *inside* an
 # elective list, so they must not be mistaken for the start of a new group.
 VARIANT_HEADING = re.compile(r"^([A-Z][^|]{2,70}?) (Track|Option)$")
@@ -104,7 +106,7 @@ ANY_SUBJECT = re.compile(r"^(?:any|all) ([A-Z]{2,6})\b[\w ]*courses?\b", re.I)
 
 # Elective wordings, in the order they are tried.
 LEVEL_ELECTIVE = re.compile(
-    r"\b([A-Z]{2,6})\s+((?:\d000-?/?)+)\s*level( or above)?", re.X)
+    r"\b([A-Z]{2,6})\s+((?:\d000-?/?)+)\s*level( or above)?")
 # "Mathematics courses at 1000- and 2000- level", "... at 3000- level or above"
 LEVEL_RANGE = re.compile(r"(\d)000-?\s*(?:level)?", re.I)
 LEVEL_OR_ABOVE = re.compile(r"(\d)000-?\s*level or above", re.I)
@@ -268,7 +270,7 @@ class Builder:
         if self.name and self.rules:
             self.groups.append(RequirementGroup(
                 name=self.name, category=self.category, rules=self.rules,
-                source_quote="\n".join(self.quotes)))
+                source_quote="\n\n".join(self.quotes)))
         self.rules, self.quotes = [], []
 
 
@@ -419,7 +421,11 @@ def parse(lines: list[str]) -> tuple[list[Variant], bool, list[str]]:
                 continue
             if not started:
                 continue
-            if head in GROUP_HEADINGS:
+            if head in SOFT_HEADINGS and pending is not None and (
+                    pending.kind == "elective"):
+                pending.line += f"\n  [{head}]"
+                continue
+            if head in GROUP_HEADINGS or head in SOFT_HEADINGS:
                 close()
                 flush_prose()
                 prefix = f"{current.name} - " if current.name else ""
