@@ -26,3 +26,8 @@ streamlit>=1.40,<2
 
 # --- tests ----------------------------------------------------------------
 pytest>=8,<10
+# Recalculates the generated .xlsx so the tests can check what Excel would
+# show. CLAUDE.md names LibreOffice headless for this; `formulas` does the
+# same job with a pip install, and tests/test_outputs.py uses LibreOffice
+# instead wherever `soffice` is on the PATH.
+formulas>=1.2,<2

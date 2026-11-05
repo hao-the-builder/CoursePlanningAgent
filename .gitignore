@@ -20,6 +20,7 @@ logs/*
 outputs/*.xlsx
 outputs/*.docx
 outputs/*.zip
+outputs/_tmp/
 /*.xlsx
 /*.docx
 !samples/*.xlsx
