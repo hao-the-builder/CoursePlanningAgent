@@ -94,8 +94,18 @@ Built in phases, one at a time — see `CLAUDE.md` for the plan and the rules.
 - [x] **Phase 3** — deterministic tools and validation
 - [x] **Phase 4** — LLM wrapper and agent loop
 - [x] **Phase 5** — output files
-- [ ] **Phase 6** — Streamlit UI
+- [x] **Phase 6** — Streamlit UI
 - [ ] **Phase 7** — testing, test log, deploy
+
+### Checked by eye, not by test
+
+`tests/test_app.py` drives the real Streamlit widgets headlessly, so the
+flow, the refusals and the session limits are tested. **Phone width is not**:
+a headless screenshot of a Streamlit page never settles before the capture,
+so the layout at 390px has to be looked at. The app uses a single centred
+column and full-width buttons, which is the layout that survives a phone, but
+that is a design choice rather than a verified result — open the deployed
+link on a phone to confirm it.
 
 Scope for now: the **2026-27 intake cohort**. Dual degree programmes are marked
 unsupported. The agent does not predict grades, does not save plans server-side
