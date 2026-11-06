@@ -25,6 +25,10 @@ outputs/_tmp/
 /*.docx
 !samples/*.xlsx
 
+# data/VERIFY.pdf is committed — it is the pack the developer checks by hand.
+# The HTML it is rendered from is scratch.
+data/VERIFY.html
+
 # --- os / editor ----------------------------------------------------------
 .DS_Store
 Thumbs.db

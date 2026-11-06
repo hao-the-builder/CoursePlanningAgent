@@ -115,6 +115,14 @@ Built in phases, one at a time — see `CLAUDE.md` for the plan and the rules.
 - [x] **Phase 6** — Streamlit UI
 - [x] **Phase 7** — testing, test log, deploy *(all but the deploy itself)*
 
+### What needs a human
+
+`data/VERIFY.pdf` — 17 pages, built by `python scripts/make_verify_pdf.py`
+from `data/VERIFY.md` — is the pack for the three jobs no test can do: check
+five programs against their official PDFs (one tick box per rule, rows worth
+a second look shaded), deploy, and look at the app on a phone. Nothing is
+tier `verified` until that check comes back.
+
 ### Checked by eye, not by test
 
 `tests/test_app.py` drives the real Streamlit widgets headlessly, so the
