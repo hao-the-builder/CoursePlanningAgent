@@ -15,7 +15,8 @@
      ]
     }
    ],
-   "source_quote": "ENTR | 1001 | Entrepreneurship 1001: Designing Your Future | 3"
+   "source_quote": "ENTR | 1001 | Entrepreneurship 1001: Designing Your Future | 3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -60,7 +61,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "ENTR/SSCI/SENG/SBM/AIS | Entrepreneurship Electives (Courses from the specified elective list, of which at least 6 credits from each area. Students may use at most 6 credits from ENTR 4901-4904 to count towards this elective requirement.) | 15\n  [Area A: Entrepreneurship Electives - Fundamentals]\n\nENTR | 4901-4904 | Student-led Entrepreneurship Acceleration Project | 1-4\n  [Area B: Entrepreneurship Electives - Skillsets]\n  [Schools of Science, Engineering, Business & Management, and Academy of Interdisciplinary Studies - Undergraduate Minor Program in Entrepreneurship]"
+   "source_quote": "ENTR/SSCI/SENG/SBM/AIS | Entrepreneurship Electives (Courses from the specified elective list, of which at least 6 credits from each area. Students may use at most 6 credits from ENTR 4901-4904 to count towards this elective requirement.) | 15\n  [Area A: Entrepreneurship Electives - Fundamentals]\n\nENTR | 4901-4904 | Student-led Entrepreneurship Acceleration Project | 1-4\n  [Area B: Entrepreneurship Electives - Skillsets]\n  [Schools of Science, Engineering, Business & Management, and Academy of Interdisciplinary Studies - Undergraduate Minor Program in Entrepreneurship]",
+   "source_url": null
   }
  ],
  "stated_total_credits": 18.0,

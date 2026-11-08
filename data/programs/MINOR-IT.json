@@ -16,7 +16,8 @@
      ]
     }
    ],
-   "source_quote": "COMP | Note: COMP 2011 AND COMP 2012 [Students taken the 5-credit COMP 2012H in 2014-15 or after may request to use the course to replace both COMP 2011 and COMP 2012. In this case, students should take additional IT elective course(s) to make up the credits shortfall.] | 8"
+   "source_quote": "COMP | Note: COMP 2011 AND COMP 2012 [Students taken the 5-credit COMP 2012H in 2014-15 or after may request to use the course to replace both COMP 2011 and COMP 2012. In this case, students should take additional IT elective course(s) to make up the credits shortfall.] | 8",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -34,7 +35,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Information Technology Electives (Courses from the specified elective list, of which at least 6 credits must be at the 3000-level or above. Out of these 6 credits at the 3000-level or above, at least 3 credits must be at the 4000-level or above. Students may request to use up to 6 credits of courses listed under http://www.cse.ust.hk/ug/minor/IT/ to count towards this requirement.) | 10\n  COMP | Any COMP courses at 2000-level or above except COMP 3900, COMP 4900, COMP 4981-4995"
+   "source_quote": "COMP | Information Technology Electives (Courses from the specified elective list, of which at least 6 credits must be at the 3000-level or above. Out of these 6 credits at the 3000-level or above, at least 3 credits must be at the 4000-level or above. Students may request to use up to 6 credits of courses listed under http://www.cse.ust.hk/ug/minor/IT/ to count towards this requirement.) | 10\n  COMP | Any COMP courses at 2000-level or above except COMP 3900, COMP 4900, COMP 4981-4995",
+   "source_url": null
   }
  ],
  "stated_total_credits": 18.0,

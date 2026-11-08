@@ -59,7 +59,8 @@
      ]
     }
    ],
-   "source_quote": "ISDN/ENGG | Note: Design Fundamentals: ISDN 1001 OR ISDN 1002 OR ISDN 1006 OR ISDN 1007 OR ENGG 1300 | 3\n\nISDN | Note: Design: ISDN 2000 OR ISDN 2200 OR ISDN 2300 OR ISDN 2400 (any 2 courses) | 6\n\nISDN/ENTR | Note: Design Project Experience: ISDN 3350 OR ISDN 3360 OR ISDN 4910 OR ENTR 3030 OR ENTR 3100 | 3"
+   "source_quote": "ISDN/ENGG | Note: Design Fundamentals: ISDN 1001 OR ISDN 1002 OR ISDN 1006 OR ISDN 1007 OR ENGG 1300 | 3\n\nISDN | Note: Design: ISDN 2000 OR ISDN 2200 OR ISDN 2300 OR ISDN 2400 (any 2 courses) | 6\n\nISDN/ENTR | Note: Design Project Experience: ISDN 3350 OR ISDN 3360 OR ISDN 4910 OR ENTR 3030 OR ENTR 3100 | 3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -123,7 +124,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "AIS | Design Electives (Courses from the specified list. Students are required to take a minimum total of 6 credits. At least 3 credits must be at 3000-level or above and no more than 3 credits can be taken at 1000-level. Courses taken as Required courses may not be counted toward the elective requirement.) | 6\n  [Courses offered by the Academy of Interdisciplinary Studies]\n  [Courses offered by the School of Science]\n  [Courses offered by the School of Engineering]\n  [Courses offered by the School of Business and Management]\n  [Courses offered by the School of Humanities and Social Science]"
+   "source_quote": "AIS | Design Electives (Courses from the specified list. Students are required to take a minimum total of 6 credits. At least 3 credits must be at 3000-level or above and no more than 3 credits can be taken at 1000-level. Courses taken as Required courses may not be counted toward the elective requirement.) | 6\n  [Courses offered by the Academy of Interdisciplinary Studies]\n  [Courses offered by the School of Science]\n  [Courses offered by the School of Engineering]\n  [Courses offered by the School of Business and Management]\n  [Courses offered by the School of Humanities and Social Science]",
+   "source_url": null
   }
  ],
  "stated_total_credits": 18.0,

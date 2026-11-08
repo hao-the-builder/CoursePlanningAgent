@@ -101,7 +101,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]",
+   "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -132,7 +133,8 @@
      ]
     }
    ],
-   "source_quote": "MATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] (Students following IRE track can only use MATH 1023 and MATH 1024 to fulfill the requirement) | 4-6"
+   "source_quote": "MATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] (Students following IRE track can only use MATH 1023 and MATH 1024 to fulfill the requirement) | 4-6",
+   "source_url": null
   },
   {
    "name": "Required Course(s)",
@@ -183,7 +185,8 @@
      ]
     }
    ],
-   "source_quote": "MATH | Note: MATH 2023 OR MATH 2024 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2033 OR MATH 2043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2121 OR MATH 2131 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 3033 OR MATH 3043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.] | 4"
+   "source_quote": "MATH | Note: MATH 2023 OR MATH 2024 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2033 OR MATH 2043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2121 OR MATH 2131 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 3033 OR MATH 3043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.] | 4",
+   "source_url": null
   },
   {
    "name": "Computer Science Track - Required Course(s)",
@@ -259,7 +262,8 @@
      ]
     }
    ],
-   "source_quote": "MATH/COMP | Note: MATH 2343 OR COMP 2711 OR COMP 2711H | 4\n\nMATH | 3121 | Abstract Algebra | 3\n\nMATH | Note: MATH 4991 OR MATH 4992 OR MATH 4999 | 3\n\nCOMP | 1023 | Introduction to Python Programming | 3\n\nCOMP | Note: (COMP 2011 AND COMP 2012) OR COMP 2012H | 5-8\n\nCOMP | 2611 | Computer Organization | 4\n\nCOMP | Note: COMP 3711 OR COMP 3711H | 3-4"
+   "source_quote": "MATH/COMP | Note: MATH 2343 OR COMP 2711 OR COMP 2711H | 4\n\nMATH | 3121 | Abstract Algebra | 3\n\nMATH | Note: MATH 4991 OR MATH 4992 OR MATH 4999 | 3\n\nCOMP | 1023 | Introduction to Python Programming | 3\n\nCOMP | Note: (COMP 2011 AND COMP 2012) OR COMP 2012H | 5-8\n\nCOMP | 2611 | Computer Organization | 4\n\nCOMP | Note: COMP 3711 OR COMP 3711H | 3-4",
+   "source_url": null
   },
   {
    "name": "Computer Science Track - Elective Course(s)",
@@ -360,7 +364,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "MATH | MATH 3000-level or above Elective (Any 1 course of the subject and level as specified) | 3\n\nMATH | MATH Electives (2 courses from the specified elective list) | 6\n\nMATH | MATH Electives (2 courses from the specified elective list) | 6\n\nCOMP | COMP 4000-level or above Elective (Any 1 course of the subject and level as specified) | 3\n\nCOMP | (For students opting COMP 2012H only) COMP 2000-level or above Elective (Any 1 course of the subject and level as specified. Students opting COMP 2011 AND COMP 2012 do not need to fulfill this requirement.) | 0-3\n\nCOMP | COMP Elective (1 course from the specified elective list) | 3\n\nCOMP | COMP Elective (1 course from the specified elective list) | 3"
+   "source_quote": "MATH | MATH 3000-level or above Elective (Any 1 course of the subject and level as specified) | 3\n\nMATH | MATH Electives (2 courses from the specified elective list) | 6\n\nMATH | MATH Electives (2 courses from the specified elective list) | 6\n\nCOMP | COMP 4000-level or above Elective (Any 1 course of the subject and level as specified) | 3\n\nCOMP | (For students opting COMP 2012H only) COMP 2000-level or above Elective (Any 1 course of the subject and level as specified. Students opting COMP 2011 AND COMP 2012 do not need to fulfill this requirement.) | 0-3\n\nCOMP | COMP Elective (1 course from the specified elective list) | 3\n\nCOMP | COMP Elective (1 course from the specified elective list) | 3",
+   "source_url": null
   }
  ],
  "stated_total_credits": 120.0,

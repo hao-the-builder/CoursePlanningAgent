@@ -26,7 +26,8 @@
      ]
     }
    ],
-   "source_quote": "MECH | Note: MECH 3640 OR MECH 3650 OR MECH 3660 OR MECH 3670 (3 courses out of 4) | 9"
+   "source_quote": "MECH | Note: MECH 3640 OR MECH 3650 OR MECH 3660 OR MECH 3670 (3 courses out of 4) | 9",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -59,7 +60,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "SENG | Technical Electives (Courses from the specified elective list, of which students may only use at most 1 course from Group B to count toward this requirement.) | 9\n  [Group A]\n  [Group B]"
+   "source_quote": "SENG | Technical Electives (Courses from the specified elective list, of which students may only use at most 1 course from Group B to count toward this requirement.) | 9\n  [Group A]\n  [Group B]",
+   "source_url": null
   }
  ],
  "stated_total_credits": 18.0,

@@ -113,6 +113,9 @@ class RequirementGroup(BaseModel):
     category: Category
     rules: list[Rule]
     source_quote: str = ""           # exact line from the PDF, for traceability
+    source_url: str | None = None    # set when the group came from a different
+                                     # PDF than the program's own — the School
+                                     # Requirements are published separately
 
 
 class Program(BaseModel):

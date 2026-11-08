@@ -194,7 +194,8 @@
      ]
     }
    ],
-   "source_quote": "ISDN | 1001 | Introduction to Integrative Systems and Design | 3\n\nISDN | 1004 | Sketching | 1\n\nISDN | 1007 | From Design Thinking to Design Action: Defining Problems for Better Solutions | 3\n\nISDN | 1010 | Academic and Professional Development I | 0\n\nISDN | 1011 | Industrial Training | 0\n\nISDN | 2001 | Second Year Design Project I | 1\n\nISDN | 2002 | Second Year Design Project II | 3\n\nISDN | 2010 | Academic and Professional Development II | 0\n\nISDN | 2200 | Systems Thinking and Design | 3\n\nISDN | 2300 | Introduction to 3D Design | 3\n\nISDN | 2400 | Physical Prototyping | 3\n\nISDN | 2601 | Exploring the World through Smart Mechatronics | 3\n\nISDN | 2602 | Internet of Things: Integrative System Design | 3\n\nISDN | 2603 | Materials, Shape and Design | 3\n\nISDN | 3001 | Third Year Design Project I | 3\n\nISDN | 3002 | Third Year Design Project II | 3\n\nISDN | 3010 | Academic and Professional Development III | 0\n\nISDN | 3200 | Graphic Communication | 2\n\nISDN | 4001 | Final Year Design Project I | 4\n\nISDN | 4002 | Final Year Design Project II | 4\n\nISDN | 4010 | Academic and Professional Development IV | 0\n\nCOMP | Note: COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\n\nLANG | 4036 | Technical Communication for Technology Projects | 3\n\nMATH | Note: [MATH 1006 OR MATH 1013 OR MATH 1023 AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] (Subject to approval of the program office, MATH 1014/1024 may be replaced by a COMP course) | 4-7\n\nPHYS | Note: PHYS 1101 OR PHYS 1111 OR PHYS 1112 OR PHYS 1312 | 3-4"
+   "source_quote": "ISDN | 1001 | Introduction to Integrative Systems and Design | 3\n\nISDN | 1004 | Sketching | 1\n\nISDN | 1007 | From Design Thinking to Design Action: Defining Problems for Better Solutions | 3\n\nISDN | 1010 | Academic and Professional Development I | 0\n\nISDN | 1011 | Industrial Training | 0\n\nISDN | 2001 | Second Year Design Project I | 1\n\nISDN | 2002 | Second Year Design Project II | 3\n\nISDN | 2010 | Academic and Professional Development II | 0\n\nISDN | 2200 | Systems Thinking and Design | 3\n\nISDN | 2300 | Introduction to 3D Design | 3\n\nISDN | 2400 | Physical Prototyping | 3\n\nISDN | 2601 | Exploring the World through Smart Mechatronics | 3\n\nISDN | 2602 | Internet of Things: Integrative System Design | 3\n\nISDN | 2603 | Materials, Shape and Design | 3\n\nISDN | 3001 | Third Year Design Project I | 3\n\nISDN | 3002 | Third Year Design Project II | 3\n\nISDN | 3010 | Academic and Professional Development III | 0\n\nISDN | 3200 | Graphic Communication | 2\n\nISDN | 4001 | Final Year Design Project I | 4\n\nISDN | 4002 | Final Year Design Project II | 4\n\nISDN | 4010 | Academic and Professional Development IV | 0\n\nCOMP | Note: COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\n\nLANG | 4036 | Technical Communication for Technology Projects | 3\n\nMATH | Note: [MATH 1006 OR MATH 1013 OR MATH 1023 AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] (Subject to approval of the program office, MATH 1014/1024 may be replaced by a COMP course) | 4-7\n\nPHYS | Note: PHYS 1101 OR PHYS 1111 OR PHYS 1112 OR PHYS 1312 | 3-4",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -247,22 +248,7 @@
       "COMP 4632",
       "COMP 4641",
       "COMP 4651",
-      "COMP 4901"
-     ],
-     "min_credits": 21.0,
-     "exclude": []
-    },
-    {
-     "type": "credits_from",
-     "patterns": [
-      "ELEC 3xxx"
-     ],
-     "min_credits": 0.0,
-     "exclude": []
-    },
-    {
-     "type": "credits_from",
-     "patterns": [
+      "COMP 4901",
       "ELEC 2100",
       "ELEC 2350",
       "ELEC 2400",
@@ -288,13 +274,16 @@
       "MECH 3907",
       "MECH 4450",
       "MECH 4710",
-      "MECH 4740"
+      "MECH 4740",
+      "ELEC 3xxx",
+      "ELEC 4xxx"
      ],
-     "min_credits": 0.0,
+     "min_credits": 21.0,
      "exclude": []
     }
    ],
-   "source_quote": "ISDN/ENTR/SBM/TEMG | Product Management and Entrepreneurship Electives (Courses from the specified elective list, of which at least 1 course must be at 3000-level or above.) | 6\n\nISDN/SENG/MATH | Project-related Electives (Courses from the specified elective list, of which at least 12 credits should be at 3000-level or above and no more than 3 credits at 1000-level. Students should seek approval of their advisor for the choices of courses.) | 21\n\nELEC | Any ELEC courses at 3000-level | 0-4\n\nELEC | Any ELEC courses at 4000-level | 0-4"
+   "source_quote": "ISDN/ENTR/SBM/TEMG | Product Management and Entrepreneurship Electives (Courses from the specified elective list, of which at least 1 course must be at 3000-level or above.) | 6\n\nISDN/SENG/MATH | Project-related Electives (Courses from the specified elective list, of which at least 12 credits should be at 3000-level or above and no more than 3 credits at 1000-level. Students should seek approval of their advisor for the choices of courses.) | 21\n  ELEC | Any ELEC courses at 3000-level | 0-4\n  ELEC | Any ELEC courses at 4000-level | 0-4",
+   "source_url": null
   }
  ],
  "stated_total_credits": 120.0,
@@ -303,8 +292,7 @@
  "tier": "auto_extracted",
  "unparsed_lines": [],
  "caveats": [
-  "[MATH 1006 OR MATH 1013 OR MATH 1023 AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] -- (Subject to approval of the program office, MATH 1014/1024 may be replaced by a COMP course)",
-  "Any ELEC courses at 3000-level -- the requirement PDF states no credit minimum here, so nothing is enforced; the courses that count are recorded."
+  "[MATH 1006 OR MATH 1013 OR MATH 1023 AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] -- (Subject to approval of the program office, MATH 1014/1024 may be replaced by a COMP course)"
  ],
  "parent": null
 }

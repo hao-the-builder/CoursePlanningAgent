@@ -102,7 +102,8 @@
      ]
     }
    ],
-   "source_quote": "SOSC | 1050 | Introduction to Social Science Research | 3\n\nSOSC | 1110 | Data Analysis for Quantitative Social Research | 3\n\nSOSC | 2400 | Quantitative Data Analysis for Social Research II | 3\n\nSOSC | 3200 | Quantitative Social Analysis Colloquium | 1\n\nSOSC | 4110 | Capstone Project | 3\n\nSOSC | 4330 | Quantitative Data Analysis for Social Research III | 3\n\nMATH | Note: [(MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-7\n\nMATH | 2411 | Applied Statistics | 4\n\nCOMP | Note: COMP 1021 OR COMP 1023 | 3"
+   "source_quote": "SOSC | 1050 | Introduction to Social Science Research | 3\n\nSOSC | 1110 | Data Analysis for Quantitative Social Research | 3\n\nSOSC | 2400 | Quantitative Data Analysis for Social Research II | 3\n\nSOSC | 3200 | Quantitative Social Analysis Colloquium | 1\n\nSOSC | 4110 | Capstone Project | 3\n\nSOSC | 4330 | Quantitative Data Analysis for Social Research III | 3\n\nMATH | Note: [(MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-7\n\nMATH | 2411 | Applied Statistics | 4\n\nCOMP | Note: COMP 1021 OR COMP 1023 | 3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -117,7 +118,12 @@
       "SOSC 1300",
       "SOSC 1960",
       "SOSC 1980",
-      "SOSC 1850"
+      "SOSC 1850",
+      "SOSC 1xxx",
+      "SOSC 2xxx",
+      "SOSC 3xxx",
+      "SOSC 4xxx",
+      "SOSC 5xxx"
      ],
      "min_credits": 24.0,
      "exclude": []
@@ -168,7 +174,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "SOSC | Social Science Electives (8 courses from the specified elective list. Students should take at least 2 Foundation courses, EACH of which should be from a different discipline [Foundation 1 to Foundation 5], and out of the 24 credits, at least 6 credits must be at 3000-/4000-level. Courses on the list of QSA Methodological Electives may not be counted towards this elective requirement) | 24\n  [Foundation 1: Geography/Demography]\n  [Foundation 2: Economics]\n  [Foundation 3: Political Science]\n  [Foundation 4: Psychology]\n  [Foundation 5: Sociology]\n  [Others]\n  SOSC | Any SOSC courses except those listed as Foundation course in this requirement and those listed under QSA Methodological Electives.\n\nSOSC | Social Science Electives (8 courses from the specified elective list. Students should take at least 2 Foundation courses, EACH of which should be from a different discipline [Foundation 1 to Foundation 5], and out of the 24 credits, at least 6 credits must be at 3000-/4000-level. Courses on the list of QSA Methodological Electives may not be counted towards this elective requirement) | 24\n  [Foundation 1: Geography/Demography]\n  [Foundation 2: Economics]\n  [Foundation 3: Political Science]\n  [Foundation 4: Psychology]\n  [Foundation 5: Sociology]\n  [Others]\n  SOSC | Any SOSC courses except those listed as Foundation course in this requirement and those listed under QSA Methodological Electives.\n\nSOSC/MATH/COMP/ISOM/ | QSA Methodological Electives (4 courses from the specified elective list, of which 6 credits must be taken in SOSC) | 12\n  [MARK]\n\nSOSC/MATH/COMP/ISOM/ | QSA Methodological Electives (4 courses from the specified elective list, of which 6 credits must be taken in SOSC) | 12\n  [MARK]"
+   "source_quote": "SOSC | Social Science Electives (8 courses from the specified elective list. Students should take at least 2 Foundation courses, EACH of which should be from a different discipline [Foundation 1 to Foundation 5], and out of the 24 credits, at least 6 credits must be at 3000-/4000-level. Courses on the list of QSA Methodological Electives may not be counted towards this elective requirement) | 24\n  [Foundation 1: Geography/Demography]\n  [Foundation 2: Economics]\n  [Foundation 3: Political Science]\n  [Foundation 4: Psychology]\n  [Foundation 5: Sociology]\n  [Others]\n  SOSC | Any SOSC courses except those listed as Foundation course in this requirement and those listed under QSA Methodological Electives.\n\nSOSC/MATH/COMP/ISOM/ | QSA Methodological Electives (4 courses from the specified elective list, of which 6 credits must be taken in SOSC) | 12\n  [MARK]\n\nSOSC/MATH/COMP/ISOM/ | QSA Methodological Electives (4 courses from the specified elective list, of which 6 credits must be taken in SOSC) | 12\n  [MARK]",
+   "source_url": null
   }
  ],
  "stated_total_credits": 120.0,
@@ -177,7 +184,7 @@
  "tier": "auto_extracted",
  "unparsed_lines": [],
  "caveats": [
-  "Social Science Electives (8 courses from the specified elective list. Students should take at least 2 Foundation courses, EACH of which should be from a different discipline [Foundation 1 to Foundation 5], and out of the 24 credits, at least 6 credits must be at 3000-/4000-level. Courses on the list of QSA Methodological Electives may not be counted towards this elective requirement) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor."
+  "Social Science Electives (8 courses from the specified elective list. Students should take at least 2 Foundation courses, EACH of which should be from a different discipline [Foundation 1 to Foundation 5], and out of the 24 credits, at least 6 credits must be at 3000-/4000-level. Courses on the list of QSA Methodological Electives may not be counted towards this elective requirement) -- the list also admits any SOSC course, so the credits are checked but the number of courses is not. Confirm the count with your advisor."
  ],
  "parent": null
 }

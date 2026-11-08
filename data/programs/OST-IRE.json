@@ -101,7 +101,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]",
+   "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -120,7 +121,8 @@
      ]
     }
    ],
-   "source_quote": "OCES | 1001 | The Earth as a Blue Planet | 3\n\nOCES | 1010 | Principles and Applications of Environmental Science | 3"
+   "source_quote": "OCES | 1001 | The Earth as a Blue Planet | 3\n\nOCES | 1010 | Principles and Applications of Environmental Science | 3",
+   "source_url": null
   },
   {
    "name": "Required Course(s)",
@@ -275,7 +277,8 @@
      ]
     }
    ],
-   "source_quote": "OCES | 2002 | Marine Chemistry | 3\n\nOCES | 2003 | Descriptive Physical Oceanography | 3\n\nOCES | 2004 | Sustainable Ocean | 3\n\nOCES | 2005 | Coastal Marine Habitats | 3\n\nOCES | 2130 | Marine Biology | 3\n\nOCES | 3001 | Coastal Environmental Monitoring | 3\n\nOCES | 3003 | Field Methods in Marine Studies | 4\n\nOCES | 3160 | Ecology | 3\n\nOCES | 3301 | Data Analysis in Ocean Science | 3\n\nOCES | 4001 | Ocean and Climate Change | 3\n\nOCES | 4203 | Environmental Impact and Risk Assessment | 3\n\nOCES/SCIE | Note: OCES 4964 OR (OCES 4974 AND OCES 4984) OR (SCIE 3500 AND SCIE 4500) (Students following IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement.) | 3-6\n\nCHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\n\nLIFS | 1902 | General Biology II | 3\n\nMATH | Note: MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\n\nPHYS | Note: PHYS 1101 OR PHYS 1111 OR PHYS 1112 OR PHYS 1312 | 3-4\n\nCOMP | Note: COMP 1021 OR COMP 1023 | 3\n\nLANG | Note: LANG 4010 (Students following IRE Track are exempted from this course and should take LANG 3027 to fulfill the IRE requirement.) | 0-3"
+   "source_quote": "OCES | 2002 | Marine Chemistry | 3\n\nOCES | 2003 | Descriptive Physical Oceanography | 3\n\nOCES | 2004 | Sustainable Ocean | 3\n\nOCES | 2005 | Coastal Marine Habitats | 3\n\nOCES | 2130 | Marine Biology | 3\n\nOCES | 3001 | Coastal Environmental Monitoring | 3\n\nOCES | 3003 | Field Methods in Marine Studies | 4\n\nOCES | 3160 | Ecology | 3\n\nOCES | 3301 | Data Analysis in Ocean Science | 3\n\nOCES | 4001 | Ocean and Climate Change | 3\n\nOCES | 4203 | Environmental Impact and Risk Assessment | 3\n\nOCES/SCIE | Note: OCES 4964 OR (OCES 4974 AND OCES 4984) OR (SCIE 3500 AND SCIE 4500) (Students following IRE Track can only use (SCIE 3500 AND SCIE 4500) to fulfill the requirement.) | 3-6\n\nCHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\n\nLIFS | 1902 | General Biology II | 3\n\nMATH | Note: MATH 1005 OR MATH 1006 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\n\nPHYS | Note: PHYS 1101 OR PHYS 1111 OR PHYS 1112 OR PHYS 1312 | 3-4\n\nCOMP | Note: COMP 1021 OR COMP 1023 | 3\n\nLANG | Note: LANG 4010 (Students following IRE Track are exempted from this course and should take LANG 3027 to fulfill the IRE requirement.) | 0-3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -293,13 +296,16 @@
       "MATH 1014",
       "MATH 2350",
       "MATH 2411",
-      "MATH 4326"
+      "MATH 4326",
+      "OCES 3xxx",
+      "OCES 4xxx"
      ],
      "min_credits": 12.0,
      "exclude": []
     }
    ],
-   "source_quote": "OCES/CHEM/LIFS/MATH | Ocean Science and Technology Electives (Courses from the specified elective list.) | 12\n  OCES | Any OCES courses at 3000/4000-level"
+   "source_quote": "OCES/CHEM/LIFS/MATH | Ocean Science and Technology Electives (Courses from the specified elective list.) | 12\n  OCES | Any OCES courses at 3000/4000-level",
+   "source_url": null
   },
   {
    "name": "Requirements",
@@ -313,7 +319,8 @@
      ]
     }
    ],
-   "source_quote": "Students in the IRE Track should also take SCIE 3500 and SCIE 4500 as specified in the major"
+   "source_quote": "Students in the IRE Track should also take SCIE 3500 and SCIE 4500 as specified in the major",
+   "source_url": null
   },
   {
    "name": "International Research Enrichment Track - Required Course(s)",
@@ -337,7 +344,8 @@
      ]
     }
    ],
-   "source_quote": "OCES | 4303 | AI and Machine Learning in Marine Science | 3\n\nLIFS/MATH | Note: LIFS 3150 OR MATH 2411 | 3-4"
+   "source_quote": "OCES | 4303 | AI and Machine Learning in Marine Science | 3\n\nLIFS/MATH | Note: LIFS 3150 OR MATH 2411 | 3-4",
+   "source_url": null
   }
  ],
  "stated_total_credits": 120.0,

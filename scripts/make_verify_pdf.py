@@ -353,7 +353,17 @@ def render_section(title: str, body: list[str], school: str | None,
     return "".join(out)
 
 
+def tiers() -> tuple[int, int, int]:
+    """(programs, auto_extracted, unsupported) as the index records them."""
+    index = json.loads(INDEX.read_text(encoding="utf-8"))
+    rows = index.get("programs", []) if isinstance(index, dict) else index
+    auto = sum(1 for r in rows if r.get("tier") == "auto_extracted")
+    bad = sum(1 for r in rows if r.get("tier") == "unsupported")
+    return len(rows), auto, bad
+
+
 def front_matter(today: str) -> str:
+    total, auto, unsupported = tiers()
     return f"""
 <p class="kicker">HKUST Course Planning Agent &middot; {today}</p>
 <h1>What still needs a human</h1>
@@ -377,12 +387,12 @@ pack; the other two take twenty minutes between them.</p>
 
 <div class="card">
 <h4>Why job 1 cannot be automated</h4>
-<p>The requirement rules were read out of 129 official PDFs by code. That code
+<p>The requirement rules were read out of the official PDFs by code. That code
 already checks what it can: every course code exists in the catalog, every
 rule loads as a valid <code>Program</code>, the credits add up to the total the
-PDF states, and nothing was silently dropped. 104 programs pass all of that
-and sit at tier <code>auto_extracted</code>; 25 failed and are marked
-<code>unsupported</code>, so the app refuses to plan them.</p>
+PDF states, and nothing was silently dropped. Of {total} programs, {auto} pass
+all of that and sit at tier <code>auto_extracted</code>; {unsupported} failed
+and are marked <code>unsupported</code>, so the app refuses to plan them.</p>
 <p>What no check can tell is whether a rule <em>means</em> what the PDF
 sentence meant. &ldquo;Must take&rdquo; versus &ldquo;choose one of&rdquo;,
 the right group, the right count &mdash; that needs eyes on both. Only your

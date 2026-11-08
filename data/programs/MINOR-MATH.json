@@ -21,7 +21,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "MATH | Mathematics Electives (Courses from the specified elective list, of which at least 6 credits must be at 3000-level or above; and out of these 6 credits at 3000-level or above, at least 3 credits must be at 4000-level or above) | 18\n  MATH | Mathematics courses at 1000- and 2000- level (except courses coded from 1000 to 1600)\n  MATH | Mathematics courses at 3000- level or above"
+   "source_quote": "MATH | Mathematics Electives (Courses from the specified elective list, of which at least 6 credits must be at 3000-level or above; and out of these 6 credits at 3000-level or above, at least 3 credits must be at 4000-level or above) | 18\n  MATH | Mathematics courses at 1000- and 2000- level (except courses coded from 1000 to 1600)\n  MATH | Mathematics courses at 3000- level or above",
+   "source_url": null
   }
  ],
  "stated_total_credits": 18.0,

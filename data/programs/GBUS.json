@@ -105,7 +105,8 @@
      ]
     }
    ],
-   "source_quote": "ACCT | 2010 | Principles of Accounting I | 3\n\nECON | Note: ECON 2103 OR ECON 2113 | 3\n\nECON | Note: ECON 2123 OR ECON 3123 (BSc ECOF students can only use ECON 3123 to fulfill this requirement; while others should take ECON 2123) | 3\n\nFINA | 2303 | Financial Management | 3\n\nISOM | 2010 | Introduction to Information Systems | 3\n\nISOM | 2020 | Coding for Business | 1\n\nISOM | 2500 | Business Statistics | 3\n\nISOM | 2600 | Introduction to Business Analytics | 1\n\nMGMT | 2010 | Business Ethics and the Individual | 2\n\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\n\nMATH | Note: MATH 1003 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\n\nSB&M | Note: Courses for BBA majors: ACCT 2200 AND ISOM 2700 AND MARK 2120 AND MGMT 2110 (Students who enroll in the BSc majors of SBM are not required to take these courses for graduation) | 12"
+   "source_quote": "ACCT | 2010 | Principles of Accounting I | 3\n\nECON | Note: ECON 2103 OR ECON 2113 | 3\n\nECON | Note: ECON 2123 OR ECON 3123 (BSc ECOF students can only use ECON 3123 to fulfill this requirement; while others should take ECON 2123) | 3\n\nFINA | 2303 | Financial Management | 3\n\nISOM | 2010 | Introduction to Information Systems | 3\n\nISOM | 2020 | Coding for Business | 1\n\nISOM | 2500 | Business Statistics | 3\n\nISOM | 2600 | Introduction to Business Analytics | 1\n\nMGMT | 2010 | Business Ethics and the Individual | 2\n\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\n\nMATH | Note: MATH 1003 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\n\nSB&M | Note: Courses for BBA majors: ACCT 2200 AND ISOM 2700 AND MARK 2120 AND MGMT 2110 (Students who enroll in the BSc majors of SBM are not required to take these courses for graduation) | 12",
+   "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf"
   },
   {
    "name": "Required Course(s)",
@@ -141,7 +142,8 @@
      ]
     }
    ],
-   "source_quote": "GBUS | 1000 | Global Leadership Development | 0\n\nGBUS | 2010 | Global Business Analysis | 3\n\nGBUS/ISOM | Note: GBUS 3030 OR ISOM 4780 | 3-4\n\nGBUS | 4910 | Capstone Project | 4"
+   "source_quote": "GBUS | 1000 | Global Leadership Development | 0\n\nGBUS | 2010 | Global Business Analysis | 3\n\nGBUS/ISOM | Note: GBUS 3030 OR ISOM 4780 | 3-4\n\nGBUS | 4910 | Capstone Project | 4",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -189,7 +191,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "GBUS | Global Business Electives (Courses from the specified elective list, of which at least 6 credits from Area A, and at least 1 course from Area B and Area C, respectively. With approval of the program office, students may replace the requirement of completing one Additional Major/ Extended Major/ Minor (see “Others” below) by taking additional 9 credits at 3000-level or above from this elective list, with at least 1 course from Area A out of the additional 9 credits.) | 15-24\n  [Area A: Global Business]\n  [Area B: Global and Societal Perspective]\n  [Area C: Business Strategy and Innovation]\n  [Other(s) Complete one Additional Major, Minor or Extended Major Program (Students pursuing Dual Degree Program in Technology and Management are exempted from this requirement) One regular term of study abroad]"
+   "source_quote": "GBUS | Global Business Electives (Courses from the specified elective list, of which at least 6 credits from Area A, and at least 1 course from Area B and Area C, respectively. With approval of the program office, students may replace the requirement of completing one Additional Major/ Extended Major/ Minor (see “Others” below) by taking additional 9 credits at 3000-level or above from this elective list, with at least 1 course from Area A out of the additional 9 credits.) | 15-24\n  [Area A: Global Business]\n  [Area B: Global and Societal Perspective]\n  [Area C: Business Strategy and Innovation]\n  [Other(s) Complete one Additional Major, Minor or Extended Major Program (Students pursuing Dual Degree Program in Technology and Management are exempted from this requirement) One regular term of study abroad]",
+   "source_url": null
   }
  ],
  "stated_total_credits": 120.0,

@@ -6,6 +6,63 @@ phase does not silently contradict a decision taken earlier.
 
 ---
 
+## 2026-11-08 — An option is taken *within* its track, and three extraction fixes
+
+The first round of human verification (Phase 2 Part F) reported two errors in
+`data/VERIFY.pdf`. Both were checked against the PDFs and both were wrong:
+`ACCT 2010 Principles of Accounting I` is what the SBM School Requirements
+state, and `Social Science Track` is a top-level track in the GCS PDF whose
+five required courses are exactly what the data holds. Nothing was changed on
+either report. Re-reading the PDFs line by line to prove that did turn up
+three real defects, fixed here.
+
+**1 · An elective list no longer ends at an "Any SUBJ courses" row.** The IDT
+PDF lists `ELEC | Any ELEC courses at 3000-level | 0-4` *inside* the 21-credit
+Project-related Electives list. Because the row carries a credit figure the
+extractor read it as a new requirement, which closed the list and bound the
+remaining 26 candidates to it. A row that names a subject rather than a course
+and asks for a minimum of zero credits requires nothing, so it is now absorbed
+into the open list. IDT's rule went from 25 of the PDF's 51 courses to all 51,
+plus `ELEC 3xxx` and `ELEC 4xxx`.
+
+**2 · A candidate list may hold named courses *and* an open subject.** GCS's
+`Others — Any SOSC courses` was recorded in the quote and dropped from the
+rule, so the 27-credit requirement demanded all nine courses from the
+Restricted list where the PDF asks for at least four. Both now go into
+`credits_from`. Where such a list also states a course count, the `choose_n`
+rule is replaced by a caveat: a count cannot be checked against a list with no
+end, and inventing a bound would be worse than saying so.
+
+**3 · An option inherits the track it is taken within.** The GCS PDF prints
+`Option(s)` inside the Integrated Humanities and Social Science Track and says
+in words that each option is for "students in the ... Track". The seven option
+variants held the base major plus their own electives and not the track's, so
+each was about 24 credits short.
+
+Position on the page is not enough to establish this, and a first attempt that
+used it was wrong: the PHYS PDF prints `Option(s)` after its IRE Track too,
+and those three options stand alone — the PDF says only "students in the
+Computational Physics with AI Option should also take ...". So an option
+inherits a track only when the option's own prose names it. That keeps the
+seven GCS options and the three CHEM ones (whose PDF says "students in the
+Core Chemistry Track ... may enroll") and leaves PHYS as it was. Where the
+prose offers two routes, as CHEM's does, the data takes the one it names first
+and the sentence itself travels as a caveat. They now carry the track's groups, caveats
+and its one unparsed line — which moves all seven to `unsupported`. That is
+the honest state: they were plannable before only because requirements were
+missing. Parsing that line (the elective block that is 24 credits with one
+capstone choice and 27 with another) would bring them back, and is not done
+here because the PDF states two different requirements and picking one is a
+judgment the data should not make quietly.
+
+**Also:** `RequirementGroup` gains `source_url` (additive, hard rule 9), set
+for the School Requirements groups, which come from a different PDF than the
+program's own. `data/VERIFY.md` prints it. Without it the verification pack
+pointed a reader at the program PDF for a row that is not in it — which is
+what produced the first of the two mistaken reports.
+
+---
+
 ## 2026-11-05 - Four additions to `schema.py`, agreed one at a time
 
 Hard rule 9 forbids changing the six rule types' semantics and allows adding

@@ -105,7 +105,8 @@
      ]
     }
    ],
-   "source_quote": "ACCT | 2010 | Principles of Accounting I | 3\n\nECON | Note: ECON 2103 OR ECON 2113 | 3\n\nECON | Note: ECON 2123 OR ECON 3123 (BSc ECOF students can only use ECON 3123 to fulfill this requirement; while others should take ECON 2123) | 3\n\nFINA | 2303 | Financial Management | 3\n\nISOM | 2010 | Introduction to Information Systems | 3\n\nISOM | 2020 | Coding for Business | 1\n\nISOM | 2500 | Business Statistics | 3\n\nISOM | 2600 | Introduction to Business Analytics | 1\n\nMGMT | 2010 | Business Ethics and the Individual | 2\n\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\n\nMATH | Note: MATH 1003 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\n\nSB&M | Note: Courses for BBA majors: ACCT 2200 AND ISOM 2700 AND MARK 2120 AND MGMT 2110 (Students who enroll in the BSc majors of SBM are not required to take these courses for graduation) | 12"
+   "source_quote": "ACCT | 2010 | Principles of Accounting I | 3\n\nECON | Note: ECON 2103 OR ECON 2113 | 3\n\nECON | Note: ECON 2123 OR ECON 3123 (BSc ECOF students can only use ECON 3123 to fulfill this requirement; while others should take ECON 2123) | 3\n\nFINA | 2303 | Financial Management | 3\n\nISOM | 2010 | Introduction to Information Systems | 3\n\nISOM | 2020 | Coding for Business | 1\n\nISOM | 2500 | Business Statistics | 3\n\nISOM | 2600 | Introduction to Business Analytics | 1\n\nMGMT | 2010 | Business Ethics and the Individual | 2\n\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\n\nMATH | Note: MATH 1003 OR MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\n\nSB&M | Note: Courses for BBA majors: ACCT 2200 AND ISOM 2700 AND MARK 2120 AND MGMT 2110 (Students who enroll in the BSc majors of SBM are not required to take these courses for graduation) | 12",
+   "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf"
   },
   {
    "name": "Required Course(s)",
@@ -300,7 +301,8 @@
      ]
     }
    ],
-   "source_quote": "RMBI | 2001 | Academic and Professional Development in Risk Management and Business Intelligence | 0\n\nRMBI | 3110 | Introduction to Risk Management and Business Intelligence | 3\n\nRMBI | 4310 | Advanced Data Mining for Risk Management and Business Intelligence | 3\n\nRMBI | 4980 | Risk Management and Business Intelligence Capstone Project I | 4\n\nRMBI | 4990 | Risk Management and Business Intelligence Capstone Project II | 4\n\nACCT | 2010 | Principles of Accounting I | 3\n\nECON | Note: ECON 2103 OR ECON 2113 | 3\n\nECON | 2123 | Macroeconomics | 3\n\nFINA | 2303 | Financial Management | 3\n\nISOM | 2010 | Introduction to Information Systems | 3\n\nISOM | 2700 | Operations Management | 3\n\nISOM/COMP | Note: ISOM 3360 OR COMP 4331 | 3\n\nISOM/COMP | Note: ISOM 3370 OR COMP 4651 | 3\n\nISOM/MATH | Note: ISOM 3540 OR MATH 2421 | 3-4\n\nISOM | 3710 | Business Modeling and Optimization | 4\n\nISOM | 4520 | Statistics for Financial Risk Management | 4\n\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\n\nCOMP | 1023 | Introduction to Python Programming | 3\n\nMATH | Note: [(MATH 1003 OR MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\n\nMATH | Note: MATH 2011 OR MATH 2023 | 3-4\n\nMATH | Note: MATH 2111 OR MATH 2121 | 3-4\n\nMATH | 2411 | Applied Statistics | 4"
+   "source_quote": "RMBI | 2001 | Academic and Professional Development in Risk Management and Business Intelligence | 0\n\nRMBI | 3110 | Introduction to Risk Management and Business Intelligence | 3\n\nRMBI | 4310 | Advanced Data Mining for Risk Management and Business Intelligence | 3\n\nRMBI | 4980 | Risk Management and Business Intelligence Capstone Project I | 4\n\nRMBI | 4990 | Risk Management and Business Intelligence Capstone Project II | 4\n\nACCT | 2010 | Principles of Accounting I | 3\n\nECON | Note: ECON 2103 OR ECON 2113 | 3\n\nECON | 2123 | Macroeconomics | 3\n\nFINA | 2303 | Financial Management | 3\n\nISOM | 2010 | Introduction to Information Systems | 3\n\nISOM | 2700 | Operations Management | 3\n\nISOM/COMP | Note: ISOM 3360 OR COMP 4331 | 3\n\nISOM/COMP | Note: ISOM 3370 OR COMP 4651 | 3\n\nISOM/MATH | Note: ISOM 3540 OR MATH 2421 | 3-4\n\nISOM | 3710 | Business Modeling and Optimization | 4\n\nISOM | 4520 | Statistics for Financial Risk Management | 4\n\nMGMT | 2130 | Business Ethics and Social Responsibility | 2\n\nCOMP | 1023 | Introduction to Python Programming | 3\n\nMATH | Note: [(MATH 1003 OR MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\n\nMATH | Note: MATH 2011 OR MATH 2023 | 3-4\n\nMATH | Note: MATH 2111 OR MATH 2121 | 3-4\n\nMATH | 2411 | Applied Statistics | 4",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -358,7 +360,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "RMBI/FINA/ISOM/COMP/IEDA/MATH | Risk Management and Business Intelligence Electives (Courses from the specified electives list, of which at least 1 course should be taken from each area and at least 6 credits at 3000- level or above) | 9\n  [Area 1: Risk Management]\n  [Area 2: Business Intelligence]\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]"
+   "source_quote": "RMBI/FINA/ISOM/COMP/IEDA/MATH | Risk Management and Business Intelligence Electives (Courses from the specified electives list, of which at least 1 course should be taken from each area and at least 6 credits at 3000- level or above) | 9\n  [Area 1: Risk Management]\n  [Area 2: Business Intelligence]\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]",
+   "source_url": null
   }
  ],
  "stated_total_credits": 120.0,

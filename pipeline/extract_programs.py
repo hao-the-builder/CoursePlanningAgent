@@ -211,6 +211,9 @@ class Variant:
     groups: list[RequirementGroup] = field(default_factory=list)
     caveats: list[str] = field(default_factory=list)
     unparsed: list[str] = field(default_factory=list)
+    inside: str | None = None      # the track an option is offered within:
+                                   # its requirements apply on top of the
+                                   # track's, not instead of them
 
 
 def cells_of(line: str) -> list[str]:
@@ -297,11 +300,25 @@ def _elective_rules(pending: Pending) -> tuple[list, str]:
 
     if pending.courses:
         unique = list(dict.fromkeys(pending.courses))
-        rules: list = [CreditsFrom(patterns=unique, min_credits=low)]
+        # The list can name courses *and* admit a whole subject ("Others —
+        # Any SOSC courses"). Both fill it, so both belong in the rule.
+        open_ended = [p for p in dict.fromkeys(pending.patterns)
+                      if p not in unique]
+        rules: list = [CreditsFrom(patterns=unique + open_ended,
+                                   min_credits=low)]
         count = LIST_ELECTIVE.search(pending.text)
-        if count:
+        if count and not open_ended:
             n = WORDS.get(count.group(1).lower()) or int(count.group(1))
             rules.insert(0, ChooseN(n=n, courses=unique))
+        elif count:
+            # choose_n needs courses it can name, and an open-ended list has
+            # no end. The credits still hold; the course count is reported.
+            subjects = "/".join(dict.fromkeys(p.split()[0] for p in open_ended))
+            caveat = (f"{pending.text.strip()} -- the list also admits any "
+                      f"{subjects} course, so the credits are checked but the "
+                      f"number of courses is not. Confirm the count with your "
+                      f"advisor.")
+            return rules, caveat
         if re.search(r"at least .*(?:area|each)|may not be reused|at most one",
                      pending.text, re.I):
             caveat = (f"{pending.text.strip()} -- the credits and the course "
@@ -364,6 +381,7 @@ def parse(lines: list[str]) -> tuple[list[Variant], bool, list[str]]:
     variants = [base]
     builders = {"": Builder()}
     current = base
+    within: str | None = None      # the track whose Option(s) we are reading
     pending: Pending | None = None
     started = False
     mandatory = False
@@ -436,7 +454,11 @@ def parse(lines: list[str]) -> tuple[list[Variant], bool, list[str]]:
                 close()
                 flush_prose()
                 builders[current.name].flush()
-                current = Variant(head, variant.group(2).lower())
+                kind = variant.group(2).lower()
+                if kind == "track":
+                    within = None            # a track is not inside anything
+                current = Variant(head, kind,
+                                  inside=within if kind == "option" else None)
                 variants.append(current)
                 builders[head] = Builder()
                 builders[head].category = builders[""].category
@@ -446,6 +468,11 @@ def parse(lines: list[str]) -> tuple[list[Variant], bool, list[str]]:
                 continue
             if head in {"Track Study", "Option(s)"}:
                 close()
+                # "Option(s)" printed inside a track's section means every
+                # option below it is taken *within* that track (the GCS PDF
+                # says so in words: "students in the ... Track ... may apply").
+                within = current.name if (head == "Option(s)"
+                                          and current.kind == "track") else None
                 continue
             found = CODE.findall(head)
             if re.search(r"should also take|are required to take", head) and found:
@@ -480,23 +507,30 @@ def parse(lines: list[str]) -> tuple[list[Variant], bool, list[str]]:
             continue
 
         if started and len(cells) >= 2:
-            body = " ".join(cells[1:-1]) if credits_of(cells) else " ".join(cells[1:])
-            if pending and pending.kind == "elective" and not credits_of(cells):
+            row_credits = credits_of(cells)
+            body = " ".join(cells[1:-1]) if row_credits else " ".join(cells[1:])
+            if pending and pending.kind == "elective":
                 subject = ANY_SUBJECT.match(body)
-                if subject:
+                # "Any ELEC courses at 3000-level | 0-4" inside a candidate
+                # list is one more way to fill that list, not a requirement of
+                # its own: a minimum of zero credits requires nothing. Read as
+                # a new requirement it closed the list early and took the rest
+                # of the candidates with it. A row that asks for credits is a
+                # requirement, even when it names a subject rather than a list.
+                if subject and (not row_credits or row_credits[0] == 0):
                     found = level_patterns(subject.group(1).upper(), body)
                     pending.patterns += found or [
                         f"{subject.group(1).upper()} {n}xxx"
                         for n in range(1, MAX_LEVEL + 1)]
                     pending.line += f"\n  {line.strip()}"
                     continue
-                if re.search(r"\d000", body):
+                if not row_credits and re.search(r"\d000", body):
                     pending.patterns += level_patterns(cells[0], body)
                     pending.line += f"\n  {line.strip()}"
                     continue
             close()
             pending = Pending(line=line, kind="elective", text=body or cells[1],
-                              credits=credits_of(cells))
+                              credits=row_credits)
             continue
 
     close()
@@ -582,7 +616,8 @@ def prune_groups(groups: list[RequirementGroup],
                 f"out of this check.")
         if rules:
             out.append(RequirementGroup(name=group.name, category=group.category,
-                                        rules=rules, source_quote=group.source_quote))
+                                        rules=rules, source_quote=group.source_quote,
+                                        source_url=group.source_url))
     return out, caveats, unparsed
 
 # ----------------------------------------------------------- the programs --
@@ -633,14 +668,40 @@ def read_pdf(path: Path) -> list[str]:
         return [line for page in pdf.pages for line in render(page, 3.5, 12.0)]
 
 
+def manifest_url(path: Path) -> str | None:
+    """Where a raw file was downloaded from, as recorded in Phase 1."""
+    global _MANIFEST
+    if _MANIFEST is None:
+        _MANIFEST = {}
+        record = RAW / "_manifest.jsonl"
+        if record.exists():
+            for line in record.read_text(encoding="utf-8").splitlines():
+                if line.strip():
+                    row = json.loads(line)
+                    _MANIFEST[row["path"]] = row["url"]
+    key = path.resolve().relative_to(RAW.resolve().parent).as_posix()
+    return _MANIFEST.get(key)
+
+
+_MANIFEST: dict[str, str] | None = None
+
+
 def school_groups(cache: dict, school: str) -> list[RequirementGroup]:
-    """The School Requirements that every program of this school also carries."""
+    """The School Requirements that every program of this school also carries.
+
+    These are published in their own PDF, so each group records that URL: a
+    reader checking a School row against the program's own PDF will not find
+    it there.
+    """
     if school not in cache:
         path = REQUIREMENTS / f"SREQ-{school}.pdf"
         if not path.exists():
             cache[school] = []
         else:
             variants, _, _ = parse(read_pdf(path))
+            url = manifest_url(path)
+            for group in variants[0].groups:
+                group.source_url = url
             cache[school] = variants[0].groups
     return cache[school]
 
@@ -688,16 +749,32 @@ def build(entry: dict, cache: dict, catalog: set[str]) -> list[Program]:
         tier=Tier.UNSUPPORTED if base_unsupported else Tier.AUTO, **common))
 
     used = {code}
+    by_name = {v.name: v for v in extras}
     for variant in extras:
         child = f"{code}-{suffix(variant.name)}"
         while child in used:
             child += "X"
         used.add(child)
+        # An option offered within a track is the track's requirements plus
+        # its own — the student takes both — so it inherits the track's
+        # groups, caveats and anything the track left unparsed. Printing the
+        # options under a track is not enough to say so: the PHYS PDF prints
+        # them there and they stand alone, while the GCS and CHEM options say
+        # in words which track their students come from. Only that sentence,
+        # in the option's own prose, makes it a nested option.
+        host = by_name.get(variant.inside or "")
+        if host and not any(f"in the {host.name}" in text
+                            for text in variant.caveats):
+            host = None
+        inherited = host.groups if host else []
         programs.append(Program(
             code=child, title=f"{title} - {variant.name}", kind=kind,
-            parent=code, groups=shared + base.groups + variant.groups,
-            caveats=base.caveats + variant.caveats + withdrawn,
-            unparsed_lines=base.unparsed + variant.unparsed, **common))
+            parent=code,
+            groups=shared + base.groups + inherited + variant.groups,
+            caveats=base.caveats + (host.caveats if host else [])
+            + variant.caveats + withdrawn,
+            unparsed_lines=base.unparsed + (host.unparsed if host else [])
+            + variant.unparsed, **common))
 
     for program in programs:
         groups, caveats, unparsed = prune_groups(program.groups, catalog)

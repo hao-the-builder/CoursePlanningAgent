@@ -101,7 +101,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]",
+   "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf"
   },
   {
    "name": "Major Pre-requisite course(s)",
@@ -132,7 +133,8 @@
      ]
     }
    ],
-   "source_quote": "MATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] (Students following IRE track can only use MATH 1023 and MATH 1024 to fulfill the requirement) | 4-6"
+   "source_quote": "MATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] (Students following IRE track can only use MATH 1023 and MATH 1024 to fulfill the requirement) | 4-6",
+   "source_url": null
   },
   {
    "name": "Required Course(s)",
@@ -183,7 +185,8 @@
      ]
     }
    ],
-   "source_quote": "MATH | Note: MATH 2023 OR MATH 2024 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2033 OR MATH 2043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2121 OR MATH 2131 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 3033 OR MATH 3043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.] | 4"
+   "source_quote": "MATH | Note: MATH 2023 OR MATH 2024 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2024 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2033 OR MATH 2043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2043 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 2121 OR MATH 2131 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 2131 to fulfill the requirement.] | 4\n\nMATH | Note: MATH 3033 OR MATH 3043 [Students following IRE Track or Pure Mathematics (Advanced) Track can only use MATH 3043 to fulfill the requirement.] | 4",
+   "source_url": null
   },
   {
    "name": "Statistics Track - Required Course(s)",
@@ -259,7 +262,8 @@
      ]
     }
    ],
-   "source_quote": "MATH | 2411 | Applied Statistics | 4\n\nMATH | Note: MATH 2421 OR MATH 2431 | 4\n\nMATH | 3423 | Statistical Inference | 3\n\nMATH | 3424 | Regression Analysis | 3\n\nMATH | 3426 | Sampling | 3\n\nMATH | 3427 | Bayesian Statistics | 3\n\nMATH | 3428 | Statistical Computing | 3\n\nMATH | Note: MATH 4424 OR MATH 4425 | 3\n\nMATH | Note: MATH 4993 OR MATH 4999 | 3"
+   "source_quote": "MATH | 2411 | Applied Statistics | 4\n\nMATH | Note: MATH 2421 OR MATH 2431 | 4\n\nMATH | 3423 | Statistical Inference | 3\n\nMATH | 3424 | Regression Analysis | 3\n\nMATH | 3426 | Sampling | 3\n\nMATH | 3427 | Bayesian Statistics | 3\n\nMATH | 3428 | Statistical Computing | 3\n\nMATH | Note: MATH 4424 OR MATH 4425 | 3\n\nMATH | Note: MATH 4993 OR MATH 4999 | 3",
+   "source_url": null
   },
   {
    "name": "Statistics Track - Elective Course(s)",
@@ -324,7 +328,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "MATH | Pure or Applied Mathematics Elective (1 course from the specified elective list) | 2\n\nMATH | Pure or Applied Mathematics Elective (1 course from the specified elective list) | 2\n\nMATH | MATH Depth Electives (2 courses from the specified elective list. Courses taken as Required Courses may not be reused to count towards this elective requirement.) | 6\n\nMATH | MATH Depth Electives (2 courses from the specified elective list. Courses taken as Required Courses may not be reused to count towards this elective requirement.) | 6"
+   "source_quote": "MATH | Pure or Applied Mathematics Elective (1 course from the specified elective list) | 2\n\nMATH | Pure or Applied Mathematics Elective (1 course from the specified elective list) | 2\n\nMATH | MATH Depth Electives (2 courses from the specified elective list. Courses taken as Required Courses may not be reused to count towards this elective requirement.) | 6\n\nMATH | MATH Depth Electives (2 courses from the specified elective list. Courses taken as Required Courses may not be reused to count towards this elective requirement.) | 6",
+   "source_url": null
   }
  ],
  "stated_total_credits": 120.0,

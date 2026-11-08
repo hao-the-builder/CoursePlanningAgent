@@ -40,7 +40,8 @@
      ]
     }
    ],
-   "source_quote": "PHYS | Note: PHYS 1111 OR PHYS 1112 OR PHYS 1312 | 3\n\nPHYS | Note: PHYS 1114 OR PHYS 1314 | 3\n\nPHYS | 2022 | Modern Physics | 3"
+   "source_quote": "PHYS | Note: PHYS 1111 OR PHYS 1112 OR PHYS 1312 | 3\n\nPHYS | Note: PHYS 1114 OR PHYS 1314 | 3\n\nPHYS | 2022 | Modern Physics | 3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -54,13 +55,19 @@
       "PHYS 3036",
       "PHYS 3037",
       "PHYS 3053",
-      "PHYS 4050"
+      "PHYS 4050",
+      "PHYS 1xxx",
+      "PHYS 2xxx",
+      "PHYS 3xxx",
+      "PHYS 4xxx",
+      "PHYS 5xxx"
      ],
      "min_credits": 9.0,
      "exclude": []
     }
    ],
-   "source_quote": "PHYS | Physics Electives [Courses from the specified elective list, of which at least one course taken from the list of Restricted Electives.] | 9\n  [Restricted Electives]\n  [Others]\n  PHYS | Courses offered by the Department of Physics at 1000-or 2000-level including PHYS 1002, PHYS 1003 and PHYS 1007, but excluding PHYS 1001, PHYS 1101 and PHYS 2080\n  PHYS | Physics courses at 3000-level or above excluding PHYS 4080"
+   "source_quote": "PHYS | Physics Electives [Courses from the specified elective list, of which at least one course taken from the list of Restricted Electives.] | 9\n  [Restricted Electives]\n  [Others]\n  PHYS | Courses offered by the Department of Physics at 1000-or 2000-level including PHYS 1002, PHYS 1003 and PHYS 1007, but excluding PHYS 1001, PHYS 1101 and PHYS 2080\n  PHYS | Physics courses at 3000-level or above excluding PHYS 4080",
+   "source_url": null
   }
  ],
  "stated_total_credits": 18.0,

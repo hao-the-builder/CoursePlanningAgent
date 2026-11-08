@@ -9,6 +9,10 @@ and nothing else.
 say which programs are right. Claude Code then sets `"tier": "verified"`
 in those `data/programs/{CODE}.json` files — nothing else sets that tier.
 
+One exception to the `Source` link: the School Requirements are published
+in a separate PDF, so that group names its own URL and is not in the
+program's PDF at all.
+
 Two of the five are track variants rather than the base program, because
 `BSc in Mathematics` and `BSc in Global China Studies` both require the
 student to choose a track, so the base on its own is not a plannable
@@ -70,6 +74,8 @@ Tier: `auto_extracted` · 5 groups · 16 rules · at least 61 credits · states 
 
 ### Requirements  _(School)_
 
+Read this group against <https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf>, not the program's own PDF.
+
 | # | What the data says | The line it came from |
 |---|---|---|
 | 1 | must take one of: COMP 1021 (Introduction to Computer Science, 3 cr)  **OR**  COMP 1023 (Introduction to Python Programming, 3 cr) | `COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3` |
@@ -128,6 +134,8 @@ Tier: `auto_extracted` · 3 groups · 20 rules · at least 55 credits · states 
 
 ### Requirements  _(School)_
 
+Read this group against <https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27sbm_requirements.pdf>, not the program's own PDF.
+
 | # | What the data says | The line it came from |
 |---|---|---|
 | 1 | must take ACCT 2010 (Principles of Accounting I, 3 cr) | `ACCT | 2010 | Principles of Accounting I | 3` |
@@ -166,7 +174,7 @@ Tier: `auto_extracted` · 3 groups · 20 rules · at least 55 credits · states 
 ## GCS-SS — BSc in Global China Studies - Social Science Track
 
 Source: <https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf>  
-Tier: `auto_extracted` · 3 groups · 15 rules · at least 66 credits · states 120 for the degree
+Tier: `auto_extracted` · 3 groups · 14 rules · at least 39 credits · states 120 for the degree
 
 ### Required Course(s)  _(Major)_
 
@@ -199,18 +207,15 @@ Tier: `auto_extracted` · 3 groups · 15 rules · at least 66 credits · states 
 | 2 | at least 6 credits from SOSC 1780, SOSC 1860, SOSC 1960, SOSC 1980 | `SOSC | Disciplinary Foundation Electives (2 courses from the specified elective list, of which the courses should be taken from different areas.) | 6
   [Introductory Demography]
   [Introductory Psychology]` |
-| 3 | must take 9 of these 9: SOSC 3120, SOSC 3520, SOSC 3540, SOSC 3630, SOSC 3880, SOSC 4260, SOSC 4280, SOSC 4310, SOSC 4600 | `SOSC | SOSC Electives (9 courses from the specified elective list, of which at least 4 courses must come from the list under "Restricted Electives".) | 27
-  [Restricted Electives]
-  [Others]
-  SOSC | Any SOSC courses` |
-| 4 | at least 27 credits from SOSC 3120, SOSC 3520, SOSC 3540, SOSC 3630, SOSC 3880, SOSC 4260, SOSC 4280, SOSC 4310, SOSC 4600 | `SOSC | SOSC Electives (9 courses from the specified elective list, of which at least 4 courses must come from the list under "Restricted Electives".) | 27
+| 3 | at least 27 credits from SOSC 3120, SOSC 3520, SOSC 3540, SOSC 3630, SOSC 3880, SOSC 4260, SOSC 4280, SOSC 4310, SOSC 4600, SOSC 1xxx, SOSC 2xxx, SOSC 3xxx, SOSC 4xxx, SOSC 5xxx | `SOSC | SOSC Electives (9 courses from the specified elective list, of which at least 4 courses must come from the list under "Restricted Electives".) | 27
   [Restricted Electives]
   [Others]
   SOSC | Any SOSC courses` |
 
-### Caveats (3) — shown, not checked
+### Caveats (4) — shown, not checked
 
 - SHSS 4991 OR SHSS 4992 OR (SHSS 4991 AND SHSS 4993) -- [For students taking one of the Research Options, they should take SHSS 4992 OR (SHSS 4991 AND SHSS 4993)]
+- SOSC Electives (9 courses from the specified elective list, of which at least 4 courses must come from the list under "Restricted Electives".) -- the list also admits any SOSC course, so the credits are checked but the number of courses is not. Confirm the count with your advisor.
 - SOSC 4290: The course was last offered in 2023-24 and was deleted subsequently.
 - Social Science Track - Elective Course(s): SOSC 4290 is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check.
 
@@ -219,7 +224,7 @@ Tier: `auto_extracted` · 3 groups · 15 rules · at least 66 credits · states 
 ## IDT — BSc in Innovation, Design and Technology
 
 Source: <https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27idt.pdf>  
-Tier: `auto_extracted` · 2 groups · 29 rules · at least 84 credits · states 120 for the degree
+Tier: `auto_extracted` · 2 groups · 27 rules · at least 84 credits · states 120 for the degree
 
 ### Required Course(s)  _(Major)_
 
@@ -256,13 +261,11 @@ Tier: `auto_extracted` · 2 groups · 29 rules · at least 84 credits · states 
 | # | What the data says | The line it came from |
 |---|---|---|
 | 1 | at least 6 credits from ISDN 3350, ISDN 3360, ISDN 4200, ENTR 3100, FINA 2203, ISOM 2030, ISOM 2700, ISOM 4020, MARK 2120, TEMG 3950, TEMG 4940, TEMG 4950, TEMG 4970 | `ISDN/ENTR/SBM/TEMG | Product Management and Entrepreneurship Electives (Courses from the specified elective list, of which at least 1 course must be at 3000-level or above.) | 6` |
-| 2 | at least 21 credits from ISDN 2210, ISDN 3004, ISDN 3150, ISDN 3300, BIEN 3320, COMP 2011, COMP 2012, COMP 2211, COMP 2611, COMP 3111, COMP 3211, COMP 3311, COMP 3711, COMP 4021, COMP 4221, COMP 4331, COMP 4411, COMP 4421, COMP 4461, COMP 4462, COMP 4521, COMP 4632, COMP 4641, COMP 4651, COMP 4901 | `ISDN/SENG/MATH | Project-related Electives (Courses from the specified elective list, of which at least 12 credits should be at 3000-level or above and no more than 3 credits at 1000-level. Students should seek approval of their advisor for the choices of courses.) | 21` |
-| 3 | at least 0 credits from ELEC 3xxx | `ELEC | Any ELEC courses at 3000-level | 0-4` |
-| 4 | at least 0 credits from ELEC 2100, ELEC 2350, ELEC 2400, ELEC 2600, IEDA 2520, MATH 2011, MATH 2111, MATH 2343, MATH 2350, MATH 2411, MECH 2020, MECH 2040, MECH 2210, MECH 2310, MECH 2410, MECH 2520, MECH 3030, MECH 3300, MECH 3310, MECH 3420, MECH 3510, MECH 3610, MECH 3907, MECH 4450, MECH 4710, MECH 4740 | `ELEC | Any ELEC courses at 4000-level | 0-4` |
+| 2 | at least 21 credits from ISDN 2210, ISDN 3004, ISDN 3150, ISDN 3300, BIEN 3320, COMP 2011, COMP 2012, COMP 2211, COMP 2611, COMP 3111, COMP 3211, COMP 3311, COMP 3711, COMP 4021, COMP 4221, COMP 4331, COMP 4411, COMP 4421, COMP 4461, COMP 4462, COMP 4521, COMP 4632, COMP 4641, COMP 4651, COMP 4901, ELEC 2100, ELEC 2350, ELEC 2400, ELEC 2600, IEDA 2520, MATH 2011, MATH 2111, MATH 2343, MATH 2350, MATH 2411, MECH 2020, MECH 2040, MECH 2210, MECH 2310, MECH 2410, MECH 2520, MECH 3030, MECH 3300, MECH 3310, MECH 3420, MECH 3510, MECH 3610, MECH 3907, MECH 4450, MECH 4710, MECH 4740, ELEC 3xxx, ELEC 4xxx | `ISDN/SENG/MATH | Project-related Electives (Courses from the specified elective list, of which at least 12 credits should be at 3000-level or above and no more than 3 credits at 1000-level. Students should seek approval of their advisor for the choices of courses.) | 21
+  ELEC | Any ELEC courses at ` |
 
-### Caveats (2) — shown, not checked
+### Caveats (1) — shown, not checked
 
 - [MATH 1006 OR MATH 1013 OR MATH 1023 AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] -- (Subject to approval of the program office, MATH 1014/1024 may be replaced by a COMP course)
-- Any ELEC courses at 3000-level -- the requirement PDF states no credit minimum here, so nothing is enforced; the courses that count are recorded.
 
 ---

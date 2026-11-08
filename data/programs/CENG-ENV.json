@@ -54,7 +54,8 @@
      ]
     }
    ],
-   "source_quote": "COMP | Note: COMP 1022P OR COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\n\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\n\nMATH | Note: MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\n\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3"
+   "source_quote": "COMP | Note: COMP 1022P OR COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\n\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\n\nMATH | Note: MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\n\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3",
+   "source_url": null
   },
   {
    "name": "Required Course(s)",
@@ -203,7 +204,8 @@
      ]
     }
    ],
-   "source_quote": "CENG | 1000 | Foundations of Chemical and Biological Engineering | 3\n\nCENG | 1010 | Academic and Professional Development I | 0\n\nCENG | 1110 | Introduction to Chemical Engineering | 3\n\nCENG | 1500 | A First Course on Materials Science and Applications | 3\n\nCENG | 2210 | Chemical and Biological Engineering Thermodynamics | 3\n\nCENG | 2220 | Transport Phenomena I | 3\n\nCENG | 2310 | Modeling for Chemical and Biological Engineering I | 3\n\nCENG | 2320 | Modeling for Chemical and Biological Engineering II | 3\n\nCENG | 3110 | Process Dynamics and Control | 3\n\nCENG | 3150 | Integrated Chemical Process and Product Design | 5\n\nCENG | 3210 | Separation Processes | 3\n\nCENG | 3220 | Transport Phenomena II | 3\n\nCENG | 3230 | Chemical and Biological Reaction Engineering | 3\n\nCENG | 3300 | Data Science for Molecular Engineering | 3\n\nCENG | 3950 | Chemical and Environmental Engineering Laboratory** | 4\n\nCENG | 4020 | Academic and Professional Development II | 0\n\nCENG | Note: CENG 4920 OR CENG 4930 OR CENG 4940 | 6\n\nBIEN/LIFS | Note: BIEN 2410 OR BIEN 2610 OR LIFS 1901 | 3\n\nCHEM | 1052 | Laboratory for General Chemistry B | 1\n\nCHEM | 2111 | Fundamentals of Organic Chemistry | 3\n\nCHEM | 2155 | Fundamental Organic Chemistry Laboratory | 1"
+   "source_quote": "CENG | 1000 | Foundations of Chemical and Biological Engineering | 3\n\nCENG | 1010 | Academic and Professional Development I | 0\n\nCENG | 1110 | Introduction to Chemical Engineering | 3\n\nCENG | 1500 | A First Course on Materials Science and Applications | 3\n\nCENG | 2210 | Chemical and Biological Engineering Thermodynamics | 3\n\nCENG | 2220 | Transport Phenomena I | 3\n\nCENG | 2310 | Modeling for Chemical and Biological Engineering I | 3\n\nCENG | 2320 | Modeling for Chemical and Biological Engineering II | 3\n\nCENG | 3110 | Process Dynamics and Control | 3\n\nCENG | 3150 | Integrated Chemical Process and Product Design | 5\n\nCENG | 3210 | Separation Processes | 3\n\nCENG | 3220 | Transport Phenomena II | 3\n\nCENG | 3230 | Chemical and Biological Reaction Engineering | 3\n\nCENG | 3300 | Data Science for Molecular Engineering | 3\n\nCENG | 3950 | Chemical and Environmental Engineering Laboratory** | 4\n\nCENG | 4020 | Academic and Professional Development II | 0\n\nCENG | Note: CENG 4920 OR CENG 4930 OR CENG 4940 | 6\n\nBIEN/LIFS | Note: BIEN 2410 OR BIEN 2610 OR LIFS 1901 | 3\n\nCHEM | 1052 | Laboratory for General Chemistry B | 1\n\nCHEM | 2111 | Fundamentals of Organic Chemistry | 3\n\nCHEM | 2155 | Fundamental Organic Chemistry Laboratory | 1",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -240,7 +242,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "CENG/BIEN/COMP/ENEG/CHEM | CENG Electives (Courses from the specified list; students taking the Environment Option must take CENG 4140 and CENG 4710.) | 12\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]"
+   "source_quote": "CENG/BIEN/COMP/ENEG/CHEM | CENG Electives (Courses from the specified list; students taking the Environment Option must take CENG 4140 and CENG 4710.) | 12\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]",
+   "source_url": null
   },
   {
    "name": "Requirements",
@@ -254,7 +257,8 @@
      ]
     }
    ],
-   "source_quote": "Students in the Environment Option should also take CENG 4140 and CENG 4710 to fulfill the CENG"
+   "source_quote": "Students in the Environment Option should also take CENG 4140 and CENG 4710 to fulfill the CENG",
+   "source_url": null
   },
   {
    "name": "Environment Option - Required Course(s)",
@@ -267,7 +271,8 @@
      ]
     }
    ],
-   "source_quote": "ENEG | 1700 | Introduction to Energy and Environmental Engineering | 3"
+   "source_quote": "ENEG | 1700 | Introduction to Energy and Environmental Engineering | 3",
+   "source_url": null
   },
   {
    "name": "Environment Option - Elective Course(s)",
@@ -297,7 +302,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "CENG/CIVL/ | Environment Electives (1 course from the specified elective list) | 3\n  [ENVR]\n\nCENG/CIVL/ | Environment Electives (1 course from the specified elective list) | 3\n  [ENVR]"
+   "source_quote": "CENG/CIVL/ | Environment Electives (1 course from the specified elective list) | 3\n  [ENVR]\n\nCENG/CIVL/ | Environment Electives (1 course from the specified elective list) | 3\n  [ENVR]",
+   "source_url": null
   }
  ],
  "stated_total_credits": 120.0,

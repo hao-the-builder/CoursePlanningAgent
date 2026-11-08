@@ -20,7 +20,8 @@
      ]
     }
    ],
-   "source_quote": "OCES/ENVR | Note: OCES 1010 OR ENVR 2010 | 3"
+   "source_quote": "OCES/ENVR | Note: OCES 1010 OR ENVR 2010 | 3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -89,7 +90,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "ENVS/CHEM/OCES/ENVR | Environmental Science Depth Electives (3 courses from the specified elective list. Students may use either CHEM 2310 or CHEM 2311, but not both, to count towards this elective requirement.) | 9\n\nENVS/CHEM/OCES/ENVR | Environmental Science Depth Electives (3 courses from the specified elective list. Students may use either CHEM 2310 or CHEM 2311, but not both, to count towards this elective requirement.) | 9\n\nLIFS/CHEM/OCES/PHYS/ENVR | Environmental Science Foundation Electives (2 courses from the specified elective list. Students may only use one course out of LIFS 1901, LIFS 1902 and CHEM 1011 to count towards this elective requirement.) | 6\n\nLIFS/CHEM/OCES/PHYS/ENVR | Environmental Science Foundation Electives (2 courses from the specified elective list. Students may only use one course out of LIFS 1901, LIFS 1902 and CHEM 1011 to count towards this elective requirement.) | 6"
+   "source_quote": "ENVS/CHEM/OCES/ENVR | Environmental Science Depth Electives (3 courses from the specified elective list. Students may use either CHEM 2310 or CHEM 2311, but not both, to count towards this elective requirement.) | 9\n\nENVS/CHEM/OCES/ENVR | Environmental Science Depth Electives (3 courses from the specified elective list. Students may use either CHEM 2310 or CHEM 2311, but not both, to count towards this elective requirement.) | 9\n\nLIFS/CHEM/OCES/PHYS/ENVR | Environmental Science Foundation Electives (2 courses from the specified elective list. Students may only use one course out of LIFS 1901, LIFS 1902 and CHEM 1011 to count towards this elective requirement.) | 6\n\nLIFS/CHEM/OCES/PHYS/ENVR | Environmental Science Foundation Electives (2 courses from the specified elective list. Students may only use one course out of LIFS 1901, LIFS 1902 and CHEM 1011 to count towards this elective requirement.) | 6",
+   "source_url": null
   }
  ],
  "stated_total_credits": 18.0,

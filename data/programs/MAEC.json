@@ -101,7 +101,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]"
+   "source_quote": "COMP | Note: COMP 1021 OR COMP 1022P OR COMP 1023 | 3\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]\n\nSSCI | Science Foundation courses [6 courses from the specified elective list, including at least 1 lecture course, but no more than 3 courses (including lecture and laboratory courses), from each of the four disciplines: CHEM, LIFS/OCES, MATH/DASC and PHYS.]",
+   "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ssci_requirements.pdf"
   },
   {
    "name": "Required Course(s)",
@@ -255,27 +256,21 @@
      ]
     }
    ],
-   "source_quote": "MATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\n\nMATH | Note: MATH 2023 OR MATH 2024 | 4\n\nMATH | Note: MATH 2033 OR MATH 2043 | 4\n\nMATH | Note: MATH 2121 OR MATH 2131 | 4\n\nMATH | 2411 | Applied Statistics | 4\n\nMATH | Note: MATH 3033 OR MATH 3043 | 4\n\nMATH/ECON | Note: MATH 4994 OR MATH 4999 OR ECON 4670 | 0-3\n\nECON | Note: ECON 2103 OR ECON 2113 | 3\n\nECON | 3113 | Microeconomic Theory I | 4\n\nECON | 3123 | Macroeconomic Theory I | 3\n\nECON | 3133 | Microeconomic Theory II | 4\n\nECON | 3143 | Macroeconomic Theory II | 4\n\nECON | 3334 | Introduction to Econometrics | 4\n\nACCT | 2010 | Principles of Accounting I | 3\n\nFINA | 2203 | Fundamentals of Business Finance | 3\n\nCOMP | 1023 | Introduction to Python Programming | 3"
+   "source_quote": "MATH | Note: [(MATH 1013 OR MATH 1023) AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] | 4-6\n\nMATH | Note: MATH 2023 OR MATH 2024 | 4\n\nMATH | Note: MATH 2033 OR MATH 2043 | 4\n\nMATH | Note: MATH 2121 OR MATH 2131 | 4\n\nMATH | 2411 | Applied Statistics | 4\n\nMATH | Note: MATH 3033 OR MATH 3043 | 4\n\nMATH/ECON | Note: MATH 4994 OR MATH 4999 OR ECON 4670 | 0-3\n\nECON | Note: ECON 2103 OR ECON 2113 | 3\n\nECON | 3113 | Microeconomic Theory I | 4\n\nECON | 3123 | Macroeconomic Theory I | 3\n\nECON | 3133 | Microeconomic Theory II | 4\n\nECON | 3143 | Macroeconomic Theory II | 4\n\nECON | 3334 | Introduction to Econometrics | 4\n\nACCT | 2010 | Principles of Accounting I | 3\n\nFINA | 2203 | Fundamentals of Business Finance | 3\n\nCOMP | 1023 | Introduction to Python Programming | 3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
    "category": "Major",
    "rules": [
     {
-     "type": "choose_n",
-     "n": 2,
-     "courses": [
-      "MATH 3423",
-      "MATH 3425",
-      "MATH 3426"
-     ]
-    },
-    {
      "type": "credits_from",
      "patterns": [
       "MATH 3423",
       "MATH 3425",
-      "MATH 3426"
+      "MATH 3426",
+      "MATH 4xxx",
+      "MATH 5xxx"
      ],
      "min_credits": 6.0,
      "exclude": []
@@ -331,7 +326,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "MATH | MATH Depth Electives (2 courses from the specified elective list. Courses taken as Major Required Courses may not be counted towards this elective requirement.) | 6\n  MATH | Mathematics courses at 4000-level or above\n\nMATH | MATH Depth Electives (2 courses from the specified elective list. Courses taken as Major Required Courses may not be counted towards this elective requirement.) | 6\n  MATH | Mathematics courses at 4000-level or above\n\nECON | ECON 4000-level or above Electives (At least 2 courses of the subject and level as specified) | 8\n\nSSCI | Science Foundation course (2 courses from the specified elective list) | 6\n\nSSCI | Science Foundation course (2 courses from the specified elective list) | 6"
+   "source_quote": "MATH | MATH Depth Electives (2 courses from the specified elective list. Courses taken as Major Required Courses may not be counted towards this elective requirement.) | 6\n  MATH | Mathematics courses at 4000-level or above\n\nECON | ECON 4000-level or above Electives (At least 2 courses of the subject and level as specified) | 8\n\nSSCI | Science Foundation course (2 courses from the specified elective list) | 6\n\nSSCI | Science Foundation course (2 courses from the specified elective list) | 6",
+   "source_url": null
   }
  ],
  "stated_total_credits": 120.0,
@@ -340,6 +336,7 @@
  "tier": "auto_extracted",
  "unparsed_lines": [],
  "caveats": [
+  "MATH Depth Electives (2 courses from the specified elective list. Courses taken as Major Required Courses may not be counted towards this elective requirement.) -- the list also admits any MATH course, so the credits are checked but the number of courses is not. Confirm the count with your advisor.",
   "Requirements: COMP 1022P is named in the requirement PDF but not in the 2026-27 course catalog, so it was left out of this check."
  ],
  "parent": null

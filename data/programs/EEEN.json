@@ -62,7 +62,8 @@
      ]
     }
    ],
-   "source_quote": "COMP | Note: COMP 1023 OR [(COMP 1022P OR COMP 2011 OR COMP 2012H) AND COMP 1029P] | 3-6\n\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\n\nCHEM | 1052 | Laboratory for General Chemistry B | 1\n\nMATH | Note: MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\n\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3"
+   "source_quote": "COMP | Note: COMP 1023 OR [(COMP 1022P OR COMP 2011 OR COMP 2012H) AND COMP 1029P] | 3-6\n\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\n\nCHEM | 1052 | Laboratory for General Chemistry B | 1\n\nMATH | Note: MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\n\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3",
+   "source_url": null
   },
   {
    "name": "Required Course(s)",
@@ -196,7 +197,8 @@
      ]
     }
    ],
-   "source_quote": "ENEG | 1700 | Introduction to Energy and Environmental Engineering | 3\n\nENEG | 3110 | Materials for Energy Technologies | 3\n\nENEG | 3910 | Sustainable Energy Laboratory** | 3**\n\nENEG | Note: ENEG 4920 OR ENEG 4930 OR ENEG 4940 | 6\n\nCENG | 1000 | Foundations of Chemical and Biological Engineering | 3\n\nCENG | 1010 | Academic and Professional Development I | 0\n\nCENG | 2210 | Chemical and Biological Engineering Thermodynamics | 3\n\nCENG | 2220 | Transport Phenomena I | 3\n\nCENG | 2310 | Modeling for Chemical and Biological Engineering I | 3\n\nCENG | 2320 | Modeling for Chemical and Biological Engineering II | 3\n\nCENG | 3150 | Integrated Chemical Process and Product Design | 5\n\nCENG | 3220 | Transport Phenomena II | 3\n\nCENG | 3230 | Chemical and Biological Reaction Engineering | 3\n\nCENG | 4020 | Academic and Professional Development II | 0\n\nCENG | 4140 | Energy Resources, Conversions and Technologies | 3\n\nCENG | 4710 | Environmental Control | 3\n\nCENG/CIVL | Note: CENG 4720 OR CIVL 4430 | 3\n\nELEC | 2420 | Basic Electronics | 3\n\nPPOL | 3210 | Energy Policy | 3"
+   "source_quote": "ENEG | 1700 | Introduction to Energy and Environmental Engineering | 3\n\nENEG | 3110 | Materials for Energy Technologies | 3\n\nENEG | 3910 | Sustainable Energy Laboratory** | 3**\n\nENEG | Note: ENEG 4920 OR ENEG 4930 OR ENEG 4940 | 6\n\nCENG | 1000 | Foundations of Chemical and Biological Engineering | 3\n\nCENG | 1010 | Academic and Professional Development I | 0\n\nCENG | 2210 | Chemical and Biological Engineering Thermodynamics | 3\n\nCENG | 2220 | Transport Phenomena I | 3\n\nCENG | 2310 | Modeling for Chemical and Biological Engineering I | 3\n\nCENG | 2320 | Modeling for Chemical and Biological Engineering II | 3\n\nCENG | 3150 | Integrated Chemical Process and Product Design | 5\n\nCENG | 3220 | Transport Phenomena II | 3\n\nCENG | 3230 | Chemical and Biological Reaction Engineering | 3\n\nCENG | 4020 | Academic and Professional Development II | 0\n\nCENG | 4140 | Energy Resources, Conversions and Technologies | 3\n\nCENG | 4710 | Environmental Control | 3\n\nCENG/CIVL | Note: CENG 4720 OR CIVL 4430 | 3\n\nELEC | 2420 | Basic Electronics | 3\n\nPPOL | 3210 | Energy Policy | 3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -270,7 +272,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "SENG/CHEM/ENVR | Area Electives (5 courses from the specified elective list, of which at least 1 course should be taken from Area 1, and at least 1 course should be taken from Area 2) | 15\n  [Area 1: Energy Engineering Electives]\n  [Area 2: Environmental Engineering Electives]\n  [Area 3: Other Electives]\n\nSENG/CHEM/ENVR | Area Electives (5 courses from the specified elective list, of which at least 1 course should be taken from Area 1, and at least 1 course should be taken from Area 2) | 15\n  [Area 1: Energy Engineering Electives]\n  [Area 2: Environmental Engineering Electives]\n  [Area 3: Other Electives]"
+   "source_quote": "SENG/CHEM/ENVR | Area Electives (5 courses from the specified elective list, of which at least 1 course should be taken from Area 1, and at least 1 course should be taken from Area 2) | 15\n  [Area 1: Energy Engineering Electives]\n  [Area 2: Environmental Engineering Electives]\n  [Area 3: Other Electives]\n\nSENG/CHEM/ENVR | Area Electives (5 courses from the specified elective list, of which at least 1 course should be taken from Area 1, and at least 1 course should be taken from Area 2) | 15\n  [Area 1: Energy Engineering Electives]\n  [Area 2: Environmental Engineering Electives]\n  [Area 3: Other Electives]",
+   "source_url": null
   }
  ],
  "stated_total_credits": 120.0,

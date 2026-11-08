@@ -58,7 +58,8 @@
      ]
     }
    ],
-   "source_quote": "EMIA | 2010A | Cross-disciplinary Seminar: Artificial Intelligence | 0\n\nEMIA | 2020 | Cross-disciplinary Design Thinking | 3\n\nEMIA/COMP/ | Note: EMIA 4110 OR COMP 4211 OR MATH 4432 | 3\n\nEMIA | Note: EMIA 4990 OR EMIA 4991 | 0-3\n\nCOMP | 1023 | Introduction to Python Programming | 3\n\nCOMP | 2211 | Introduction to Artificial Intelligence | 3"
+   "source_quote": "EMIA | 2010A | Cross-disciplinary Seminar: Artificial Intelligence | 0\n\nEMIA | 2020 | Cross-disciplinary Design Thinking | 3\n\nEMIA/COMP/ | Note: EMIA 4110 OR COMP 4211 OR MATH 4432 | 3\n\nEMIA | Note: EMIA 4990 OR EMIA 4991 | 0-3\n\nCOMP | 1023 | Introduction to Python Programming | 3\n\nCOMP | 2211 | Introduction to Artificial Intelligence | 3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -137,7 +138,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "AIS/SSCI/SENG/SBM/SHSS | Artificial Intelligence Electives (Courses from the specified elective list. Students may use at most one course from the same course groups of COMP 1944/CTDL 1902/HUMA 1930, COMP 4462/DASC 3240 and IEDA 3250/MATH 3425 to count towards this elective requirement.) (Students taking EMIA 4990 should take a minimum of 9 credits. Students taking EMIA 4991 should take a minimum of 6 credits.) | 6-9"
+   "source_quote": "AIS/SSCI/SENG/SBM/SHSS | Artificial Intelligence Electives (Courses from the specified elective list. Students may use at most one course from the same course groups of COMP 1944/CTDL 1902/HUMA 1930, COMP 4462/DASC 3240 and IEDA 3250/MATH 3425 to count towards this elective requirement.) (Students taking EMIA 4990 should take a minimum of 9 credits. Students taking EMIA 4991 should take a minimum of 6 credits.) | 6-9",
+   "source_url": null
   }
  ],
  "stated_total_credits": null,

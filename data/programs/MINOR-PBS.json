@@ -29,7 +29,8 @@
      ]
     }
    ],
-   "source_quote": "SOSC | Note: SOSC 1960 OR SOSC 1969 OR SOSC 1980 | 3\n\nSOSC | 1990 | Research Methods in Psychological Science | 3"
+   "source_quote": "SOSC | Note: SOSC 1960 OR SOSC 1969 OR SOSC 1980 | 3\n\nSOSC | 1990 | Research Methods in Psychological Science | 3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -67,7 +68,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "SOSC/MARK/MGMT | Psychological and Behavioral Science Electives (Courses from the two specified elective lists, of which at least two courses from List A, and at least one from List B, with no more than one 1000-level course in total). Courses taken as Required courses may not be counted toward the elective requirement.) | 12\n  [List A: SOSC courses]\n  [List B: SBM courses]"
+   "source_quote": "SOSC/MARK/MGMT | Psychological and Behavioral Science Electives (Courses from the two specified elective lists, of which at least two courses from List A, and at least one from List B, with no more than one 1000-level course in total). Courses taken as Required courses may not be counted toward the elective requirement.) | 12\n  [List A: SOSC courses]\n  [List B: SBM courses]",
+   "source_url": null
   }
  ],
  "stated_total_credits": 18.0,

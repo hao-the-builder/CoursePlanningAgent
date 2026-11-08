@@ -60,7 +60,8 @@
      ]
     }
    ],
-   "source_quote": "COMP | Note: COMP 1022P OR COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\n\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\n\nCHEM | 1052 | Laboratory for General Chemistry B | 1\n\nMATH | Note: MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\n\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3"
+   "source_quote": "COMP | Note: COMP 1022P OR COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\n\nCHEM | 1012 | General Chemistry B: Atomic Structure, Molecules, and Bonding Theories | 3\n\nCHEM | 1052 | Laboratory for General Chemistry B | 1\n\nMATH | Note: MATH 1013 OR MATH 1020 OR MATH 1023 | 3-4\n\nPHYS | Note: PHYS 1112 OR PHYS 1312 | 3",
+   "source_url": null
   },
   {
    "name": "Required Course(s)",
@@ -176,7 +177,8 @@
      ]
     }
    ],
-   "source_quote": "BIEN | 1600 | Introduction to Bioengineering | 3\n\nBIEN | 2410 | Cellular and Systems Physiology for Engineers | 3\n\nBIEN | 2610 | Chemical Biology for Engineers | 3\n\nBIEN | 3250 | Rate and Transport Processes in Biological Systems | 3\n\nBIEN | 3300 | Data Science for Molecular Engineering | 3\n\nBIEN | Note: BIEN 3310 OR BIEN 3320 | 3\n\nBIEN | 3410 | Bioimaging and Image Analysis | 3\n\nBIEN | 3420 | Biosensors and Bioinstrumentation for Healthcare | 3\n\nBIEN | 3910 | Bioengineering Laboratory | 4\n\nBIEN | Note: BIEN 4920 OR BIEN 4930 OR BIEN 4940 | 6\n\nCENG | 1000 | Foundations of Chemical and Biological Engineering | 3\n\nCENG | 1010 | Academic and Professional Development I | 0\n\nCENG | 2210 | Chemical and Biological Engineering Thermodynamics | 3\n\nCENG | 2310 | Modeling for Chemical and Biological Engineering I | 3\n\nCENG | 2320 | Modeling for Chemical and Biological Engineering II | 3\n\nCENG | 4020 | Academic and Professional Development II | 0"
+   "source_quote": "BIEN | 1600 | Introduction to Bioengineering | 3\n\nBIEN | 2410 | Cellular and Systems Physiology for Engineers | 3\n\nBIEN | 2610 | Chemical Biology for Engineers | 3\n\nBIEN | 3250 | Rate and Transport Processes in Biological Systems | 3\n\nBIEN | 3300 | Data Science for Molecular Engineering | 3\n\nBIEN | Note: BIEN 3310 OR BIEN 3320 | 3\n\nBIEN | 3410 | Bioimaging and Image Analysis | 3\n\nBIEN | 3420 | Biosensors and Bioinstrumentation for Healthcare | 3\n\nBIEN | 3910 | Bioengineering Laboratory | 4\n\nBIEN | Note: BIEN 4920 OR BIEN 4930 OR BIEN 4940 | 6\n\nCENG | 1000 | Foundations of Chemical and Biological Engineering | 3\n\nCENG | 1010 | Academic and Professional Development I | 0\n\nCENG | 2210 | Chemical and Biological Engineering Thermodynamics | 3\n\nCENG | 2310 | Modeling for Chemical and Biological Engineering I | 3\n\nCENG | 2320 | Modeling for Chemical and Biological Engineering II | 3\n\nCENG | 4020 | Academic and Professional Development II | 0",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -266,7 +268,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "SSCI/SENG/AIS | Bioengineering Electives (5 courses from the specified elective list, of which at least 9 credits should be taken from a single specialty area (Area 1 or Area 2). Out of the 15 credits taken, at least 9 credits should be at 4000-level or above. Courses taken as Major Required Courses may not be counted towards this elective requirement.) | 15\n  [Area 1: Biomedical Data Acquisition and Analytics]\n  [Area 2: Bioprocesses, Biomaterials and Bioanalysis]\n  [Other electives]\n\nSSCI/SENG/AIS | Bioengineering Electives (5 courses from the specified elective list, of which at least 9 credits should be taken from a single specialty area (Area 1 or Area 2). Out of the 15 credits taken, at least 9 credits should be at 4000-level or above. Courses taken as Major Required Courses may not be counted towards this elective requirement.) | 15\n  [Area 1: Biomedical Data Acquisition and Analytics]\n  [Area 2: Bioprocesses, Biomaterials and Bioanalysis]\n  [Other electives]"
+   "source_quote": "SSCI/SENG/AIS | Bioengineering Electives (5 courses from the specified elective list, of which at least 9 credits should be taken from a single specialty area (Area 1 or Area 2). Out of the 15 credits taken, at least 9 credits should be at 4000-level or above. Courses taken as Major Required Courses may not be counted towards this elective requirement.) | 15\n  [Area 1: Biomedical Data Acquisition and Analytics]\n  [Area 2: Bioprocesses, Biomaterials and Bioanalysis]\n  [Other electives]\n\nSSCI/SENG/AIS | Bioengineering Electives (5 courses from the specified elective list, of which at least 9 credits should be taken from a single specialty area (Area 1 or Area 2). Out of the 15 credits taken, at least 9 credits should be at 4000-level or above. Courses taken as Major Required Courses may not be counted towards this elective requirement.) | 15\n  [Area 1: Biomedical Data Acquisition and Analytics]\n  [Area 2: Bioprocesses, Biomaterials and Bioanalysis]\n  [Other electives]",
+   "source_url": null
   }
  ],
  "stated_total_credits": 120.0,

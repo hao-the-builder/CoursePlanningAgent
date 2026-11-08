@@ -265,6 +265,10 @@ def write_verify(codes: list[str], catalog: dict[str, Course]) -> Path:
         'say which programs are right. Claude Code then sets `"tier": "verified"`',
         "in those `data/programs/{CODE}.json` files — nothing else sets that tier.",
         "",
+        "One exception to the `Source` link: the School Requirements are published",
+        "in a separate PDF, so that group names its own URL and is not in the",
+        "program's PDF at all.",
+        "",
         "Two of the five are track variants rather than the base program, because",
         "`BSc in Mathematics` and `BSc in Global China Studies` both require the",
         "student to choose a track, so the base on its own is not a plannable",
@@ -297,6 +301,11 @@ def write_verify(codes: list[str], catalog: dict[str, Course]) -> Path:
         ]
         for group in program.groups:
             out += [f"### {group.name}  _({group.category.value})_", ""]
+            if group.source_url and group.source_url != program.source_url:
+                # The School Requirements are published in their own PDF, and
+                # looking for them in the program's PDF finds nothing.
+                out += [f"Read this group against <{group.source_url}>, not "
+                        f"the program's own PDF.", ""]
             out += ["| # | What the data says | The line it came from |",
                     "|---|---|---|"]
             # One rule's quote can itself span lines, so rules are separated

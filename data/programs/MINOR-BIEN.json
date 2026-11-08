@@ -54,7 +54,8 @@
      ]
     }
    ],
-   "source_quote": "BIEN/CENG | Note: BIEN 1010 OR CENG 1600 | 3\n\nBIEN/ELEC/LIFS | Note: BIEN 2310 OR BIEN 3320 OR BIEN 3410 OR ELEC 4810 OR LIFS 4320 | 3-4\n\nBIEN/LIFS | Note: BIEN 2410 OR BIEN 2610 OR LIFS 3040 | 3"
+   "source_quote": "BIEN/CENG | Note: BIEN 1010 OR CENG 1600 | 3\n\nBIEN/ELEC/LIFS | Note: BIEN 2310 OR BIEN 3320 OR BIEN 3410 OR ELEC 4810 OR LIFS 4320 | 3-4\n\nBIEN/LIFS | Note: BIEN 2410 OR BIEN 2610 OR LIFS 3040 | 3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -102,7 +103,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "SENG/LIFS | Bioengineering Electives (3 courses from the specified list, of which at least one course must be at 4000-level) | 9\n\nSENG/LIFS | Bioengineering Electives (3 courses from the specified list, of which at least one course must be at 4000-level) | 9"
+   "source_quote": "SENG/LIFS | Bioengineering Electives (3 courses from the specified list, of which at least one course must be at 4000-level) | 9\n\nSENG/LIFS | Bioengineering Electives (3 courses from the specified list, of which at least one course must be at 4000-level) | 9",
+   "source_url": null
   }
  ],
  "stated_total_credits": 18.0,

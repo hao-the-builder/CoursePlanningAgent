@@ -52,7 +52,8 @@
      ]
     }
    ],
-   "source_quote": "IEDA/COMP | Note: IEDA 1180 OR COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\n\nCHEM/PHYS | Note: CHEM 1012 OR PHYS 1112 OR PHYS 1312 | 3\n\nMATH | 2011 | Introduction to Multivariable Calculus | 3\n\nMATH | 2111 | Matrix Algebra and Applications | 3"
+   "source_quote": "IEDA/COMP | Note: IEDA 1180 OR COMP 1023 OR COMP 2011 OR COMP 2012H | 3-5\n\nCHEM/PHYS | Note: CHEM 1012 OR PHYS 1112 OR PHYS 1312 | 3\n\nMATH | 2011 | Introduction to Multivariable Calculus | 3\n\nMATH | 2111 | Matrix Algebra and Applications | 3",
+   "source_url": null
   },
   {
    "name": "Required Course(s)",
@@ -153,7 +154,8 @@
      ]
     }
    ],
-   "source_quote": "IEDA | 1010 | Academic and Professional Development I | 0\n\nIEDA | 1020 | Academic and Professional Development II | 0\n\nIEDA | 1901 | Industrial Training and Experience | 0\n\nIEDA | 2010 | Introduction of Industrial Engineering and Decision Analytics | 3\n\nIEDA | 2520 | Probability for Engineers | 3\n\nIEDA | 2540 | Statistics for Engineers | 3\n\nIEDA | 3010 | Prescriptive Analytics | 3\n\nIEDA | 3230 | Engineering Economics and Accounting | 3\n\nIEDA | 3250 | Stochastic Models | 3\n\nIEDA | 3300 | Industrial Data Systems | 3\n\nIEDA | 4100 | Integrated Production Systems | 3\n\nIEDA | 4130 | System Simulation | 3\n\nIEDA | Note: IEDA 4901 OR IEDA 4960 (Students taking the Research Option must take IEDA 4901) | 6\n\nECON | Note: ECON 2103 OR ECON 2113 | 3"
+   "source_quote": "IEDA | 1010 | Academic and Professional Development I | 0\n\nIEDA | 1020 | Academic and Professional Development II | 0\n\nIEDA | 1901 | Industrial Training and Experience | 0\n\nIEDA | 2010 | Introduction of Industrial Engineering and Decision Analytics | 3\n\nIEDA | 2520 | Probability for Engineers | 3\n\nIEDA | 2540 | Statistics for Engineers | 3\n\nIEDA | 3010 | Prescriptive Analytics | 3\n\nIEDA | 3230 | Engineering Economics and Accounting | 3\n\nIEDA | 3250 | Stochastic Models | 3\n\nIEDA | 3300 | Industrial Data Systems | 3\n\nIEDA | 4100 | Integrated Production Systems | 3\n\nIEDA | 4130 | System Simulation | 3\n\nIEDA | Note: IEDA 4901 OR IEDA 4960 (Students taking the Research Option must take IEDA 4901) | 6\n\nECON | Note: ECON 2103 OR ECON 2113 | 3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -178,7 +180,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "IEDA | Industrial Engineering Electives (Courses from the specified elective list) | 21\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]"
+   "source_quote": "IEDA | Industrial Engineering Electives (Courses from the specified elective list) | 21\n  [Students may opt to graduate with or without an option. Students who take an option MUST complete all requirements]\n  [specified in addition to the major requirements.]",
+   "source_url": null
   },
   {
    "name": "Financial Engineering Option - Required Course(s)",
@@ -191,7 +194,8 @@
      ]
     }
    ],
-   "source_quote": "IEDA | 3330 | Introduction to Financial Engineering | 3"
+   "source_quote": "IEDA | 3330 | Introduction to Financial Engineering | 3",
+   "source_url": null
   },
   {
    "name": "Financial Engineering Option - Elective Course(s)",
@@ -215,7 +219,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "IEDA/FINA/ISOM/RMBI | Financial Engineering Electives (2 courses from the specified elective list) | 6\n\nIEDA/FINA/ISOM/RMBI | Financial Engineering Electives (2 courses from the specified elective list) | 6"
+   "source_quote": "IEDA/FINA/ISOM/RMBI | Financial Engineering Electives (2 courses from the specified elective list) | 6\n\nIEDA/FINA/ISOM/RMBI | Financial Engineering Electives (2 courses from the specified elective list) | 6",
+   "source_url": null
   }
  ],
  "stated_total_credits": 120.0,

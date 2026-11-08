@@ -445,8 +445,8 @@
     "S"
    ],
    "home_areas_note": "",
-   "groups": 5,
-   "rules": 21,
+   "groups": 7,
+   "rules": 25,
    "caveats": 5,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27chem.pdf",
@@ -489,8 +489,8 @@
     "S"
    ],
    "home_areas_note": "",
-   "groups": 5,
-   "rules": 21,
+   "groups": 7,
+   "rules": 25,
    "caveats": 5,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27chem.pdf",
@@ -511,8 +511,8 @@
     "S"
    ],
    "home_areas_note": "",
-   "groups": 5,
-   "rules": 21,
+   "groups": 7,
+   "rules": 25,
    "caveats": 5,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27chem.pdf",
@@ -556,8 +556,8 @@
    ],
    "home_areas_note": "",
    "groups": 4,
-   "rules": 30,
-   "caveats": 5,
+   "rules": 29,
+   "caveats": 6,
    "unparsed_lines": 1,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ciev.pdf",
    "issues_file": "CIEV-RES.issues.md"
@@ -578,8 +578,8 @@
    ],
    "home_areas_note": "",
    "groups": 3,
-   "rules": 29,
-   "caveats": 4,
+   "rules": 28,
+   "caveats": 5,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ciev.pdf",
    "issues_file": null
@@ -1160,7 +1160,7 @@
    "school_name": "School of Humanities and Social Science",
    "department": "School of Humanities and Social Science",
    "parent": "GCS",
-   "tier": "auto_extracted",
+   "tier": "unsupported",
    "default_years": 4,
    "stated_total_credits": 120.0,
    "home_areas": [
@@ -1168,10 +1168,10 @@
     "SA"
    ],
    "home_areas_note": "",
-   "groups": 2,
-   "rules": 7,
-   "caveats": 3,
-   "unparsed_lines": 0,
+   "groups": 4,
+   "rules": 10,
+   "caveats": 5,
+   "unparsed_lines": 1,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
    "issues_file": "GCS-AER.issues.md"
   },
@@ -1183,7 +1183,7 @@
    "school_name": "School of Humanities and Social Science",
    "department": "School of Humanities and Social Science",
    "parent": "GCS",
-   "tier": "auto_extracted",
+   "tier": "unsupported",
    "default_years": 4,
    "stated_total_credits": 120.0,
    "home_areas": [
@@ -1191,10 +1191,10 @@
     "SA"
    ],
    "home_areas_note": "",
-   "groups": 2,
-   "rules": 7,
-   "caveats": 4,
-   "unparsed_lines": 0,
+   "groups": 4,
+   "rules": 10,
+   "caveats": 6,
+   "unparsed_lines": 1,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
    "issues_file": "GCS-ETR.issues.md"
   },
@@ -1206,7 +1206,7 @@
    "school_name": "School of Humanities and Social Science",
    "department": "School of Humanities and Social Science",
    "parent": "GCS",
-   "tier": "auto_extracted",
+   "tier": "unsupported",
    "default_years": 4,
    "stated_total_credits": 120.0,
    "home_areas": [
@@ -1214,10 +1214,10 @@
     "SA"
    ],
    "home_areas_note": "",
-   "groups": 2,
-   "rules": 7,
-   "caveats": 3,
-   "unparsed_lines": 0,
+   "groups": 4,
+   "rules": 10,
+   "caveats": 5,
+   "unparsed_lines": 1,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
    "issues_file": "GCS-HCSR.issues.md"
   },
@@ -1229,7 +1229,7 @@
    "school_name": "School of Humanities and Social Science",
    "department": "School of Humanities and Social Science",
    "parent": "GCS",
-   "tier": "auto_extracted",
+   "tier": "unsupported",
    "default_years": 4,
    "stated_total_credits": 120.0,
    "home_areas": [
@@ -1237,10 +1237,10 @@
     "SA"
    ],
    "home_areas_note": "",
-   "groups": 2,
-   "rules": 7,
-   "caveats": 3,
-   "unparsed_lines": 0,
+   "groups": 4,
+   "rules": 10,
+   "caveats": 5,
+   "unparsed_lines": 1,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
    "issues_file": "GCS-HR.issues.md"
   },
@@ -1275,7 +1275,7 @@
    "school_name": "School of Humanities and Social Science",
    "department": "School of Humanities and Social Science",
    "parent": "GCS",
-   "tier": "auto_extracted",
+   "tier": "unsupported",
    "default_years": 4,
    "stated_total_credits": 120.0,
    "home_areas": [
@@ -1283,10 +1283,10 @@
     "SA"
    ],
    "home_areas_note": "",
-   "groups": 2,
-   "rules": 7,
-   "caveats": 3,
-   "unparsed_lines": 0,
+   "groups": 4,
+   "rules": 10,
+   "caveats": 5,
+   "unparsed_lines": 1,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
    "issues_file": "GCS-LLR.issues.md"
   },
@@ -1298,7 +1298,7 @@
    "school_name": "School of Humanities and Social Science",
    "department": "School of Humanities and Social Science",
    "parent": "GCS",
-   "tier": "auto_extracted",
+   "tier": "unsupported",
    "default_years": 4,
    "stated_total_credits": 120.0,
    "home_areas": [
@@ -1306,10 +1306,10 @@
     "SA"
    ],
    "home_areas_note": "",
-   "groups": 2,
-   "rules": 7,
-   "caveats": 3,
-   "unparsed_lines": 0,
+   "groups": 4,
+   "rules": 10,
+   "caveats": 5,
+   "unparsed_lines": 1,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
    "issues_file": "GCS-PR.issues.md"
   },
@@ -1321,7 +1321,7 @@
    "school_name": "School of Humanities and Social Science",
    "department": "School of Humanities and Social Science",
    "parent": "GCS",
-   "tier": "auto_extracted",
+   "tier": "unsupported",
    "default_years": 4,
    "stated_total_credits": 120.0,
    "home_areas": [
@@ -1329,10 +1329,10 @@
     "SA"
    ],
    "home_areas_note": "",
-   "groups": 2,
-   "rules": 7,
-   "caveats": 3,
-   "unparsed_lines": 0,
+   "groups": 4,
+   "rules": 10,
+   "caveats": 5,
+   "unparsed_lines": 1,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
    "issues_file": "GCS-SR.issues.md"
   },
@@ -1353,8 +1353,8 @@
    ],
    "home_areas_note": "",
    "groups": 3,
-   "rules": 15,
-   "caveats": 3,
+   "rules": 14,
+   "caveats": 4,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
    "issues_file": null
@@ -1398,8 +1398,8 @@
    ],
    "home_areas_note": "",
    "groups": 2,
-   "rules": 29,
-   "caveats": 2,
+   "rules": 27,
+   "caveats": 1,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27idt.pdf",
    "issues_file": null
@@ -1594,8 +1594,8 @@
    ],
    "home_areas_note": "",
    "groups": 3,
-   "rules": 24,
-   "caveats": 1,
+   "rules": 23,
+   "caveats": 2,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27maec.pdf",
    "issues_file": null
@@ -2360,7 +2360,7 @@
    "caveats": 1,
    "unparsed_lines": 0,
    "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27minor-phys.pdf",
-   "issues_file": null
+   "issues_file": "MINOR-PHYS.issues.md"
   },
   {
    "code": "MINOR-ROBO",

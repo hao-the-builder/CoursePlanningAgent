@@ -41,7 +41,8 @@
      ]
     }
    ],
-   "source_quote": "CHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\n\nCHEM | Note: (CHEM 2110 OR CHEM 2111) OR CHEM 2210 OR (CHEM 2310 OR CHEM 2311) OR (CHEM 2401 OR CHEM 2410) (3 courses out of 4 course groups) | 9-10"
+   "source_quote": "CHEM | 1011 | General Chemistry A: Reactions, Thermodynamics, and Reaction Kinetics | 3\n\nCHEM | Note: (CHEM 2110 OR CHEM 2111) OR CHEM 2210 OR (CHEM 2310 OR CHEM 2311) OR (CHEM 2401 OR CHEM 2410) (3 courses out of 4 course groups) | 9-10",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -113,7 +114,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "CHEM | Chemistry Elective (2 courses from the specified elective list, out of which at least 3 credits must be at 4000-level.) | 6\n\nCHEM | Chemistry Elective (2 courses from the specified elective list, out of which at least 3 credits must be at 4000-level.) | 6"
+   "source_quote": "CHEM | Chemistry Elective (2 courses from the specified elective list, out of which at least 3 credits must be at 4000-level.) | 6\n\nCHEM | Chemistry Elective (2 courses from the specified elective list, out of which at least 3 credits must be at 4000-level.) | 6",
+   "source_url": null
   }
  ],
  "stated_total_credits": 18.0,

@@ -60,9 +60,21 @@ term was emptiest, prerequisites be damned.
   published; the class schedule disallows scraping so no course is checked
   against the terms it is offered in; and HKUST publishes no rule on
   final-year-project duration. Each is reported rather than papered over.
-- **Nothing is tier `verified`.** 104 of 129 programs are `auto_extracted`
-  and 25 `unsupported`. `data/VERIFY.md` is written and waiting on a human
-  check.
+- **Nothing is tier `verified`.** 97 of 129 programs are `auto_extracted`
+  and 32 `unsupported`. `data/VERIFY.md` and `data/VERIFY.pdf` are written and
+  waiting on a human check. The first round of that check came back on three
+  programs: both reported errors turned out to be correct extractions, and
+  re-reading the PDFs to prove it found two real bugs the check had passed
+  over (an elective list truncated at an "Any SUBJ courses" row, and the seven
+  GCS research options missing the track they are taken within). Fixing the
+  second is what moved seven programs to `unsupported`: they had been
+  plannable only because 24 credits of requirements were missing.
+- **A test suite that called the real model.** `tests/test_app.py` sets the
+  stub backend with a function-scoped `monkeypatch`, but its module-scoped
+  fixture is built first, so once a developer `.env` existed the full run
+  planned a degree against the subscription backend and timed out after five
+  minutes — 61 errors and 15 minutes for a suite that takes 46 seconds.
+  `tests/conftest.py` now pins `LLM_BACKEND=stub` at collection time.
 - **Phone width is not tested.** A headless screenshot of a Streamlit page
   never settles before the capture, so the 390px layout needs a human eye.
 

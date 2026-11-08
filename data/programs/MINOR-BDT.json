@@ -37,7 +37,8 @@
      ]
     }
    ],
-   "source_quote": "COMP | Note: COMP 2011 OR COMP 2012H | 4-5\n\nCOMP | Note: COMP 4211 OR COMP 4331 | 3\n\nCOMP | 4651 | Cloud Computing and Big Data Systems | 3"
+   "source_quote": "COMP | Note: COMP 2011 OR COMP 2012H | 4-5\n\nCOMP | Note: COMP 4211 OR COMP 4331 | 3\n\nCOMP | 4651 | Cloud Computing and Big Data Systems | 3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -75,7 +76,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "COMP | Big Data Technology Electives (3 courses from the specified elective list. Students may request to use up to 3 credits of courses listed under http://www.cse.ust.hk/ug/minor/BDT/ to count towards this requirement.) | 9\n\nCOMP | Big Data Technology Electives (3 courses from the specified elective list. Students may request to use up to 3 credits of courses listed under http://www.cse.ust.hk/ug/minor/BDT/ to count towards this requirement.) | 9"
+   "source_quote": "COMP | Big Data Technology Electives (3 courses from the specified elective list. Students may request to use up to 3 credits of courses listed under http://www.cse.ust.hk/ug/minor/BDT/ to count towards this requirement.) | 9\n\nCOMP | Big Data Technology Electives (3 courses from the specified elective list. Students may request to use up to 3 credits of courses listed under http://www.cse.ust.hk/ug/minor/BDT/ to count towards this requirement.) | 9",
+   "source_url": null
   }
  ],
  "stated_total_credits": null,

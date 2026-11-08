@@ -49,7 +49,8 @@
      ]
     }
    ],
-   "source_quote": "SUST | 1000 | Sustainability Fundamentals | 3\n\nEMIA | 2010C | Cross-disciplinary Seminar: Sustainability | 0\n\nEMIA | 2020 | Cross-disciplinary Design Thinking | 3\n\nEMIA | Note: EMIA 4990 OR EMIA 4991 | 0-3\n\nENVR | Note: ENVR 3005 OR ENVR 4340 | 3"
+   "source_quote": "SUST | 1000 | Sustainability Fundamentals | 3\n\nEMIA | 2010C | Cross-disciplinary Seminar: Sustainability | 0\n\nEMIA | 2020 | Cross-disciplinary Design Thinking | 3\n\nEMIA | Note: EMIA 4990 OR EMIA 4991 | 0-3\n\nENVR | Note: ENVR 3005 OR ENVR 4340 | 3",
+   "source_url": null
   },
   {
    "name": "Elective(s)",
@@ -110,7 +111,8 @@
      "exclude": []
     }
    ],
-   "source_quote": "SUST | SUST Electives [Courses from the specified elective list. Students may use at most one course from the same course groups of CENG 4720 / CIVL 4430 / ENVR 3210 / OCES 4203; CIVL 1190 / ENVR 1170 and COMP 1021 / COMP 1023 to count towards this elective requirement. (Students opting for EMIA 4990 are required to take a minimum of 15 credits; while those opting for EMIA 4991 a minimum of 12 credits.) Out of the electives taken, at least 6 credits should be at 3000-level or above.] | 12-15"
+   "source_quote": "SUST | SUST Electives [Courses from the specified elective list. Students may use at most one course from the same course groups of CENG 4720 / CIVL 4430 / ENVR 3210 / OCES 4203; CIVL 1190 / ENVR 1170 and COMP 1021 / COMP 1023 to count towards this elective requirement. (Students opting for EMIA 4990 are required to take a minimum of 15 credits; while those opting for EMIA 4991 a minimum of 12 credits.) Out of the electives taken, at least 6 credits should be at 3000-level or above.] | 12-15",
+   "source_url": null
   }
  ],
  "stated_total_credits": null,
