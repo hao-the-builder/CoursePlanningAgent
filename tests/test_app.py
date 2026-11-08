@@ -57,7 +57,8 @@ def planned() -> AppTest:
 def test_the_app_starts_without_an_exception():
     app = started()
     assert not app.exception
-    assert app.title[0].value.endswith("HKUST course planner")
+    # The title is the hero's own <h1> (ui/components.hero), not st.title.
+    assert any("HKUST course planner" in m.value for m in app.markdown)
     assert [h.value for h in app.header][:4] == [
         "1 · About you", "2 · How you want to study", "3 · Anything to add",
         "4 · Generate"]
@@ -146,10 +147,37 @@ def test_the_session_has_a_generation_limit():
     app = app.run()
     warnings_shown = " ".join(w.value for w in app.warning)
     assert "used this session's generations" in warnings_shown
-    assert app.button == [] or app.button[0].disabled
+    # Other buttons exist further down the page now (the assistant's suggested
+    # questions), so the check is that no button plans another degree.
+    plan_buttons = [b for b in app.button if b.label == "Plan my degree"]
+    assert all(b.disabled for b in plan_buttons)
 
 
 def test_the_footer_names_the_sources_and_the_advisor():
     text = " ".join(c.value for c in started().caption)
     assert "Academic Regulations" in text
     assert "academic advisor" in text
+
+
+# ------------------------------------------------------- the assistant --
+
+def test_the_assistant_appears_with_the_plan_and_offers_a_way_in(planned):
+    """A student who has a plan can ask about it without typing first."""
+    headers = [h.value for h in planned.header]
+    assert "Ask about this plan" in headers
+    labels = [b.label for b in planned.button]
+    assert any(label in labels for label in module_suggestions())
+
+
+def test_the_assistant_asks_which_path_it_is_about(planned):
+    """Three paths exist, so a question has to name one."""
+    radios = [r.label for r in planned.radio]
+    assert "Which path?" in radios
+    chooser = next(r for r in planned.radio if r.label == "Which path?")
+    assert len(chooser.options) == len(planned.session_state["result"].paths)
+
+
+def module_suggestions() -> list[str]:
+    import app as module
+
+    return list(module.SUGGESTED)

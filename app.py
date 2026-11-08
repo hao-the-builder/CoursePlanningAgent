@@ -2,14 +2,19 @@
 
     streamlit run app.py
 
-Four steps down one column: a form, a short chat, generate, download. One
-column on purpose — it is the layout that survives a phone, and a student
-checking their plan on the way to class is the likely reader.
+Four steps down one column — a form, a short chat, generate, download —
+followed, once a plan exists, by an assistant that can answer questions about
+it and change it. One column on purpose: it is the layout that survives a
+phone, and a student checking their plan on the way to class is the likely
+reader.
 
 Nothing here computes anything. The form builds a StudentProfile, the agent
-plans, `planner.validate` judges, and `outputs/` writes the files. This
-module's whole job is to collect input, show what came back, and hand over
-the downloads.
+plans, `planner.validate` judges, `planner.assistant` handles the questions
+and the revisions, and `outputs/` writes the files. This module's whole job is
+to collect input, show what came back, and hand over the downloads.
+
+The look lives in `ui/style.py`, written against the `apple-design` skill;
+the HTML fragments are in `ui/components.py`.
 """
 from __future__ import annotations
 
@@ -18,22 +23,25 @@ import os
 import sys
 import zipfile
 from datetime import datetime, timezone
-from pathlib import Path
+from pathlib import Path as FilePath
 
 import streamlit as st
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(FilePath(__file__).resolve().parent))
 
 from dotenv import load_dotenv  # noqa: E402
 
 from outputs.docx_builder import build_document  # noqa: E402
 from outputs.xlsx_builder import build_workbook  # noqa: E402
+from planner import assistant  # noqa: E402
 from planner.agent import plan_for  # noqa: E402
 from planner.intake import ExchangePlan, StudentProfile  # noqa: E402
 from planner.llm import LLMUnavailable, backend_name, chat, prompt_text  # noqa: E402
-from planner.terms import sort_key, term_sequence  # noqa: E402
+from planner.terms import term_sequence  # noqa: E402
 from planner.tools import catalog, common_core_for, get_program, list_programs  # noqa: E402
 from schema import PlannedCourse, Tier  # noqa: E402
+from ui import components as C  # noqa: E402
+from ui import style  # noqa: E402
 
 load_dotenv()
 
@@ -51,6 +59,7 @@ for _name in ("LLM_BACKEND", "ANTHROPIC_API_KEY", "MODEL_FAST", "MODEL_STRONG"):
 
 MAX_GENERATIONS = 3
 MAX_CHAT_TURNS = 12
+MAX_ASSISTANT_TURNS = 12
 COHORT = "2026-27"
 
 TIER_BADGE = {
@@ -64,8 +73,15 @@ TIER_BADGE = {
                                             "produced for it."),
 }
 
+SUGGESTED = [
+    "Why is this course in that term?",
+    "What fills the Common Core slots?",
+    "Make my final year lighter",
+]
+
 st.set_page_config(page_title="HKUST course planner", page_icon="🎓",
                    layout="centered")
+style.inject()
 
 
 # ------------------------------------------------------------- helpers --
@@ -105,11 +121,19 @@ def label_of(row: dict) -> str:
     return f"{row['code']} — {row['title']}"
 
 
+def fingerprint(path) -> tuple:
+    """What a path's files depend on, so they are built once per change."""
+    return (path.name,
+            tuple((r.code, r.term, r.status) for r in path.plan))
+
+
 # ---------------------------------------------------------- 1. the form --
 
-st.title("🎓 HKUST course planner")
-st.caption("Turns your degree requirements into a term-by-term plan. It "
-           "recommends and writes files — it never registers you for "
+C.hero("HKUST course planner",
+       "Turns your degree requirements into a term-by-term plan you can edit, "
+       "download and take to your advisor.",
+       eyebrow="2026-27 intake")
+st.caption("It recommends and writes files — it never registers you for "
            "anything, contacts anyone, or predicts a grade.")
 
 rows = programs()
@@ -117,72 +141,84 @@ majors = [r for r in rows if r["kind"] == "major"]
 minors = [r for r in rows if r["kind"] == "minor"]
 
 st.header("1 · About you")
+C.step_note("Your program decides the requirements, so this is the part that "
+            "has to be right.")
 
-cohort = st.selectbox("Intake cohort", [COHORT], index=0,
-                      help="Requirements differ by the year you started. "
-                           "Only 2026-27 is supported.")
+with st.container(border=True, key="card-about"):
+    cohort = st.selectbox("Intake cohort", [COHORT], index=0,
+                          help="Requirements differ by the year you started. "
+                               "Only 2026-27 is supported.")
 
-schools = sorted({r["school"] for r in majors if r["school"]})
-school = st.selectbox("School", ["Any"] + schools)
-visible = [r for r in majors if school == "Any" or r["school"] == school]
-visible.sort(key=lambda r: (r["tier"] != "verified", r["code"]))
+    schools = sorted({r["school"] for r in majors if r["school"]})
+    school = st.selectbox("School", ["Any"] + schools)
+    visible = [r for r in majors if school == "Any" or r["school"] == school]
+    visible.sort(key=lambda r: (r["tier"] != "verified", r["code"]))
 
-major_label = st.selectbox(
-    "Major", [label_of(r) for r in visible],
-    help="Programs with a track (for example Mathematics) are listed once "
-         "per track, because the track decides the requirements.")
-major = code_of(major_label) if major_label else None
+    major_label = st.selectbox(
+        "Major", [label_of(r) for r in visible],
+        help="Programs with a track (for example Mathematics) are listed once "
+             "per track, because the track decides the requirements.")
+    major = code_of(major_label) if major_label else None
 
-minor_label = st.selectbox("Minor (optional)",
-                           ["none"] + [label_of(r) for r in minors])
-minor = None if minor_label == "none" else code_of(minor_label)
+    minor_label = st.selectbox("Minor (optional)",
+                               ["none"] + [label_of(r) for r in minors])
+    minor = None if minor_label == "none" else code_of(minor_label)
 
 if major:
     tier_note(major)
 
 st.header("2 · How you want to study")
+C.step_note("Everything here is a constraint the plan has to satisfy, not a "
+            "preference it weighs up.")
 
-low, high = st.slider("Credits per term", 3, 21, (12, 18),
-                      help="The Academic Regulations allow 12 to 18 in a "
-                           "Regular Term without the Dean's approval.")
-spread = st.radio("Workload shape",
-                  ["even", "front", "back"],
-                  format_func={"even": "Even across the degree",
-                               "front": "Front-loaded — free up later years",
-                               "back": "Back-loaded — gentler start"}.get,
-                  horizontal=False)
+with st.container(border=True, key="card-study"):
+    low, high = st.slider("Credits per term", 3, 21, (12, 18),
+                          help="The Academic Regulations allow 12 to 18 in a "
+                               "Regular Term without the Dean's approval.")
+    spread = st.radio("Workload shape",
+                      ["even", "front", "back"],
+                      format_func={
+                          "even": "Even across the degree",
+                          "front": "Front-loaded — free up later years",
+                          "back": "Back-loaded — gentler start"}.get,
+                      horizontal=False)
 
-terms = term_sequence(cohort, 4, use_summer=True, use_winter=True)
-regular = [t.label for t in terms if t.is_regular]
+    terms = term_sequence(cohort, 4, use_summer=True, use_winter=True)
+    regular = [t.label for t in terms if t.is_regular]
 
-free_terms = st.multiselect("Terms to keep free", regular,
-                            help="A term with no courses at all.")
-graduate_early = st.checkbox("Graduate early if that is possible")
+    free_terms = st.multiselect("Terms to keep free", regular,
+                                help="A term with no courses at all.")
+    graduate_early = st.checkbox("Graduate early if that is possible")
 
-use_summer = st.checkbox("Willing to take summer courses")
-use_winter = st.checkbox("Willing to take winter courses")
-reserve_summer = st.checkbox("Keep summers for internships")
+    left, right = st.columns(2)
+    with left:
+        use_summer = st.checkbox("Willing to take summer courses")
+        use_winter = st.checkbox("Willing to take winter courses")
+    with right:
+        reserve_summer = st.checkbox("Keep summers for internships")
+        going = st.checkbox("I want to go on exchange")
 
-going = st.checkbox("I want to go on exchange")
-exchange = None
-if going:
-    exchange_terms = st.multiselect("Exchange term(s)", regular,
-                                    max_selections=2)
-    host = st.text_input("Host university (if you know it)")
-    purposes = st.multiselect(
-        "Use the exchange for", ["major", "common_core", "minor", "free"],
-        default=["major"],
-        format_func={"major": "Major requirements",
-                     "common_core": "Common Core",
-                     "minor": "Minor", "free": "Free electives"}.get)
-    exchange = ExchangePlan(terms=exchange_terms, host_university=host or None,
-                            purposes=purposes)
-    st.caption("Exchange credits are never counted as met until the mapping "
-               "is approved. They are shown separately throughout.")
+    exchange = None
+    if going:
+        exchange_terms = st.multiselect("Exchange term(s)", regular,
+                                        max_selections=2)
+        host = st.text_input("Host university (if you know it)")
+        purposes = st.multiselect(
+            "Use the exchange for", ["major", "common_core", "minor", "free"],
+            default=["major"],
+            format_func={"major": "Major requirements",
+                         "common_core": "Common Core",
+                         "minor": "Minor", "free": "Free electives"}.get)
+        exchange = ExchangePlan(terms=exchange_terms,
+                                host_university=host or None,
+                                purposes=purposes)
+        st.caption("Exchange credits are never counted as met until the "
+                   "mapping is approved. They are shown separately "
+                   "throughout.")
 
-gpa = st.number_input("GPA target (optional)", 0.0, 4.3, 0.0, step=0.1,
-                      help="Used for workload advice only. No grade is ever "
-                           "predicted.")
+    gpa = st.number_input("GPA target (optional)", 0.0, 4.3, 0.0, step=0.1,
+                          help="Used for workload advice only. No grade is "
+                               "ever predicted.")
 
 with st.expander("Courses you have already done"):
     taken_choices = st.multiselect("Already taken", course_choices())
@@ -231,42 +267,45 @@ def build_profile() -> StudentProfile:
 # ---------------------------------------------------------- 3. the chat --
 
 st.header("3 · Anything to add")
-st.caption("Optional. Tell the planner anything the form did not cover and "
-           "it will ask follow-ups.")
+C.step_note("Optional. Tell the planner anything the form did not cover and "
+            "it will ask follow-ups.")
 
 history = state("chat", [])
 state("notes", [])
 
-for speaker, message in history:
-    with st.chat_message(speaker):
-        st.write(message)
+with st.container(border=True, key="card-chat"):
+    for speaker, message in history:
+        with st.chat_message(speaker):
+            st.write(message)
 
-if len(history) >= MAX_CHAT_TURNS * 2:
-    st.warning(f"That is {MAX_CHAT_TURNS} turns — enough for one sitting. "
-               f"Generate a plan, or reload to start again.")
-elif prompt := st.chat_input("e.g. I would rather not take 8am classes"):
-    history.append(("user", prompt))
-    st.session_state["notes"].append(prompt)
-    with st.chat_message("user"):
-        st.write(prompt)
-    with st.chat_message("assistant"), st.spinner("Thinking…"):
-        try:
-            said = "\n".join(f"{who}: {what}" for who, what in history)
-            reply = chat(
-                f"The student is planning {major or 'a degree'} at HKUST. "
-                f"They said:\n\n{said}\n\nAcknowledge it in one sentence and "
-                f"ask at most one follow-up question, only if it would change "
-                f"the plan. Never promise a grade or an outcome.",
-                task="intake", system=prompt_text("system"))
-            answer = reply.text.strip() or "Noted."
-        except LLMUnavailable as exc:
-            answer = (f"Noted — I have written that down. (No model is "
-                      f"connected, so I cannot reply properly: {exc})")
-        history.append(("assistant", answer))
-        st.write(answer)
+    if len(history) >= MAX_CHAT_TURNS * 2:
+        st.warning(f"That is {MAX_CHAT_TURNS} turns — enough for one sitting. "
+                   f"Generate a plan, or reload to start again.")
+    elif prompt := st.chat_input("e.g. I would rather not take 8am classes",
+                                 key="intake_chat"):
+        history.append(("user", prompt))
+        st.session_state["notes"].append(prompt)
+        with st.chat_message("user"):
+            st.write(prompt)
+        with st.chat_message("assistant"), st.spinner("Thinking…"):
+            try:
+                said = "\n".join(f"{who}: {what}" for who, what in history)
+                reply = chat(
+                    f"The student is planning {major or 'a degree'} at HKUST. "
+                    f"They said:\n\n{said}\n\nAcknowledge it in one sentence "
+                    f"and ask at most one follow-up question, only if it "
+                    f"would change the plan. Never promise a grade or an "
+                    f"outcome.",
+                    task="intake", system=prompt_text("system"))
+                answer = reply.text.strip() or "Noted."
+            except LLMUnavailable as exc:
+                answer = (f"Noted — I have written that down. (No model is "
+                          f"connected, so I cannot reply properly: {exc})")
+            history.append(("assistant", answer))
+            st.write(answer)
 
 
-# ------------------------------------------------------ 4. generate --
+# -------------------------------------------------------- 4. generate --
 
 st.header("4 · Generate")
 
@@ -289,12 +328,166 @@ if go:
             st.session_state["result"] = plan_for(profile, paths=3)
             st.session_state["profile"] = profile
             st.session_state["generations"] = used + 1
+            st.session_state["ask"] = []
         except Exception as exc:                      # noqa: BLE001
             st.session_state["result"] = None
             st.error(f"That did not finish: {exc}")
 
 result = st.session_state.get("result")
 profile = st.session_state.get("profile")
+
+
+# ---------------------------------------------------------- the results --
+
+def show_path(index: int, path) -> None:
+    report = path.report
+    mark = "✅" if path.ok else "⚠️"
+    with st.expander(f"{mark} Path {index}: {path.name}",
+                     expanded=index == 1):
+        if path.summary:
+            st.write(path.summary)
+
+        away = set(profile.exchange_terms)
+        C.term_strip(report.per_term, away)
+
+        left, middle, right = st.columns(3)
+        left.metric("Confirmed credits", f"{report.credits.confirmed:g}")
+        middle.metric("Pending exchange",
+                      f"{report.credits.exchange_pending:g}")
+        right.metric("Problems",
+                     f"{len(report.errors)} / {len(report.warnings)} warn")
+
+        if path.why_it_fits:
+            st.markdown("**Why this one**")
+            for reason in path.why_it_fits:
+                st.markdown(f"- {reason}")
+        if path.trade_offs:
+            st.markdown("**What it costs you**")
+            for cost in path.trade_offs:
+                st.markdown(f"- {cost}")
+
+        if report.errors:
+            st.error("Unresolved problems — these must be settled before you "
+                     "register:")
+            for issue in report.errors:
+                st.markdown(f"- {issue.message}")
+        with st.expander(f"Things to check ({len(report.warnings)})"):
+            for issue in report.warnings + report.infos:
+                st.markdown(f"- {issue.message}")
+
+
+def ask_about(result, profile) -> None:
+    """The assistant: questions about the plan, and changes to it."""
+    st.header("Ask about this plan")
+    C.step_note("It reads your plan and the requirement data to answer, and "
+                "can change the plan. Every change is re-checked before it "
+                "lands, and a change that breaks something is discarded.")
+
+    names = [f"Path {i}: {p.name}" for i, p in enumerate(result.paths, 1)]
+    with st.container(border=True, key="card-ask"):
+        chosen = st.radio("Which path?", names, horizontal=False,
+                          key="ask_path")
+        index = names.index(chosen)
+        path = result.paths[index]
+
+        talk = state("ask", [])
+        for speaker, message in talk:
+            with st.chat_message(speaker):
+                st.write(message)
+
+        pending = st.session_state.pop("ask_pending", None)
+        if len(talk) >= MAX_ASSISTANT_TURNS * 2:
+            st.warning(f"That is {MAX_ASSISTANT_TURNS} questions — enough for "
+                       f"one sitting. Reload the page to start again.")
+            return
+
+        if not talk:
+            C.write('<p class="step-note">Try asking:</p>')
+            columns = st.columns(len(SUGGESTED))
+            for column, text in zip(columns, SUGGESTED):
+                if column.button(text, key=f"sugg-{text}",
+                                 use_container_width=True):
+                    pending = text
+
+        typed = st.chat_input("Ask about this plan, or ask for a change",
+                              key="ask_chat")
+        question = pending or typed
+        if not question:
+            return
+
+        talk.append(("user", question))
+        with st.chat_message("user"):
+            st.write(question)
+        with st.chat_message("assistant"), st.spinner("Reading your plan…"):
+            answer = assistant.ask(question, path=path, profile=profile,
+                                   history=talk)
+            st.write(answer.text)
+
+        said = answer.text
+        if answer.revised:
+            result.paths[index] = answer.path
+            lines = "\n".join(f"- {change}" for change in answer.changes)
+            st.success(f"**Applied, and re-checked:**\n{lines}")
+            said = f"{answer.text}\n\n**Applied:**\n{lines}"
+            if answer.errors:
+                st.warning("The revised plan still has problems: "
+                           + "; ".join(answer.errors))
+        elif answer.refused:
+            st.warning(f"**Not applied** — {answer.refused}.")
+            said = f"{answer.text}\n\n**Not applied** — {answer.refused}."
+            for message in answer.errors:
+                st.markdown(f"- {message}")
+
+        talk.append(("assistant", said))
+        if answer.revised:
+            st.rerun()
+
+
+def downloads(result, profile, program, minor_program, core) -> None:
+    st.header("Download")
+    C.step_note("Every number in the spreadsheet is a formula, so the totals "
+                "follow your edits after you download it.")
+
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%d")
+    built = state("files", {})
+    bundle = io.BytesIO()
+    with zipfile.ZipFile(bundle, "w", zipfile.ZIP_DEFLATED) as archive:
+        for index, path in enumerate(result.paths, 1):
+            key = fingerprint(path)
+            if key not in built:
+                book = build_workbook(path, profile, program, minor_program,
+                                      core, catalog())
+                buffer = io.BytesIO()
+                book.save(buffer)
+                built[key] = buffer.getvalue()
+            data = built[key]
+            name = f"{profile.major}-path{index}-{stamp}.xlsx"
+            archive.writestr(name, data)
+            st.download_button(
+                f"⬇️ Path {index}: {path.name} (.xlsx)", data, file_name=name,
+                mime="application/vnd.openxmlformats-officedocument."
+                     "spreadsheetml.sheet",
+                use_container_width=True)
+
+        document = build_document(result, profile, program, minor_program,
+                                  core, catalog())
+        buffer = io.BytesIO()
+        document.save(buffer)
+        doc_name = f"{profile.major}-plan-{stamp}.docx"
+        archive.writestr(doc_name, buffer.getvalue())
+        st.download_button(
+            "⬇️ The write-up for all paths (.docx)", buffer.getvalue(),
+            file_name=doc_name,
+            mime="application/vnd.openxmlformats-officedocument."
+                 "wordprocessingml.document",
+            use_container_width=True)
+
+    st.download_button("⬇️ Everything, zipped", bundle.getvalue(),
+                       file_name=f"{profile.major}-plans-{stamp}.zip",
+                       mime="application/zip", use_container_width=True)
+    if result.log_path:
+        st.caption(f"Run log: `{result.log_path.name}`")
+
 
 if result is not None and profile is not None:
     if result.status == "needs_input":
@@ -314,85 +507,21 @@ if result is not None and profile is not None:
         minor_program = get_program(profile.minor) if profile.minor else None
         core = common_core_for(profile.major)
 
+        st.header("Your plan")
+        clean = sum(1 for p in result.paths if p.ok)
+        C.chips(
+            C.pill(f"{len(result.paths)} paths", "flat"),
+            C.pill(f"{clean} validate cleanly",
+                   "ok" if clean else "warn"),
+            C.pill(f"tier: {program.tier.value.replace('_', ' ')}",
+                   "ok" if program.tier is Tier.VERIFIED else "warn"),
+        )
+
         for index, path in enumerate(result.paths, 1):
-            report = path.report
-            mark = "✅" if path.ok else "⚠️"
-            with st.expander(f"{mark} Path {index}: {path.name}",
-                             expanded=index == 1):
-                if path.summary:
-                    st.write(path.summary)
+            show_path(index, path)
 
-                st.bar_chart(
-                    {"credits": {term: credits for term, credits in
-                                 sorted(report.per_term.items(),
-                                        key=lambda kv: sort_key(kv[0]))}},
-                    y="credits", height=200)
-
-                left, middle, right = st.columns(3)
-                left.metric("Confirmed credits",
-                            f"{report.credits.confirmed:g}")
-                middle.metric("Pending exchange",
-                              f"{report.credits.exchange_pending:g}")
-                right.metric("Problems",
-                             f"{len(report.errors)} / "
-                             f"{len(report.warnings)} warn")
-
-                if path.why_it_fits:
-                    st.markdown("**Why this one**")
-                    for reason in path.why_it_fits:
-                        st.markdown(f"- {reason}")
-                if path.trade_offs:
-                    st.markdown("**What it costs you**")
-                    for cost in path.trade_offs:
-                        st.markdown(f"- {cost}")
-
-                if report.errors:
-                    st.error("Unresolved problems — these must be settled "
-                             "before you register:")
-                    for issue in report.errors:
-                        st.markdown(f"- {issue.message}")
-                with st.expander(f"Things to check "
-                                 f"({len(report.warnings)})"):
-                    for issue in report.warnings + report.infos:
-                        st.markdown(f"- {issue.message}")
-
-        st.header("5 · Download")
-        stamp = datetime.now(timezone.utc).strftime("%Y%m%d")
-        bundle = io.BytesIO()
-        with zipfile.ZipFile(bundle, "w", zipfile.ZIP_DEFLATED) as archive:
-            for index, path in enumerate(result.paths, 1):
-                book = build_workbook(path, profile, program, minor_program,
-                                      core, catalog())
-                buffer = io.BytesIO()
-                book.save(buffer)
-                name = f"{profile.major}-path{index}-{stamp}.xlsx"
-                archive.writestr(name, buffer.getvalue())
-                st.download_button(
-                    f"⬇️ Path {index}: {path.name} (.xlsx)",
-                    buffer.getvalue(), file_name=name,
-                    mime="application/vnd.openxmlformats-officedocument."
-                         "spreadsheetml.sheet",
-                    use_container_width=True)
-
-            document = build_document(result, profile, program, minor_program,
-                                      core, catalog())
-            buffer = io.BytesIO()
-            document.save(buffer)
-            doc_name = f"{profile.major}-plan-{stamp}.docx"
-            archive.writestr(doc_name, buffer.getvalue())
-            st.download_button(
-                "⬇️ The write-up for all paths (.docx)", buffer.getvalue(),
-                file_name=doc_name,
-                mime="application/vnd.openxmlformats-officedocument."
-                     "wordprocessingml.document",
-                use_container_width=True)
-
-        st.download_button("⬇️ Everything, zipped", bundle.getvalue(),
-                           file_name=f"{profile.major}-plans-{stamp}.zip",
-                           mime="application/zip",
-                           use_container_width=True)
-        if result.log_path:
-            st.caption(f"Run log: `{result.log_path.name}`")
+        ask_about(result, profile)
+        downloads(result, profile, program, minor_program, core)
 
 st.divider()
 st.caption("Built for a course project. Requirements come from HKUST's "

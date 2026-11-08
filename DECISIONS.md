@@ -6,6 +6,48 @@ phase does not silently contradict a decision taken earlier.
 
 ---
 
+## 2026-11-08 — The app is restyled in place, and gains a plan-aware assistant
+
+**Streamlit stays.** A React front end would give total design freedom and
+cost a FastAPI layer over `planner/`, a second deploy target, and a rewrite of
+the eleven headless UI tests. The look was the problem, not the framework, so
+the fix is a stylesheet (`ui/style.py`) and HTML fragments
+(`ui/components.py`) written against Streamlit's own `data-testid` hooks, with
+`app.py` left as a reading of the flow.
+
+**The design follows the `apple-design` skill** in `D:/Skills for AI`. The
+parts that earn their place in a form-and-tables app are typography (tracking
+is size-specific, hierarchy comes from weight and leading, not size alone),
+response (feedback on the press, 100ms, never on release), materials (one
+translucent layer for the top bar, a gradient scroll edge rather than a 1px
+rule), restraint (motion only where it explains something), and the three
+accessibility signals — reduced motion, reduced transparency, increased
+contrast — each answered with a gentler equivalent rather than nothing.
+
+The generic bar chart is replaced by a term strip that colours each term by
+what its load *means*: heavy, light, free, exchange. A bar chart drew a
+9-credit term and a free term as the same kind of thing. The thresholds are
+the ones the workbook's load-tag formula uses, so the two renderings cannot
+disagree in front of a student.
+
+**The assistant may revise, under a gate.** `planner/assistant.py` answers
+questions about a finished plan and can change it. The model reads the plan
+and the requirement data through the agent's own tools and writes the revised
+course list; nothing it writes reaches the student until `validate_plan` has
+judged it, and a revision that raises the blocking-error count is discarded
+with its errors quoted. That keeps hard rules 1 and 2 true of the chat as
+well as of the planner: an invented course cannot survive parsing into
+`PlannedCourse` plus `unknown_courses`, and a plan with problems is never
+shown as though it had none.
+
+The change list shown to the student is computed by comparing the two plans,
+not taken from the model's account of what it did — in testing it will claim
+more than it changed. It counts `(course, term)` pairs rather than courses,
+because COMP 4900 is required in *every* term in residence and keying by code
+would hide a move of one of them.
+
+---
+
 ## 2026-11-08 — An option is taken *within* its track, and three extraction fixes
 
 The first round of human verification (Phase 2 Part F) reported two errors in

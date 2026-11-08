@@ -53,6 +53,31 @@ streamlit run app.py                          # the UI
 python scripts/run_eval.py                    # all profiles -> logs/eval_report.md
 ```
 
+## The app
+
+Four steps down one column — about you, how you want to study, anything to
+add, generate — then the plan, an assistant, and the downloads.
+
+**The assistant** (`planner/assistant.py`) is the chat beside a finished
+plan. It answers questions about that plan using the same tools the planner
+used, so a claim about a prerequisite is read from the data rather than
+recalled. It also makes changes: *move the exchange to Y3 Fall*, *swap the
+FYP for co-op*, *make my final year lighter*. A revision is parsed into real
+course rows, validated in full, and **applied only if it is no worse than the
+plan it replaces** — one that breaks a prerequisite or overruns a term is
+reported and discarded, and the student keeps what they had. The list of
+changes shown is computed by comparing the two plans, never taken from the
+model's description of its own work.
+
+**The look** follows the `apple-design` skill in `D:/Skills for AI`:
+size-specific tracking, hierarchy from weight and leading rather than size
+alone, feedback on the press rather than the release, one translucent layer
+for the top bar with a soft scroll edge instead of a rule, and an answer for
+each of `prefers-reduced-motion`, `prefers-reduced-transparency` and
+`prefers-contrast`. The term strip colours each term by what its load *means*
+— heavy, light, free, exchange — using the same thresholds the workbook's
+load-tag formula uses, so the browser and the spreadsheet cannot disagree.
+
 ## Deploying
 
 Streamlit Community Cloud, pointed at this repository with `app.py` as the
@@ -95,7 +120,10 @@ data/              derived JSON: catalog.json (1,649 courses),
                    programs/{CODE}.json (129, incl. track/option variants),
                    program_index.json, common_core.json, regulations.json
 pipeline/          fetch and parse raw sources into data/
-planner/           terms, tools, validation, allocation, intake, agent loop
+planner/           terms, tools, validation, allocation, intake, agent loop,
+                   and assistant.py — the chat that answers about a finished
+                   plan and revises it
+ui/                the app's stylesheet and HTML fragments
 outputs/           the .xlsx and .docx builders
 tests/             tests, student profiles, hand-calculated expected results
 ```
