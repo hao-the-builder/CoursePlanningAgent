@@ -110,6 +110,8 @@ def code_of(choice: str) -> str:
 def tier_note(code: str) -> None:
     program = get_program(code)
     mark, word, explanation = TIER_BADGE[program.tier]
+    if program.verified_on:
+        explanation += f" Checked on {program.verified_on}."
     body = (f"**{mark} Data tier: {word}.** {explanation}  \n"
             f"Source: {program.source_url}  \n"
             f"**Whatever this app produces, check it with your academic "

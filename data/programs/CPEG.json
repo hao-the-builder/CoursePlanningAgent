@@ -330,6 +330,7 @@
  "max_double_count_credits": null,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27cpeg.pdf",
  "tier": "auto_extracted",
+ "verified_on": null,
  "unparsed_lines": [],
  "caveats": [
   "[CPEG 1971 AND (CPEG 4901 OR CPEG 4902 OR CPEG 4911 OR CPEG 4912)] OR [CPEG 4910] -- (Students taking the Research Option must take either CPEG 4902 or CPEG 4912)",

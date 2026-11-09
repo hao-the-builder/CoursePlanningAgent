@@ -7,7 +7,10 @@ and nothing else.
 
 **What to do.** Open each program's `Source` link, read down the table, and
 say which programs are right. Claude Code then sets `"tier": "verified"`
-in those `data/programs/{CODE}.json` files — nothing else sets that tier.
+in those `data/programs/{CODE}.json` files — nothing else sets that tier,
+together with the date of the check in `verified_on`. A program whose
+`Tier` line below already reads `verified` has been through this once;
+its date is in its JSON, and re-reading it re-checks that same claim.
 
 One exception to the `Source` link: the School Requirements are published
 in a separate PDF, so that group names its own URL and is not in the
@@ -27,7 +30,7 @@ a mistake in the extraction.
 ## COMP — BEng in Computer Science
 
 Source: <https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27comp.pdf>  
-Tier: `auto_extracted` · 3 groups · 15 rules · at least 57 credits · states 120 for the degree
+Tier: `verified` · 3 groups · 15 rules · at least 57 credits · states 120 for the degree
 
 ### Engineering Fundamental Course(s)  _(Major)_
 
@@ -70,7 +73,7 @@ Tier: `auto_extracted` · 3 groups · 15 rules · at least 57 credits · states 
 ## MATH-AM — BSc in Mathematics - Applied Mathematics Track
 
 Source: <https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27math.pdf>  
-Tier: `auto_extracted` · 5 groups · 16 rules · at least 61 credits · states 120 for the degree
+Tier: `verified` · 5 groups · 16 rules · at least 61 credits · states 120 for the degree
 
 ### Requirements  _(School)_
 
@@ -130,7 +133,7 @@ Read this group against <https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-
 ## FINA — BBA in Finance
 
 Source: <https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27fina.pdf>  
-Tier: `auto_extracted` · 3 groups · 20 rules · at least 55 credits · states 120 for the degree
+Tier: `verified` · 3 groups · 20 rules · at least 55 credits · states 120 for the degree
 
 ### Requirements  _(School)_
 
@@ -174,7 +177,7 @@ Read this group against <https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-
 ## GCS-SS — BSc in Global China Studies - Social Science Track
 
 Source: <https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf>  
-Tier: `auto_extracted` · 3 groups · 14 rules · at least 39 credits · states 120 for the degree
+Tier: `verified` · 3 groups · 14 rules · at least 39 credits · states 120 for the degree
 
 ### Required Course(s)  _(Major)_
 
@@ -224,7 +227,7 @@ Tier: `auto_extracted` · 3 groups · 14 rules · at least 39 credits · states 
 ## IDT — BSc in Innovation, Design and Technology
 
 Source: <https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27idt.pdf>  
-Tier: `auto_extracted` · 2 groups · 27 rules · at least 84 credits · states 120 for the degree
+Tier: `verified` · 2 groups · 27 rules · at least 84 credits · states 120 for the degree
 
 ### Required Course(s)  _(Major)_
 

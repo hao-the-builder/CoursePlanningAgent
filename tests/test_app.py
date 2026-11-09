@@ -85,12 +85,38 @@ def test_the_major_list_covers_the_catalog_and_names_its_tracks():
 
 # ------------------------------------------------------------- the tier --
 
+def a_program_with_tier(tier: str) -> str:
+    """A program code at this tier, read from the index rather than named.
+
+    Tiers move: a program named here would be a test that breaks the day
+    someone verifies it, which is the one day the suite should stay green.
+    """
+    from planner.tools import list_programs
+
+    codes = sorted(row["code"]
+                   for row in list_programs(kind="major", tier=tier))
+    assert codes, f"no major is tier {tier}"
+    return codes[0]
+
+
 def test_an_auto_extracted_program_shows_an_amber_badge_and_its_source():
-    app = pick_major(started(), "COMP")
+    app = pick_major(started(), a_program_with_tier("auto_extracted"))
     note = app.info[0].value
     assert "auto-extracted" in note
+    assert "not yet verified by a person" in note
     assert "academic advisor" in note
-    assert "ugadmin.hkust.edu.hk" in note
+    assert "hkust.edu.hk" in note
+
+
+def test_a_verified_program_says_so_and_names_the_day_it_was_checked():
+    """Part F's outcome, where the student sees it."""
+    from planner.tools import get_program
+
+    code = a_program_with_tier("verified")
+    note = pick_major(started(), code).info[0].value
+    assert "verified" in note
+    assert "Checked by hand" in note
+    assert get_program(code).verified_on in note
 
 
 def test_an_unsupported_program_shows_a_red_badge_before_anything_is_planned():

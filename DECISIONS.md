@@ -6,6 +6,31 @@ phase does not silently contradict a decision taken earlier.
 
 ---
 
+## 2026-11-09 — Five programs are `verified`, and the tier carries a date
+
+**Decision.** The developer checked `data/VERIFY.pdf` against the official
+PDFs and reported all five correct, so `COMP`, `MATH-AM`, `FINA`, `GCS-SS` and
+`IDT` are `tier: verified`. Phase 2's "at least 5 programs verified" is met.
+
+**The tier now carries a date.** `Program.verified_on` records the day of the
+check (an additive field — hard rule 9 permits that). `tier: verified` is a
+claim about a *particular document*, not about a program: `source_url` names
+the PDF and `raw/_manifest.jsonl` records when it was downloaded, so without a
+date the claim would survive a refetch for another cohort in total silence and
+nothing would show that it had gone stale. The date is shown wherever the tier
+is — the app's badge, the workbook legend, the document's "Data and limits".
+
+**What this does not change.** 92 programs are still `auto_extracted` and 32
+`unsupported`; most of the catalog shows the amber badge, which is correct.
+Verification here means the extracted rules match the PDF, not that the plan
+is right for any student — every output still says to check with an advisor.
+
+**Why the badge tests no longer name a program.** They ask the index for a
+program at the tier under test, because a test that names one breaks on the
+day someone verifies it — the one day the suite should stay green.
+
+---
+
 ## 2026-11-08 — The app is restyled in place, and gains a plan-aware assistant
 
 **Streamlit stays.** A React front end would give total design freedom and

@@ -419,6 +419,7 @@
  "max_double_count_credits": null,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27rmbi.pdf",
  "tier": "auto_extracted",
+ "verified_on": null,
  "unparsed_lines": [],
  "caveats": [
   "Risk Management and Business Intelligence Electives (Courses from the specified electives list, of which at least 1 course should be taken from each area and at least 6 credits at 3000- level or above) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor."

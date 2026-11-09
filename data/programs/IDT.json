@@ -289,7 +289,8 @@
  "stated_total_credits": 120.0,
  "max_double_count_credits": null,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27idt.pdf",
- "tier": "auto_extracted",
+ "tier": "verified",
+ "verified_on": "2026-11-09",
  "unparsed_lines": [],
  "caveats": [
   "[MATH 1006 OR MATH 1013 OR MATH 1023 AND (MATH 1014 OR MATH 1024)] OR [MATH 1020] -- (Subject to approval of the program office, MATH 1014/1024 may be replaced by a COMP course)"

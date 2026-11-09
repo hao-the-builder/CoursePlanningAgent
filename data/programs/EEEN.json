@@ -280,6 +280,7 @@
  "max_double_count_credits": null,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27eeen.pdf",
  "tier": "auto_extracted",
+ "verified_on": null,
  "unparsed_lines": [],
  "caveats": [
   "Area Electives (5 courses from the specified elective list, of which at least 1 course should be taken from Area 1, and at least 1 course should be taken from Area 2) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor.",

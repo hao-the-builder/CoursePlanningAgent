@@ -146,10 +146,16 @@ Built in phases, one at a time — see `CLAUDE.md` for the plan and the rules.
 ### What needs a human
 
 `data/VERIFY.pdf` — 17 pages, built by `python scripts/make_verify_pdf.py`
-from `data/VERIFY.md` — is the pack for the three jobs no test can do: check
-five programs against their official PDFs (one tick box per rule, rows worth
-a second look shaded), deploy, and look at the app on a phone. Nothing is
-tier `verified` until that check comes back.
+from `data/VERIFY.md` — is the pack for the one job no test can do: checking a
+program against its official PDF, one tick box per rule, with the rows worth a
+second look shaded. That check came back on **2026-11-09** for all five
+programs in the pack, so `COMP`, `MATH-AM`, `FINA`, `GCS-SS` and `IDT` are
+tier `verified` and carry that date in `verified_on`. The other 92 readable
+programs are `auto_extracted` and show the amber badge; to build a pack for
+any of them, run `python pipeline/check_program.py --verify CODE …` and then
+`python scripts/make_verify_pdf.py`.
+
+Two jobs are still open: the deploy, and looking at the app on a phone.
 
 ### Checked by eye, not by test
 

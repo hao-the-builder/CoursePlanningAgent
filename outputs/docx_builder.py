@@ -189,8 +189,9 @@ def data_and_limits(document, profile, program: Program, minor: Program | None,
                     common_core: Program | None, result) -> None:
     document.add_heading("Data and limits", level=1)
     rows = [["Cohort", profile.cohort or "not given"],
-            ["Program data tier", f"{program.tier.value} — "
-                                  f"{TIER_WORDS[program.tier]}"],
+            ["Program data tier",
+             f"{program.tier.value} — {TIER_WORDS[program.tier]}"
+             + (f" on {program.verified_on}" if program.verified_on else "")],
             ["Program source", program.source_url]]
     if minor is not None:
         rows.append([f"Minor source ({minor.code})", minor.source_url])

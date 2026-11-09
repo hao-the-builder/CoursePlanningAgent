@@ -320,7 +320,8 @@
  "stated_total_credits": 120.0,
  "max_double_count_credits": null,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27comp.pdf",
- "tier": "auto_extracted",
+ "tier": "verified",
+ "verified_on": "2026-11-09",
  "unparsed_lines": [],
  "caveats": [
   "COMP Electives (5 courses from the specified elective list, of which at least 3 courses should be taken from 1 area and at least 2 courses outside that area (including course(s) in the Courses Without Associated Area). Students may use at most one course under Deep Learning Applications (COMP 4471 and COMP 5215) to count towards this elective requirement.) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor.",

@@ -128,6 +128,12 @@ class Program(BaseModel):
     max_double_count_credits: float | None = None
     source_url: str
     tier: Tier = Tier.AUTO
+    verified_on: str | None = None   # date a human checked these rules against the
+                                     # PDF at `source_url`. `tier: verified` is a
+                                     # claim about a particular document, so it
+                                     # carries a date — if the PDFs are refetched
+                                     # for another cohort the claim is stale, and
+                                     # a bare flag would carry over in silence.
     unparsed_lines: list[str] = []   # anything the extractor couldn't map → forces review
     caveats: list[str] = []          # mapped, but a stated refinement is not enforced
     parent: str | None = None        # base program, when this is a track/option variant

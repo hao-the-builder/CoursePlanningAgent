@@ -636,7 +636,7 @@
    "school_name": "School of Engineering",
    "department": "Computer Science and Engineering",
    "parent": null,
-   "tier": "auto_extracted",
+   "tier": "verified",
    "default_years": 4,
    "stated_total_credits": 120.0,
    "home_areas": [
@@ -1094,7 +1094,7 @@
    "school_name": "School of Business and Management",
    "department": "Finance",
    "parent": null,
-   "tier": "auto_extracted",
+   "tier": "verified",
    "default_years": 4,
    "stated_total_credits": 120.0,
    "home_areas": [
@@ -1344,7 +1344,7 @@
    "school_name": "School of Humanities and Social Science",
    "department": "School of Humanities and Social Science",
    "parent": "GCS",
-   "tier": "auto_extracted",
+   "tier": "verified",
    "default_years": 4,
    "stated_total_credits": 120.0,
    "home_areas": [
@@ -1390,7 +1390,7 @@
    "school_name": "Academy of Interdisciplinary Studies",
    "department": "Integrative Systems and Design",
    "parent": null,
-   "tier": "auto_extracted",
+   "tier": "verified",
    "default_years": 4,
    "stated_total_credits": 120.0,
    "home_areas": [
@@ -1630,7 +1630,7 @@
    "school_name": "School of Science",
    "department": "Mathematics",
    "parent": "MATH",
-   "tier": "auto_extracted",
+   "tier": "verified",
    "default_years": 4,
    "stated_total_credits": 120.0,
    "home_areas": [

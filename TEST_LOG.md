@@ -60,15 +60,18 @@ term was emptiest, prerequisites be damned.
   published; the class schedule disallows scraping so no course is checked
   against the terms it is offered in; and HKUST publishes no rule on
   final-year-project duration. Each is reported rather than papered over.
-- **Nothing is tier `verified`.** 97 of 129 programs are `auto_extracted`
-  and 32 `unsupported`. `data/VERIFY.md` and `data/VERIFY.pdf` are written and
-  waiting on a human check. The first round of that check came back on three
-  programs: both reported errors turned out to be correct extractions, and
-  re-reading the PDFs to prove it found two real bugs the check had passed
-  over (an elective list truncated at an "Any SUBJ courses" row, and the seven
-  GCS research options missing the track they are taken within). Fixing the
-  second is what moved seven programs to `unsupported`: they had been
-  plannable only because 24 credits of requirements were missing.
+- **Five programs are tier `verified`; 92 are not.** `COMP`, `MATH-AM`,
+  `FINA`, `GCS-SS` and `IDT` were checked by hand against the official PDFs on
+  2026-11-09 and carry that date in `verified_on`. The remaining 92 are
+  `auto_extracted` and 32 are `unsupported`, so most of the catalog still
+  shows the "not yet verified by a person" badge, which is the honest label.
+  The check ran in two rounds. The first came back on three programs: both
+  reported errors turned out to be correct extractions, and re-reading the
+  PDFs to prove it found two real bugs the check had passed over (an elective
+  list truncated at an "Any SUBJ courses" row, and the seven GCS research
+  options missing the track they are taken within). Fixing the second is what
+  moved seven programs to `unsupported`: they had been plannable only because
+  24 credits of requirements were missing. The second round passed all five.
 - **A test suite that called the real model.** `tests/test_app.py` sets the
   stub backend with a function-scoped `monkeypatch`, but its module-scoped
   fixture is built first, so once a developer `.env` existed the full run

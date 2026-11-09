@@ -149,7 +149,8 @@
  "stated_total_credits": 120.0,
  "max_double_count_credits": null,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27gcs.pdf",
- "tier": "auto_extracted",
+ "tier": "verified",
+ "verified_on": "2026-11-09",
  "unparsed_lines": [],
  "caveats": [
   "SHSS 4991 OR SHSS 4992 OR (SHSS 4991 AND SHSS 4993) -- [For students taking one of the Research Options, they should take SHSS 4992 OR (SHSS 4991 AND SHSS 4993)]",

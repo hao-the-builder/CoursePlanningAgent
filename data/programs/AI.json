@@ -264,6 +264,7 @@
  "max_double_count_credits": null,
  "source_url": "https://ugadmin.hkust.edu.hk/prog_crs/ug/202627/pdf/26-27ai.pdf",
  "tier": "auto_extracted",
+ "verified_on": null,
  "unparsed_lines": [],
  "caveats": [
   "COMP Electives (6 courses from the specified elective list, of which at least 4 courses should be taken from Artificial Intelligence area and at least 2 courses from Other COMP area.) -- the credits and the course count are checked, but the extra condition in this sentence is not. Confirm it with your advisor.",

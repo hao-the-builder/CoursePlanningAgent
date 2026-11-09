@@ -510,7 +510,9 @@ def things_to_check(report: ValidationReport, program: Program) -> list[str]:
                  "requirement inputs; every other number is a formula over "
                  "the Course Plan sheet.")
     lines.append(f"ℹ️ Data tier: {program.tier.value} — "
-                 f"{TIER_WORDS[program.tier]}. Source: {program.source_url}")
+                 f"{TIER_WORDS[program.tier]}"
+                 f"{f' on {program.verified_on}' if program.verified_on else ''}"
+                 f". Source: {program.source_url}")
     lines.append("ℹ️ Verify this plan with your academic advisor before you "
                  "rely on it.")
     return lines
