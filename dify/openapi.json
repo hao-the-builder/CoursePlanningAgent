@@ -1,0 +1,265 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "HKUST course planner tools",
+    "description": "The deterministic half of the course planner, over HTTP. Every course code, credit value, requirement rule and validation verdict in a plan comes from here, so a model that invents a course cannot have it confirmed. Read-only: no endpoint writes anything. Import this schema in Dify under Tools > Custom to get four callable tools for an Agent node; the workflow in course-planner.yml calls the same endpoints with HTTP Request nodes instead.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://host.docker.internal:8601",
+      "description": "Self-hosted Dify in Docker, reaching the service on the host. Replace with your own base URL; Dify Cloud needs a publicly reachable one."
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "The value of TOOL_API_TOKEN the service was started with."
+      }
+    },
+    "schemas": {
+      "Profile": {
+        "type": "object",
+        "description": "A student profile. `cohort` and `major` are required; everything else has a default.",
+        "required": ["cohort", "major"],
+        "properties": {
+          "cohort": {"type": "string", "example": "2026-27"},
+          "major": {"type": "string", "description": "A code from program_index.json, e.g. COMP", "example": "COMP"},
+          "minor": {"type": "string"},
+          "programme_years": {"type": "integer", "enum": [4, 5], "default": 4},
+          "workload_min": {"type": "number", "default": 12},
+          "workload_max": {"type": "number", "default": 18},
+          "spread": {"type": "string", "enum": ["even", "front", "back"], "default": "even"},
+          "free_terms": {"type": "array", "items": {"type": "string"}, "example": ["Y4 Spring"]},
+          "use_summer": {"type": "boolean", "default": false},
+          "use_winter": {"type": "boolean", "default": false},
+          "direction": {"type": "string", "description": "e.g. AI, systems, finance"}
+        }
+      },
+      "PlannedCourse": {
+        "type": "object",
+        "required": ["code", "term", "status"],
+        "properties": {
+          "code": {"type": "string", "example": "COMP 2011"},
+          "term": {"type": "string", "example": "Y1 Fall"},
+          "status": {"type": "string", "enum": ["taken", "current", "planned", "transfer", "exchange"]},
+          "note": {"type": "string"}
+        }
+      },
+      "Issue": {
+        "type": "object",
+        "properties": {
+          "check": {"type": "string"},
+          "message": {"type": "string"},
+          "course": {"type": "string", "nullable": true},
+          "term": {"type": "string", "nullable": true}
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {"error": {"type": "string"}}
+      }
+    },
+    "responses": {
+      "BadRequest": {
+        "description": "The request was not answered, and the reason says why.",
+        "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}
+      }
+    }
+  },
+  "security": [{"bearer": []}],
+  "paths": {
+    "/health": {
+      "get": {
+        "operationId": "health",
+        "summary": "Is the service up, and what data does it hold",
+        "description": "Open, so a connection test needs no token.",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Service details and the tier counts of the program catalog.",
+            "content": {"application/json": {"schema": {
+              "type": "object",
+              "properties": {
+                "ok": {"type": "boolean"},
+                "cohort": {"type": "string"},
+                "programs": {"type": "integer"},
+                "courses": {"type": "integer"},
+                "tiers": {"type": "object", "additionalProperties": {"type": "integer"}}
+              }
+            }}}
+          }
+        }
+      }
+    },
+    "/tools/search_courses": {
+      "post": {
+        "operationId": "search_courses",
+        "summary": "Search the HKUST course catalog",
+        "description": "Keyword search over the catalog. The only source of real course codes, titles, credits and prerequisites — a code that does not come from here is an invention.",
+        "requestBody": {
+          "required": true,
+          "content": {"application/json": {"schema": {
+            "type": "object",
+            "required": ["query"],
+            "properties": {
+              "query": {"type": "string", "description": "Words to look for in the code or title", "example": "data structures"},
+              "subject": {"type": "string", "description": "Narrow to one subject, e.g. COMP", "example": "COMP"},
+              "level": {"type": "integer", "description": "Course level, 1 to 5", "example": 2},
+              "limit": {"type": "integer", "default": 30, "maximum": 100}
+            }
+          }}}
+        },
+        "responses": {
+          "200": {
+            "description": "Matching courses.",
+            "content": {"application/json": {"schema": {
+              "type": "object",
+              "properties": {
+                "query": {"type": "string"},
+                "count": {"type": "integer"},
+                "courses": {"type": "array", "items": {
+                  "type": "object",
+                  "properties": {
+                    "code": {"type": "string"},
+                    "title": {"type": "string"},
+                    "credits": {"type": "number", "nullable": true},
+                    "prerequisite": {"type": "string", "nullable": true},
+                    "common_core_areas": {"type": "array", "items": {"type": "string"}}
+                  }
+                }}
+              }
+            }}}
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"}
+        }
+      }
+    },
+    "/tools/get_program": {
+      "post": {
+        "operationId": "get_program",
+        "summary": "One program's requirement rules",
+        "description": "The requirements of a major or minor, rendered the way the planner reads them, with the data tier and the URL of the official PDF they were extracted from. A program whose tier is `unsupported` cannot be planned.",
+        "requestBody": {
+          "required": true,
+          "content": {"application/json": {"schema": {
+            "type": "object",
+            "required": ["code"],
+            "properties": {"code": {"type": "string", "description": "A program code from program_index.json", "example": "COMP"}}
+          }}}
+        },
+        "responses": {
+          "200": {
+            "description": "The program, its rules and its provenance.",
+            "content": {"application/json": {"schema": {
+              "type": "object",
+              "properties": {
+                "code": {"type": "string"},
+                "title": {"type": "string"},
+                "tier": {"type": "string", "enum": ["verified", "auto_extracted", "unsupported"]},
+                "verified_on": {"type": "string", "nullable": true, "description": "The day a human checked these rules against the PDF"},
+                "cohort": {"type": "string"},
+                "source_url": {"type": "string"},
+                "plannable": {"type": "boolean"},
+                "stated_total_credits": {"type": "number", "nullable": true},
+                "max_double_count_credits": {"type": "number", "nullable": true},
+                "requirements": {"type": "string", "description": "The rules as text, one group at a time"},
+                "caveats": {"type": "array", "items": {"type": "string"}},
+                "unparsed_lines": {"type": "array", "items": {"type": "string"}}
+              }
+            }}}
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"}
+        }
+      }
+    },
+    "/tools/draft_plan": {
+      "post": {
+        "operationId": "draft_plan",
+        "summary": "A complete, feasible plan built by code",
+        "description": "Builds a term-by-term plan from the requirement rules, honouring the profile's workload range, spread, free terms and exchange. Start here: it is a legal plan, and every real course code a model may use must already appear in it. Returns 422 for a program that cannot be planned reliably.",
+        "requestBody": {
+          "required": true,
+          "content": {"application/json": {"schema": {
+            "type": "object",
+            "required": ["profile"],
+            "properties": {
+              "profile": {"$ref": "#/components/schemas/Profile"},
+              "spread": {"type": "string", "enum": ["even", "front", "back"], "description": "Overrides the profile's own spread"}
+            }
+          }}}
+        },
+        "responses": {
+          "200": {
+            "description": "The draft plan and its credits per term.",
+            "content": {"application/json": {"schema": {
+              "type": "object",
+              "properties": {
+                "program": {"type": "string"},
+                "tier": {"type": "string"},
+                "count": {"type": "integer"},
+                "per_term": {"type": "object", "additionalProperties": {"type": "number"}},
+                "plan": {"type": "array", "items": {"$ref": "#/components/schemas/PlannedCourse"}}
+              }
+            }}}
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "422": {
+            "description": "The program is tier `unsupported`: it cannot be planned reliably and no plan will be produced for it.",
+            "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}
+          }
+        }
+      }
+    },
+    "/tools/validate_plan": {
+      "post": {
+        "operationId": "validate_plan",
+        "summary": "Check a plan against every rule",
+        "description": "Runs every check: unknown courses, prerequisite order, exclusions, credit load per term, heavy terms, exchange handling, free terms, workload spread, final-year project, transfer credits, courses required every term, double-count caps and the 120-credit total. Call this on any plan before presenting it. `ok` false means the plan is not fit to show as it stands, and `errors` says why.",
+        "requestBody": {
+          "required": true,
+          "content": {"application/json": {"schema": {
+            "type": "object",
+            "required": ["profile", "plan"],
+            "properties": {
+              "profile": {"$ref": "#/components/schemas/Profile"},
+              "plan": {"type": "array", "items": {"$ref": "#/components/schemas/PlannedCourse"}}
+            }
+          }}}
+        },
+        "responses": {
+          "200": {
+            "description": "The validator's full report.",
+            "content": {"application/json": {"schema": {
+              "type": "object",
+              "properties": {
+                "ok": {"type": "boolean", "description": "True only when there are no blocking errors"},
+                "error_count": {"type": "integer"},
+                "warning_count": {"type": "integer"},
+                "errors": {"type": "array", "items": {"$ref": "#/components/schemas/Issue"}},
+                "warnings": {"type": "array", "items": {"$ref": "#/components/schemas/Issue"}},
+                "infos": {"type": "array", "items": {"$ref": "#/components/schemas/Issue"}},
+                "per_term": {"type": "object", "additionalProperties": {"type": "number"}},
+                "credits": {
+                  "type": "object",
+                  "description": "Exchange credits are listed apart because they are pending approval and never count as met until the mapping is approved.",
+                  "properties": {
+                    "earned": {"type": "number"},
+                    "planned": {"type": "number"},
+                    "unspecified_transfer": {"type": "number"},
+                    "exchange_pending": {"type": "number"},
+                    "confirmed": {"type": "number"},
+                    "with_exchange": {"type": "number"}
+                  }
+                }
+              }
+            }}}
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"}
+        }
+      }
+    }
+  }
+}

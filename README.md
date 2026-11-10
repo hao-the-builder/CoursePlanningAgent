@@ -110,6 +110,16 @@ One wrapper, `planner/llm.py`, two interchangeable backends chosen by the
 document prose. Deployed on Streamlit Community Cloud the key lives in Streamlit
 secrets, never in the repo.
 
+### Running the agent loop on Dify instead
+
+`dify/` holds a third route: the workflow as an importable DSL file, with the
+agent loop on Dify and the tools reached over HTTP. It is not an `LLM_BACKEND`
+— Dify runs a whole app server-side and never hands a tool call back to the
+caller, so the workflow replaces `planner/agent.py` rather than the model call
+inside it. The catalog is never uploaded, and `planner/dify.py` re-validates
+locally whatever comes back, so the verdict on any plan is still computed from
+`data/`. See `dify/README.md`.
+
 ## Layout
 
 ```
@@ -121,10 +131,15 @@ data/              derived JSON: catalog.json (1,649 courses),
                    program_index.json, common_core.json, regulations.json
 pipeline/          fetch and parse raw sources into data/
 planner/           terms, tools, validation, allocation, intake, agent loop,
-                   and assistant.py — the chat that answers about a finished
-                   plan and revises it
+                   assistant.py — the chat that answers about a finished plan
+                   and revises it — and dify.py, which runs a plan through the
+                   Dify workflow and re-validates the answer here
 ui/                the app's stylesheet and HTML fragments
 outputs/           the .xlsx and .docx builders
+service/           tool_api.py — the deterministic tools over HTTP, read-only,
+                   so a Dify workflow can reach them
+dify/              the workflow as an importable DSL file, an OpenAPI schema
+                   for the same tools, and how to set both up
 tests/             tests, student profiles, hand-calculated expected results
 ```
 

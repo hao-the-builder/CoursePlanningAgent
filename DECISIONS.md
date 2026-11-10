@@ -6,6 +6,58 @@ phase does not silently contradict a decision taken earlier.
 
 ---
 
+## 2026-11-10 — A Dify backend, with the data and the verdict kept here
+
+**Decision.** The agentic workflow can run on Dify. `dify/course-planner.yml`
+is the workflow as a DSL export, `service/tool_api.py` puts the deterministic
+tools on HTTP so Dify can reach them, and `planner/dify.py` drives a run and
+judges the result. This adds a path CLAUDE.md §4 does not list; the two
+`LLM_BACKEND` backends are unchanged and remain the default.
+
+**Why it is not a third `LLM_BACKEND`.** `planner/llm.py` wraps a chat
+primitive — one question, one answer, a tool loop around it. Dify exposes
+nothing that shape: its Service API runs a whole app server-side and never
+hands a tool call back to the caller (the only pause is a Human Input node,
+for a person filling a form). So the Dify workflow replaces the *agent loop*,
+making it a sibling of `planner/agent.py`, not a backend underneath it. A
+`dify` entry in `BACKENDS` would have had to pretend to a contract it cannot
+keep.
+
+**What does not move.** The catalog is not uploaded to Dify — the workflow
+asks the tool service for every code, credit and rule, so there stays one copy
+of the data and it is the one in `data/`. And `planner/dify.py` re-runs
+`validate_plan` locally on whatever comes back: the workflow validates its own
+work, which is how its repair pass works, but no plan is presented on the
+strength of a remote check (hard rule 2). A disagreement between the two
+verdicts is reported, because it means the workflow is reading a different
+service or stale data.
+
+**The retry loop is unrolled to one pass.** A Dify workflow graph is a DAG.
+A conditional loop back to an earlier node needs a `loop` node whose DSL shape
+could not be verified against any real export, and hand-authoring one from
+prose docs would ship a file that may not import. So the graph always runs one
+repair pass, with the model told to return the plan untouched when the verdict
+is already clean. `planner/agent.py` keeps the five-retry version.
+
+**The DSL is declared `0.1.5`, not `0.7.0`.** Every node shape in the file was
+copied from a real `0.1.x` export; no real export at Dify's current `0.7.0`
+could be found. Declaring the current version would claim shapes that were
+never seen, so the file imports one minor version behind and lets Dify migrate
+it, which costs a "completed with warnings" notice on import.
+
+**No secret in the artifact.** The YAML is what gets handed in, so the tool
+service's URL and token are Start-node inputs supplied at run time rather than
+values in the file. Dify environment variables were the alternative and were
+rejected: their export semantics around secret values are documented but their
+`value_type` string could not be verified, and a wrong guess would have put a
+token in a submitted file.
+
+**New dependency:** `pyyaml`, so `tests/test_dify_workflow.py` can read the
+DSL and check it. `starlette` and `uvicorn` were already arriving with
+streamlit and are now named explicitly.
+
+---
+
 ## 2026-11-09 — Five programs are `verified`, and the tier carries a date
 
 **Decision.** The developer checked `data/VERIFY.pdf` against the official

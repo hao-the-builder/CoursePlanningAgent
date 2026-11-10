@@ -1,0 +1,873 @@
+app:
+  description: 'Plans an HKUST undergraduate degree term by term. The course codes,
+    credits, requirement rules and every validation check come from the course-planner
+    tool service over HTTP; the model only chooses between legal options and explains
+    them. Cohort 2026-27.'
+  icon: 🎓
+  icon_background: '#E4FBCC'
+  mode: workflow
+  name: HKUST Course Planner
+  use_icon_as_answer_icon: false
+kind: app
+version: '0.1.5'
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions: []
+      allowed_file_types: []
+      allowed_file_upload_methods: []
+      enabled: false
+      fileUploadConfig:
+        file_size_limit: 15
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: http-request
+      id: 1701-source-1702-target
+      selected: false
+      source: '1701'
+      sourceHandle: source
+      target: '1702'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: http-request
+      id: 1702-source-1703-target
+      selected: false
+      source: '1702'
+      sourceHandle: source
+      target: '1703'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: llm
+      id: 1703-source-1704-target
+      selected: false
+      source: '1703'
+      sourceHandle: source
+      target: '1704'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 1704-source-1705-target
+      selected: false
+      source: '1704'
+      sourceHandle: source
+      target: '1705'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: http-request
+      id: 1705-source-1706-target
+      selected: false
+      source: '1705'
+      sourceHandle: source
+      target: '1706'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: code
+      id: 1706-source-1707-target
+      selected: false
+      source: '1706'
+      sourceHandle: source
+      target: '1707'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: 1707-source-1708-target
+      selected: false
+      source: '1707'
+      sourceHandle: source
+      target: '1708'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 1708-source-1709-target
+      selected: false
+      source: '1708'
+      sourceHandle: source
+      target: '1709'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: http-request
+      id: 1709-source-1710-target
+      selected: false
+      source: '1709'
+      sourceHandle: source
+      target: '1710'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: code
+      id: 1710-source-1711-target
+      selected: false
+      source: '1710'
+      sourceHandle: source
+      target: '1711'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: end
+      id: 1711-source-1712-target
+      selected: false
+      source: '1711'
+      sourceHandle: source
+      target: '1712'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: The student, the program, and where the tool service lives.
+        selected: false
+        title: Start
+        type: start
+        variables:
+        - label: major
+          max_length: 48
+          options: []
+          required: true
+          type: text-input
+          variable: major
+        - label: profile_json
+          max_length: 50000
+          options: []
+          required: true
+          type: paragraph
+          variable: profile_json
+        - label: tool_base
+          max_length: 256
+          options: []
+          required: true
+          type: text-input
+          variable: tool_base
+        - label: tool_token
+          max_length: 256
+          options: []
+          required: true
+          type: paragraph
+          variable: tool_token
+      height: 196
+      id: '1701'
+      position:
+        x: 80
+        y: 282
+      positionAbsolute:
+        x: 80
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - id: body-1702
+            key: ''
+            type: text
+            value: '{"code": "{{#1701.major#}}"}'
+          type: json
+        desc: The requirement rules, read from the official PDF. Also carries the
+          data tier, so the model can say how trustworthy this is.
+        headers: Authorization:Bearer {{#1701.tool_token#}}
+        method: post
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: Tool · get_program
+        type: http-request
+        url: '{{#1701.tool_base#}}/tools/get_program'
+        variables: []
+      height: 150
+      id: '1702'
+      position:
+        x: 384
+        y: 282
+      positionAbsolute:
+        x: 384
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - id: body-1703
+            key: ''
+            type: text
+            value: '{"profile": {{#1701.profile_json#}}}'
+          type: json
+        desc: A complete, feasible plan built by code from the rules. This is the
+          only source of real course codes in the whole workflow.
+        headers: Authorization:Bearer {{#1701.tool_token#}}
+        method: post
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: Tool · draft_plan
+        type: http-request
+        url: '{{#1701.tool_base#}}/tools/draft_plan'
+        variables: []
+      height: 150
+      id: '1703'
+      position:
+        x: 688
+        y: 282
+      positionAbsolute:
+        x: 688
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: Shapes the draft to what the student asked for. It may move and swap
+          rows; it may not invent one.
+        model:
+          completion_params:
+            temperature: 0
+          mode: chat
+          name: claude-opus-5-5
+          provider: anthropic
+        prompt_template:
+        - id: sys-1704
+          role: system
+          text: 'You plan HKUST undergraduate degrees. You are one step inside a
+            workflow that has already done the factual work for you, and your output
+            is checked by a validator before anyone sees it.
+
+
+            Rules you cannot break:
+
+
+            1. Every course code you write must already appear in the draft plan
+            you are given. You have no reliable memory of HKUST''s catalog, and a
+            code you did not read from the draft is an invention. The validator
+            will catch it and the plan will be thrown away.
+
+            2. Keep every row whose status is taken, current or transfer exactly
+            where it is. Those are facts about the student''s past.
+
+            3. A row whose code begins with "SLOT" or "CC —" is a choice the student
+            has not made yet. Leave it as a slot. Do not fill it with a real course.
+
+            4. You may move a row to a different term, and you may drop or re-add a
+            row the requirements allow. You may not change a row''s credits.
+
+            5. Respect what the student asked for: the workload range, the spread,
+            any term they want kept free, and any exchange term.
+
+
+            Answer with one JSON object and nothing else:
+
+
+            {"plan": [{"code": "...", "term": "...", "status": "..."}, ...],
+            "rationale": "two or three sentences on what you changed and why"}
+
+
+            Every row of the plan, every term, in that one array.'
+        - id: usr-1704
+          role: user
+          text: 'The student''s profile:
+
+
+            {{#1701.profile_json#}}
+
+
+            The program, its requirement rules and its data tier:
+
+
+            {{#1702.body#}}
+
+
+            The draft plan built by code — the only source of real course codes
+            here:
+
+
+            {{#1703.body#}}
+
+
+            Shape this draft to the profile and return the JSON object.'
+        selected: false
+        title: LLM · shape the plan
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '1704'
+      position:
+        x: 992
+        y: 282
+      positionAbsolute:
+        x: 992
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: |
+          import json
+          import re
+
+
+          def main(llm_text: str, draft_body: str) -> dict:
+              """Pull the plan out of the model's reply.
+
+              The model is asked for bare JSON and usually gives it, but it may
+              fence the block or write a sentence first. If nothing parses, fall
+              back to the code-built draft rather than passing junk to the
+              validator: a plan that was never shaped is still a legal plan.
+              """
+              text = llm_text or ""
+              block = re.search(r"```(?:json)?\s*(.+?)```", text, re.S)
+              candidates = [block.group(1)] if block else []
+              brace = text.find("{")
+              if brace != -1:
+                  candidates.append(text[brace:])
+              candidates.append(text)
+
+              for candidate in candidates:
+                  try:
+                      parsed = json.loads(candidate.strip())
+                  except Exception:
+                      continue
+                  if isinstance(parsed, dict) and isinstance(parsed.get("plan"), list):
+                      rows = [r for r in parsed["plan"] if isinstance(r, dict)]
+                      if rows:
+                          return {
+                              "plan_json": json.dumps(rows, ensure_ascii=False),
+                              "rationale": str(parsed.get("rationale", "")),
+                              "source": "model",
+                          }
+
+              try:
+                  draft = json.loads(draft_body or "{}").get("plan") or []
+              except Exception:
+                  draft = []
+              return {
+                  "plan_json": json.dumps(draft, ensure_ascii=False),
+                  "rationale": "The model's reply could not be read as a plan, so "
+                               "the plan built by code was kept unchanged.",
+                  "source": "draft",
+              }
+        code_language: python3
+        desc: Reads the plan out of the reply. Falls back to the code-built draft
+          rather than sending junk to the validator.
+        outputs:
+          plan_json:
+            children: null
+            type: string
+          rationale:
+            children: null
+            type: string
+          source:
+            children: null
+            type: string
+        selected: false
+        title: Read the plan
+        type: code
+        variables:
+        - value_selector:
+          - '1704'
+          - text
+          variable: llm_text
+        - value_selector:
+          - '1703'
+          - body
+          variable: draft_body
+      height: 54
+      id: '1705'
+      position:
+        x: 1296
+        y: 282
+      positionAbsolute:
+        x: 1296
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - id: body-1706
+            key: ''
+            type: text
+            value: '{"profile": {{#1701.profile_json#}}, "plan": {{#1705.plan_json#}}}'
+          type: json
+        desc: Every check in planner/validate.py — prerequisites, exclusions, load,
+          spread, exchange, double-counting, 120 credits.
+        headers: Authorization:Bearer {{#1701.tool_token#}}
+        method: post
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: Tool · validate_plan
+        type: http-request
+        url: '{{#1701.tool_base#}}/tools/validate_plan'
+        variables: []
+      height: 150
+      id: '1706'
+      position:
+        x: 1600
+        y: 282
+      positionAbsolute:
+        x: 1600
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: |
+          import json
+
+
+          def main(report_body: str) -> dict:
+              """Turn the validator's report into something a prompt can carry."""
+              try:
+                  report = json.loads(report_body or "{}")
+              except Exception as exc:
+                  return {"verdict": "unreadable",
+                          "errors_text": f"The validator's reply could not be "
+                                         f"read: {exc}"}
+
+              errors = report.get("errors") or []
+              if not errors:
+                  return {"verdict": "clean",
+                          "errors_text": "No blocking errors. Leave the plan "
+                                         "exactly as it is."}
+
+              lines = []
+              for issue in errors:
+                  where = " · ".join(
+                      str(x) for x in (issue.get("term"), issue.get("course")) if x)
+                  lines.append(f"- [{issue.get('check')}] {issue.get('message')}"
+                               + (f" ({where})" if where else ""))
+              return {"verdict": "has_errors", "errors_text": "\n".join(lines)}
+        code_language: python3
+        desc: Reads the verdict and lists the blocking errors in plain English.
+        outputs:
+          errors_text:
+            children: null
+            type: string
+          verdict:
+            children: null
+            type: string
+        selected: false
+        title: Read the verdict
+        type: code
+        variables:
+        - value_selector:
+          - '1706'
+          - body
+          variable: report_body
+      height: 54
+      id: '1707'
+      position:
+        x: 1904
+        y: 282
+      positionAbsolute:
+        x: 1904
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: One repair pass against the real validator output. Told to return the
+          plan untouched when the verdict is already clean.
+        model:
+          completion_params:
+            temperature: 0
+          mode: chat
+          name: claude-opus-5-5
+          provider: anthropic
+        prompt_template:
+        - id: sys-1708
+          role: system
+          text: 'You fix an HKUST degree plan that a validator has just checked.
+
+
+            If the verdict is "clean", return the plan exactly as given, with a
+            rationale saying it passed. Change nothing.
+
+
+            If there are errors, fix those errors and only those. The same rules
+            still hold: every course code must already appear in the plan you are
+            given, rows marked taken, current or transfer stay where they are, slot
+            rows stay slots, and credits are never edited.
+
+
+            Answer with one JSON object and nothing else:
+
+
+            {"plan": [{"code": "...", "term": "...", "status": "..."}, ...],
+            "rationale": "what you fixed, or that nothing needed fixing"}'
+        - id: usr-1708
+          role: user
+          text: 'Verdict: {{#1707.verdict#}}
+
+
+            Blocking errors:
+
+
+            {{#1707.errors_text#}}
+
+
+            The plan as it stands:
+
+
+            {{#1705.plan_json#}}
+
+
+            The student''s profile, for the constraints:
+
+
+            {{#1701.profile_json#}}
+
+
+            Return the JSON object.'
+        selected: false
+        title: LLM · repair pass
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '1708'
+      position:
+        x: 2208
+        y: 282
+      positionAbsolute:
+        x: 2208
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: |
+          import json
+          import re
+
+
+          def main(llm_text: str, draft_body: str) -> dict:
+              """The same reader as before. Here `draft_body` is the plan that
+              went into the repair pass, so an unreadable repair leaves the
+              validated-once plan standing rather than losing it."""
+              text = llm_text or ""
+              block = re.search(r"```(?:json)?\s*(.+?)```", text, re.S)
+              candidates = [block.group(1)] if block else []
+              brace = text.find("{")
+              if brace != -1:
+                  candidates.append(text[brace:])
+              candidates.append(text)
+
+              for candidate in candidates:
+                  try:
+                      parsed = json.loads(candidate.strip())
+                  except Exception:
+                      continue
+                  if isinstance(parsed, dict) and isinstance(parsed.get("plan"), list):
+                      rows = [r for r in parsed["plan"] if isinstance(r, dict)]
+                      if rows:
+                          return {
+                              "plan_json": json.dumps(rows, ensure_ascii=False),
+                              "rationale": str(parsed.get("rationale", "")),
+                              "source": "model",
+                          }
+
+              return {
+                  "plan_json": draft_body or "[]",
+                  "rationale": "The repair pass could not be read, so the plan "
+                               "from the first pass was kept.",
+                  "source": "previous",
+              }
+        code_language: python3
+        desc: Reads the repaired plan, keeping the first-pass plan if the reply
+          cannot be read.
+        outputs:
+          plan_json:
+            children: null
+            type: string
+          rationale:
+            children: null
+            type: string
+          source:
+            children: null
+            type: string
+        selected: false
+        title: Read the repair
+        type: code
+        variables:
+        - value_selector:
+          - '1708'
+          - text
+          variable: llm_text
+        - value_selector:
+          - '1705'
+          - plan_json
+          variable: draft_body
+      height: 54
+      id: '1709'
+      position:
+        x: 2512
+        y: 282
+      positionAbsolute:
+        x: 2512
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - id: body-1710
+            key: ''
+            type: text
+            value: '{"profile": {{#1701.profile_json#}}, "plan": {{#1709.plan_json#}}}'
+          type: json
+        desc: The check that decides what comes out. Nothing downstream can
+          overrule it.
+        headers: Authorization:Bearer {{#1701.tool_token#}}
+        method: post
+        params: ''
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: Tool · validate_plan (final)
+        type: http-request
+        url: '{{#1701.tool_base#}}/tools/validate_plan'
+        variables: []
+      height: 150
+      id: '1710'
+      position:
+        x: 2816
+        y: 282
+      positionAbsolute:
+        x: 2816
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: |
+          import json
+
+
+          def main(plan_json: str, rationale: str, report_body: str,
+                   program_body: str) -> dict:
+              """One JSON document out, carrying its own verdict.
+
+              The validator's report travels with the plan. A caller that reads
+              `ok` is reading the validator, not the model's opinion of itself,
+              and `errors` is non-empty whenever the plan is not clean — so a
+              plan that failed can never be presented as if it passed (hard
+              rule 2).
+              """
+              def load(raw, default):
+                  try:
+                      return json.loads(raw or "")
+                  except Exception:
+                      return default
+
+              plan = load(plan_json, [])
+              report = load(report_body, {})
+              program = load(program_body, {})
+
+              per_term = report.get("per_term") or {}
+              result = {
+                  "ok": bool(report.get("ok")),
+                  "plan": plan,
+                  "rationale": rationale or "",
+                  "program": {
+                      "code": program.get("code"),
+                      "title": program.get("title"),
+                      "tier": program.get("tier"),
+                      "verified_on": program.get("verified_on"),
+                      "source_url": program.get("source_url"),
+                      "cohort": program.get("cohort"),
+                  },
+                  "validation": {
+                      "ok": bool(report.get("ok")),
+                      "error_count": report.get("error_count"),
+                      "warning_count": report.get("warning_count"),
+                      "errors": report.get("errors") or [],
+                      "warnings": report.get("warnings") or [],
+                      "credits": report.get("credits") or {},
+                      "per_term": per_term,
+                  },
+                  "caveat": "Course data is extracted from official HKUST PDFs. "
+                            "Check this plan with your academic advisor before "
+                            "you register.",
+              }
+              return {"result": json.dumps(result, ensure_ascii=False, indent=1)}
+        code_language: python3
+        desc: Assembles the one output — the plan, the validator's own verdict, and
+          the provenance of the data it was built from.
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: Assemble the answer
+        type: code
+        variables:
+        - value_selector:
+          - '1709'
+          - plan_json
+          variable: plan_json
+        - value_selector:
+          - '1709'
+          - rationale
+          variable: rationale
+        - value_selector:
+          - '1710'
+          - body
+          variable: report_body
+        - value_selector:
+          - '1702'
+          - body
+          variable: program_body
+      height: 54
+      id: '1711'
+      position:
+        x: 3120
+        y: 282
+      positionAbsolute:
+        x: 3120
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1711'
+          - result
+          variable: result
+        selected: false
+        title: End
+        type: end
+      height: 90
+      id: '1712'
+      position:
+        x: 3424
+        y: 282
+      positionAbsolute:
+        x: 3424
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243

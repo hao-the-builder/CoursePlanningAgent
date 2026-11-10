@@ -24,6 +24,15 @@ python-dotenv>=1,<2
 # --- Phase 6: UI ----------------------------------------------------------
 streamlit>=1.40,<2
 
+# --- the Dify backend -----------------------------------------------------
+# `service/tool_api.py` puts the deterministic tools on HTTP so a Dify
+# workflow can call them. Starlette and uvicorn already arrive with
+# streamlit; pyyaml is here for the DSL file in `dify/`, which
+# tests/test_dify_workflow.py reads and checks.
+starlette>=0.40
+uvicorn>=0.30
+pyyaml>=6,<7
+
 # --- tests ----------------------------------------------------------------
 pytest>=8,<10
 # Recalculates the generated .xlsx so the tests can check what Excel would
