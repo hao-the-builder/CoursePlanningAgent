@@ -8,6 +8,8 @@ Two files here, and one service in the repo:
 | `openapi.json` | the same four tools as an OpenAPI schema, if you'd rather build an **Agent node** than the fixed graph |
 | `../service/tool_api.py` | the tools themselves — the deterministic half, over HTTP |
 
+**Step-by-step instructions are in `SETUP.md`.** This file is the reasoning behind the design.
+
 ## Why it is built this way
 
 Dify runs its agent loop on its own server and **never hands a tool call back
