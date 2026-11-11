@@ -112,6 +112,15 @@ and re-pick the model from the dropdown, which rewrites it correctly. Dify's
 own docs do not confirm which form the current editor writes, so this is left
 for you to resolve in the UI rather than guessed at here.
 
+Re-picking from the dropdown only helps if the dropdown holds a model that
+still exists. Dify's Anthropic plugin ships a **hard-coded** model list rather
+than reading Anthropic's `/v1/models`, so an older plugin offers only models
+Anthropic has since retired, and every one of them answers `404
+not_found_error`. The durable answer is to stop depending on the plugin's list:
+Anthropic's OpenAI-compatible endpoint can be added through Dify's
+**OpenAI-API-compatible** provider, where the model name is typed rather than
+chosen. `dify/SETUP.md` step 5 has the fields.
+
 Note that Dify has **no per-request model override** — `inputs` only carries
 the app's own variables. So CLAUDE.md's `MODEL_FAST` / `MODEL_STRONG` split
 does not survive this route: both nodes name one model. Give them different

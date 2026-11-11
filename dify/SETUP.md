@@ -188,7 +188,67 @@ Then in the workflow, click on the box called **LLM · shape the plan**:
 Do the same for the box called **LLM · repair pass**.
 
 That is all — picking from the dropdown writes the right settings for your
-installation.
+installation, **as long as the dropdown offers a model that still exists.**
+
+### If the provider only offers old models
+
+Dify's Anthropic plugin carries a **fixed list** of model names, written when
+that version of the plugin was published. It never asks Anthropic what exists
+today. So if the list stops at Claude Opus 4, Sonnet 4 and Claude 3.5, the
+plugin is from before June 2026 — and every model on that list has since been
+retired. Picking any of them gives you this:
+
+```
+[models] Bad Request Error, Error code: 404 - {'type': 'error', 'error':
+{'type': 'not_found_error', 'message': 'model: claude-opus-4-20250514'}}
+```
+
+That 404 is Anthropic saying the model is gone. Your key is fine and the
+workflow is fine. Retirement dates, for reference: Opus 4 and Sonnet 4 on
+15 June 2026, Sonnet 3.7 in February 2026, Claude 3.5 Sonnet in October 2025.
+
+**First, try updating the plugin.** Dify's **Plugins** page → Anthropic →
+update. If the Marketplace version is current, the dropdown gains the Claude 5
+models and there is nothing else to do.
+
+**If it still only lists old models, add Claude through the
+OpenAI-API-compatible provider instead.** Anthropic serves an OpenAI-shaped
+endpoint, so the same Anthropic key works — and that provider has no built-in
+model list, so you type the name yourself and are never again at the mercy of
+the plugin's age.
+
+**Settings → Model Provider → OpenAI-API-compatible → Add Model:**
+
+| Field | Value |
+|---|---|
+| Model Name | `claude-opus-5-5` |
+| API Key | your Anthropic API key |
+| API endpoint URL | `https://api.anthropic.com/v1` |
+| Completion mode | Chat |
+| Model context size | `200000` |
+| Upper bound for max tokens | `8192` |
+
+Leave `/chat/completions` off the end of the URL — Dify appends the route
+itself. The context and token numbers only cap what Dify will send; the model
+allows far more, and this workflow needs a few thousand tokens at most.
+
+Then re-pick the model in **both** LLM boxes, choosing the new
+OpenAI-API-compatible entry.
+
+**The current model names**, if you want a cheaper one:
+
+| Model | Name to type | Cost per million tokens, in / out |
+|---|---|---|
+| Claude Opus 5.5 | `claude-opus-5-5` | $4 / $20 |
+| Claude Sonnet 5.5 | `claude-sonnet-5-5` | $2 / $10 |
+| Claude Haiku 5.5 | `claude-haiku-5-5` | $0.10 / $0.50 |
+
+These names carry **no date suffix** — `claude-opus-5-5` is the whole name. A
+name ending in a date, like `claude-opus-4-20250514`, is the old style, and
+every model that used it has been retired.
+
+> The compatibility endpoint does not offer extended thinking or prompt
+> caching. This workflow uses neither — both LLM boxes only ask for JSON back.
 
 > Both boxes name the same model. Dify cannot be told which model to use per
 > request, so if you want a cheaper model for the repair pass, set it here.
@@ -311,6 +371,8 @@ asked about:
 | A `Tool ·` box returns **422** with *unsupported* | That program's rules could not be read reliably, so it refuses to plan it | Use a program that works: `COMP`, `MATH-AM`, `FINA`, `GCS-SS`, `IDT` |
 | A `Tool ·` box returns **400** with *not valid JSON* | `profile_json` is malformed | Paste the example from step 6 again; it must be one line of valid JSON |
 | An `LLM ·` box is red | No model picked, or no provider set up | Step 5 |
+| An `LLM ·` box gives **404** `not_found_error` naming a model with a date in it, like `claude-opus-4-20250514` | The provider plugin's model list is older than the models. That one is retired | Step 5, *If the provider only offers old models* — update the Anthropic plugin, or add `claude-opus-5-5` by name through the OpenAI-API-compatible provider |
+| An `LLM ·` box gives **400** mentioning `temperature` | The model rejects sampling parameters | Open the node and clear `temperature` from its settings |
 | Result has `"ok": false` and a list of errors | The workflow ran correctly and the plan genuinely breaks a rule | Read the errors; this is the system working, not failing |
 | `result` says *the model's reply could not be read* | The model did not answer with clean JSON | It fell back to the code-built plan on purpose. Re-run; if it keeps happening, try a stronger model |
 
