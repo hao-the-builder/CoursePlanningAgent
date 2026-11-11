@@ -95,6 +95,12 @@ than being migrated.
 
 ### 3. Pick the model
 
+Any chat model will do. No fact in the output comes from the model — codes,
+credits, rules, totals and every check come from the tool service — so the
+model only reorders rows and writes prose, and `validate_plan` checks its
+output regardless. The design is what makes the model swappable: a weaker or
+unfamiliar model cannot get a course that does not exist past the validator.
+
 Both LLM nodes are written as:
 
 ```yaml

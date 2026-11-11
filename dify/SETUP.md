@@ -173,8 +173,16 @@ You should now see a workflow with 12 boxes joined left to right, starting at
 
 ## 5. Give it a model
 
-The workflow asks for Claude, but it cannot know how your Dify is set up, so
-check this by hand.
+**Any chat model works.** The file names a Claude model because that is what
+it was written against, but nothing in the workflow depends on it: the two LLM
+boxes only reorder rows that the tool service already supplied and write a few
+sentences of rationale. Every course code, credit figure and rule comes from
+the service, the validator checks the model's output either way, and the `code`
+box after each LLM box falls back to the code-built plan if the reply will not
+parse. So use whichever model your Dify can actually reach — and say in your
+write-up which one you used.
+
+The workflow cannot know how your Dify is set up, so check this by hand.
 
 First, make sure a model is available at all: **Settings → Model Provider**.
 If nothing is set up, add a provider there (Anthropic if you have an API key
