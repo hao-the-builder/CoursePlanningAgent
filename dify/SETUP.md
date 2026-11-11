@@ -407,6 +407,12 @@ problem is the address or the tunnel — not the service.
 
 ## 10. Letting other people test it
 
+> **For a link reviewers can use, follow `dify/DEPLOY.md` instead.** It is the
+> same ground as this section but written click by click, including the
+> hosting account, the eight fields that have to be repointed in Dify, and
+> how to stop a free service falling asleep mid-review. This section is the
+> short version and the reasoning.
+
 Publishing in Dify is one click. The thing that breaks is the one you cannot
 see from inside Dify: **`tool_base` points at your laptop.** A published app
 whose `tool_base` is a quick tunnel works for exactly as long as your machine
