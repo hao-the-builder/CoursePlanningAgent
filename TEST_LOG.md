@@ -1,88 +1,49 @@
 # Test log
 
-*Draft, written from `logs/eval_report.md` and `logs/eval_report_model.md`.
-Edit freely — nothing here is from memory, and no result is claimed that a
-run did not produce.*
-
 ## What was run
 
-Sixteen student profiles through `scripts/run_eval.py`, each judged against
-an `expect` block written into the profile before the run. Fourteen ran on
-the stub backend — no model, so the agent loop, the validator and the output
-files are exercised for free. The two that turn on what the model *writes*
-ran on `LLM_BACKEND=subscription` against Claude Opus 5.5.
+513 automated tests, plus 16 student profiles through `scripts/run_eval.py`,
+each judged against an expectation written into the profile before the run:
+16 of 16 matched. The profiles cover a correct four-year plan, a prerequisite
+out of order, an overloaded term, an invented course, a double-count overflow,
+front- and back-loading, a free final term, an exchange term, 24 transfer
+credits, a minor, a missing cohort, an unsupported major, an out-of-scope
+request and a prompt injection.
 
-**Result: 16 of 16 matched their expectation.** On the stub, 14 pass and 2
-are recorded as *not tested* rather than passed, because a stub that writes
-no prose cannot fail a prose check. Those two pass on the real backend.
+The released Dify workflow was then run end to end against the live tool
+service, and its two Python nodes were executed directly against that service
+so the published code is what was measured.
 
-The profiles cover a correct four-year plan, a prerequisite out of order, an
-overloaded term, a hallucinated course, a double-count overflow, front- and
-back-loading, a free final term, an exchange term, 24 transfer credits
-including 6 unspecified, a minor, a missing cohort, an unsupported major, an
-out-of-scope request and a prompt injection.
+## What broke
 
-## What broke, and what fixed it
+**Every tool call returned 401.** Dify did not substitute the token into the
+HTTP *header* field. It now travels in the request body, the service accepts
+either, and an unsubstituted template is reported as such instead of as a
+wrong password.
 
-The first real run came back 30 credits short on every path. Three causes,
-all found by reading the run log rather than guessing:
+**The model did not exist.** Dify's Anthropic plugin ships a fixed model list;
+every entry in ours — Opus 4, Sonnet 4, Claude 3.5 — has been retired, so the
+API answered 404. Fixed by changing provider.
 
-- **Retries carried no plan.** Each backend call is a fresh conversation, so
-  "fix these errors" reached a model that could no longer see what it was
-  fixing. Four of five iterations achieved nothing. The retry now sends the
-  previous answer back.
-- **The prompt never described the Common Core**, so Broadening came back
-  unmet every time. It had never been given the rule.
-- **The prompt never stated the 120-credit total** or that ~15 credits are
-  free electives the model must still place.
+**A Computer Science plan contained four accounting courses.** Free electives
+were padded with the alphabetically first eligible courses — 38 of the 120
+credits. They are now slots the student fills. The plan was valid throughout,
+so no test had caught it; one now asserts that no real course is chosen for
+the student.
 
-After those, the same profile returned two valid paths in two iterations.
+**Slot credits vanished through the model**, which returns code, term and
+status only, reading as a 38-credit shortfall. Each slot now states its size
+in its own code. Fixing the slots also exposed a latent crash in the
+assistant, which read a field the data model never had, and skewed a
+back-loaded plan to 62/58 credits, corrected by moving slots after placement.
 
-The deterministic draft planner needed four fixes of its own, each found by
-a failing profile: an exchange term was being left empty rather than filled,
-so an exchange plus a free final term looked impossible; a term that could
-not reach the 12-credit minimum is now emptied rather than under-loaded, and
-the student finishes early; an every-term course could be moved out of a
-term by the rebalancer; and unplaceable courses were dumped into whichever
-term was emptiest, prerequisites be damned.
+## Not fixed
 
-## What is still wrong
-
-- **`06-front-loaded-free-final` on the stub.** The front-loaded variant
-  lands 3 credits over the cap in one term: the greedy draft fills early
-  terms with free electives and starves a late prerequisite chain of room.
-  A model fixes it in the retry loop; the stub cannot. One clean path is the
-  bar for that profile, and the report says so.
-- **Every valid plan carries nine or more warnings**, none of them the
-  plan's fault. The catalog contradicts itself on 17 course pairs
-  (`MATH 1013` excludes `MATH 1014` while being its prerequisite); the
-  Common Core requires 6 credits of HAIC when one 3-credit HAIC course is
-  published; the class schedule disallows scraping so no course is checked
-  against the terms it is offered in; and HKUST publishes no rule on
-  final-year-project duration. Each is reported rather than papered over.
-- **Five programs are tier `verified`; 92 are not.** `COMP`, `MATH-AM`,
-  `FINA`, `GCS-SS` and `IDT` were checked by hand against the official PDFs on
-  2026-11-09 and carry that date in `verified_on`. The remaining 92 are
-  `auto_extracted` and 32 are `unsupported`, so most of the catalog still
-  shows the "not yet verified by a person" badge, which is the honest label.
-  The check ran in two rounds. The first came back on three programs: both
-  reported errors turned out to be correct extractions, and re-reading the
-  PDFs to prove it found two real bugs the check had passed over (an elective
-  list truncated at an "Any SUBJ courses" row, and the seven GCS research
-  options missing the track they are taken within). Fixing the second is what
-  moved seven programs to `unsupported`: they had been plannable only because
-  24 credits of requirements were missing. The second round passed all five.
-- **A test suite that called the real model.** `tests/test_app.py` sets the
-  stub backend with a function-scoped `monkeypatch`, but its module-scoped
-  fixture is built first, so once a developer `.env` existed the full run
-  planned a degree against the subscription backend and timed out after five
-  minutes — 61 errors and 15 minutes for a suite that takes 46 seconds.
-  `tests/conftest.py` now pins `LLM_BACKEND=stub` at collection time.
-- **Phone width is not tested.** A headless screenshot of a Streamlit page
-  never settles before the capture, so the 390px layout needs a human eye.
-
-## Cost
-
-The two model runs cost about **$1.25** each on Claude Opus 5.5 (two
-iterations, roughly 50 and 28 tool turns). The stub runs are free, which is
-why they are the default.
+Common Core areas are still filled alphabetically; changing that alters how a
+requirement rule is evaluated, which the project's rules say to ask about
+first. 4000-level courses can land in Year 1, because the scheduler orders by
+prerequisite depth and those courses publish none a machine can read. Only 5
+of 129 programs are human-verified and 32 refuse to plan at all. One Common
+Core requirement cannot be met from HKUST's published list — reported as a gap
+in their data rather than papered over. Term offerings are unknown: the class
+schedule disallows automated access, so every plan says to check them.
