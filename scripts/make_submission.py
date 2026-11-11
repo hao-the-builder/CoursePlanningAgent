@@ -47,46 +47,55 @@ invent a course that reaches the student: every plan is checked by a validator
 before it is returned, and checked again afterwards.
 """
 
-ACCESS = """## What the link runs
+ACCESS = """## How to use it
 
-Fill in the form, press generate, and you get two or three term-by-term plans,
-each with its credit totals, its validation result and downloadable `.xlsx`
-and `.docx` files. The course data ships with the app, so the link does not
-depend on anyone's machine being switched on.
+Open the link above. There is nothing to install, nothing to sign in to and no
+key to obtain. Choose a major, say how heavy you want each term and whether
+you want the load front- or back-loaded, name any term you want kept free, and
+press **Plan my degree**.
 
-Every plan, every credit total and every
-requirement check is deterministic Python over data extracted from HKUST's
-published PDFs - which is all of the planning. What the link does not include
-is the model-written prose, because it runs with no language model configured.
-The app says so where that prose would be, rather than leaving a blank that
-reads like an error. Nothing shown is a model's guess.
+You get two or three complete term-by-term plans. Each shows its credits per
+term, whether it passed every check, and what could not be checked. Each plan
+downloads as a spreadsheet whose totals are live Excel formulas - edit the plan
+and the progress figures follow - and one document covers all of them.
 
-## The agentic workflow
+**Start with the five scenarios on the next page.** They are ordered so the
+most informative comes first, and every setting is given.
 
-The planning agent proper runs as a **Dify workflow**, submitted as
-`dify/course-planner.yml` and as an export from the live app. It is the same
-deterministic tools, reached over HTTP, with a model choosing between the
-options the data allows and explaining the result.
+## What to expect, and what it will not do
 
-**Its data service is not hosted.** Several free providers refused a sign-up
-or wanted a card in the time available, so the HTTP service the workflow calls
-still runs on the developer's machine. To see the workflow end to end, start
-it yourself - two commands, no account, no API key, about two minutes:
+**It may need to wake up.** The host puts an idle app to sleep. If you are
+shown a button asking to get the app back up, press it and give it about half
+a minute. That is the host, not the app.
 
-```
-pip install -r service/requirements.txt
-python -m service.tool_api --host 0.0.0.0 --port 8601
-```
+**No written explanations on the hosted version.** It runs with no language
+model configured, so where the system would normally explain its reasoning you
+will find a line saying no model ran. Every plan, credit total, prerequisite
+check and requirement check is deterministic Python over HKUST's published
+data, so nothing factual is missing - and nothing shown is a model's guess.
+The agentic version, a Dify workflow that adds a model's reasoning on top of
+the same tools, is submitted as a file rather than hosted; `dify/SETUP.md`
+runs it in about two minutes.
 
-Then open http://localhost:8601/health. It should report 129 programs, 5 of
-them human-verified, and 1649 courses. That endpoint needs no token, so it
-confirms the data side on its own. `dify/SETUP.md` has the rest: importing the
-workflow and pointing it at your own address. The run on page 5 of this
-document came from exactly that path.
+**One intake cohort.** 2026-27 only. Requirements differ by the year a student
+started, and we extracted one year.
 
-This is stated plainly because a link with a condition attached is worth more
-than one that fails silently.
+**Three levels of confidence in the data, and the app shows which you are
+getting.** 5 programs have been checked line by line against the official PDF
+by a person. 92 more were extracted by machine and carry a visible warning.
+32 refuse to be planned at all, because their rules could not be read reliably
+- scenario 4 is one of those, and the refusal is the feature.
+
+**No term-offering data.** HKUST's class schedule disallows automated access,
+so no course in any plan has been checked against the terms it is actually
+offered in. Every plan says so. This is the largest single gap and it is not
+one we can close without permission.
+
+**Nothing here is endorsed by HKUST**, and every plan says to check it with an
+academic advisor before registering. The agent only recommends and writes
+files: it never registers for a course, emails anyone or submits anything.
 """
+
 
 FILES = """| File | What it is |
 |---|---|
