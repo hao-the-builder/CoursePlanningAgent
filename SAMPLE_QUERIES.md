@@ -1,109 +1,113 @@
 # Five things to try
 
-Scenarios in the order that shows the most for the least clicking. Each is a
-run of the published workflow and takes about a minute.
+For the prototype link. Each takes about a minute, and they are ordered so the
+most informative comes first. Every setting is given, so nothing needs
+guessing.
 
-The form asks for six things. Every scenario below gives all six, so nothing
-has to be guessed.
+Two things to know before you start:
 
-> **If the first run is slow or the first step fails, run it once more.** The
-> tool service sleeps when nobody has used it for a while and takes up to a
-> minute to wake. Opening `/health` on the service first wakes it.
+- **The hosted link runs with no language model configured.** Every plan,
+  credit total and requirement check is deterministic Python over data taken
+  from HKUST's published PDFs, which is all of the planning. What is missing is
+  the written explanation, and the app says so where that text would be. The
+  agentic version — a Dify workflow that adds a model's reasoning on top of
+  the same tools — is submitted as a file; `dify/SETUP.md` runs it.
+- **Rows reading "Free elective" are choices left to you on purpose.** The
+  requirements say only "enough credits to reach 120", so the planner states
+  the size of each gap rather than picking a course on your behalf.
 
 ---
 
 ## 1 · The thing it is for
 
-| Field | Value |
+| Setting | Value |
 |---|---|
-| Major | `COMP` |
 | Intake cohort | `2026-27` |
+| Major | `COMP — BEng in Computer Science` |
 | Credits per term | `12` to `18` |
-| Workload spread | `even` |
-| Terms to keep free | `Y4 Spring` |
+| Workload shape | **Even across the degree** |
 
-A complete four-year plan for a Computer Science degree, with the final term
-free.
+Press **Plan my degree**.
 
-**What to look at.** The total is exactly 120 against the 120 needed. Every
-term sits inside 12–18 credits. The header says the data tier is **verified**
-and when a human last checked it against the PDF, and the requirements link
-goes to the official source. `"Passed every check"` comes from the validator,
-not from the model describing its own work.
+**What to look at.** Two or three complete four-year plans, each totalling 120
+credits with every term inside 12–18. Each path shows its credits per term and
+its validation result. Near the top is the **data tier** and the date a human
+last checked those requirements against the PDF. At the bottom, an `.xlsx` per
+path and one `.docx` covering all of them — the spreadsheet's totals are Excel
+formulas, so you can edit the plan and watch the progress figures follow.
 
 ---
 
-## 2 · Ask for the free term to be paid for earlier
+## 2 · Front-load it, and keep the final term free
 
-Same as above, but **Workload spread** `front`.
+As above, then change two things:
 
-**What to look at.** The first half of the degree now carries more credits
-than the second. Nothing else about the request changed — this is the planner
-shaping the same 120 credits around a stated preference. Compare the term
-table against scenario 1.
+| Setting | Value |
+|---|---|
+| Workload shape | **Front-loaded — free up later years** |
+| Terms to keep free | `Y4 Spring` |
+
+**What to look at.** The first half of the degree now carries more credits than
+the second, and Y4 Spring appears as a block with no courses and a zero total
+rather than being quietly dropped. Same 120 credits, same requirements, a
+different shape — the constraints are satisfied, not weighed up.
 
 ---
 
 ## 3 · Ask for something impossible
 
-Same as scenario 1, but **Terms to keep free** `Y4 Fall and Y4 Spring`.
+As scenario 2, but set **Terms to keep free** to **both** `Y4 Fall` *and*
+`Y4 Spring`.
 
 That leaves six terms to carry a 120-credit degree, which needs 20 credits a
-term against an 18-credit cap in HKUST's Academic Regulations. No arrangement
+term against the 18-credit cap in HKUST's Academic Regulations. No arrangement
 of courses can satisfy it.
 
-**What to look at.** The result says the plan breaks twelve rules and lists
-every one, with the regulation's own URL, *above* the plan rather than below
-it. It does not quietly drop a term, trim the degree, or present the plan as
-though it passed. **This is the scenario worth your time**: a plan that cannot
-exist is the hardest thing for a planner to admit, and it is the one property
-you cannot check by reading a successful output.
+**What to look at.** The plan comes back with its failures named — each
+overloaded term, with the regulation's own URL — in the Progress sheet's
+*Things to check* and in the document. It does not quietly drop a term, trim
+the degree, or present the result as though it passed.
+
+**This is the scenario worth your time.** A plan that cannot exist is the
+hardest thing for a planner to admit, and it is the one property you cannot
+verify by reading a successful output.
 
 ---
 
 ## 4 · Ask for a degree it cannot plan
 
-Same as scenario 1, but **Major** `MATH`.
+Set **Major** to `MATH — BSc in Mathematics`.
 
-**What to look at.** The run stops at the drafting step and says the program's
-requirements could not be read reliably, so no plan will be produced for it.
-32 of the 129 programs are in this state. The alternative — planning anyway
-from half-parsed rules — would produce something that looks exactly as
-confident as scenario 1.
+**What to look at.** It says plainly that this program's requirements could not
+be read reliably enough to plan, and produces nothing. 32 of the 129 programs
+are in that state, and 92 more are machine-extracted but unverified — the tier
+badge in scenario 1 is what tells them apart. Planning anyway from
+half-parsed rules would produce something that looks exactly as confident as
+scenario 1 does.
 
 ---
 
-## 5 · Read what it refuses to be sure about
+## 5 · See how exchange credits are treated
 
-Any successful run, at the bottom.
+Back to scenario 1, then tick **I want to go on exchange**, choose a term such
+as `Y3 Spring`, and pick what you would use it for.
 
-**What to look at.** Nine things to verify, each naming what could not be
-checked and why:
-
-- **No course was checked against the terms it is offered in.** HKUST's class
-  schedule disallows automated access, so that data does not exist here.
-- **One Common Core requirement cannot be met by any plan** — the courses
-  HKUST publishes for this cohort do not add up to it. That is a gap in their
-  data, and it is reported as one rather than hidden.
-- **Prerequisites written for a person**, like "Level 3 or above in HKDSE
-  Mathematics Extended Module M1", which no validator can confirm for you.
-- **Two catalog entries that contradict each other**, where a course excludes
-  another that is also its own prerequisite.
-
-Each plan also carries a line telling you to check it with an academic
-advisor. Nothing here is endorsed by HKUST.
+**What to look at.** The exchange term is filled with rows marked as pending
+rather than real HKUST courses, because which host course maps to which
+requirement is the university's decision and not ours. Any requirement that
+would only be met by those credits shows as needing approval — never as met.
+The credit totals hold exchange credits separately for the same reason.
 
 ---
 
 ## What is doing the work
 
-Course codes, credits, prerequisites, requirement rules, credit totals and
-every check come from a read-only service over HTTP, reading data extracted
-from HKUST's official PDFs. The model reorders a plan the code has already
-built and explains it. A plan is validated before it is returned and
-re-validated afterwards, so a plan that breaks a rule cannot be presented as
-if it passed — scenario 3 is that mechanism firing.
+Course codes, credits, prerequisites, exclusions, requirement rules, credit
+totals and every check are deterministic Python over structured data extracted
+from HKUST's official PDFs. Numbers in the spreadsheet are Excel formulas
+written by that code, never arithmetic done by a model. A language model's only
+job in the full system is to choose between options the data allows and explain
+the result, and a plan is validated before it is shown and again afterwards.
 
-Rows reading **Free elective** are choices left to you on purpose. The
-requirements say only "enough credits to reach 120", so the planner states the
-size of each gap rather than picking a course on your behalf.
+Every plan carries its data tier and a line telling you to check it with an
+academic advisor. Nothing here is endorsed by HKUST.
