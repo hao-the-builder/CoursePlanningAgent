@@ -1,0 +1,9 @@
+# Just the tool service. The repo's root requirements.txt builds the whole
+# project - Streamlit, openpyxl, python-docx, pdfplumber, the Anthropic SDKs -
+# and none of it is reachable from here: the service answers lookups from
+# `data/` and calls no model. Verified by importing `service.tool_api` and
+# reading `sys.modules`, so this list is measured rather than guessed.
+starlette==1.10.0
+uvicorn==0.54.0
+pydantic==2.14.2
+python-dotenv==1.2.4

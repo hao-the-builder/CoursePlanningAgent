@@ -402,3 +402,90 @@ asked about:
 **Still stuck?** The service terminal prints every request it receives. If a
 box in Dify fails and nothing appears there, the request never arrived, so the
 problem is the address or the tunnel — not the service.
+
+---
+
+## 10. Letting other people test it
+
+Publishing in Dify is one click. The thing that breaks is the one you cannot
+see from inside Dify: **`tool_base` points at your laptop.** A published app
+whose `tool_base` is a quick tunnel works for exactly as long as your machine
+is awake and that tunnel is alive - and a quick tunnel is deregistered without
+warning. A tester who opens the link tomorrow gets a connection error on every
+`Tool ·` box.
+
+So before sharing a link, two things have to change.
+
+### 10a. The token must stop being an input
+
+Right now `tool_token` is a Start variable, which means **every tester has to
+be told your token, and can read it.** They can also point `tool_base` at a
+server of their own. Neither is acceptable once the link leaves your hands.
+
+Dify has workflow **environment variables** for exactly this - string, number
+and secret types, referenced from any node. Move `tool_base` to a string and
+`tool_token` to a **secret**, then open each of the four `Tool ·` nodes and
+repoint the body fields at the environment variable instead of the Start
+variable.
+
+> Pick the variable from Dify's own variable picker rather than typing the
+> reference by hand. The template form is easy to get subtly wrong, and a
+> reference that does not resolve arrives at this service as the literal text
+> `{{#...#}}` - which it will tell you about, in those words, rather than
+> leaving you to guess at a 401.
+
+Testers are then left with the two inputs that are actually theirs: `major`
+and `profile_json`.
+
+### 10b. The service needs a home that is not your laptop
+
+| | Works while you are offline | Address changes | Setup |
+|---|---|---|---|
+| **Deploy the service** | Yes | No | A hosting account, ~15 min |
+| **Named Cloudflare tunnel** | No | No | A Cloudflare account, ~10 min |
+| **Testers run the repo** | Yes, on their machine | n/a | None for you |
+
+**Deploy it.** There is a `Dockerfile` in the repo root that builds the tool
+service alone - four packages, no Streamlit, no model SDKs, because nothing
+here calls a model. Any container host works the same way: point it at this
+repo, let it build the Dockerfile, set `TOOL_API_TOKEN` in the host's secret
+store, and it serves on whatever port the host assigns through `$PORT`.
+
+Then check `https://your-service/health` in a browser - it is open on purpose,
+so a tester or a grader can confirm the data side is up without a token - and
+put that address in the `tool_base` environment variable.
+
+> **Free tiers usually sleep.** A free instance commonly spins down after
+> about 15 minutes idle and takes up to a minute to wake. The first Dify run
+> after a quiet spell can therefore time out on the first `Tool ·` box and
+> succeed on a retry. Opening `/health` first wakes it. Say this in whatever
+> note you send with the link, or a tester will read a cold start as a broken
+> app.
+
+**Named Cloudflare tunnel**, if you would rather not deploy: `cloudflared
+tunnel login`, then `cloudflared tunnel create course-planner`, then route a
+hostname you own to it. The address stops changing, which is the one thing
+quick tunnels get wrong. Your machine still has to be running, so this suits a
+demo at a known time rather than a link someone opens whenever.
+
+**Testers run the repo.** Worth remembering as the fallback: this project's own
+Streamlit app needs no Dify and no tunnel, because the data ships with the
+code. `pip install -r requirements.txt`, then `streamlit run app.py`. What they
+lose is the Dify workflow - which is the part you are submitting, so this is a
+complement to a shared link, not a substitute for one.
+
+### 10c. Then publish
+
+**Publish** in the app, then open the app's overview and find the web-app URL
+and its accessibility setting. Make it public if you want anyone with the link
+to run it. Send testers the link, the two inputs they need, and one line about
+the cold start.
+
+A profile they can paste:
+
+```json
+{"cohort":"2026-27","major":"COMP","workload_min":12,"workload_max":18,"spread":"even","free_terms":["Y4 Spring"]}
+```
+
+And `COMP`, `MATH-AM`, `FINA`, `GCS-SS` or `IDT` for `major` - those five are
+the verified programs. Anything else is honest about its data tier or refuses.

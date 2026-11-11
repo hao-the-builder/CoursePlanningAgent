@@ -377,11 +377,19 @@ def main(argv: list[str] | None = None) -> int:
     import uvicorn
 
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--host", default="127.0.0.1",
+    # A hosting platform hands the port over in the environment and expects
+    # the process to listen on every interface. A laptop wants neither, so the
+    # environment is consulted first and the private defaults stand when it is
+    # silent. An explicit flag still wins over both.
+    ap.add_argument("--host", default=os.environ.get("HOST", "127.0.0.1"),
                     help="127.0.0.1 keeps it off the network (default). Use "
                          "0.0.0.0 only when Dify runs in a container that "
-                         "has to reach it.")
-    ap.add_argument("--port", type=int, default=8601)
+                         "has to reach it, or when this is deployed. Reads "
+                         "$HOST if set.")
+    ap.add_argument("--port", type=int,
+                    default=int(os.environ.get("PORT") or 8601),
+                    help="reads $PORT if set, which is how Render, Railway, "
+                         "Fly and Cloud Run assign one")
     args = ap.parse_args(argv)
 
     token()        # fail now, with the reason, rather than on the first call

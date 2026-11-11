@@ -47,3 +47,7 @@ desktop.ini
 # To archive them instead, delete these two lines and re-add.
 raw/**/*.pdf
 raw/**/*.jpg
+
+# a screenshot dropped in the project root is not part of the project
+/*.png
+/*.jpg
