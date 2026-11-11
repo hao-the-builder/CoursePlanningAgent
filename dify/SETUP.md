@@ -203,10 +203,18 @@ Click **Run** in the top right. Dify asks for four values:
 For `profile_json`:
 
 ```json
-{"cohort":"2026-27","major":"COMP","workload_min":12,"workload_max":18,"spread":"front","free_terms":["Y4 Spring"]}
+{"cohort":"2026-27","major":"COMP","workload_min":12,"workload_max":18,"spread":"even","free_terms":["Y4 Spring"]}
 ```
 
 Press run and watch the boxes light up one by one.
+
+> **Use this profile for your first run.** It is chosen because the plan the
+> code builds for it already passes every check, so a clean result proves the
+> plumbing works. Once it does, try changing `"even"` to `"front"`: that one
+> puts Y3 Spring at 19 credits, one over the 18-credit cap in the Academic
+> Regulations, and you get to watch the repair pass fix a real error instead of
+> an imaginary one. Seeing `"ok": false` on *that* profile is the system
+> working.
 
 **What a good result looks like.** The End box gives you one value called
 `result`, holding something like:
