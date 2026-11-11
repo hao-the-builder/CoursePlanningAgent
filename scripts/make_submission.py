@@ -28,6 +28,10 @@ OUT = REPO / "submission"
 NAME = "HKUST-Course-Planner-Submission"
 
 GREY = RGBColor(0x55, 0x55, 0x55)
+LINK = RGBColor(0x0B, 0x57, 0xD0)
+PALE = "EAF3EA"
+
+APP_URL = "https://kxhijnfqbggbqkjrpsqzbd.streamlit.app"
 
 COVER = """The prototype plans an HKUST undergraduate degree term by term, for the
 2026-27 intake. A student says what they are studying, how heavy they want
@@ -35,25 +39,22 @@ each term, whether they want the load front- or back-loaded and which terms
 they want to keep free; the agent returns a term-by-term plan that satisfies
 the programme's published requirements, or says plainly why no plan can.
 
-It runs as a Dify workflow. Every course code, credit value, prerequisite and
-requirement rule comes from a small read-only service over HTTP, which reads
-data extracted from HKUST's own published PDFs. The model's only job is to
+How it is built. Every course code, credit value, prerequisite and requirement
+rule comes from structured data extracted from HKUST's own published PDFs, and
+the agent reaches it through deterministic Python rather than recalling it. The model's only job is to
 choose between options the data allows and explain the result, so it cannot
 invent a course that reaches the student: every plan is checked by a validator
 before it is returned, and checked again afterwards.
 """
 
-ACCESS = """## The demo link
+ACCESS = """## What the link runs
 
-**https://kxhijnfqbggbqkjrpsqzbd.streamlit.app**
+Fill in the form, press generate, and you get two or three term-by-term plans,
+each with its credit totals, its validation result and downloadable `.xlsx`
+and `.docx` files. The course data ships with the app, so the link does not
+depend on anyone's machine being switched on.
 
-Nothing to install and nothing to sign in to. Fill in the form, press
-generate, and you get two or three term-by-term plans, each with its credit
-totals, its validation result and downloadable `.xlsx` and `.docx` files. The
-course data ships with the app, so this link does not depend on anyone's
-machine being switched on.
-
-**What is running there.** Every plan, every credit total and every
+Every plan, every credit total and every
 requirement check is deterministic Python over data extracted from HKUST's
 published PDFs - which is all of the planning. What the link does not include
 is the model-written prose, because it runs with no language model configured.
@@ -105,6 +106,78 @@ safe to hand in as it stands.
 
 
 # --------------------------------------------------------------- rendering --
+
+def add_hyperlink(para, url: str, text: str, size: float = 10.5,
+                  bold: bool = False):
+    """A clickable link. python-docx has no API for one, so the relationship
+    and the `w:hyperlink` element are written by hand. Word carries it
+    through to the PDF, so the link works in the submitted file."""
+    from docx.opc.constants import RELATIONSHIP_TYPE as RT
+    from docx.oxml.ns import qn
+    from docx.oxml import OxmlElement
+
+    part = para.part
+    relation = part.relate_to(url, RT.HYPERLINK, is_external=True)
+
+    link = OxmlElement("w:hyperlink")
+    link.set(qn("r:id"), relation)
+    run = OxmlElement("w:r")
+    properties = OxmlElement("w:rPr")
+
+    colour = OxmlElement("w:color")
+    colour.set(qn("w:val"), "0B57D0")
+    properties.append(colour)
+    underline = OxmlElement("w:u")
+    underline.set(qn("w:val"), "single")
+    properties.append(underline)
+    points = OxmlElement("w:sz")
+    points.set(qn("w:val"), str(int(size * 2)))
+    properties.append(points)
+    if bold:
+        properties.append(OxmlElement("w:b"))
+
+    run.append(properties)
+    label = OxmlElement("w:t")
+    label.text = text
+    run.append(label)
+    link.append(run)
+    para._p.append(link)
+    return link
+
+
+def shade(cell, colour: str) -> None:
+    from docx.oxml.ns import qn
+    from docx.oxml import OxmlElement
+
+    fill = OxmlElement("w:shd")
+    fill.set(qn("w:val"), "clear")
+    fill.set(qn("w:fill"), colour)
+    cell._tc.get_or_add_tcPr().append(fill)
+
+
+def add_link_banner(document, url: str) -> None:
+    """The first thing on the page: what to click, and what it is."""
+    table = document.add_table(rows=1, cols=1)
+    cell = table.rows[0].cells[0]
+    shade(cell, PALE)
+
+    label = cell.paragraphs[0]
+    run = label.add_run("THE PROTOTYPE — TRY IT HERE")
+    run.bold = True
+    run.font.size = Pt(8.5)
+    run.font.color.rgb = GREY
+    label.paragraph_format.space_after = Pt(2)
+
+    address = cell.add_paragraph()
+    add_hyperlink(address, url, url, size=14, bold=True)
+    address.paragraph_format.space_after = Pt(2)
+
+    note = cell.add_paragraph()
+    run = note.add_run("Nothing to install and no sign-in. Choose a major, "
+                       "set how heavy you want each term, and press generate.")
+    run.font.size = Pt(9.5)
+    run.font.color.rgb = GREY
+    document.add_paragraph()
 
 def add_markdown(document: Document, text: str) -> None:
     """Enough Markdown for the files in this repo: headings, tables, lists,
@@ -240,6 +313,8 @@ def main() -> int:
                            "· cohort 2026-27")
     run.italic = True
     run.font.color.rgb = GREY
+
+    add_link_banner(document, APP_URL)
 
     document.add_heading("What it does", level=1)
     add_markdown(document, COVER)
