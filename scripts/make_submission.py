@@ -43,29 +43,48 @@ invent a course that reaches the student: every plan is checked by a validator
 before it is returned, and checked again afterwards.
 """
 
-ACCESS = """**The workflow runs; the data service behind it is not hosted.** Three free
-hosting providers refused a sign-up or a card in the time available, so the
-service that holds the course data still runs on the developer's machine. A
-reviewer has two ways to see it working, and the second needs nothing from us:
+ACCESS = """## The demo link
 
-**1. The Dify link**, when the developer's service is up. Arrange a time, or
-try it and retry if a tool step reports a connection error.
+**https://kxhijnfqbggbqkjrpsqzbd.streamlit.app**
 
-**2. Run the data service yourself** - two commands, no account, no API key,
-about two minutes:
+Nothing to install and nothing to sign in to. Fill in the form, press
+generate, and you get two or three term-by-term plans, each with its credit
+totals, its validation result and downloadable `.xlsx` and `.docx` files. The
+course data ships with the app, so this link does not depend on anyone's
+machine being switched on.
+
+**What is running there.** Every plan, every credit total and every
+requirement check is deterministic Python over data extracted from HKUST's
+published PDFs - which is all of the planning. What the link does not include
+is the model-written prose, because it runs with no language model configured.
+The app says so where that prose would be, rather than leaving a blank that
+reads like an error. Nothing shown is a model's guess.
+
+## The agentic workflow
+
+The planning agent proper runs as a **Dify workflow**, submitted as
+`dify/course-planner.yml` and as an export from the live app. It is the same
+deterministic tools, reached over HTTP, with a model choosing between the
+options the data allows and explaining the result.
+
+**Its data service is not hosted.** Several free providers refused a sign-up
+or wanted a card in the time available, so the HTTP service the workflow calls
+still runs on the developer's machine. To see the workflow end to end, start
+it yourself - two commands, no account, no API key, about two minutes:
 
 ```
 pip install -r service/requirements.txt
 python -m service.tool_api --host 0.0.0.0 --port 8601
 ```
 
-Then open http://localhost:8601/health in a browser. It should report 129
-programs, 5 of them human-verified, and 1649 courses. That endpoint needs no
-token, so it confirms the data side is alive on its own. `dify/SETUP.md` has
-the rest: importing the workflow and pointing it at your own address.
+Then open http://localhost:8601/health. It should report 129 programs, 5 of
+them human-verified, and 1649 courses. That endpoint needs no token, so it
+confirms the data side on its own. `dify/SETUP.md` has the rest: importing the
+workflow and pointing it at your own address. The run on page 5 of this
+document came from exactly that path.
 
-This is stated plainly because a link that silently fails is worse than a link
-with a condition attached.
+This is stated plainly because a link with a condition attached is worth more
+than one that fails silently.
 """
 
 FILES = """| File | What it is |
@@ -225,7 +244,6 @@ def main() -> int:
     document.add_heading("What it does", level=1)
     add_markdown(document, COVER)
 
-    document.add_heading("How to try it", level=1)
     add_markdown(document, ACCESS)
 
     document.add_page_break()
