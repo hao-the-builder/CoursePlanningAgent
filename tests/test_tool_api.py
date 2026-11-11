@@ -9,6 +9,7 @@ agent uses.
 from __future__ import annotations
 
 import sys
+import json
 from pathlib import Path
 
 import pytest
@@ -159,3 +160,47 @@ def test_a_plan_sent_as_a_json_string_is_accepted(client):
                 {"profile": json.dumps(PROFILE),
                  "plan": json.dumps({"plan": draft["plan"]})}).json()
     assert body["ok"] is True
+
+
+# ------------------------------------------- the token in the body too --
+
+def test_the_token_is_accepted_in_the_body(client):
+    """Dify substitutes variables inside a JSON body dependably; whether it
+    does so inside the headers field is not something its docs settle, and a
+    header sent literally looks exactly like a wrong token."""
+    reply = client.post("/tools/get_program",
+                        json={"code": "COMP", "tool_token": TOKEN})
+    assert reply.status_code == 200
+    assert reply.json()["code"] == "COMP"
+
+
+def test_a_wrong_token_in_the_body_is_still_refused(client):
+    reply = client.post("/tools/get_program",
+                        json={"code": "COMP", "tool_token": "nope"})
+    assert reply.status_code == 401
+
+
+def test_an_unfilled_template_says_what_went_wrong(client):
+    """The 401 that costs the most time to diagnose, named outright."""
+    reply = post(client, "/tools/get_program",
+                 {"code": "COMP"}, auth="{{#1701.tool_token#}}")
+    assert reply.status_code == 401
+    assert "did not substitute" in reply.json()["error"]
+
+
+def test_the_echo_endpoint_describes_without_revealing(client):
+    body = client.post("/debug/echo",
+                       json={"tool_token": "{{#1701.tool_token#}}"}).json()
+    assert body["tool_token_in_body"]["looks_like_an_unfilled_template"]
+    assert body["authorization_header"] == {"present": False}
+    assert "not substituted" in body["hint"]
+    # It must never confirm or deny a guess, only describe the shape.
+    assert TOKEN not in json.dumps(body)
+    assert "correct" not in json.dumps(body).lower()
+
+
+def test_the_echo_endpoint_reports_a_token_that_did_arrive(client):
+    body = post(client, "/debug/echo", {}).json()
+    assert body["authorization_header"]["present"] is True
+    assert body["authorization_header"]["length"] == len(TOKEN)
+    assert body["expected_token_length"] == len(TOKEN)

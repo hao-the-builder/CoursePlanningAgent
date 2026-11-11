@@ -206,7 +206,7 @@ workflow:
           max_length: 256
           options: []
           required: true
-          type: paragraph
+          type: text-input
           variable: tool_token
       height: 196
       id: '1701'
@@ -230,7 +230,7 @@ workflow:
           - id: body-1702
             key: ''
             type: text
-            value: '{"code": "{{#1701.major#}}"}'
+            value: '{"tool_token": "{{#1701.tool_token#}}", "code": "{{#1701.major#}}"}'
           type: json
         desc: The requirement rules, read from the official PDF. Also carries the
           data tier, so the model can say how trustworthy this is.
@@ -268,7 +268,7 @@ workflow:
           - id: body-1703
             key: ''
             type: text
-            value: '{"profile": {{#1701.profile_json#}}}'
+            value: '{"tool_token": "{{#1701.tool_token#}}", "profile": {{#1701.profile_json#}}}'
           type: json
         desc: A complete, feasible plan built by code from the rules. This is the
           only source of real course codes in the whole workflow.
@@ -480,7 +480,7 @@ workflow:
           - id: body-1706
             key: ''
             type: text
-            value: '{"profile": {{#1701.profile_json#}}, "plan": {{#1705.plan_json#}}}'
+            value: '{"tool_token": "{{#1701.tool_token#}}", "profile": {{#1701.profile_json#}}, "plan": {{#1705.plan_json#}}}'
           type: json
         desc: Every check in planner/validate.py — prerequisites, exclusions, load,
           spread, exchange, double-counting, 120 credits.
@@ -727,7 +727,7 @@ workflow:
           - id: body-1710
             key: ''
             type: text
-            value: '{"profile": {{#1701.profile_json#}}, "plan": {{#1709.plan_json#}}}'
+            value: '{"tool_token": "{{#1701.tool_token#}}", "profile": {{#1701.profile_json#}}, "plan": {{#1709.plan_json#}}}'
           type: json
         desc: The check that decides what comes out. Nothing downstream can
           overrule it.

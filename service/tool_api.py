@@ -82,14 +82,45 @@ def token() -> str:
     return value
 
 
-def check_auth(request: Request) -> None:
+def header_token(request: Request) -> str | None:
     sent = request.headers.get("authorization", "")
     prefix = "bearer "
     if not sent.lower().startswith(prefix):
-        raise Bad("send the token as `Authorization: Bearer <token>`", 401)
-    if sent[len(prefix):].strip() != token():
-        raise Bad("that token is not the one this service was started with",
-                  401)
+        return None
+    return sent[len(prefix):].strip() or None
+
+
+def unsubstituted(value: str) -> bool:
+    """A Dify variable that was never filled in, arriving as its own name."""
+    return "{{" in value or "#}}" in value
+
+
+def authorise(request: Request, fields: dict[str, Any]) -> None:
+    """The token, from the `Authorization` header or the request body.
+
+    The body is allowed because a Dify HTTP Request node substitutes
+    `{{#node.field#}}` inside a JSON body reliably, and whether it does the
+    same inside the headers field is not something the docs settle — a
+    workflow that sends the header literally gets a 401 that looks exactly
+    like a wrong token. Accepting both means the DSL can use the path that is
+    known to work and the header still works for everything else.
+    """
+    expected = token()
+    from_body = fields.get("tool_token")
+    candidates = [c.strip() for c in (header_token(request),
+                                      from_body if isinstance(from_body, str)
+                                      else None) if c]
+    if not candidates:
+        raise Bad("no token: send `Authorization: Bearer <token>`, or a "
+                  "`tool_token` field in the JSON body", 401)
+    if any(c == expected for c in candidates):
+        return
+    if any(unsubstituted(c) for c in candidates):
+        raise Bad("the token arrived as an unfilled template, so whatever "
+                  "sent it did not substitute the variable. In Dify, put "
+                  "`\"tool_token\": \"{{#<start-node>.tool_token#}}\"` in the "
+                  "request body rather than in the headers field.", 401)
+    raise Bad("that token is not the one this service was started with", 401)
 
 
 # ------------------------------------------------------------- the input --
@@ -177,10 +208,47 @@ async def health(request: Request) -> JSONResponse:
                          "tiers": tiers, "courses": len(T.catalog())})
 
 
+async def echo(request: Request) -> JSONResponse:
+    """What this service actually received, redacted. For debugging a 401.
+
+    Open, like `/health`, and deliberately not an oracle: it never says
+    whether a token is correct, only what shape arrived. That is enough to
+    tell the three cases apart — no token sent, a token sent as an unfilled
+    `{{...}}` template, or a real token of the wrong length — without giving
+    anything away to someone guessing.
+    """
+    fields = await body(request)
+    header = header_token(request)
+    in_body = fields.get("tool_token")
+    in_body = in_body if isinstance(in_body, str) else None
+
+    def describe(value: str | None) -> dict:
+        if value is None:
+            return {"present": False}
+        return {"present": True, "length": len(value.strip()),
+                "looks_like_an_unfilled_template": unsubstituted(value)}
+
+    expected = len(token())
+    return JSONResponse({
+        "authorization_header": describe(header),
+        "tool_token_in_body": describe(in_body),
+        "expected_token_length": expected,
+        "body_keys": sorted(fields),
+        "hint": (
+            "Neither place carried a token — in Dify, add "
+            "\"tool_token\": \"{{#<start-node>.tool_token#}}\" to the request "
+            "body." if not (header or in_body) else
+            "The token arrived as an unfilled template, so the variable was "
+            "not substituted. Put it in the JSON body rather than the headers "
+            "field." if unsubstituted(header or in_body or "") else
+            f"A token arrived. If calls still fail, it is the wrong value: "
+            f"this service expects {expected} characters.")})
+
+
 async def search_courses(request: Request) -> JSONResponse:
     """Keyword search over the catalog. The only source of real course codes."""
-    check_auth(request)
     fields = await body(request)
+    authorise(request, fields)
     query = str(fields.get("query") or "").strip()
     if not query:
         raise Bad("`query` is required")
@@ -199,8 +267,8 @@ async def search_courses(request: Request) -> JSONResponse:
 
 async def get_program(request: Request) -> JSONResponse:
     """One program's requirements, rendered the way the planner reads them."""
-    check_auth(request)
     fields = await body(request)
+    authorise(request, fields)
     code = str(fields.get("code") or "").strip()
     if not code:
         raise Bad("`code` is required")
@@ -222,8 +290,8 @@ async def get_program(request: Request) -> JSONResponse:
 
 async def draft_plan(request: Request) -> JSONResponse:
     """A complete, feasible plan built by code. The workflow starts here."""
-    check_auth(request)
     fields = await body(request)
+    authorise(request, fields)
     profile = profile_from(fields.get("profile"))
     major, minor = programs_for(profile)
     if major.tier.value == "unsupported":
@@ -249,8 +317,8 @@ async def validate(request: Request) -> JSONResponse:
     wire: the workflow can ask whether what it just wrote is allowed out, and
     loop on the answer, instead of returning a plan nobody checked.
     """
-    check_auth(request)
     fields = await body(request)
+    authorise(request, fields)
     profile = profile_from(fields.get("profile"))
     rows = rows_from(fields.get("plan"))
     major, minor = programs_for(profile)
@@ -291,6 +359,7 @@ async def on_error(request: Request, exc: Exception) -> JSONResponse:
 
 ROUTES = [
     Route("/health", health, methods=["GET"]),
+    Route("/debug/echo", echo, methods=["POST"]),
     Route("/tools/search_courses", search_courses, methods=["POST"]),
     Route("/tools/get_program", get_program, methods=["POST"]),
     Route("/tools/draft_plan", draft_plan, methods=["POST"]),

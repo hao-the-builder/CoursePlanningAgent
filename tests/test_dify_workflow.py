@@ -293,14 +293,23 @@ def spec() -> dict:
     return json.loads((REPO / "dify" / "openapi.json").read_text("utf-8"))
 
 
-def test_the_openapi_schema_documents_exactly_what_the_service_serves(spec):
+def test_the_openapi_schema_documents_only_paths_the_service_serves(spec):
     """It is imported into Dify to build the tools, so a path that does not
     exist becomes a tool that always fails."""
     served = {route.path: {m.lower() for m in route.methods}
               for route in api.ROUTES}
-    assert set(spec["paths"]) == set(served)
+    assert set(spec["paths"]) <= set(served)
     for path, operations in spec["paths"].items():
         assert set(operations) <= served[path], path
+
+
+def test_every_tool_is_documented_and_nothing_else_is(spec):
+    """`/debug/echo` is served but deliberately absent: it exists to diagnose
+    a 401, and it has no business becoming a tool a model can call."""
+    tools = {route.path for route in api.ROUTES
+             if route.path.startswith("/tools/")}
+    assert tools <= set(spec["paths"]), tools - set(spec["paths"])
+    assert "/debug/echo" not in spec["paths"]
 
 
 def test_every_documented_operation_has_an_id_dify_can_name_a_tool_with(spec):
