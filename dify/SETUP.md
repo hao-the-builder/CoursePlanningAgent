@@ -73,8 +73,14 @@ Open a terminal in this repo.
 know, so nobody else can call your service.
 
 ```powershell
-.venv\Scripts\python.exe -c "import secrets; print(secrets.token_urlsafe(32))"
+.venv\Scripts\python.exe -c "import secrets, string; print(''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(43)))"
 ```
+
+Letters and digits only, on purpose. `secrets.token_urlsafe` also emits `-`
+and `_`, and a token that *begins* with one of those is a trap: the character
+is easy to lose when you copy it into a form field, and what you get back is a
+401 saying the token is wrong — with no hint that it is only wrong by one
+character.
 
 Copy what it prints. Open `.env` in this repo and add the line:
 
@@ -301,7 +307,7 @@ asked about:
 |---|---|---|
 | Import fails immediately | The file was changed, or Dify rejected the format | Re-download `course-planner.yml` from the repo, unedited |
 | A `Tool ·` box turns red, error mentions *connection* or *timeout* | Dify cannot reach your service | Is the service terminal still running? Is `tool_base` right? Docker needs `host.docker.internal`, not `localhost` |
-| A `Tool ·` box returns **401** | Wrong token | The `tool_token` you typed must match `TOOL_API_TOKEN` in `.env`. If it looks right, the service is probably running with an older value from a shell variable — close that terminal, open a new one, start it again |
+| A `Tool ·` box returns **401** | Wrong token. Dify's trace shows the request it sent — compare the token in it, character by character, against `.env`. A token one character short is the usual answer, and a leading `-` or `_` is the usual missing character | The `tool_token` you typed must match `TOOL_API_TOKEN` in `.env`. If it looks right, the service is probably running with an older value from a shell variable — close that terminal, open a new one, start it again |
 | A `Tool ·` box returns **422** with *unsupported* | That program's rules could not be read reliably, so it refuses to plan it | Use a program that works: `COMP`, `MATH-AM`, `FINA`, `GCS-SS`, `IDT` |
 | A `Tool ·` box returns **400** with *not valid JSON* | `profile_json` is malformed | Paste the example from step 6 again; it must be one line of valid JSON |
 | An `LLM ·` box is red | No model picked, or no provider set up | Step 5 |
