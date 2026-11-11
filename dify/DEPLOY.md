@@ -10,103 +10,147 @@ Three phases, about 45 minutes the first time.
 2. **Wire Dify to it** — and hide your token from reviewers.
 3. **Publish, and keep it awake.**
 
-Nothing here touches the repo. If a step goes wrong you can stop and nothing
-is broken.
+The host below is **Hugging Face Spaces**: free, no credit card, and it runs
+the `Dockerfile` this repo already has. If you would rather use Render or
+anything else that builds a Dockerfile, the appendix at the bottom has the
+settings; everything from Phase 2 onwards is identical.
 
 ---
 
 ## Before you start
 
-Have these two things to hand.
-
-**The repo on GitHub.** It is already pushed. You will point the host at it.
-
-**Your tool token.** It is the `TOOL_API_TOKEN` line in `.env`. Open `.env` in
-a text editor and copy everything after the `=`. It is 43 characters of
-letters and digits. Do not paste it into anything public — not a GitHub issue,
-not a Dify form field that reviewers can see, not a screenshot.
+**Your tool token.** Open `.env` in a text editor and copy everything after
+`TOOL_API_TOKEN=` — 43 letters and digits. You will paste it once, into Hugging
+Face's secret store, and once into Dify's. Never into a form field a reviewer
+can see, and never into a file.
 
 ---
 
 # Phase 1 · Put the tool service online
 
-The tool service is the part that holds the course data and answers Dify's
-questions. Right now it runs on your laptop. A reviewer opening your link
-tomorrow needs it somewhere that is always there.
+The tool service holds the course data and answers Dify's questions. It runs
+on your laptop today, which is why your current link dies when you close it.
 
-## 1.1 Make an account
+## 1.1 Build the folder to upload
 
-Go to <https://render.com> and sign up — the "Sign up with GitHub" button is
-easiest, because the next step needs GitHub access anyway.
+A Space has to be **public** for Dify to call it without credentials, and this
+repo is private. Publishing all of it would publish the source PDFs, the
+tests and your coursework documents too — so build a folder with only the
+service and the data it reads:
 
-> **If it asks for a credit card** and you would rather not give one, stop here
-> and use **Plan B** at the bottom of this file instead. Reports disagree about
-> whether Render's free tier asks for one, so you will find out at this step.
+```powershell
+.venv\Scripts\python.exe scripts\make_space.py
+```
 
-## 1.2 Create the service
+It prints what it wrote: 158 files, about 1.9 MB, in `deploy\space`. It leaves
+out `raw/`, `tests/`, `outputs/`, `pipeline/`, `app.py` and every document in
+the repo root. `deploy/` is gitignored, so this never lands in your repo.
 
-1. Click **New** (top right) → **Web Service**.
-2. Choose **Build and deploy from a Git repository**, then **Next**.
-3. Find `CoursePlanningAgent` in the list and click **Connect**. If it is not
-   listed, click **Configure account** / **Install** and give Render access to
-   that repository.
+## 1.2 Make an account
 
-## 1.3 Fill in the settings
+Sign up at <https://huggingface.co/join>. Email and password; no card.
 
-Most defaults are fine. These are the ones that matter:
+## 1.3 Create the Space
 
-| Setting | What to put | Why |
-|---|---|---|
-| **Name** | `course-planner-tools` | Becomes part of your URL |
-| **Language** or **Runtime** | **Docker** | There is a `Dockerfile` in the repo; this tells Render to use it |
-| **Branch** | `main` | |
-| **Region** | the one nearest you | |
-| **Instance Type** | **Free** | Scroll down; Free is at the bottom of the list |
+1. Click your avatar (top right) → **New Space**.
+2. Fill in:
 
-Leave **Root Directory**, **Build Command** and **Start Command** empty. The
-`Dockerfile` already says what to build and how to start it.
-
-## 1.4 Add your token
-
-Still on the same page, find **Environment Variables** (you may need to expand
-**Advanced**). Click **Add Environment Variable** and enter:
-
-| Key | Value |
+| Field | What to choose |
 |---|---|
-| `TOOL_API_TOKEN` | the 43 characters from `.env` |
+| **Space name** | `course-planner-tools` |
+| **License** | anything; `mit` is fine |
+| **Space SDK** | **Docker**, then the **Blank** template |
+| **Space hardware** | **CPU basic · 2 vCPU · 16 GB · FREE** |
+| **Visibility** | **Public** |
 
-**This step is not optional.** The service refuses to start without it, on
-purpose — it would otherwise be answering anyone who found the address.
+3. Click **Create Space**.
 
-You do **not** need to set `PORT`. Render sets it, and the service reads it.
+> **Public is required, not a preference.** Dify calls this service over the
+> internet with no Hugging Face credentials, so a private Space would refuse
+> it. What becomes public is the service and HKUST's already-public course
+> data — which is why step 1.1 exists.
 
-## 1.5 Deploy
+You will land on a page saying the Space is empty and showing git commands.
+Leave that tab open.
 
-Click **Create Web Service**. Render now builds the image and starts it. The
-log scrolls past on screen; the first build takes about three to five minutes.
+## 1.4 Put your token in the Space's secret store
 
-You are looking for these two lines near the end:
+1. On the Space page, click **Settings**.
+2. Scroll to **Variables and secrets** → **New secret**.
+3. Name it `TOOL_API_TOKEN`, paste the 43 characters as the value, and save.
+
+Use **secret**, not variable. A secret is hidden after saving and is passed to
+the container as an environment variable, which is where the service reads it.
+
+**The service refuses to start without this**, deliberately — otherwise it
+would answer anyone who found the address.
+
+## 1.5 Get a token for pushing files
+
+Hugging Face will not accept your account password over git. You need an
+access token:
+
+1. Click your avatar → **Access Tokens** (or go to
+   <https://huggingface.co/settings/tokens>).
+2. **Create new token** → type **Write** → name it anything → **Create**.
+3. Copy it. It starts with `hf_`. You will paste it in the next step.
+
+This is a *different* token from `TOOL_API_TOKEN`. One lets you upload files;
+the other protects your service.
+
+## 1.6 Upload the folder
+
+Open a terminal in this repo and run these, replacing `YOUR-USERNAME` with
+your Hugging Face username:
+
+```powershell
+cd deploy\space
+git init -b main
+git add -A
+git commit -m "Course planner tool service"
+git remote add origin https://huggingface.co/spaces/YOUR-USERNAME/course-planner-tools
+git push -u origin main
+```
+
+The push asks for credentials:
+
+- **Username:** your Hugging Face username
+- **Password:** the `hf_...` token from 1.5 — *not* your account password
+
+> On Windows a credential dialog may appear instead of a prompt in the
+> terminal. Same answers: username, then the token in the password box.
+
+Then come back to the repo root for later steps:
+
+```powershell
+cd ..\..
+```
+
+## 1.7 Watch it build, then check it
+
+Reload the Space page. It will say **Building** — this takes two to four
+minutes the first time. Click **Logs** to watch. You are waiting for:
 
 ```
-tools on http://0.0.0.0:10000  (health is open, /tools/* needs the Bearer token)
+tools on http://0.0.0.0:8601  (health is open, /tools/* needs the Bearer token)
 INFO:     Application startup complete.
 ```
 
-Then, at the top of the page, copy your URL. It looks like:
+The status then changes to **Running**.
+
+Your service address is shown on the Space page, and looks like:
 
 ```
-https://course-planner-tools.onrender.com
+https://YOUR-USERNAME-course-planner-tools.hf.space
 ```
 
-## 1.6 Check it with your own eyes
-
-Open this in a browser tab, pasting your own address:
+Open this in a browser tab:
 
 ```
-https://course-planner-tools.onrender.com/health
+https://YOUR-USERNAME-course-planner-tools.hf.space/health
 ```
 
-You should see something like:
+You should see:
 
 ```json
 {"ok":true,"service":"course-planner-tools","cohort":"2026-27",
@@ -116,10 +160,13 @@ You should see something like:
 
 `"programs":129` and `"verified":5` mean the data arrived intact. This endpoint
 needs no token on purpose, so you — or a reviewer, or a marker — can confirm
-the data side is alive without being given a password.
+the data side is alive without being handed a password.
 
-**If you get an error page**, go to the **Logs** tab in Render and read the
-last lines. `TOOL_API_TOKEN` missing is the usual cause, and it says so.
+**If the build fails**, read the last lines of **Logs**. A missing
+`TOOL_API_TOKEN` is the usual cause and the error says so by name.
+
+**If you change the data later**, re-run `scripts/make_space.py`, then
+`cd deploy\space`, `git add -A`, `git commit -m "update"`, `git push`.
 
 ---
 
@@ -135,76 +182,74 @@ In Dify:
 **"Imported with warnings" is expected.** The file is written in an older
 version of Dify's format on purpose, so Dify upgrades it as it reads it.
 
-This creates a **new** app. Your old one is untouched, which also means the
-model you picked before is not carried over — that is the next step.
+This creates a **new** app, so the model you picked in your old one does not
+come with it — that is the next step.
 
-Check the form looks right: the Start box should now ask for **Major**,
-**Intake cohort**, **Credits per term** (two numbers), **Workload spread** and
-**Terms to keep free**, plus two configuration fields you are about to move.
+Check the Start box now asks for **Major**, **Intake cohort**, **Credits per
+term** (two numbers), **Workload spread** and **Terms to keep free**, plus two
+configuration fields you are about to move.
 
 > If a dropdown arrived as a plain text box, click the field in the Start node
-> and change its type to **Select**, then add the options listed in
-> `SAMPLE_QUERIES.md`. Dify's importer is occasionally lossy about field types;
-> the graph itself is unaffected.
+> and change its type to **Select**, then add the options from
+> `SAMPLE_QUERIES.md`. Dify's importer is occasionally lossy about field
+> types; the graph itself is unaffected.
 
 ## 2.2 Give both LLM boxes a model
 
-Click the box called **LLM · shape the plan**. In its **Model** dropdown, pick
-your model.
+Click **LLM · shape the plan** and pick your model from its **Model**
+dropdown. Then do the same for **LLM · repair pass**.
 
-Then do the same for **LLM · repair pass**. It is easy to forget, and it only
-fails *after* the first one has already worked.
+Do not skip the second one. It is easy to forget, and it only fails *after*
+the first has already worked, which makes it look like a new problem.
 
 ## 2.3 Create the two environment variables
 
-This is the step that keeps your token away from reviewers. Right now the token
-is a form field, which means anyone who opens your link is handed it.
+This is what keeps your token away from reviewers. Right now it is a form
+field, so anyone who opens your link is handed it.
 
-In the workflow editor, find **Environment Variables** — it is in the panel on
-the right-hand side, or behind a **Variables** button at the top. Add two:
+In the workflow editor find **Environment Variables** — in the right-hand
+panel, or behind a **Variables** button at the top. Add two:
 
 | Name | Type | Value |
 |---|---|---|
-| `tool_base` | String | your Render URL, with **no** trailing slash |
+| `tool_base` | String | `https://YOUR-USERNAME-course-planner-tools.hf.space` (no trailing slash) |
 | `tool_token` | **Secret** | the 43 characters from `.env` |
 
-Use **Secret** for the token, not String. A secret is masked in the interface
-and is left blank when the app is exported, so it cannot leak through a file
-you hand in.
+**Secret**, not String, for the token: a secret is masked in the interface and
+left blank when the app is exported, so it cannot leak through a file you hand
+in.
 
 ## 2.4 Point the four tool boxes at them
 
-There are four boxes named `Tool · something`. Each has **two** places that
-still refer to the old form fields. That is eight small edits, and they are all
-the same edit.
+Four boxes are named `Tool · something`, and each has **two** places still
+referring to the old form fields. Eight small edits, all the same edit.
 
-For each of these boxes — **Tool · get_program**, **Tool · draft_plan**,
-**Tool · validate_plan**, **Tool · validate_plan (final)** — do this:
+For **Tool · get_program**, **Tool · draft_plan**, **Tool · validate_plan**
+and **Tool · validate_plan (final)**:
 
-**The URL field.** It currently reads something like:
+**The URL field** reads something like:
 
 ```
 {{#1701.tool_base#}}/tools/get_program
 ```
 
-Delete just the `{{#1701.tool_base#}}` part, leaving `/tools/get_program`. With
-your cursor at the front, type `/` — Dify opens a variable picker — and choose
-**tool_base** from the **Environment Variables** section. The field should end
-up as the environment variable followed by `/tools/get_program`.
+Delete just the `{{#1701.tool_base#}}` part, leaving `/tools/get_program`. Put
+the cursor at the front and type `/` — Dify opens a variable picker — then
+choose **tool_base** under *Environment Variables*.
 
-**The body field.** Below it, the request body starts like:
+**The body field** below it starts:
 
 ```json
 {"tool_token": "{{#1701.tool_token#}}", ...
 ```
 
-Delete just the `{{#1701.tool_token#}}` part, keeping the quotes around it, and
-insert the **tool_token** environment variable the same way.
+Delete just the `{{#1701.tool_token#}}` part, keeping the quotes, and insert
+the **tool_token** environment variable the same way.
 
 > **Pick from the list; do not type the reference by hand.** The template form
-> is easy to get subtly wrong, and a reference that does not resolve arrives at
-> the service as the literal text `{{#...#}}`. The service will tell you that
-> in those words rather than leaving you to guess — but picking from the list
+> is easy to get subtly wrong, and a reference that does not resolve arrives
+> at the service as the literal text `{{#...#}}`. The service will say exactly
+> that rather than leaving you to guess at a 401 — but picking from the list
 > avoids it entirely.
 
 When all four are done, delete `tool_base` and `tool_token` from the **Start**
@@ -212,11 +257,9 @@ box so reviewers never see them.
 
 ## 2.5 Check the timeouts
 
-Open each `Tool ·` box and find **Timeout**. It should read roughly 30 seconds
-to connect and 60 to read. If the import reset them to 0, set them.
-
-This matters because a sleeping free service takes up to a minute to wake, and
-the default timeout gives up before it answers.
+Open each `Tool ·` box and find **Timeout**: about 30 seconds to connect, 60
+to read. If the import reset them to 0, set them. A sleeping free service
+takes up to a minute to wake, and the default gives up before it answers.
 
 ## 2.6 Run it once
 
@@ -231,12 +274,12 @@ Click **Run** and fill in:
 | Workload spread | `even` |
 | Terms to keep free | `Y4 Spring` |
 
-All twelve boxes should go green and the result should be a readable plan:
-a term-by-term table totalling 120 credits, the data tier, nine things to
-check, and a line telling you to see an academic advisor.
+All twelve boxes should go green, and the result should be a readable plan: a
+term-by-term table totalling 120 credits, the data tier, nine things to check,
+and a line telling you to see an academic advisor.
 
-**If a `Tool ·` box fails**, the troubleshooting table at the bottom of
-`SETUP.md` covers what each failure means.
+**If a `Tool ·` box fails**, the troubleshooting table at the end of
+`SETUP.md` says what each failure means.
 
 ---
 
@@ -244,39 +287,38 @@ check, and a line telling you to see an academic advisor.
 
 ## 3.1 Publish
 
-Click **Publish** (top right). Then open the app's overview page and find the
-**web app** URL — this is the link reviewers use. Set its access so anyone
-with the link can run it.
+Click **Publish** (top right). Open the app's overview page, find the **web
+app** URL — this is the link reviewers use — and set its access so anyone with
+the link can run it.
 
 ## 3.2 Stop it falling asleep
 
-A free service sleeps after about 15 minutes of nobody using it, and takes up
-to a minute to wake. A reviewer who meets that reads it as broken.
+A free Space sleeps after **48 hours** with no visitors and takes up to a
+minute to wake. Over a review window that is a real risk, and a reviewer who
+meets a cold start reads it as broken.
 
-So give it a heartbeat. Go to <https://cron-job.org> (free, no card), sign up,
-and create a cronjob:
+So give it a heartbeat. At <https://cron-job.org> (free, no card), sign up and
+create one cronjob:
 
 | Setting | Value |
 |---|---|
-| **URL** | `https://course-planner-tools.onrender.com/health` |
-| **Schedule** | every 10 minutes |
+| **URL** | `https://YOUR-USERNAME-course-planner-tools.hf.space/health` |
+| **Schedule** | every 15 minutes |
 
-That is it. The service now gets a visitor every ten minutes and never sleeps
-during your review window. `/health` needs no token, which is why it is the
-right URL to use for this.
+`/health` needs no token, which is why it is the right URL for this.
 
 ## 3.3 Prove it the way a reviewer will
 
 Do all three:
 
 1. Open the web app link in a **private/incognito window** — this is how you
-   find out it is actually public and not just visible to you.
+   learn whether it is really public rather than just visible to you.
 2. Open it **on your phone**.
 3. **Close your laptop** and try again from your phone.
 
-If step 3 works, you are done. If it only works with your laptop open,
-something is still pointing at your machine — check the `tool_base`
-environment variable is your Render URL and not a `trycloudflare.com` address.
+If step 3 works you are done. If it only works with the laptop open, something
+still points at your machine: check `tool_base` is the `hf.space` address and
+not a `trycloudflare.com` one.
 
 ---
 
@@ -291,36 +333,37 @@ environment variable is your Render URL and not a `trycloudflare.com` address.
 Worth sending with the link: *"The first run may take up to a minute if the
 service has been idle."*
 
-Neither YAML nor either document contains the token — it lives in Render's
-environment and in Dify's secret store, and a Dify export leaves secrets
-blank.
+No token is in any of it. It lives in the Space's secret store and in Dify's,
+and a Dify export leaves secrets blank.
 
 ---
 
-## Plan B · if Render wants a card
+## Appendix · other hosts
 
-Use Hugging Face Spaces, which is free without one.
+Everything from Phase 2 on is the same wherever the service runs. What changes
+is how it gets there.
 
-1. Sign up at <https://huggingface.co>.
-2. **New** → **Space**. Name it, choose **Docker** as the SDK, and **Blank**
-   as the template. Hardware: **CPU basic (free)**.
-3. In **Settings → Variables and secrets**, add a secret `TOOL_API_TOKEN` with
-   the value from `.env`.
-4. Push this repo to the Space's git remote (the Space page shows the command).
-5. Add this to the very top of `README.md` in the Space, before anything else:
+**Any host that builds a Dockerfile** — Render, Railway, Fly, Koyeb, Cloud Run
+— can use this repo directly rather than `deploy/space`, because they can read
+a private repository once you connect your GitHub account. The settings that
+matter are always the same four:
 
-   ```
-   ---
-   title: Course Planner Tools
-   sdk: docker
-   app_port: 8601
-   ---
-   ```
+| Setting | Value |
+|---|---|
+| Runtime / Language | **Docker** |
+| Branch | `main` |
+| Build and start commands | **leave empty** — the `Dockerfile` says both |
+| Environment variable | `TOOL_API_TOKEN` = the 43 characters from `.env` |
 
-   The Space serves whatever is on `app_port`, and the `Dockerfile` listens on
-   8601.
-6. Your address is `https://<your-name>-<space-name>.hf.space`. Check
-   `/health` as in 1.6, then carry on from Phase 2.
+You do not need to set `PORT`: the host sets it and the service reads it.
 
-A free Space sleeps after **48 hours** idle rather than 15 minutes, so the
-heartbeat in 3.2 matters less — but it does no harm.
+Two things to know before choosing one. Several of these ask for a credit card
+at sign-up even on a free plan. And free instances sleep much sooner than a
+Space does — about 15 minutes idle rather than 48 hours — which makes the
+heartbeat in 3.2 essential rather than merely wise.
+
+**Vercel is a poor fit**, despite being free and easy elsewhere. It runs
+serverless functions, not containers, so it ignores the `Dockerfile` and needs
+a separate entry point; and it installs the repo's root `requirements.txt`,
+which carries Streamlit, pdfplumber and the model SDKs that this service never
+imports. Possible, but more work than the options above for no gain.

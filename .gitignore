@@ -51,3 +51,6 @@ raw/**/*.jpg
 # a screenshot dropped in the project root is not part of the project
 /*.png
 /*.jpg
+
+# the Space staging folder, rebuilt by scripts/make_space.py
+/deploy/
