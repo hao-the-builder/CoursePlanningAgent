@@ -153,3 +153,90 @@ def test_every_prerequisite_in_the_catalog_parses_without_losing_a_code():
         assert mentioned <= found, course.code
         prose_only += isinstance(tree, Other)
     assert prose_only < 20     # a handful of pure language requirements
+
+# -------------------------------------------- free electives are the student's --
+
+def _comp_draft(spread: str = "even"):
+    from planner.intake import StudentProfile
+    from planner.tools import draft_plan, get_program
+
+    profile = StudentProfile(cohort="2026-27", major="COMP", workload_min=12,
+                             workload_max=18, spread=spread,
+                             free_terms=["Y4 Spring"])
+    return profile, draft_plan(profile, get_program("COMP"), catalog=catalog())
+
+
+def test_no_real_course_is_chosen_for_the_student():
+    """The invariant behind the slot change.
+
+    Every real course in a draft must be one a requirement rule asked for.
+    The drafter used to pad to 120 credits with codes off the top of an
+    alphabetical list - ACCT 4801, BIEN 1600 - in a Computer Science degree.
+    Those satisfied no rule at all; they were there to make a number add up.
+    A free elective is the student's choice, so the only honest filler is a
+    slot, and this is the assertion that says so.
+    """
+    from planner.tools import common_core_for, get_program, required_set
+
+    _, plan = _comp_draft()
+    cat = catalog()
+    asked_for: set[str] = set()
+    for program in (get_program("COMP"), common_core_for("COMP")):
+        # The second return is the every-term courses (COMP 4900), which a
+        # rule asks for just as plainly as the rest.
+        asked_for, every_term = required_set(program, cat, asked_for)
+        asked_for |= set(every_term)
+
+    real = {row.code for row in plan if not row.code.startswith("SLOT:")}
+    unasked = sorted(real - asked_for)
+    assert not unasked, f"chosen for the student by nothing: {unasked}"
+
+    slots = [row for row in plan if row.code.startswith("SLOT:")]
+    assert slots, "nothing padded the plan to the degree total"
+    assert all(row.credits for row in slots),         "a slot with no credits cannot be counted toward 120"
+
+
+def test_slot_credits_count_toward_the_degree_total():
+    """A slot is a placeholder for a course, not for nothing: three credits of
+    free elective count toward 120 whichever course fills them."""
+    from planner.validate import validate_plan
+
+    profile, plan = _comp_draft()
+    report = validate_plan(plan, profile, catalog=catalog())
+    needed = 120.0
+
+    assert report.credits.confirmed >= needed, report.credits
+    assert report.ok, [issue.message for issue in report.errors]
+
+
+def test_a_slot_survives_a_model_that_returns_only_code_term_and_status():
+    """What the Dify workflow actually does to a plan.
+
+    The shape prompt asks for one JSON object of `code`, `term` and `status`,
+    so a model following it drops every other field - `credits` included. If a
+    slot's size lived only in that field, 38 credits of free electives would
+    come back worth nothing and the validator would report a plan 38 credits
+    short of graduating. The size is in the code for this reason.
+    """
+    from planner.validate import validate_plan
+    from schema import PlannedCourse
+
+    profile, plan = _comp_draft()
+    stripped = [PlannedCourse(code=row.code, term=row.term, status=row.status)
+                for row in plan]
+    report = validate_plan(stripped, profile, catalog=catalog())
+
+    assert report.credits.confirmed >= 120, report.credits
+    assert report.ok, [issue.message for issue in report.errors]
+
+
+def test_a_slot_says_what_it_is_in_words():
+    from planner.validate import slot_credits, slot_label
+
+    assert slot_label("SLOT:FREE-3") == "Free elective (you choose)"
+    assert slot_label("SLOT:FREE-7-3CR") == "Free elective (you choose)"
+    assert slot_credits("SLOT:FREE-7-3CR") == 3.0
+    assert slot_credits("SLOT:FREE-13-2CR") == 2.0
+    assert slot_credits("SLOT:CC-A") is None
+    assert "Arts" in slot_label("SLOT:Arts")
+    assert "you choose" in slot_label("SLOT:CC-A")

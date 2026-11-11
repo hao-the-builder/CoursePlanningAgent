@@ -35,7 +35,7 @@ from planner.logging import RunLog
 from planner.terms import sort_key
 from planner.tools import catalog as load_catalog
 from planner.tools import get_program
-from planner.validate import ValidationReport, validate_plan
+from planner.validate import ValidationReport, validate_plan, slot_label
 from schema import PlannedCourse
 
 MAX_HISTORY = 8            # turns of context sent back with a question
@@ -66,8 +66,10 @@ def plan_table(path: Path, catalog: dict) -> str:
     lines = []
     for row in rows:
         course = catalog.get(row.code)
-        credits = f"{course.credits:g}" if course else "?"
-        title = course.title if course else row.title or ""
+        credits = (f"{course.credits:g}" if course
+                   else f"{row.credits:g}" if row.credits is not None
+                   else "?")
+        title = course.title if course else slot_label(row.code)
         lines.append(f"{row.term} | {row.code} | {title} | {credits} | "
                      f"{row.status}")
     return "\n".join(lines) or "(empty)"

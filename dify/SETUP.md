@@ -282,13 +282,18 @@ For `profile_json`:
 
 Press run and watch the boxes light up one by one.
 
-> **Use this profile for your first run.** It is chosen because the plan the
-> code builds for it already passes every check, so a clean result proves the
-> plumbing works. Once it does, try changing `"even"` to `"front"`: that one
-> puts Y3 Spring at 19 credits, one over the 18-credit cap in the Academic
-> Regulations, and you get to watch the repair pass fix a real error instead of
-> an imaginary one. Seeing `"ok": false` on *that* profile is the system
-> working.
+> **Use this profile for your first run.** The plan the code builds for it
+> already passes every check, so a clean result proves the plumbing works.
+>
+> **For a second run, ask for something impossible.** Add `"Y4 Fall"` to
+> `free_terms` so it reads `["Y4 Fall","Y4 Spring"]`. That leaves six terms to
+> carry a 120-credit degree, which needs 20 credits a term against an
+> 18-credit cap in the Academic Regulations, so no arrangement of courses can
+> satisfy it. You get `"ok": false` and twelve errors naming the exact
+> overload in each term. **That is the better demo**: it shows the system
+> refusing to present a plan that breaks a rule, which is the one property
+> nobody can check by reading the output. A plan that cannot exist is the
+> hardest thing for an agent to admit.
 
 **What a good result looks like.** The End box gives you one value called
 `result`, holding something like:
@@ -296,7 +301,8 @@ Press run and watch the boxes light up one by one.
 ```json
 {
  "ok": true,
- "plan": [ { "code": "COMP 2011", "term": "Y1 Fall", "status": "planned" }, ... ],
+ "plan": [ { "code": "COMP 2011", "term": "Y1 Fall", "status": "planned" },
+           { "code": "SLOT:FREE-1-3CR", "term": "Y2 Fall", "status": "planned" }, ... ],
  "rationale": "Front-loaded the first two years so Y4 Spring is free...",
  "program": { "code": "COMP", "tier": "verified", "verified_on": "2026-11-09" },
  "validation": { "ok": true, "error_count": 0, "warnings": [...] },
@@ -306,6 +312,15 @@ Press run and watch the boxes light up one by one.
 
 `"ok": true` means the plan passed every check. That line comes from the
 checker, not from the model talking about itself.
+
+**The `SLOT:` rows are deliberate.** A free elective is your choice, not the
+planner's: the requirements say only "and enough credits to reach 120". Each
+slot states its size in its own code — `SLOT:FREE-1-3CR` is three credits —
+and those credits count toward the 120, so the totals are complete while the
+choice stays open. The `.docx` is where two or three real options for each one
+belong. Earlier versions filled these with real course codes taken off the top
+of an alphabetical list, which is how a Computer Science plan ended up holding
+four accounting courses.
 
 ---
 

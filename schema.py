@@ -148,6 +148,11 @@ class PlannedCourse(BaseModel):
     host_course: str | None = None   # exchange only: host university course title
     host_university: str | None = None
     mapping_approved: bool = False   # exchange/transfer mapping confirmed by HKUST
+    credits: float | None = None     # slot rows only. A slot's code is not in
+                                     # the catalog, so its credits cannot be
+                                     # looked up; this says what the choice is
+                                     # worth. None means "read the catalog",
+                                     # which is right for every real course.
     note: str = ""
 
 

@@ -55,6 +55,11 @@ CODE = re.compile(r"\b[A-Z]{2,6} ?\d{4}[A-Z]?\b")
 # Courses that belong at the home university, whatever the exchange is meant
 # to cover. A final year project done at a host university is not the same
 # qualification, and an industrial placement is arranged by HKUST.
+# A free-elective slot's size. Three credits is HKUST's ordinary course, so a
+# plan of three-credit slots is the one a student can actually fill; the last
+# slot takes whatever is left over.
+FREE_ELECTIVE_CREDITS = 3.0
+
 STAY_HOME = re.compile(
     r"final year (project|thesis)|capstone|industrial experience|co-op"
     r"|undergraduate research|independent (study|work)", re.I)
@@ -547,15 +552,30 @@ def draft_plan(profile, major: Program, minor: Program | None = None,
             chosen, extra = required_set(program, catalog, chosen)
             every_term += extra
 
-    # Free electives up to the degree total.
+    # Free electives up to the degree total, as slots rather than courses.
+    #
+    # A free elective is by definition the student's choice: the requirements
+    # say only "and enough credits to reach 120". Picking real codes here used
+    # to fill a Computer Science degree with ACCT 4801 and BIEN 1600, because
+    # the only ordering available was the catalog's own - alphabetical. That
+    # plan validated and read as nonsense, which is worse than an honest
+    # placeholder. So each one goes in as a slot carrying its credits, and
+    # CLAUDE.md 1.2's job for the .docx - suggest two or three real options -
+    # is where a recommendation belongs.
     needed = regulation("graduation_total_credits") or 120.0
     have = sum(catalog[c].credits for c in chosen if c in catalog)
     have += profile.unspecified_transfer_credits
-    if have < needed:
-        fillers = [c for c, course in catalog.items()
-                   if not course.prereq_expr and course.credits == 3
-                   and not course.common_core_areas]
-        _pick(sorted(fillers), needed - have, chosen, catalog)
+    slot_credits: dict[str, float] = {}
+    short = needed - have
+    while short > 0:
+        size = min(FREE_ELECTIVE_CREDITS, short)
+        # The size goes in the code, not only in the row's `credits`. A slot
+        # makes a round trip through a model that is asked for code, term and
+        # status alone, so any field beside those three is dropped on the way
+        # back - and a slot whose size was lost silently costs the plan its
+        # credits. The code is the one thing a model is told to copy verbatim.
+        slot_credits[f"SLOT:FREE-{len(slot_credits) + 1}-{size:g}CR"] = size
+        short -= size
 
     # Schedule what is left, prerequisites first.
     to_place = sorted(chosen - done - set(every_term),
@@ -585,6 +605,10 @@ def draft_plan(profile, major: Program, minor: Program | None = None,
         to_place,
         key=lambda c: (-_height(c, chosen, catalog, heights),
                        _depth(c, chosen, catalog), c))
+    # Last, because nothing depends on a free elective and it fits anywhere:
+    # placing the constrained courses first is what keeps the slots from
+    # taking the room a prerequisite chain needed.
+    remaining += sorted(slot_credits)
 
     def ready(code: str, before: set[str]) -> bool:
         course = catalog.get(code)
@@ -594,7 +618,9 @@ def draft_plan(profile, major: Program, minor: Program | None = None,
         return met
 
     def credits_of(code: str) -> float:
-        return catalog[code].credits if code in catalog else 0.0
+        if code in catalog:
+            return catalog[code].credits
+        return slot_credits.get(code, 0.0)
 
     low_ = low
 
@@ -612,6 +638,8 @@ def draft_plan(profile, major: Program, minor: Program | None = None,
         budget = high
         for code in sorted(remaining,
                            key=lambda c: (heights.get(c, 0), -credits_of(c), c)):
+            if code in slot_credits:
+                continue        # a slot abroad would be a placeholder twice
             if heights.get(code, 0) or credits_of(code) > budget:
                 continue
             if STAY_HOME.search(catalog[code].title if code in catalog else ""):
@@ -803,4 +831,12 @@ def draft_plan(profile, major: Program, minor: Program | None = None,
             term = "Y4 Spring"
         plan.append(PlannedCourse(code=code, term=term, status="planned"))
         loaded[term] = loaded.get(term, 0.0) + credits_of(code)
+
+    # The slots are rewritten once, here, rather than at each of the six
+    # places a row is appended or moved.
+    for row in plan:
+        if row.code in slot_credits:
+            row.credits = slot_credits[row.code]
+            row.note = row.note or ("Free elective - you choose. Any course "
+                                    "outside your requirements counts.")
     return plan

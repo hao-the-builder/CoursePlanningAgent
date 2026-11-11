@@ -300,10 +300,11 @@ async def draft_plan(request: Request) -> JSONResponse:
                   422)
     rows = T.draft_plan(profile, major, minor,
                         spread=fields.get("spread") or profile.spread)
-    per_term: dict[str, float] = {}
-    for row in rows:
-        credits = T.catalog()[row.code].credits if row.code in T.catalog() else 0
-        per_term[row.term] = per_term.get(row.term, 0.0) + (credits or 0.0)
+    # The validator's own tally, not a second implementation of it: a slot
+    # carries its credits and this read the catalog alone, so the two would
+    # disagree the moment a plan held anything but real courses.
+    from planner.validate import term_credits
+    per_term = term_credits(rows, T.catalog())
     return JSONResponse({
         "program": major.code, "tier": major.tier.value,
         "count": len(rows), "per_term": per_term,

@@ -346,3 +346,54 @@ Phase 2: an explicit course list is expressible through `credits_from` because
 `_matches` accepts an exact code as a pattern, and it tolerates an `H` suffix,
 so `COMP 2012` also matches `COMP 2012H`. No new rule type is needed for
 "select N credits from the following list".
+
+---
+
+## 2026-11-11 — Free electives are slots, not the courses that sort first
+
+**Decision.** `draft_plan` pads a plan to the degree total with
+`SLOT:FREE-<n>-<credits>CR` rows instead of real course codes.
+`PlannedCourse` gains an optional `credits` field, and the validator counts a
+slot whose size is known toward graduation.
+
+**Why.** The old filler took the alphabetically first 3-credit courses with no
+prerequisite and no Common Core area. For a Computer Science degree that meant
+`ACCT 4801`, `ACCT 4803`, `BIBU 4830`, `BIEN 1600` — thirteen courses, 38 of
+the 120 credits, chosen because `ACCT` sorts before `COMP`. Every one was a
+real course and the plan validated, so nothing caught it: the output was
+*valid* and *absurd*, which is worse than an honest placeholder, because a
+reader who spots one absurd row stops trusting the rows that are right.
+CLAUDE.md §1.2 already said these should be slots and `validate.py` already
+exempted `SLOT:` codes from the course checks; only `draft_plan` had never
+emitted one. A free elective is by definition the student's choice — the
+requirements say "and enough credits to reach 120" and nothing more — so a
+recommendation belongs in the `.docx`, where §1.2 puts it, not in a cell that
+looks like a decision already taken.
+
+**Why the size is in the code.** A slot makes a round trip through the Dify
+workflow, whose shape prompt asks the model for one JSON object of `code`,
+`term` and `status`. A model that obeys drops every other field, so a size
+held only in `credits` would come back as nothing and the plan would read 38
+credits short of graduating. The code is the one thing the model is told to
+copy verbatim, so the size travels there too, and `row_credits` prefers the
+row, falls back to the code, and counts zero only when neither says.
+
+**What this changed elsewhere.** `summarise` counted no slot at all, so a
+plan of slots could never reach 120; it now counts a slot whose size is known
+and still ignores one that is genuinely unknown. The spreadsheet's term totals
+are `SUMIFS` over the Credits column, so `_slot_row` had to put the size in
+that cell or every total on the sheet would disagree with the validator.
+`assistant.py` read `row.title`, a field `PlannedCourse` has never had — dead
+code until a plan could contain a code the catalog does not hold.
+
+**Not done.** Common Core areas are still filled with real courses chosen the
+same alphabetical way (`ACCT 1010` for Social Analysis, `AMCC 2010` for Arts).
+Making those slots means teaching the evaluator that `SLOT:CC-A` satisfies the
+Arts area, which changes how a rule type is evaluated — hard rule 9 says to
+ask first. They read far less oddly than a 4000-level accounting course did,
+being real Common Core courses at introductory level, so this is a smaller
+debt than the one above.
+
+**To reverse.** Restore the `fillers`/`_pick` block in `draft_plan`. The
+`credits` field and `row_credits` can stay; nothing else depends on the slots
+existing.

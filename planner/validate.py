@@ -132,9 +132,51 @@ def real_courses(plan: list[PlannedCourse]) -> list[PlannedCourse]:
     return [p for p in plan if not is_slot(p.code) and p.status != "exchange"]
 
 
+SLOT_CREDITS = re.compile(r"-(\d+(?:\.\d+)?)CR$", re.I)
+
+
+def slot_credits(code: str) -> float | None:
+    """A slot's size, when its code states it: "SLOT:FREE-7-3CR" is 3 credits.
+
+    Written into the code because a plan may come back from a model that was
+    asked for code, term and status and returned exactly that. The row's own
+    `credits` is used first; this is what makes the loss survivable.
+    """
+    found = SLOT_CREDITS.search(code)
+    return float(found.group(1)) if found else None
+
+
+def slot_label(code: str) -> str:
+    """What a slot is, in words, for anything that shows one to a person.
+
+    A bare "SLOT:FREE-7" is a placeholder the student cannot act on, and every
+    builder was writing its own version of this sentence.
+    """
+    kind = SLOT_CREDITS.sub("", code.split(":", 1)[1] if ":" in code else "any")
+    if kind.upper().startswith("FREE"):
+        return "Free elective (you choose)"
+    return f"Common Core {kind} course (you choose)"
+
+
 def credits_of(code: str, catalog: dict[str, Course]) -> float:
     course = catalog.get(code)
     return course.credits if course else 0.0
+
+
+def row_credits(entry: PlannedCourse, catalog: dict[str, Course]) -> float:
+    """What one plan row is worth.
+
+    A slot carries its own credits, because its code is a placeholder and the
+    catalog has nothing to look up. Every real course reads from the catalog,
+    so a row cannot quietly disagree with it: `credits` is only consulted when
+    the code is not a real one.
+    """
+    if entry.code in catalog:
+        return credits_of(entry.code, catalog)
+    if entry.credits is not None:
+        return float(entry.credits)
+    from_code = slot_credits(entry.code)
+    return from_code if from_code is not None else 0.0
 
 
 def term_credits(plan: list[PlannedCourse],
@@ -147,7 +189,7 @@ def term_credits(plan: list[PlannedCourse],
         if key in seen:
             continue
         seen.add(key)
-        totals[entry.term] += credits_of(entry.code, catalog)
+        totals[entry.term] += row_credits(entry, catalog)
     return dict(totals)
 
 
@@ -723,10 +765,17 @@ def summarise(plan: list[PlannedCourse], profile: StudentProfile,
         unspecified_transfer=profile.unspecified_transfer_credits)
     seen: set[str] = set()
     for entry in plan:
-        if entry.code in seen or is_slot(entry.code):
+        if entry.code in seen:
+            continue
+        # A slot the student has not filled still has a size: three credits of
+        # free elective count toward 120 whichever course ends up in them. A
+        # slot with no credits is genuinely unknown and stays uncounted, so a
+        # plan cannot reach the total on placeholders alone.
+        if (is_slot(entry.code) and entry.credits is None
+                and slot_credits(entry.code) is None):
             continue
         seen.add(entry.code)
-        credits = credits_of(entry.code, catalog)
+        credits = row_credits(entry, catalog)
         if entry.status == "exchange":
             summary.exchange_pending += credits
         elif entry.status in ("taken", "current", "transfer"):

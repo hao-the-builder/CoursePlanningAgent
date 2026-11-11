@@ -35,7 +35,8 @@ from openpyxl.worksheet.datavalidation import DataValidation  # noqa: E402
 
 from planner.allocate import Allocation, group_demand  # noqa: E402
 from planner.terms import sort_key, term_sequence  # noqa: E402
-from planner.validate import ValidationReport, is_slot  # noqa: E402
+from planner.validate import (ValidationReport, is_slot, row_credits,
+                              slot_label)  # noqa: E402
 from schema import Category, Course, NAreas, PlannedCourse, Program, Tier  # noqa: E402
 
 FONT = "Arial"
@@ -82,11 +83,16 @@ class Row:
 
 def _slot_row(entry: PlannedCourse, allocation: Allocation) -> Row:
     """A course the student has not chosen yet."""
-    area = entry.code.split(":", 1)[1] if ":" in entry.code else "any"
-    label = f"CC — {area}" if area.upper().startswith("CC") or len(area) <= 5 \
-        else "Free elective"
-    return Row(term=entry.term, code=label,
-               name=f"{area} course (you choose)", credits="", status="Planned",
+    kind = entry.code.split(":", 1)[1] if ":" in entry.code else "any"
+    free = kind.upper().startswith("FREE")
+    # A slot carries its own credits, and they have to reach the Credits
+    # column: the term totals are SUMIFS over it, so a blank here would make
+    # every total on the sheet disagree with the validator.
+    return Row(term=entry.term,
+               code="Free elective" if free else f"CC — {kind}",
+               name=slot_label(entry.code),
+               credits=row_credits(entry, {}) or "",
+               status="Planned",
                note=entry.note or "Slot: options are in the document")
 
 
