@@ -37,11 +37,15 @@ REPO = Path(__file__).resolve().parent.parent
 if __package__ in (None, ""):
     sys.path.insert(0, str(REPO))
 
+from dotenv import load_dotenv                       # noqa: E402
+
 from planner import tools as T                       # noqa: E402
 from planner.intake import StudentProfile            # noqa: E402
 from planner.llm import LLMUnavailable               # noqa: E402
 from planner.validate import ValidationReport, validate_plan   # noqa: E402
 from schema import PlannedCourse                      # noqa: E402
+
+load_dotenv()          # DIFY_API_KEY, DIFY_BASE_URL, TOOL_API_BASE, TOOL_API_TOKEN
 
 CLOUD = "https://api.dify.ai/v1"
 TIMEOUT = 300.0

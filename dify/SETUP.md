@@ -87,9 +87,16 @@ TOOL_API_TOKEN=paste-what-was-printed-here
 **Start the service.** Leave this terminal open — it has to keep running.
 
 ```powershell
-$env:TOOL_API_TOKEN = "paste-the-same-token-here"
 .venv\Scripts\python.exe -m service.tool_api --host 0.0.0.0 --port 8601
 ```
+
+The service reads the token from `.env`, so there is nothing to type twice.
+
+> **Do not set `$env:TOOL_API_TOKEN` in the terminal as well.** A shell
+> variable overrides `.env`, and then editing `.env` changes nothing while the
+> service keeps the old value — every call answers **401** and the two sides
+> look identical to you. If you have already done it, close that terminal and
+> open a fresh one.
 
 > `--host 0.0.0.0` lets Dify's container reach it. If you are not using Docker
 > and not using a tunnel, leave it off and it stays private to your computer.
@@ -286,7 +293,7 @@ asked about:
 |---|---|---|
 | Import fails immediately | The file was changed, or Dify rejected the format | Re-download `course-planner.yml` from the repo, unedited |
 | A `Tool ·` box turns red, error mentions *connection* or *timeout* | Dify cannot reach your service | Is the service terminal still running? Is `tool_base` right? Docker needs `host.docker.internal`, not `localhost` |
-| A `Tool ·` box returns **401** | Wrong token | The `tool_token` you typed must exactly match `TOOL_API_TOKEN` in the service terminal |
+| A `Tool ·` box returns **401** | Wrong token | The `tool_token` you typed must match `TOOL_API_TOKEN` in `.env`. If it looks right, the service is probably running with an older value from a shell variable — close that terminal, open a new one, start it again |
 | A `Tool ·` box returns **422** with *unsupported* | That program's rules could not be read reliably, so it refuses to plan it | Use a program that works: `COMP`, `MATH-AM`, `FINA`, `GCS-SS`, `IDT` |
 | A `Tool ·` box returns **400** with *not valid JSON* | `profile_json` is malformed | Paste the example from step 6 again; it must be one line of valid JSON |
 | An `LLM ·` box is red | No model picked, or no provider set up | Step 5 |

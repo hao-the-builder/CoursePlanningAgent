@@ -37,6 +37,7 @@ REPO = Path(__file__).resolve().parent.parent
 if __package__ in (None, ""):
     sys.path.insert(0, str(REPO))
 
+from dotenv import load_dotenv                                 # noqa: E402
 from starlette.applications import Starlette                  # noqa: E402
 from starlette.requests import Request                        # noqa: E402
 from starlette.responses import JSONResponse                   # noqa: E402
@@ -47,6 +48,13 @@ from planner.agent import describe_program                      # noqa: E402
 from planner.intake import StudentProfile                       # noqa: E402
 from planner.validate import validate_plan                      # noqa: E402
 from schema import PlannedCourse                                # noqa: E402
+
+# `.env` is the one place the token is written down, so read it here as
+# `app.py` does. An exported shell variable still wins, which is the
+# precedence you want — but it is also how the two sides drift apart: a
+# service started with one value in its shell keeps using it, whatever `.env`
+# says afterwards, and every call then answers 401.
+load_dotenv()
 
 TOKEN_ENV = "TOOL_API_TOKEN"
 SEARCH_LIMIT = 30
