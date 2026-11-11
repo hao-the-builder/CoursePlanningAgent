@@ -76,11 +76,36 @@ def test_the_inputs_are_the_four_variables_the_dsl_declares(profile):
     assert set(dify.inputs_for(profile)) == declared
 
 
-def test_the_profile_goes_as_json_text_that_parses(profile):
+def test_the_profile_goes_as_the_answers_a_reviewer_would_pick(profile):
+    """The workflow assembles the profile from form answers, so a run from
+    here sends the same answers and exercises the same node."""
     sent = dify.inputs_for(profile)
-    assert json.loads(sent["profile_json"])["major"] == profile.major
     assert sent["major"] == profile.major
+    assert sent["cohort"] == profile.cohort
+    assert sent["workload_min"] == str(profile.workload_min)
+    assert sent["workload_max"] == str(profile.workload_max)
+    assert sent["spread"] == profile.spread
     assert sent["tool_token"] == "tool-test-token"
+    assert all(isinstance(value, str) for value in sent.values()),         "Dify fills these into text fields"
+
+
+def test_free_terms_the_form_cannot_express_are_refused_not_dropped(profile):
+    """Silently planning a different degree than the one asked for is the
+    worst of the available outcomes."""
+    import pytest
+
+    asked = profile.model_copy(update={"free_terms": ["Y2 Spring"]})
+    with pytest.raises(ValueError, match="no option for free terms"):
+        dify.inputs_for(asked)
+
+
+def test_the_free_term_options_match_the_forms_own_list():
+    dsl = yaml.safe_load(DSL.read_text(encoding="utf-8"))
+    start = next(n for n in dsl["workflow"]["graph"]["nodes"]
+                 if n["data"]["type"] == "start")
+    field = next(v for v in start["data"]["variables"]
+                 if v["variable"] == "free_terms")
+    assert set(field["options"]) == set(dify.FREE_TERM_CHOICES.values()),         "the client offers options the form does not, or the reverse"
 
 
 def test_the_request_is_a_blocking_workflow_run_with_the_app_key(

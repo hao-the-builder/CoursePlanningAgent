@@ -1,15 +1,12 @@
 app:
-  description: 'Plans an HKUST undergraduate degree term by term. The course codes,
-    credits, requirement rules and every validation check come from the course-planner
-    tool service over HTTP; the model only chooses between legal options and explains
-    them. Cohort 2026-27.'
+  description: Plans an HKUST undergraduate degree term by term. The course codes, credits, requirement rules and every validation check come from the course-planner tool service over HTTP; the model only chooses between legal options and explains them. Cohort 2026-27.
   icon: 🎓
   icon_background: '#E4FBCC'
   mode: workflow
   name: HKUST Course Planner
   use_icon_as_answer_icon: false
 kind: app
-version: '0.1.5'
+version: 0.1.5
 workflow:
   conversation_variables: []
   environment_variables: []
@@ -48,10 +45,22 @@ workflow:
     - data:
         isInIteration: false
         sourceType: start
-        targetType: http-request
-      id: 1701-source-1702-target
+        targetType: code
+      id: 1701-source-1713-target
       selected: false
       source: '1701'
+      sourceHandle: source
+      target: '1713'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: http-request
+      id: 1713-source-1702-target
+      selected: false
+      source: '1713'
       sourceHandle: source
       target: '1702'
       targetHandle: target
@@ -179,36 +188,73 @@ workflow:
       zIndex: 0
     nodes:
     - data:
-        desc: The student, the program, and where the tool service lives.
+        desc: What the student wants. The last two fields are configuration, not questions - move them to environment variables before sharing a link.
         selected: false
         title: Start
         type: start
         variables:
-        - label: major
-          max_length: 48
-          options: []
+        - label: Major
+          max_length: 256
+          options:
+          - COMP
+          - MATH-AM
+          - FINA
+          - GCS-SS
+          - IDT
+          - MATH
           required: true
-          type: text-input
+          type: select
           variable: major
-        - label: profile_json
-          max_length: 50000
+        - label: Intake cohort
+          max_length: 256
+          options:
+          - 2026-27
+          required: true
+          type: select
+          variable: cohort
+        - label: Credits per term, minimum
+          max_length: 256
           options: []
           required: true
-          type: paragraph
-          variable: profile_json
-        - label: tool_base
+          type: number
+          variable: workload_min
+        - label: Credits per term, maximum
+          max_length: 256
+          options: []
+          required: true
+          type: number
+          variable: workload_max
+        - label: Workload spread
+          max_length: 256
+          options:
+          - even
+          - front
+          - back
+          required: true
+          type: select
+          variable: spread
+        - label: Terms to keep free
+          max_length: 256
+          options:
+          - none
+          - Y4 Spring
+          - Y4 Fall and Y4 Spring
+          required: true
+          type: select
+          variable: free_terms
+        - label: tool_base (move me to an environment variable)
           max_length: 256
           options: []
           required: true
           type: text-input
           variable: tool_base
-        - label: tool_token
+        - label: tool_token (move me to a secret environment variable)
           max_length: 256
           options: []
           required: true
           type: text-input
           variable: tool_token
-      height: 196
+      height: 324
       id: '1701'
       position:
         x: 80
@@ -232,16 +278,15 @@ workflow:
             type: text
             value: '{"tool_token": "{{#1701.tool_token#}}", "code": "{{#1701.major#}}"}'
           type: json
-        desc: The requirement rules, read from the official PDF. Also carries the
-          data tier, so the model can say how trustworthy this is.
+        desc: The requirement rules, read from the official PDF. Also carries the data tier, so the model can say how trustworthy this is.
         headers: Authorization:Bearer {{#1701.tool_token#}}
         method: post
         params: ''
         selected: false
         timeout:
-          max_connect_timeout: 0
-          max_read_timeout: 0
-          max_write_timeout: 0
+          max_connect_timeout: 30
+          max_read_timeout: 60
+          max_write_timeout: 30
         title: Tool · get_program
         type: http-request
         url: '{{#1701.tool_base#}}/tools/get_program'
@@ -249,10 +294,10 @@ workflow:
       height: 150
       id: '1702'
       position:
-        x: 384
+        x: 688
         y: 282
       positionAbsolute:
-        x: 384
+        x: 688
         y: 282
       selected: false
       sourcePosition: right
@@ -268,18 +313,17 @@ workflow:
           - id: body-1703
             key: ''
             type: text
-            value: '{"tool_token": "{{#1701.tool_token#}}", "profile": {{#1701.profile_json#}}}'
+            value: '{"tool_token": "{{#1701.tool_token#}}", "profile": {{#1713.profile_json#}}}'
           type: json
-        desc: A complete, feasible plan built by code from the rules. This is the
-          only source of real course codes in the whole workflow.
+        desc: A complete, feasible plan built by code from the rules. This is the only source of real course codes in the whole workflow.
         headers: Authorization:Bearer {{#1701.tool_token#}}
         method: post
         params: ''
         selected: false
         timeout:
-          max_connect_timeout: 0
-          max_read_timeout: 0
-          max_write_timeout: 0
+          max_connect_timeout: 30
+          max_read_timeout: 60
+          max_write_timeout: 30
         title: Tool · draft_plan
         type: http-request
         url: '{{#1701.tool_base#}}/tools/draft_plan'
@@ -287,10 +331,10 @@ workflow:
       height: 150
       id: '1703'
       position:
-        x: 688
+        x: 992
         y: 282
       positionAbsolute:
-        x: 688
+        x: 992
         y: 282
       selected: false
       sourcePosition: right
@@ -301,8 +345,7 @@ workflow:
         context:
           enabled: false
           variable_selector: []
-        desc: Shapes the draft to what the student asked for. It may move and swap
-          rows; it may not invent one.
+        desc: Shapes the draft to what the student asked for. It may move and swap rows; it may not invent one.
         model:
           completion_params:
             temperature: 0
@@ -312,37 +355,27 @@ workflow:
         prompt_template:
         - id: sys-1704
           role: system
-          text: 'You plan HKUST undergraduate degrees. You are one step inside a
-            workflow that has already done the factual work for you, and your output
-            is checked by a validator before anyone sees it.
+          text: 'You plan HKUST undergraduate degrees. You are one step inside a workflow that has already done the factual work for you, and your output is checked by a validator before anyone sees it.
 
 
             Rules you cannot break:
 
 
-            1. Every course code you write must already appear in the draft plan
-            you are given. You have no reliable memory of HKUST''s catalog, and a
-            code you did not read from the draft is an invention. The validator
-            will catch it and the plan will be thrown away.
+            1. Every course code you write must already appear in the draft plan you are given. You have no reliable memory of HKUST''s catalog, and a code you did not read from the draft is an invention. The validator will catch it and the plan will be thrown away.
 
-            2. Keep every row whose status is taken, current or transfer exactly
-            where it is. Those are facts about the student''s past.
+            2. Keep every row whose status is taken, current or transfer exactly where it is. Those are facts about the student''s past.
 
-            3. A row whose code begins with "SLOT" or "CC —" is a choice the student
-            has not made yet. Leave it as a slot. Do not fill it with a real course.
+            3. A row whose code begins with "SLOT" or "CC —" is a choice the student has not made yet. Leave it as a slot. Do not fill it with a real course.
 
-            4. You may move a row to a different term, and you may drop or re-add a
-            row the requirements allow. You may not change a row''s credits.
+            4. You may move a row to a different term, and you may drop or re-add a row the requirements allow. You may not change a row''s credits.
 
-            5. Respect what the student asked for: the workload range, the spread,
-            any term they want kept free, and any exchange term.
+            5. Respect what the student asked for: the workload range, the spread, any term they want kept free, and any exchange term.
 
 
             Answer with one JSON object and nothing else:
 
 
-            {"plan": [{"code": "...", "term": "...", "status": "..."}, ...],
-            "rationale": "two or three sentences on what you changed and why"}
+            {"plan": [{"code": "...", "term": "...", "status": "..."}, ...], "rationale": "two or three sentences on what you changed and why"}
 
 
             Every row of the plan, every term, in that one array.'
@@ -351,7 +384,7 @@ workflow:
           text: 'The student''s profile:
 
 
-            {{#1701.profile_json#}}
+            {{#1713.profile_json#}}
 
 
             The program, its requirement rules and its data tier:
@@ -360,8 +393,7 @@ workflow:
             {{#1702.body#}}
 
 
-            The draft plan built by code — the only source of real course codes
-            here:
+            The draft plan built by code — the only source of real course codes here:
 
 
             {{#1703.body#}}
@@ -377,10 +409,10 @@ workflow:
       height: 98
       id: '1704'
       position:
-        x: 992
+        x: 1296
         y: 282
       positionAbsolute:
-        x: 992
+        x: 1296
         y: 282
       selected: false
       sourcePosition: right
@@ -388,54 +420,9 @@ workflow:
       type: custom
       width: 243
     - data:
-        code: |
-          import json
-          import re
-
-
-          def main(llm_text: str, draft_body: str) -> dict:
-              """Pull the plan out of the model's reply.
-
-              The model is asked for bare JSON and usually gives it, but it may
-              fence the block or write a sentence first. If nothing parses, fall
-              back to the code-built draft rather than passing junk to the
-              validator: a plan that was never shaped is still a legal plan.
-              """
-              text = llm_text or ""
-              block = re.search(r"```(?:json)?\s*(.+?)```", text, re.S)
-              candidates = [block.group(1)] if block else []
-              brace = text.find("{")
-              if brace != -1:
-                  candidates.append(text[brace:])
-              candidates.append(text)
-
-              for candidate in candidates:
-                  try:
-                      parsed = json.loads(candidate.strip())
-                  except Exception:
-                      continue
-                  if isinstance(parsed, dict) and isinstance(parsed.get("plan"), list):
-                      rows = [r for r in parsed["plan"] if isinstance(r, dict)]
-                      if rows:
-                          return {
-                              "plan_json": json.dumps(rows, ensure_ascii=False),
-                              "rationale": str(parsed.get("rationale", "")),
-                              "source": "model",
-                          }
-
-              try:
-                  draft = json.loads(draft_body or "{}").get("plan") or []
-              except Exception:
-                  draft = []
-              return {
-                  "plan_json": json.dumps(draft, ensure_ascii=False),
-                  "rationale": "The model's reply could not be read as a plan, so "
-                               "the plan built by code was kept unchanged.",
-                  "source": "draft",
-              }
+        code: "import json\nimport re\n\n\ndef main(llm_text: str, draft_body: str) -> dict:\n    \"\"\"Pull the plan out of the model's reply.\n\n    The model is asked for bare JSON and usually gives it, but it may\n    fence the block or write a sentence first. If nothing parses, fall\n    back to the code-built draft rather than passing junk to the\n    validator: a plan that was never shaped is still a legal plan.\n    \"\"\"\n    text = llm_text or \"\"\n    block = re.search(r\"```(?:json)?\\s*(.+?)```\", text, re.S)\n    candidates = [block.group(1)] if block else []\n    brace = text.find(\"{\")\n    if brace != -1:\n        candidates.append(text[brace:])\n    candidates.append(text)\n\n    for candidate in candidates:\n        try:\n            parsed = json.loads(candidate.strip())\n        except Exception:\n            continue\n        if isinstance(parsed, dict) and isinstance(parsed.get(\"plan\"), list):\n            rows = [r for r in parsed[\"plan\"] if isinstance(r, dict)]\n            if rows:\n                return {\n                    \"plan_json\": json.dumps(rows, ensure_ascii=False),\n                    \"rationale\": str(parsed.get(\"rationale\", \"\")),\n                    \"source\": \"model\",\n                }\n\n    try:\n        draft = json.loads(draft_body or \"{}\").get(\"plan\") or []\n    except Exception:\n        draft = []\n    return {\n        \"plan_json\": json.dumps(draft, ensure_ascii=False),\n        \"rationale\": \"The model's reply could not be read as a plan, so \"\n                     \"the plan built by code was kept unchanged.\",\n        \"source\": \"draft\",\n    }\n"
         code_language: python3
-        desc: Reads the plan out of the reply. Falls back to the code-built draft
-          rather than sending junk to the validator.
+        desc: Reads the plan out of the reply. Falls back to the code-built draft rather than sending junk to the validator.
         outputs:
           plan_json:
             children: null
@@ -461,10 +448,10 @@ workflow:
       height: 54
       id: '1705'
       position:
-        x: 1296
+        x: 1600
         y: 282
       positionAbsolute:
-        x: 1296
+        x: 1600
         y: 282
       selected: false
       sourcePosition: right
@@ -480,18 +467,17 @@ workflow:
           - id: body-1706
             key: ''
             type: text
-            value: '{"tool_token": "{{#1701.tool_token#}}", "profile": {{#1701.profile_json#}}, "plan": {{#1705.plan_json#}}}'
+            value: '{"tool_token": "{{#1701.tool_token#}}", "profile": {{#1713.profile_json#}}, "plan": {{#1705.plan_json#}}}'
           type: json
-        desc: Every check in planner/validate.py — prerequisites, exclusions, load,
-          spread, exchange, double-counting, 120 credits.
+        desc: Every check in planner/validate.py — prerequisites, exclusions, load, spread, exchange, double-counting, 120 credits.
         headers: Authorization:Bearer {{#1701.tool_token#}}
         method: post
         params: ''
         selected: false
         timeout:
-          max_connect_timeout: 0
-          max_read_timeout: 0
-          max_write_timeout: 0
+          max_connect_timeout: 30
+          max_read_timeout: 60
+          max_write_timeout: 30
         title: Tool · validate_plan
         type: http-request
         url: '{{#1701.tool_base#}}/tools/validate_plan'
@@ -499,10 +485,10 @@ workflow:
       height: 150
       id: '1706'
       position:
-        x: 1600
+        x: 1904
         y: 282
       positionAbsolute:
-        x: 1600
+        x: 1904
         y: 282
       selected: false
       sourcePosition: right
@@ -510,32 +496,7 @@ workflow:
       type: custom
       width: 243
     - data:
-        code: |
-          import json
-
-
-          def main(report_body: str) -> dict:
-              """Turn the validator's report into something a prompt can carry."""
-              try:
-                  report = json.loads(report_body or "{}")
-              except Exception as exc:
-                  return {"verdict": "unreadable",
-                          "errors_text": f"The validator's reply could not be "
-                                         f"read: {exc}"}
-
-              errors = report.get("errors") or []
-              if not errors:
-                  return {"verdict": "clean",
-                          "errors_text": "No blocking errors. Leave the plan "
-                                         "exactly as it is."}
-
-              lines = []
-              for issue in errors:
-                  where = " · ".join(
-                      str(x) for x in (issue.get("term"), issue.get("course")) if x)
-                  lines.append(f"- [{issue.get('check')}] {issue.get('message')}"
-                               + (f" ({where})" if where else ""))
-              return {"verdict": "has_errors", "errors_text": "\n".join(lines)}
+        code: "import json\n\n\ndef main(report_body: str) -> dict:\n    \"\"\"Turn the validator's report into something a prompt can carry.\"\"\"\n    try:\n        report = json.loads(report_body or \"{}\")\n    except Exception as exc:\n        return {\"verdict\": \"unreadable\",\n                \"errors_text\": f\"The validator's reply could not be \"\n                               f\"read: {exc}\"}\n\n    errors = report.get(\"errors\") or []\n    if not errors:\n        return {\"verdict\": \"clean\",\n                \"errors_text\": \"No blocking errors. Leave the plan \"\n                               \"exactly as it is.\"}\n\n    lines = []\n    for issue in errors:\n        where = \" · \".join(\n            str(x) for x in (issue.get(\"term\"), issue.get(\"course\")) if x)\n        lines.append(f\"- [{issue.get('check')}] {issue.get('message')}\"\n                     + (f\" ({where})\" if where else \"\"))\n    return {\"verdict\": \"has_errors\", \"errors_text\": \"\\n\".join(lines)}\n"
         code_language: python3
         desc: Reads the verdict and lists the blocking errors in plain English.
         outputs:
@@ -556,10 +517,10 @@ workflow:
       height: 54
       id: '1707'
       position:
-        x: 1904
+        x: 2208
         y: 282
       positionAbsolute:
-        x: 1904
+        x: 2208
         y: 282
       selected: false
       sourcePosition: right
@@ -570,8 +531,7 @@ workflow:
         context:
           enabled: false
           variable_selector: []
-        desc: One repair pass against the real validator output. Told to return the
-          plan untouched when the verdict is already clean.
+        desc: One repair pass against the real validator output. Told to return the plan untouched when the verdict is already clean.
         model:
           completion_params:
             temperature: 0
@@ -584,21 +544,16 @@ workflow:
           text: 'You fix an HKUST degree plan that a validator has just checked.
 
 
-            If the verdict is "clean", return the plan exactly as given, with a
-            rationale saying it passed. Change nothing.
+            If the verdict is "clean", return the plan exactly as given, with a rationale saying it passed. Change nothing.
 
 
-            If there are errors, fix those errors and only those. The same rules
-            still hold: every course code must already appear in the plan you are
-            given, rows marked taken, current or transfer stay where they are, slot
-            rows stay slots, and credits are never edited.
+            If there are errors, fix those errors and only those. The same rules still hold: every course code must already appear in the plan you are given, rows marked taken, current or transfer stay where they are, slot rows stay slots, and credits are never edited.
 
 
             Answer with one JSON object and nothing else:
 
 
-            {"plan": [{"code": "...", "term": "...", "status": "..."}, ...],
-            "rationale": "what you fixed, or that nothing needed fixing"}'
+            {"plan": [{"code": "...", "term": "...", "status": "..."}, ...], "rationale": "what you fixed, or that nothing needed fixing"}'
         - id: usr-1708
           role: user
           text: 'Verdict: {{#1707.verdict#}}
@@ -619,7 +574,7 @@ workflow:
             The student''s profile, for the constraints:
 
 
-            {{#1701.profile_json#}}
+            {{#1713.profile_json#}}
 
 
             Return the JSON object.'
@@ -632,10 +587,10 @@ workflow:
       height: 98
       id: '1708'
       position:
-        x: 2208
+        x: 2512
         y: 282
       positionAbsolute:
-        x: 2208
+        x: 2512
         y: 282
       selected: false
       sourcePosition: right
@@ -643,46 +598,9 @@ workflow:
       type: custom
       width: 243
     - data:
-        code: |
-          import json
-          import re
-
-
-          def main(llm_text: str, draft_body: str) -> dict:
-              """The same reader as before. Here `draft_body` is the plan that
-              went into the repair pass, so an unreadable repair leaves the
-              validated-once plan standing rather than losing it."""
-              text = llm_text or ""
-              block = re.search(r"```(?:json)?\s*(.+?)```", text, re.S)
-              candidates = [block.group(1)] if block else []
-              brace = text.find("{")
-              if brace != -1:
-                  candidates.append(text[brace:])
-              candidates.append(text)
-
-              for candidate in candidates:
-                  try:
-                      parsed = json.loads(candidate.strip())
-                  except Exception:
-                      continue
-                  if isinstance(parsed, dict) and isinstance(parsed.get("plan"), list):
-                      rows = [r for r in parsed["plan"] if isinstance(r, dict)]
-                      if rows:
-                          return {
-                              "plan_json": json.dumps(rows, ensure_ascii=False),
-                              "rationale": str(parsed.get("rationale", "")),
-                              "source": "model",
-                          }
-
-              return {
-                  "plan_json": draft_body or "[]",
-                  "rationale": "The repair pass could not be read, so the plan "
-                               "from the first pass was kept.",
-                  "source": "previous",
-              }
+        code: "import json\nimport re\n\n\ndef main(llm_text: str, draft_body: str) -> dict:\n    \"\"\"The same reader as before. Here `draft_body` is the plan that\n    went into the repair pass, so an unreadable repair leaves the\n    validated-once plan standing rather than losing it.\"\"\"\n    text = llm_text or \"\"\n    block = re.search(r\"```(?:json)?\\s*(.+?)```\", text, re.S)\n    candidates = [block.group(1)] if block else []\n    brace = text.find(\"{\")\n    if brace != -1:\n        candidates.append(text[brace:])\n    candidates.append(text)\n\n    for candidate in candidates:\n        try:\n            parsed = json.loads(candidate.strip())\n        except Exception:\n            continue\n        if isinstance(parsed, dict) and isinstance(parsed.get(\"plan\"), list):\n            rows = [r for r in parsed[\"plan\"] if isinstance(r, dict)]\n            if rows:\n                return {\n                    \"plan_json\": json.dumps(rows, ensure_ascii=False),\n                    \"rationale\": str(parsed.get(\"rationale\", \"\")),\n                    \"source\": \"model\",\n                }\n\n    return {\n        \"plan_json\": draft_body or \"[]\",\n        \"rationale\": \"The repair pass could not be read, so the plan \"\n                     \"from the first pass was kept.\",\n        \"source\": \"previous\",\n    }\n"
         code_language: python3
-        desc: Reads the repaired plan, keeping the first-pass plan if the reply
-          cannot be read.
+        desc: Reads the repaired plan, keeping the first-pass plan if the reply cannot be read.
         outputs:
           plan_json:
             children: null
@@ -708,10 +626,10 @@ workflow:
       height: 54
       id: '1709'
       position:
-        x: 2512
+        x: 2816
         y: 282
       positionAbsolute:
-        x: 2512
+        x: 2816
         y: 282
       selected: false
       sourcePosition: right
@@ -727,18 +645,17 @@ workflow:
           - id: body-1710
             key: ''
             type: text
-            value: '{"tool_token": "{{#1701.tool_token#}}", "profile": {{#1701.profile_json#}}, "plan": {{#1709.plan_json#}}}'
+            value: '{"tool_token": "{{#1701.tool_token#}}", "profile": {{#1713.profile_json#}}, "plan": {{#1709.plan_json#}}}'
           type: json
-        desc: The check that decides what comes out. Nothing downstream can
-          overrule it.
+        desc: The check that decides what comes out. Nothing downstream can overrule it.
         headers: Authorization:Bearer {{#1701.tool_token#}}
         method: post
         params: ''
         selected: false
         timeout:
-          max_connect_timeout: 0
-          max_read_timeout: 0
-          max_write_timeout: 0
+          max_connect_timeout: 30
+          max_read_timeout: 60
+          max_write_timeout: 30
         title: Tool · validate_plan (final)
         type: http-request
         url: '{{#1701.tool_base#}}/tools/validate_plan'
@@ -746,10 +663,10 @@ workflow:
       height: 150
       id: '1710'
       position:
-        x: 2816
+        x: 3120
         y: 282
       positionAbsolute:
-        x: 2816
+        x: 3120
         y: 282
       selected: false
       sourcePosition: right
@@ -757,61 +674,14 @@ workflow:
       type: custom
       width: 243
     - data:
-        code: |
-          import json
-
-
-          def main(plan_json: str, rationale: str, report_body: str,
-                   program_body: str) -> dict:
-              """One JSON document out, carrying its own verdict.
-
-              The validator's report travels with the plan. A caller that reads
-              `ok` is reading the validator, not the model's opinion of itself,
-              and `errors` is non-empty whenever the plan is not clean — so a
-              plan that failed can never be presented as if it passed (hard
-              rule 2).
-              """
-              def load(raw, default):
-                  try:
-                      return json.loads(raw or "")
-                  except Exception:
-                      return default
-
-              plan = load(plan_json, [])
-              report = load(report_body, {})
-              program = load(program_body, {})
-
-              per_term = report.get("per_term") or {}
-              result = {
-                  "ok": bool(report.get("ok")),
-                  "plan": plan,
-                  "rationale": rationale or "",
-                  "program": {
-                      "code": program.get("code"),
-                      "title": program.get("title"),
-                      "tier": program.get("tier"),
-                      "verified_on": program.get("verified_on"),
-                      "source_url": program.get("source_url"),
-                      "cohort": program.get("cohort"),
-                  },
-                  "validation": {
-                      "ok": bool(report.get("ok")),
-                      "error_count": report.get("error_count"),
-                      "warning_count": report.get("warning_count"),
-                      "errors": report.get("errors") or [],
-                      "warnings": report.get("warnings") or [],
-                      "credits": report.get("credits") or {},
-                      "per_term": per_term,
-                  },
-                  "caveat": "Course data is extracted from official HKUST PDFs. "
-                            "Check this plan with your academic advisor before "
-                            "you register.",
-              }
-              return {"result": json.dumps(result, ensure_ascii=False, indent=1)}
+        code: "import json\nimport re\n\n\ndef main(plan_json: str, rationale: str, report_body: str,\n         program_body: str) -> dict:\n    \"\"\"One JSON document and one readable report, from the same facts.\n\n    The validator's report travels with the plan. A caller that reads\n    `ok` is reading the validator, not the model's opinion of itself,\n    and the Markdown lists every blocking error *above* the plan rather\n    than below it, so a plan that failed cannot be skimmed as though it\n    had passed (hard rule 2).\n    \"\"\"\n    def load(raw, default):\n        try:\n            return json.loads(raw or \"\")\n        except Exception:\n            return default\n\n    plan = load(plan_json, [])\n    report = load(report_body, {})\n    program = load(program_body, {})\n\n    per_term = report.get(\"per_term\") or {}\n    credits = report.get(\"credits\") or {}\n    errors = report.get(\"errors\") or []\n    warnings = report.get(\"warnings\") or []\n    ok = bool(report.get(\"ok\"))\n    caveat = (\"Course data is extracted from official HKUST PDFs. Check \"\n              \"this plan with your academic advisor before you register.\")\n\n    result = {\n        \"ok\": ok,\n        \"plan\": plan,\n        \"rationale\": rationale or \"\",\n        \"program\": {\n            \"code\": program.get(\"code\"),\n            \"title\": program.get(\"title\"),\n            \"tier\": program.get(\"tier\"),\n            \"verified_on\": program.get(\"verified_on\"),\n            \"source_url\": program.get(\"source_url\"),\n            \"cohort\": program.get(\"cohort\"),\n        },\n        \"validation\": {\n            \"ok\": ok,\n            \"error_count\": report.get(\"error_count\"),\n            \"warning_count\": report.get(\"warning_count\"),\n            \"errors\": errors,\n            \"warnings\": warnings,\n            \"credits\": credits,\n            \"per_term\": per_term,\n        },\n        \"caveat\": caveat,\n    }\n\n    # ----------------------------------------------- the same, for a person --\n    seasons = {\"Fall\": 0, \"Winter\": 1, \"Spring\": 2, \"Summer\": 3}\n\n    def order(term):\n        \"\"\"Transfer first, then by year, then Fall before Spring.\"\"\"\n        if term == \"Transfer\":\n            return (0, 0, 0)\n        found = re.match(r\"Y([0-9]+)[ ]+([A-Za-z]+)\", str(term or \"\"))\n        if not found:\n            return (9, 9, 9)\n        return (1, int(found.group(1)), seasons.get(found.group(2), 9))\n\n    def readable(code):\n        \"\"\"A slot is a choice, not a course, so the table says so.\"\"\"\n        text = str(code)\n        if not text.upper().startswith(\"SLOT:\"):\n            return text\n        size = re.search(r\"-([0-9]+(?:[.][0-9]+)?)CR$\", text, re.I)\n        if size:\n            return \"Free elective (\" + size.group(1) + \" cr)\"\n        return \"Free elective (you choose)\"\n\n    by_term = {}\n    for row in plan:\n        if isinstance(row, dict) and row.get(\"term\"):\n            by_term.setdefault(row[\"term\"], []).append(\n                readable(row.get(\"code\", \"\")))\n\n    lines = [\"# \" + str(program.get(\"title\") or \"Degree plan\"), \"\"]\n    checked = program.get(\"verified_on\")\n    badge = \"**\" + str(program.get(\"tier\") or \"unknown\") + \"**\"\n    if checked:\n        badge += \" · checked \" + str(checked)\n    lines.append(\"`\" + str(program.get(\"code\")) + \"` · cohort \"\n                 + str(program.get(\"cohort\")) + \" · data tier \" + badge)\n    lines.append(\"\")\n\n    if ok:\n        lines.append(\"**Passed every check.** \" + str(len(warnings))\n                     + \" things to verify yourself, listed below.\")\n        lines.append(\"\")\n    else:\n        lines.append(\"**This plan breaks \" + str(len(errors))\n                     + \" rule(s).** It is shown anyway, with every failure \"\n                     + \"named, because hiding it would be worse than \"\n                     + \"reading it.\")\n        lines.append(\"\")\n        lines.append(\"## Blocking errors\")\n \
+          \       lines.append(\"\")\n        for issue in errors:\n            where = issue.get(\"term\") or issue.get(\"course\") or \"\"\n            prefix = \"**\" + str(where) + \"** — \" if where else \"\"\n            lines.append(\"- \" + prefix + str(issue.get(\"message\", \"\")))\n        lines.append(\"\")\n\n    lines.append(\"## The plan\")\n    lines.append(\"\")\n    lines.append(\"| Term | Credits | Courses |\")\n    lines.append(\"|---|---|---|\")\n    for term in sorted(by_term, key=order):\n        # Several free-elective slots in one term read identically, so they\n        # are counted rather than deduplicated: a term showing 18 credits\n        # beside two entries looks like an arithmetic error.\n        counted = {}\n        for label in by_term[term]:\n            counted[label] = counted.get(label, 0) + 1\n        shown = \", \".join(\n            label + (\" × \" + str(n) if n > 1 else \"\")\n            for label, n in sorted(counted.items()))\n        lines.append(\"| \" + str(term) + \" | \"\n                     + (\"%g\" % per_term.get(term, 0)) + \" | \" + shown + \" |\")\n    total = credits.get(\"confirmed\")\n    lines.append(\"| **Total** | **\"\n                 + ((\"%g\" % total) if total is not None else \"?\")\n                 + \"** | 120 needed to graduate |\")\n    lines.append(\"\")\n\n    if rationale:\n        lines.append(\"## What was changed, and why\")\n        lines.append(\"\")\n        lines.append(str(rationale))\n        lines.append(\"\")\n\n    if warnings:\n        lines.append(\"## Things to check (\" + str(len(warnings)) + \")\")\n        lines.append(\"\")\n        for issue in warnings:\n            lines.append(\"- \" + str(issue.get(\"message\", \"\")))\n        lines.append(\"\")\n\n    source = program.get(\"source_url\")\n    if source:\n        lines.append(\"Requirements read from <\" + str(source) + \">.\")\n        lines.append(\"\")\n    lines.append(\"*\" + caveat + \"*\")\n\n    return {\"result\": json.dumps(result, ensure_ascii=False, indent=1),\n            \"report\": chr(10).join(lines)}\n"
         code_language: python3
-        desc: Assembles the one output — the plan, the validator's own verdict, and
-          the provenance of the data it was built from.
+        desc: One JSON document for a caller, and the same facts as Markdown for a person.
         outputs:
+          report:
+            children: null
+            type: string
           result:
             children: null
             type: string
@@ -838,10 +708,10 @@ workflow:
       height: 54
       id: '1711'
       position:
-        x: 3120
+        x: 3424
         y: 282
       positionAbsolute:
-        x: 3120
+        x: 3424
         y: 282
       selected: false
       sourcePosition: right
@@ -853,6 +723,10 @@ workflow:
         outputs:
         - value_selector:
           - '1711'
+          - report
+          variable: report
+        - value_selector:
+          - '1711'
           - result
           variable: result
         selected: false
@@ -861,10 +735,59 @@ workflow:
       height: 90
       id: '1712'
       position:
-        x: 3424
+        x: 3728
         y: 282
       positionAbsolute:
-        x: 3424
+        x: 3728
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "import json\n\n\ndef main(major, cohort, workload_min, workload_max, spread,\n         free_terms) -> dict:\n    \"\"\"The profile the tools expect, assembled from the form.\n\n    A reviewer should answer questions about a degree, not compose JSON.\n    Every value here is a straight translation of a field: nothing is\n    invented, and a field left empty stays empty so the service can say\n    what is missing rather than guess at it (hard rule 4).\n    \"\"\"\n    chosen = {\n        \"none\": [],\n        \"Y4 Spring\": [\"Y4 Spring\"],\n        \"Y4 Fall and Y4 Spring\": [\"Y4 Fall\", \"Y4 Spring\"],\n    }.get(str(free_terms or \"none\").strip(), [])\n\n    def whole(value, fallback):\n        try:\n            return int(float(value))\n        except (TypeError, ValueError):\n            return fallback\n\n    profile = {\n        \"cohort\": str(cohort or \"\").strip(),\n        \"major\": str(major or \"\").strip(),\n        \"workload_min\": whole(workload_min, 12),\n        \"workload_max\": whole(workload_max, 18),\n        \"spread\": str(spread or \"even\").strip(),\n        \"free_terms\": chosen,\n    }\n    return {\"profile_json\": json.dumps(profile, ensure_ascii=False)}\n"
+        code_language: python3
+        desc: Turns the form into the profile JSON the tools read.
+        outputs:
+          profile_json:
+            children: null
+            type: string
+        selected: false
+        title: Build the profile
+        type: code
+        variables:
+        - value_selector:
+          - '1701'
+          - major
+          variable: major
+        - value_selector:
+          - '1701'
+          - cohort
+          variable: cohort
+        - value_selector:
+          - '1701'
+          - workload_min
+          variable: workload_min
+        - value_selector:
+          - '1701'
+          - workload_max
+          variable: workload_max
+        - value_selector:
+          - '1701'
+          - spread
+          variable: spread
+        - value_selector:
+          - '1701'
+          - free_terms
+          variable: free_terms
+      height: 54
+      id: '1713'
+      position:
+        x: 384
+        y: 282
+      positionAbsolute:
+        x: 384
         y: 282
       selected: false
       sourcePosition: right

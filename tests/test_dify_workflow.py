@@ -343,4 +343,7 @@ def test_the_submitted_file_holds_no_secret(dsl):
     start = next(n for n in dsl["workflow"]["graph"]["nodes"]
                  if n["data"]["type"] == "start")
     names = {v["variable"] for v in start["data"]["variables"]}
-    assert {"tool_base", "tool_token", "profile_json", "major"} == names
+    assert {"tool_base", "tool_token"} <= names,         "the address and token must stay run-time inputs, never values here"
+    assert {"major", "cohort", "workload_min", "workload_max", "spread",
+            "free_terms"} <= names, "the form has to ask for the profile"
+    assert "profile_json" not in names,         "a reviewer answers questions; the profile is built from the answers"

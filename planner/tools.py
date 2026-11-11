@@ -605,9 +605,9 @@ def draft_plan(profile, major: Program, minor: Program | None = None,
         to_place,
         key=lambda c: (-_height(c, chosen, catalog, heights),
                        _depth(c, chosen, catalog), c))
-    # Last, because nothing depends on a free elective and it fits anywhere:
-    # placing the constrained courses first is what keeps the slots from
-    # taking the room a prerequisite chain needed.
+    # Last in the queue, because nothing depends on a free elective: the
+    # courses whose prerequisites pin them to a term are placed first, and a
+    # slot takes whatever room is left.
     remaining += sorted(slot_credits)
 
     def ready(code: str, before: set[str]) -> bool:
@@ -831,6 +831,53 @@ def draft_plan(profile, major: Program, minor: Program | None = None,
             term = "Y4 Spring"
         plan.append(PlannedCourse(code=code, term=term, status="planned"))
         loaded[term] = loaded.get(term, 0.0) + credits_of(code)
+
+    # The curve, corrected afterwards by moving free electives.
+    #
+    # Nothing depends on a free elective, so moving one between terms cannot
+    # break a prerequisite, an exclusion or an every-term rule. That makes the
+    # slots the only rows a finished plan can safely rebalance, and it is
+    # needed: filling each term to its shaped target in order lets the early
+    # terms spend the slots, and a back-loaded request came back with 62
+    # credits in the first half against 58 in the second.
+    #
+    # The halves are the ones `check_spread` uses - the programme's own term
+    # sequence cut in two, not the terms that happen to hold courses - so this
+    # optimises the number the validator will actually report.
+    want = spread or profile.spread or ""
+    if want in ("front", "back") and slot_credits:
+        ordered = sorted(terms, key=sort_key)
+        cut = len(ordered) // 2
+        early, late = ordered[:cut], ordered[cut:]
+        giving, taking = (late, early) if want == "front" else (early, late)
+
+        for _ in range(len(slot_credits) * 2):
+            first = sum(loaded.get(t, 0.0) for t in early)
+            second = sum(loaded.get(t, 0.0) for t in late)
+            if (first >= second) if want == "front" else (second >= first):
+                break
+            moved = False
+            for row in [p for p in plan
+                        if p.code in slot_credits and p.term in giving]:
+                size = slot_credits[row.code]
+                if loaded.get(row.term, 0.0) - size < low:
+                    continue        # emptying a term below the minimum is worse
+                for target in sorted(taking, key=lambda t: loaded.get(t, 0.0)):
+                    # A term at zero was deliberately emptied so the student
+                    # finishes early. It stays empty.
+                    if not loaded.get(target, 0.0):
+                        continue
+                    if loaded[target] + size > high:
+                        continue
+                    loaded[row.term] -= size
+                    loaded[target] += size
+                    row.term = target
+                    moved = True
+                    break
+                if moved:
+                    break
+            if not moved:
+                break
 
     # The slots are rewritten once, here, rather than at each of the six
     # places a row is appended or moved.

@@ -113,14 +113,46 @@ def tool_endpoint() -> tuple[str, str]:
     return base.rstrip("/"), token
 
 
+# How the workflow's `free_terms` dropdown spells each choice. The form offers
+# a fixed list because a reviewer cannot be asked to type a term label, and a
+# profile that wants some other term has no option to carry it - so the choice
+# is made plain here rather than silently dropped.
+FREE_TERM_CHOICES = {
+    (): "none",
+    ("Y4 Spring",): "Y4 Spring",
+    ("Y4 Fall", "Y4 Spring"): "Y4 Fall and Y4 Spring",
+}
+
+
+def free_terms_choice(profile: StudentProfile) -> str:
+    """The dropdown option matching this profile's free terms."""
+    wanted = tuple(sorted(profile.free_terms, reverse=True))
+    for terms, label in FREE_TERM_CHOICES.items():
+        if tuple(sorted(terms, reverse=True)) == wanted:
+            return label
+    raise ValueError(
+        f"the Dify form offers no option for free terms {list(profile.free_terms)}. "
+        f"It offers {sorted(FREE_TERM_CHOICES.values())}. Run this profile "
+        f"through `planner.agent` instead, or add the option to the Start node "
+        f"and to FREE_TERM_CHOICES.")
+
+
 def inputs_for(profile: StudentProfile) -> dict[str, str]:
-    """The four Start-node variables, as the DSL declares them."""
+    """The Start-node variables, as the DSL declares them.
+
+    The workflow asks a person questions and assembles the profile itself, so
+    this sends the same answers a reviewer would pick from the form rather
+    than the profile JSON. Keeping to one path means a run from here exercises
+    what a reviewer exercises, including the node that does the assembling.
+    """
     base, token = tool_endpoint()
     return {
         "major": profile.major or "",
-        # Dify passes this straight into a JSON body, so it goes as compact
-        # JSON text rather than as a nested object.
-        "profile_json": profile.model_dump_json(exclude_defaults=True),
+        "cohort": profile.cohort or "",
+        "workload_min": str(profile.workload_min),
+        "workload_max": str(profile.workload_max),
+        "spread": profile.spread or "even",
+        "free_terms": free_terms_choice(profile),
         "tool_base": base,
         "tool_token": token,
     }
